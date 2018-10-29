@@ -3,65 +3,32 @@
 namespace yourhtml {
 
 token_t::token_t(token_t::kind_t kind_):
-  kind(kind_),
-  type_flag(type_flag_t::UNKNOWN) {}
+  kind(kind_){}
 
 token_t::token_t(const pos_t &pos_, token_t::kind_t kind_):
   pos(pos_),
-  kind(kind_),
-  type_flag(type_flag_t::UNKNOWN) {}
+  kind(kind_){}
 
 token_t::token_t(const pos_t &pos_, token_t::kind_t kind_, std::string &&text_):
   pos(pos_),
   kind(kind_),
-  text(std::move(text_)),
-  type_flag(type_flag_t::UNKNOWN) {}
+  text(std::move(text_)) {}
 
 token_t::~token_t() = default;
 
 std::string token_t::get_desc(token_t::kind_t kind) {
   switch(kind) {
-    case IDENT_TOKEN: return "IDENT_TOKEN";
-    case FUNCTION_TOKEN: return "FUNCTION_TOKEN";
-    case AT_KEYWORD_TOKEN: return "AT_KEYWORD_TOKEN";
-    case HASH_TOKEN: return "HASH_TOKEN";
-    case STRING_TOKEN: return "STRING_TOKEN";
-    case BAD_STRING_TOKEN: return "BAD_STRING_TOKEN";
-    case URL_TOKEN: return "URL_TOKEN";
-    case BAD_URL_TOKEN: return "BAD_URL_TOKEN";
-    case DELIM_TOKEN: return "DELIM_TOKEN";
-    case NUMBER_TOKEN: return "NUMBER_TOKEN";
-    case PERCENTAGE_TOKEN: return "PERCENTAGE_TOKEN";
-    case DIMENSION_TOKEN: return "DIMENSION_TOKEN";
-    case UNICODE_RANGE_TOKEN: return "UNICODE_RANGE_TOKEN";
-    case INCLUDE_MATCH_TOKEN: return "INCLUDE_MATCH_TOKEN";
-    case DASH_MATCH_TOKEN: return "DASH_MATCH_TOKEN";
-    case PREFIX_MATCH_TOKEN: return "PREFIX_MATCH_TOKEN";
-    case SUFFIX_MATCH_TOKEN: return "SUFFIX_MATCH_TOKEN";
-    case SUBSTRING_MATCH_TOKEN: return "SUBSTRING_MATCH_TOKEN";
-    case COLUMN_TOKEN: return "COLUMN_TOKEN";
-    case WHITESPACE_TOKEN: return "WHITESPACE_TOKEN";
-    case CDO_TOKEN: return "CDO_TOKEN";
-    case CDC_TOKEN: return "CDC_TOKEN";
-    case COLON_TOKEN: return "COLON_TOKEN";
-    case SEMICOLON_TOKEN: return "SEMICOLON_TOKEN";
-    case COMMA_TOKEN: return "COMMA_TOKEN";
-    case LEFT_BRACKET_TOKEN: return "LEFT_BRACKET_TOKEN";
-    case RIGHT_BRACKET_TOKEN: return "RIGHT_BRACKET_TOKEN";
-    case LEFT_PAREN_TOKEN: return "LEFT_PAREN_TOKEN";
-    case RIGHT_PAREN_TOKEN: return "RIGHT_PAREN_TOKEN";
-    case LEFT_BRACE_TOKEN: return "LEFT_BRACE_TOKEN";
-    case RIGHT_BRACE_TOKEN: return "RIGHT_BRACE_TOKEN";
-    case COMMENT_TOKEN: return "COMMENT_TOKEN";
+    case DOCTYPE: return "DOCTYPE";
+    case START_TAG: return "START_TAG";
+    case END_TAG: return "END_TAG";
+    case COMMENT: return "COMMENT";
+    case CHARACTER: return "CHARACTER";
+    case END_OF_FILE: return "END_OF_FILE";
   }
 }
 
-token_t::type_flag_t token_t::get_type_flag() const {
-  return type_flag;
-}
-
-void token_t::set_type_flag(token_t::type_flag_t type_flag_) {
-  type_flag = type_flag_;
+std::string token_t::get_name() const {
+  return name;
 }
 
 token_t::kind_t token_t::get_kind() const {
@@ -72,18 +39,16 @@ std::string token_t::get_text() const {
   return text;
 }
 
-std::string token_t::get_name() const {
-  return token_t::get_desc(kind);
+void token_t::set_name(const std::string &name_) {
+  name = name_;
 }
 
-std::string token_t::get_type_flag_name() const {
-  switch (type_flag) {
-    case UNKNOWN: return "UNKNOWN";
-    case UNRESTRICTED: return "UNRESTRICTED";
-    case ID: return "ID";
-    case INTEGER: return "INTEGER";
-    case NUMBER: return "NUMBER";
-  }
+void token_t::append_name(const std::string &appended) {
+  name += appended;
+}
+
+std::string token_t::get_description() const {
+  return token_t::get_desc(kind);
 }
 
 pos_t token_t::get_pos() const {

@@ -10,6 +10,7 @@
 #include "ice.h"
 #include "token.h"
 #include "pos.h"
+#include "lookup_character_reference.h"
 
 namespace yourhtml {
 
@@ -77,12 +78,12 @@ public:
     comment_start,
     comment_start_dash,
     comment,
-    comment_less_then_sign,
-    comment_less_then_sign_bang,
-    comment_less_then_sign_bang_dash,
-    comment_less_then_sign_bang_dash_dash,
-    comment_end_dash_state,
-    comment_end_state,
+    comment_less_than_sign,
+    comment_less_than_sign_bang,
+    comment_less_than_sign_bang_dash,
+    comment_less_than_sign_bang_dash_dash,
+    comment_end_dash,
+    comment_end,
     comment_end_bang,
     doctype,
     before_doctype_name,
@@ -103,7 +104,7 @@ public:
     cdata_section,
     cdata_section_bracket,
     cdata_section_end,
-    character_reference_state,
+    character_reference,
     named_character_reference,
     ambiguous_ampersand,
     numeric_character_reference,
@@ -113,6 +114,10 @@ public:
     decimal_character_reference,
     numeric_character_reference_end,
   };
+
+  void emit_token(std::shared_ptr<token_t> token);
+
+  void emit_parse_error(const std::string &);
 
   /* Heper method to print tokens returned from lex */
   static void print_tokens(const std::vector<token_t> &tokens);
@@ -159,6 +164,29 @@ private:
      etc.*/
   void add_single_token(token_t::kind_t kind);
 
+  /* Reset the temporary buffer */
+  void reset_temporary_buffer();
+
+  /* Reset tag name buffer */
+  void reset_tag_name_buffer();
+
+  /* A character reference is said to be consumed as part of an attribute
+     if the return state is either attribute value (double-quoted) state,
+     attribute value (single-quoted) state or attribute value (unquoted)
+     state. */
+  bool is_consuming_part_of_attribute();
+
+  /* When a state says to flush code points consumed as a character reference,
+     it means that for each code point in the temporary buffer (in the order
+     they were added to the buffer) user agent must append the code point from
+     the buffer to the current attribute's value if the character reference was
+     consumed as part of an attribute, or emit the code point as a character
+     token otherwise. */
+  void flush_consumed_as_character_reference();
+
+  /* Set the current tag as self closing or not self closing */
+  void set_current_tag_self_closing(bool);
+
   /* Temporarily holds tokens while lexing */
   std::vector<std::shared_ptr<token_t>> tokens;
 
@@ -190,6 +218,27 @@ private:
 
   /* The return state */
   state_t return_state;
+
+  /* Temporary buffer */
+  std::stringstream temporary_buffer;
+
+  /* Attribute value buffer */
+  std::stringstream attribute_value_buffer;
+
+  /* Tag name buffer */
+  std::stringstream tag_name_buffer;
+
+  /* Current tag token */
+  std::vector<std::shared_ptr<token_t>> stack_of_open_elements;
+
+  /* Token in the process of being parsed */
+  std::shared_ptr<token_t> current_token;
+
+  /* The current tag's attributes */
+  std::vector<std::pair<std::string, std::string>> current_token_attributes;
+
+  /* Is the current tag self closing? */
+  bool current_tag_self_closing;
 
 };  // lexer_t
 

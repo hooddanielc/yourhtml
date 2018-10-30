@@ -7,12 +7,7 @@ token_t::token_t(token_t::kind_t kind_):
 
 token_t::token_t(const pos_t &pos_, token_t::kind_t kind_):
   pos(pos_),
-  kind(kind_){}
-
-token_t::token_t(const pos_t &pos_, token_t::kind_t kind_, std::string &&text_):
-  pos(pos_),
-  kind(kind_),
-  text(std::move(text_)) {}
+  kind(kind_) {}
 
 token_t::~token_t() = default;
 
@@ -27,24 +22,8 @@ std::string token_t::get_desc(token_t::kind_t kind) {
   }
 }
 
-std::string token_t::get_name() const {
-  return name;
-}
-
 token_t::kind_t token_t::get_kind() const {
   return kind;
-}
-
-std::string token_t::get_text() const {
-  return text;
-}
-
-void token_t::set_name(const std::string &name_) {
-  name = name_;
-}
-
-void token_t::append_name(const std::string &appended) {
-  name += appended;
 }
 
 std::string token_t::get_description() const {
@@ -61,10 +40,6 @@ std::shared_ptr<token_t> token_t::make(token_t::kind_t kind) {
 
 std::shared_ptr<token_t> token_t::make(const pos_t &pos, token_t::kind_t kind) {
   return std::make_shared<token_t>(pos, kind);
-}
-
-std::shared_ptr<token_t> token_t::make(const pos_t &pos, token_t::kind_t kind, std::string &&text) {
-  return std::make_shared<token_t>(pos, kind, std::move(text));
 }
 
 /* Writes a human-readable dump of the token.  This is for debugging

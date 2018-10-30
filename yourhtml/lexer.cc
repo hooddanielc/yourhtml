@@ -142,7 +142,7 @@ void lexer_t::flush_consumed_as_character_reference() {
     attribute_value_buffer << temporary_buffer.str();
   } else {
     auto text = temporary_buffer.str();
-    emit_token(token_t::make(anchor_pos, token_t::CHARACTER, std::move(text)));
+    emit_token(token_t::make(anchor_pos, token_t::CHARACTER));
   }
 }
 
@@ -184,7 +184,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           default: {
             std::string char_text(1, c);
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::move(char_text)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
             break;
           }
@@ -210,7 +210,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, c)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
             break;
           }
@@ -230,7 +230,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, c)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
             break;
           }
@@ -250,7 +250,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, c)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
             break;
           }
@@ -262,7 +262,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           emit_token(token_t::make(pos, token_t::END_OF_FILE));
           go = false;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, c)));
+          emit_token(token_t::make(pos, token_t::CHARACTER));
           pop();
         }
         break;
@@ -286,7 +286,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '\0': {
             emit_parse_error("eof-before-tag-name");
             std::string less_than_text(1, '<');
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::move(less_than_text)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             emit_token(token_t::make(pos, token_t::END_OF_FILE));
             go = false;
             break;
@@ -295,11 +295,11 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             if (isalpha(c)) {
               state = tag_name;
               reset_tag_name_buffer();
-              current_token = token_t::make(anchor_pos, token_t::START_TAG);
+              current_token = std::make_shared<tag_t>(anchor_pos);
             } else {
               emit_parse_error("invalid-first-character-of-tag-name");
               std::string less_than_text(1, '<');
-              emit_token(token_t::make(pos, token_t::CHARACTER, std::move(less_than_text)));
+              emit_token(token_t::make(pos, token_t::CHARACTER));
             }
             break;
           }
@@ -316,9 +316,9 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             std::string char_text(1, '<');
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::move(char_text)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             std::string char_solidus(1, '\\');
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::move(char_solidus)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             emit_token(token_t::make(pos, token_t::END_OF_FILE));
             emit_parse_error("eof-before-tag-name");
             break;
@@ -326,7 +326,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           default: {
             if (isalpha(c)) {
               reset_tag_name_buffer();
-              current_token = token_t::make(anchor_pos, token_t::END_TAG);
+              temp_tag_token = std::make_shared<tag_t>(anchor_pos, true);
               state = tag_name;
             } else {
               emit_parse_error("invalid-first-character-of-tag-name");
@@ -353,7 +353,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '\0': {
             emit_parse_error("eof-in-tag");
             std::string replacement_text("\uFFFD");
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::move(replacement_text)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             break;
           }
           default: {
@@ -378,17 +378,17 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           pop();
           state = rcdata_end_tag_open;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, '<')));
+          emit_token(token_t::make(pos, token_t::CHARACTER));
           state = rcdata;
         }
         break;
       }
       case rcdata_end_tag_open: {
         if (isalpha(c)) {
-          current_token = token_t::make(pos, token_t::END_TAG);
+          temp_tag_token = std::make_shared<tag_t>(pos, true);
           state = rcdata_end_tag_name;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, '<')));
+          emit_token(token_t::make(pos, token_t::CHARACTER));
           state = rcdata;
         }
         break;
@@ -1107,15 +1107,15 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else if (isalpha(c)) {
-              current_token = token_t::make(pos, token_t::DOCTYPE);
+              temp_doctype_token = std::make_shared<doctype_t>(pos);
               if (isupper(c)) {
-                current_token->append_name(std::string(1, char(tolower(c))));
+                temp_doctype_token->append_doctype_name(char(tolower(c)));
               } else {
-                current_token->append_name(std::string(1, c));
+                temp_doctype_token->append_doctype_name(c);
               }
             } else {
-              current_token = token_t::make(pos, token_t::DOCTYPE);
-              current_token->append_name(std::string(1, c));
+              temp_doctype_token = std::make_shared<doctype_t>(pos);
+              temp_doctype_token->append_doctype_name(c);
             }
             break;
           }
@@ -1140,12 +1140,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           default: {
             if (isalpha(c)) {
               if (isupper(c)) {
-                current_token->append_name(std::string(1, char(tolower(c))));
+                temp_doctype_token->append_doctype_name(char(tolower(c)));
               } else {
-                current_token->append_name(std::string(1, c));
+                temp_doctype_token->append_doctype_name(c);
               }
             } else {
-              current_token->append_name(std::string(1, c));
+              temp_doctype_token->append_doctype_name(c);
             }
             break;
           }
@@ -1647,7 +1647,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, c)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
             break;
           }
@@ -1659,7 +1659,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           pop();
           state = cdata_section_end;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, ']')));
+          emit_token(token_t::make(pos, token_t::CHARACTER));
           state = cdata_section;
         }
         break;
@@ -1667,7 +1667,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
       case cdata_section_end: {
         switch (c) {
           case ']': {
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, ']')));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
             break;
           }
@@ -1677,8 +1677,8 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, ']')));
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::string(1, ']')));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
             state = cdata_section;
             break;
           }
@@ -1759,7 +1759,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             attribute_value_buffer << c;
           } else {
             std::string text(1, c);
-            emit_token(token_t::make(pos, token_t::CHARACTER, std::move(text)));
+            emit_token(token_t::make(pos, token_t::CHARACTER));
           }
         } else if (c == ';') {
           // This is an unknown-named-character-reference parse error. Reconsume in the

@@ -12,6 +12,11 @@
 #include "pos.h"
 #include "lookup_character_reference.h"
 
+#include "tokens/character.h"
+#include "tokens/comment.h"
+#include "tokens/doctype.h"
+#include "tokens/tag.h"
+
 namespace yourhtml {
 
 /* Convert source text into a vector of tokens. */
@@ -239,6 +244,12 @@ private:
 
   /* Is the current tag self closing? */
   bool current_tag_self_closing;
+
+  std::shared_ptr<doctype_t> temp_doctype_token;
+
+  std::shared_ptr<tag_t> temp_tag_token;
+
+  std::shared_ptr<comment_t> temp_comment_token;
 
 };  // lexer_t
 

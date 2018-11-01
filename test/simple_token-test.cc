@@ -36,3 +36,7 @@ FIXTURE(construction) {
   EXPECT_EQ(std::string(second_char.get_data()), std::string(")"));
   EXPECT_EQ(end_tag.get_tag_name(), std::string("html"));
 }
+
+int main(int argc, char *argv[]) {
+  return dj::lick::main(argc, argv);
+}

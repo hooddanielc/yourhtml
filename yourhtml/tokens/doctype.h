@@ -9,13 +9,21 @@ public:
 
   doctype_t(pos_t);
 
-  std::string get_doctype_name();
+  doctype_t(const doctype_t&) = default;
 
-  std::string get_public_identifier();
+  doctype_t(doctype_t&&) = default;
 
-  std::string get_system_identifier();
+  doctype_t& operator=(const doctype_t&) = default;
 
-  bool set_force_quirks(bool);
+  doctype_t& operator=(doctype_t&&) = default;
+
+  std::string get_doctype_name() const;
+
+  std::string get_public_identifier() const;
+
+  std::string get_system_identifier() const;
+
+  void set_force_quirks(bool);
 
   void set_doctype_name(const std::string &doctype_name_);
 
@@ -37,13 +45,17 @@ public:
 
   bool is_forcing_quirks();
 
-  bool is_missing_public_identifier();
+  bool is_missing_public_identifier() const;
 
-  bool is_missing_doctype_name();
+  bool is_missing_doctype_name() const;
 
-  bool is_missing_system_identifier();
+  bool is_missing_system_identifier() const;
 
   virtual ~doctype_t();
+
+  friend std::ostream &operator<<(std::ostream &strm, const doctype_t &that);
+
+  friend std::ostream &operator<<(std::ostream &strm, const doctype_t *that);
 
 private:
 

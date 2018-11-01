@@ -31,6 +31,14 @@ public:
   /* Cache the position and kind and set the text to the empty string. */
   token_t(const pos_t &pos, kind_t kind);
 
+  token_t(const token_t&) = default;
+
+  token_t(token_t&&) = default;
+
+  token_t& operator=(const token_t&) = default;
+
+  token_t& operator=(token_t&&) = default;
+
   static std::string get_desc(kind_t kind);
 
   kind_t get_kind() const;
@@ -45,6 +53,11 @@ public:
   static std::shared_ptr<token_t> make(const pos_t &pos, kind_t kind);
 
   virtual ~token_t();
+
+  template <typename as_t>
+  as_t get_as() {
+    return *(dynamic_cast<as_t*>(this));
+  }
 
 protected:
 

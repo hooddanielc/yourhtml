@@ -11,9 +11,19 @@ public:
 
   tag_t(const pos_t &pos, bool closing = false);
 
-  std::string get_tag_name();
+  tag_t(const tag_t&) = default;
 
-  bool is_self_closing();
+  tag_t(tag_t&&) = default;
+
+  tag_t& operator=(const tag_t&) = default;
+
+  tag_t& operator=(tag_t&&) = default;
+
+  std::string get_tag_name() const;
+
+  std::vector<std::pair<std::string, std::string>> get_attributes() const;
+
+  bool is_self_closing() const;
 
   void set_self_closing(bool self_closing_);
 
@@ -32,6 +42,10 @@ public:
   void start_new_attribute();
 
   virtual ~tag_t();
+
+  friend std::ostream &operator<<(std::ostream &strm, const tag_t &that);
+
+  friend std::ostream &operator<<(std::ostream &strm, const tag_t *that);
 
 private:
 

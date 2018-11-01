@@ -7,6 +7,8 @@ lexer_t::lexer_error_t::lexer_error_t(const lexer_t *lexer, const char *msg):
 
 lexer_t::lexer_error_t::~lexer_error_t() = default;
 
+lexer_t::~lexer_t() = default;
+
 void lexer_t::print_tokens(const std::vector<token_t> &tokens) {
   for (const auto &token: tokens) {
     std::cout << token << std::endl;
@@ -16,6 +18,92 @@ void lexer_t::print_tokens(const std::vector<token_t> &tokens) {
 void lexer_t::print_tokens(const std::vector<std::shared_ptr<token_t>> &tokens) {
   for (const auto &token: tokens) {
     std::cout << (*token) << std::endl;
+  }
+}
+
+std::string lexer_t::get_state_name(state_t state) {
+  switch (state) {
+    case idle: return "idle";
+    case data: return "data";
+    case rcdata: return "rcdata";
+    case rawtext: return "rawtext";
+    case script_data: return "script_data";
+    case plaintext: return "plaintext";
+    case tag_open: return "tag_open";
+    case end_tag_open: return "end_tag_open";
+    case tag_name: return "tag_name";
+    case rcdata_less_than_sign: return "rcdata_less_than_sign";
+    case rcdata_end_tag_open: return "rcdata_end_tag_open";
+    case rcdata_end_tag_name: return "rcdata_end_tag_name";
+    case rawtext_less_than_sign: return "rawtext_less_than_sign";
+    case rawtext_end_tag_open: return "rawtext_end_tag_open";
+    case rawtext_end_tag_name: return "rawtext_end_tag_name";
+    case script_data_less_than_sign: return "script_data_less_than_sign";
+    case script_data_end_tag_open: return "script_data_end_tag_open";
+    case script_data_end_tag_name: return "script_data_end_tag_name";
+    case script_data_escape_start: return "script_data_escape_start";
+    case script_data_escape_start_dash: return "script_data_escape_start_dash";
+    case script_data_escaped: return "script_data_escaped";
+    case script_data_escaped_dash: return "script_data_escaped_dash";
+    case script_data_escaped_dash_dash: return "script_data_escaped_dash_dash";
+    case script_data_escaped_less_than_sign: return "script_data_escaped_less_than_sign";
+    case script_data_escaped_end_tag_open: return "script_data_escaped_end_tag_open";
+    case script_data_escaped_end_tag_name: return "script_data_escaped_end_tag_name";
+    case script_data_double_escape_start: return "script_data_double_escape_start";
+    case script_data_double_escaped: return "script_data_double_escaped";
+    case script_data_double_escaped_dash: return "script_data_double_escaped_dash";
+    case script_data_double_escaped_dash_dash: return "script_data_double_escaped_dash_dash";
+    case script_data_double_escaped_less_than_sign: return "script_data_double_escaped_less_than_sign";
+    case script_data_double_escape_end: return "script_data_double_escape_end";
+    case before_attribute_name: return "before_attribute_name";
+    case attribute_name: return "attribute_name";
+    case after_attribute_name: return "after_attribute_name";
+    case before_attribute_value: return "before_attribute_value";
+    case attribute_value_double_quoted: return "attribute_value_double_quoted";
+    case attribute_value_single_quoted: return "attribute_value_single_quoted";
+    case attribute_value_unquoted: return "attribute_value_unquoted";
+    case after_attribute_value_quoted: return "after_attribute_value_quoted";
+    case self_closing_start_tag: return "self_closing_start_tag";
+    case bogus_comment: return "bogus_comment";
+    case markup_declaration_open: return "markup_declaration_open";
+    case comment_start: return "comment_start";
+    case comment_start_dash: return "comment_start_dash";
+    case comment: return "comment";
+    case comment_less_than_sign: return "comment_less_than_sign";
+    case comment_less_than_sign_bang: return "comment_less_than_sign_bang";
+    case comment_less_than_sign_bang_dash: return "comment_less_than_sign_bang_dash";
+    case comment_less_than_sign_bang_dash_dash: return "comment_less_than_sign_bang_dash_dash";
+    case comment_end_dash: return "comment_end_dash";
+    case comment_end: return "comment_end";
+    case comment_end_bang: return "comment_end_bang";
+    case doctype: return "doctype";
+    case before_doctype_name: return "before_doctype_name";
+    case doctype_name: return "doctype_name";
+    case after_doctype_name: return "after_doctype_name";
+    case after_doctype_public_keyword: return "after_doctype_public_keyword";
+    case before_doctype_public_identifier: return "before_doctype_public_identifier";
+    case doctype_public_identifier_double_quoted: return "doctype_public_identifier_double_quoted";
+    case doctype_public_identifier_single_quoted: return "doctype_public_identifier_single_quoted";
+    case after_doctype_public_identifier: return "after_doctype_public_identifier";
+    case between_doctype_public_and_system_identifiers: return "between_doctype_public_and_system_identifiers";
+    case after_doctype_system_keyword: return "after_doctype_system_keyword";
+    case before_doctype_system_identifier: return "before_doctype_system_identifier";
+    case doctype_system_identifier_double_quoted: return "doctype_system_identifier_double_quoted";
+    case doctype_system_identifier_single_quoted: return "doctype_system_identifier_single_quoted";
+    case after_doctype_system_identifier: return "after_doctype_system_identifier";
+    case bogus_doctype: return "bogus_doctype";
+    case cdata_section: return "cdata_section";
+    case cdata_section_bracket: return "cdata_section_bracket";
+    case cdata_section_end: return "cdata_section_end";
+    case character_reference: return "character_reference";
+    case named_character_reference: return "named_character_reference";
+    case ambiguous_ampersand: return "ambiguous_ampersand";
+    case numeric_character_reference: return "numeric_character_reference";
+    case hexadecimal_character_reference_start: return "hexadecimal_character_reference_start";
+    case decimal_character_reference_start: return "decimal_character_reference_start";
+    case hexadecimal_character_reference: return "hexadecimal_character_reference";
+    case decimal_character_reference: return "decimal_character_reference";
+    case numeric_character_reference_end: return "numeric_character_reference_end";
   }
 }
 
@@ -65,11 +153,6 @@ char lexer_t::pop() {
 
 void lexer_t::set_anchor() const {
   anchor_pos = pos;
-
-  if (anchor) {
-    throw ice_t(pos, __FILE__, __LINE__);
-  }
-
   anchor = cursor;
 }
 
@@ -84,13 +167,6 @@ std::string lexer_t::pop_anchor() {
   std::string text(anchor, static_cast<size_t>(cursor - anchor));
   anchor = nullptr;
   return text;
-}
-
-void lexer_t::add_single_token(token_t::kind_t kind) {
-  set_anchor();
-  pop();
-  pop_anchor();
-  tokens.push_back(token_t::make(anchor_pos, kind));
 }
 
 lexer_t::state_t lexer_t::pop_state() {
@@ -109,10 +185,10 @@ void lexer_t::push_state(state_t return_state_) {
   return_state = return_state_;
 }
 
-void lexer_t::emit_token(std::shared_ptr<token_t> token) {
-  // invoke a callback here for tree construction?
-  tokens.push_back(token);
-}
+// void lexer_t::emit_token(std::shared_ptr<token_t> token) {
+//   // invoke a callback here for tree construction?
+//   tokens.push_back(*token);
+// }
 
 void lexer_t::reset_temporary_buffer() {
   temporary_buffer.str("");
@@ -141,23 +217,45 @@ void lexer_t::flush_consumed_as_character_reference() {
   if (is_consuming_part_of_attribute()) {
     attribute_value_buffer << temporary_buffer.str();
   } else {
-    auto text = temporary_buffer.str();
-    emit_token(token_t::make(anchor_pos, token_t::CHARACTER));
+    auto text = temporary_buffer.str().c_str();
+    emit_token(character_t(anchor_pos, text));
   }
 }
 
 void lexer_t::emit_parse_error(const std::string &error) {
-  throw lexer_error_t(this, error.c_str());
+  this->on_parse_error(lexer_error_t(this, error.c_str()));
 }
 
 void lexer_t::set_current_tag_self_closing(bool current_tag_self_closing_) {
   current_tag_self_closing = current_tag_self_closing_;
 }
 
-std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
+void lexer_t::emit_token(const comment_t &token) {
+  this->on_comment(token);
+}
+
+void lexer_t::emit_token(const doctype_t &token) {
+  this->on_doctype(token);
+}
+
+void lexer_t::emit_token(const character_t &token) {
+  this->on_character(token);
+}
+
+void lexer_t::emit_token(const eof_t &token) {
+  this->on_eof(token);
+}
+
+void lexer_t::emit_token(const tag_t &token) {
+  this->on_tag(token);
+}
+
+void lexer_t::lex() {
   bool go = true;
   do {
     char c = peek();
+    // std::cout << "DEBUG: " << get_state_name(state) << " " << (!isspace(c) ? c : ' ') << std::endl;
+
     switch (state) {
       case idle: {
         throw ice_t(pos, __FILE__, __LINE__);
@@ -178,13 +276,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           case '\0': {
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            std::string char_text(1, c);
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
             pop();
             break;
           }
@@ -205,13 +302,13 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           case '\0': {
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER));
             pop();
+            emit_token(character_t(pos, c));
             break;
           }
         }
@@ -225,12 +322,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           case '\0': {
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
             pop();
             break;
           }
@@ -245,12 +342,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           case '\0': {
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
             pop();
             break;
           }
@@ -259,10 +356,10 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
       }
       case plaintext: {
         if (c == '\0') {
-          emit_token(token_t::make(pos, token_t::END_OF_FILE));
+          emit_token(eof_t(pos));
           go = false;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER));
+          emit_token(character_t(pos, c));
           pop();
         }
         break;
@@ -270,6 +367,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
       case tag_open: {
         switch (c) {
           case '!': {
+            pop();
             state = markup_declaration_open;
             break;
           }
@@ -286,8 +384,8 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '\0': {
             emit_parse_error("eof-before-tag-name");
             std::string less_than_text(1, '<');
-            emit_token(token_t::make(pos, token_t::CHARACTER));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(character_t(pos, c));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -295,11 +393,11 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             if (isalpha(c)) {
               state = tag_name;
               reset_tag_name_buffer();
-              current_token = std::make_shared<tag_t>(anchor_pos);
+              temp_tag_token = std::make_shared<tag_t>(anchor_pos);
             } else {
               emit_parse_error("invalid-first-character-of-tag-name");
               std::string less_than_text(1, '<');
-              emit_token(token_t::make(pos, token_t::CHARACTER));
+              emit_token(character_t(pos, c));
             }
             break;
           }
@@ -316,10 +414,10 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             std::string char_text(1, '<');
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
             std::string char_solidus(1, '\\');
-            emit_token(token_t::make(pos, token_t::CHARACTER));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(character_t(pos, c));
+            emit_token(eof_t(pos));
             emit_parse_error("eof-before-tag-name");
             break;
           }
@@ -347,13 +445,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            emit_token(stack_of_open_elements.back());
+            emit_token(*temp_tag_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-tag");
-            std::string replacement_text("\uFFFD");
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(eof_t(pos));
             break;
           }
           default: {
@@ -361,10 +458,11 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               state = before_attribute_name;
               pop();
             } else {
+              pop();
               if (isupper(c)) {
-                tag_name_buffer << tolower(c);
+                temp_tag_token->append_tag_name(char(tolower(c)));
               } else {
-                tag_name_buffer << c;
+                temp_tag_token->append_tag_name(c);
               }
             }
             break;
@@ -378,7 +476,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           pop();
           state = rcdata_end_tag_open;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER));
+          emit_token(character_t(pos, c));
           state = rcdata;
         }
         break;
@@ -388,7 +486,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           temp_tag_token = std::make_shared<tag_t>(pos, true);
           state = rcdata_end_tag_name;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER));
+          emit_token(character_t(pos, c));
           state = rcdata;
         }
         break;
@@ -537,14 +635,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            pop_anchor();
-            emit_token(current_token);
-            current_token = nullptr;
+            emit_token(*temp_tag_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-tag");
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -575,8 +671,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             emit_parse_error("missing-attribute-value");
             pop();
-            emit_token(current_token);
-            current_token = nullptr;
+            emit_token(*temp_tag_token);
             break;
           }
           default: {
@@ -630,7 +725,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-tag");
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -653,7 +748,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_tag_token);
             break;
           }
           case '"':
@@ -668,7 +763,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-tag");
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -694,12 +789,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_tag_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-tag");
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -720,12 +815,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '>': {
             set_current_tag_self_closing(true);
-            emit_token(current_token);
+            emit_token(*temp_tag_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-tag");
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -741,12 +836,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '>': {
             state = data;
-            emit_token(token_t::make(pos, token_t::COMMENT));
+            emit_token(comment_t(pos));
             break;
           }
           case '\0': {
-            emit_token(token_t::make(pos, token_t::COMMENT));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(comment_t(pos));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -866,7 +961,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             pop();
             emit_parse_error("abrupt-closing-of-empty-comment");
             state = data;
-            emit_token(token_t::make(pos, token_t::COMMENT));
+            emit_token(comment_t(pos));
             break;
           }
           default: {
@@ -887,13 +982,13 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             pop();
             emit_parse_error("abrupt-closing-of-empty-comment");
             state = data;
-            emit_token(token_t::make(pos, token_t::COMMENT));
+            emit_token(comment_t(pos));
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-comment");
-            emit_token(token_t::make(pos, token_t::COMMENT));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(comment_t(pos));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -918,8 +1013,8 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-comment");
-            emit_token(token_t::make(pos, token_t::COMMENT));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(comment_t(pos));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -990,8 +1085,8 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-comment");
-            emit_token(token_t::make(pos, token_t::COMMENT));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(comment_t(pos));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1007,7 +1102,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            emit_token(token_t::make(pos, token_t::COMMENT));
+            emit_token(comment_t(pos));
             break;
           }
           case '!': {
@@ -1021,8 +1116,8 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-comment");
-            emit_token(token_t::make(pos, token_t::COMMENT));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(comment_t(pos));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1045,13 +1140,13 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             pop();
             emit_parse_error("incorrectly-closed-comment");
             state = data;
-            emit_token(token_t::make(pos, token_t::COMMENT));
+            emit_token(comment_t(pos));
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-comment");
-            emit_token(token_t::make(pos, token_t::COMMENT));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(comment_t(pos));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1070,7 +1165,6 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            current_token = token_t::make(pos, token_t::DOCTYPE);
             go = false;
             break;
           }
@@ -1092,14 +1186,14 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             emit_parse_error("unexpected-null-character");
-            emit_token(token_t::make(pos, token_t::DOCTYPE));
+            emit_token(*temp_doctype_token);
             state = data;
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            emit_token(token_t::make(pos, token_t::DOCTYPE));
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1107,15 +1201,19 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else if (isalpha(c)) {
+              pop();
               temp_doctype_token = std::make_shared<doctype_t>(pos);
               if (isupper(c)) {
                 temp_doctype_token->append_doctype_name(char(tolower(c)));
               } else {
                 temp_doctype_token->append_doctype_name(c);
               }
+              state = doctype_name;
             } else {
+              pop();
               temp_doctype_token = std::make_shared<doctype_t>(pos);
               temp_doctype_token->append_doctype_name(c);
+              state = doctype_name;
             }
             break;
           }
@@ -1126,25 +1224,31 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '>': {
             pop();
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             state = data;
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            if (isalpha(c)) {
+            if (isspace(c)) {
+              pop();
+              state = after_doctype_name;
+            } else if (isalpha(c)) {
+              pop();
               if (isupper(c)) {
                 temp_doctype_token->append_doctype_name(char(tolower(c)));
               } else {
                 temp_doctype_token->append_doctype_name(c);
               }
             } else {
+              pop();
               temp_doctype_token->append_doctype_name(c);
             }
             break;
@@ -1158,6 +1262,11 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           case '\0': {
+            emit_parse_error("eof-in-doctype");
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
+            go = false;
             break;
           }
           default: {
@@ -1199,31 +1308,31 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '"': {
             emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            // TODO set doctypes token public identifier to empty string
+            temp_doctype_token->set_public_identifier("");
             pop();
             state = doctype_public_identifier_double_quoted;
             break;
           }
           case '\'': {
             emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            // TODO set doctypes token public identifier to empty string
+            temp_doctype_token->set_public_identifier("");
             state = doctype_public_identifier_single_quoted;
             pop();
             break;
           }
           case '>': {
             emit_parse_error("missing-doctype-public-identifier");
-            // TODO set doctypes token's force quirks mode flag to on
             pop();
             state = data;
-            emit_token(current_token);
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1233,7 +1342,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               state = before_doctype_public_identifier;
             } else {
               emit_parse_error("missing-quote-before-doctype-public-identifier");
-              // TODO set doctypes token's force quirks mode flag to on
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
             }
             break;
@@ -1245,31 +1354,31 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '"': {
             emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            // TODO set doctypes token public identifier to empty string
+            temp_doctype_token->set_public_identifier("");
             pop();
             state = doctype_public_identifier_double_quoted;
             break;
           }
           case '\'': {
             emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            // TODO set doctypes token public identifier to empty string
+            temp_doctype_token->set_public_identifier("");
             state = doctype_public_identifier_single_quoted;
             pop();
             break;
           }
           case '>': {
             emit_parse_error("missing-doctype-public-identifier");
-            // TODO set doctypes token's force quirks mode flag to on
+            temp_doctype_token->set_force_quirks(true);
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1278,7 +1387,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               pop();
             } else {
               emit_parse_error("missing-quote-before-doctype-public-identifier");
-              // TODO set doctypes token's force quirks mode flag to on
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
             }
             break;
@@ -1296,21 +1405,21 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             emit_parse_error("abrupt-doctype-public-identifier");
             pop();
-            // todo set force-quirks mod flag to on
+            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            // TODO append the current input character to the current doctype tokens public
+            temp_doctype_token->append_public_identifier(c);
             pop();
             break;
           }
@@ -1326,23 +1435,22 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '>': {
             emit_parse_error("abrupt-doctype-public-identifier");
-            // todo set doctypes force-quirks flag to one
+            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             pop();
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            // TODO append the current input character to the current DOCTYPE
-            // tokens public identifier
+            temp_doctype_token->append_public_identifier(c);
             pop();
             break;
           }
@@ -1354,12 +1462,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '"': {
             emit_parse_error("missing-whitespace-between-doctype-public-and-system-identifiers");
-            // TODO set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             pop();
             state = doctype_system_identifier_double_quoted;
             break;
@@ -1367,15 +1475,15 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '\'': {
             emit_parse_error("missing-whitespace-between-doctype-public-and-system-identifiers");
             pop();
-            // TODO set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             state = doctype_system_identifier_single_quoted;
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1385,7 +1493,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               state = between_doctype_public_and_system_identifiers;
             } else {
               emit_parse_error("missing-quote-before-doctype-system-identifier");
-              // TODO set doctypes token force-quirks mode flag to on
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
             }
             break;
@@ -1398,26 +1506,26 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '"': {
-            // TODO - set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             pop();
             state = doctype_system_identifier_double_quoted;
             break;
           }
           case '\'': {
-            // TODO - set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             pop();
             state = doctype_system_identifier_single_quoted;
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1426,7 +1534,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               pop();
             } else {
               emit_parse_error("missing-quote-before-doctype-system-identifier");
-              // TODO set doctypes token force-quirks mode flag to on
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
             }
             break;
@@ -1438,21 +1546,21 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '>': {
             emit_parse_error("missing-doctype-system-identifier");
-            // TODO - set doctypes token's force-quirks mode flag to on
+            temp_doctype_token->set_force_quirks(true);
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '"': {
-            // TODO - set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             emit_parse_error("missing-whitespace-after-doctype-system-keyword");
             pop();
             state = doctype_system_identifier_double_quoted;
             break;
           }
           case '\'': {
-            // TODO - set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             emit_parse_error("missing-whitespace-after-doctype-system-keyword");
             pop();
             state = doctype_system_identifier_single_quoted;
@@ -1460,9 +1568,9 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1472,7 +1580,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               state = before_doctype_system_identifier;
             } else {
               emit_parse_error("missing-quote-before-doctype-system-identifier");
-              // TODO set doctypes token force-quirks mode flag to on
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
             }
             break;
@@ -1484,29 +1592,29 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
         switch (c) {
           case '>': {
             emit_parse_error("missing-doctype-system-identifier");
-            // TODO - set doctypes token's force-quirks mode flag to on
+            temp_doctype_token->set_force_quirks(true);
             pop();
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '"': {
-            // TODO - set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             pop();
             state = doctype_system_identifier_double_quoted;
             break;
           }
           case '\'': {
-            // TODO - set doctypes token's system identifier to the empty string (not missing)
+            temp_doctype_token->set_system_identifier("");
             pop();
             state = doctype_system_identifier_single_quoted;
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1515,7 +1623,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
               pop();
             } else {
               emit_parse_error("missing-quote-before-doctype-system-identifier");
-              // TODO set doctypes token force-quirks mode flag to on
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
             }
             break;
@@ -1532,17 +1640,17 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '>': {
             emit_parse_error("abrupt-doctype-system-identifier");
-            // TODO set doctypes force-quirks mode flag to on
+            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             pop();
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1563,17 +1671,17 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '>': {
             emit_parse_error("abrupt-doctype-system-identifier");
-            // TODO set doctypes force-quirks mode flag to on
+            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             pop();
             break;
           }
           case '\0': {
             emit_parse_error("eof-in-doctype");
-            // TODO set doctypes token's force quirks mode flag to on
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1590,14 +1698,14 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             state = data;
             pop();
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '\0': {
-            // TODO set force quirks mode flag to on
+            temp_doctype_token->set_force_quirks(true);
             emit_parse_error("eof-in-doctype");
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1617,12 +1725,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           case '>': {
             state = data;
             pop();
-            emit_token(current_token);
+            emit_token(*temp_doctype_token);
             break;
           }
           case '\0': {
-            emit_token(current_token);
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
@@ -1642,12 +1750,12 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           }
           case '\0': {
             emit_parse_error("eof-in-cdata");
-            emit_token(token_t::make(pos, token_t::END_OF_FILE));
+            emit_token(eof_t(pos));
             go = false;
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
             pop();
             break;
           }
@@ -1659,7 +1767,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           pop();
           state = cdata_section_end;
         } else {
-          emit_token(token_t::make(pos, token_t::CHARACTER));
+          emit_token(character_t(pos, c));
           state = cdata_section;
         }
         break;
@@ -1667,7 +1775,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
       case cdata_section_end: {
         switch (c) {
           case ']': {
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
             pop();
             break;
           }
@@ -1677,8 +1785,8 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
             break;
           }
           default: {
-            emit_token(token_t::make(pos, token_t::CHARACTER));
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
+            emit_token(character_t(pos, c));
             state = cdata_section;
             break;
           }
@@ -1702,7 +1810,6 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           // Flush code points consumed as a character reference. Reconsume in the
           // return state.
           flush_consumed_as_character_reference();
-          pop_anchor();
           state = pop_state();
         }
         break;
@@ -1758,8 +1865,7 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
           if (is_consuming_part_of_attribute()) {
             attribute_value_buffer << c;
           } else {
-            std::string text(1, c);
-            emit_token(token_t::make(pos, token_t::CHARACTER));
+            emit_token(character_t(pos, c));
           }
         } else if (c == ';') {
           // This is an unknown-named-character-reference parse error. Reconsume in the
@@ -1882,7 +1988,6 @@ std::vector<std::shared_ptr<token_t>> lexer_t::lex() {
       }
     }
   } while (go);
-  return tokens;
 }
 
 }   // yourcss

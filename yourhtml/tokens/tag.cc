@@ -8,11 +8,11 @@ tag_t::tag_t(const pos_t &pos, bool closing):
 
 tag_t::~tag_t() = default;
 
-std::string tag_t::get_tag_name() {
+std::string tag_t::get_tag_name() const {
   return tag_name;
 }
 
-bool tag_t::is_self_closing() {
+bool tag_t::is_self_closing() const {
   return self_closing;
 }
 
@@ -46,6 +46,33 @@ void tag_t::append_tag_name(const std::string &text) {
 
 void tag_t::append_tag_name(char text) {
   tag_name += text;
+}
+
+std::vector<std::pair<std::string, std::string>> tag_t::get_attributes() const {
+  return attributes;
+}
+
+std::ostream &operator<<(std::ostream &strm, const tag_t &that) {
+  strm << that.pos << "; " << tag_t::get_desc(that.kind);
+  strm << "; <";
+  if (that.kind == token_t::END_TAG) {
+    strm << "/";
+  }
+  strm << that.get_tag_name();
+  for (const auto &attr: that.get_attributes()) {
+    strm << " " << std::get<0>(attr) << "=\"" << std::get<1>(attr) << "\"";
+  }
+  if (that.is_self_closing()) {
+    strm << "/>";
+  } else {
+    strm << ">";
+  }
+  return strm;
+}
+
+std::ostream &operator<<(std::ostream &strm, const tag_t *that) {
+  strm << *that;
+  return strm;
 }
 
 }

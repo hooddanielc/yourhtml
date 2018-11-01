@@ -16,11 +16,13 @@
 #include "tokens/comment.h"
 #include "tokens/doctype.h"
 #include "tokens/tag.h"
+#include "tokens/eof.h"
+
 
 namespace yourhtml {
 
 /* Convert source text into a vector of tokens. */
-class lexer_t final {
+class lexer_t {
 
 public:
 
@@ -120,7 +122,17 @@ public:
     numeric_character_reference_end,
   };
 
-  void emit_token(std::shared_ptr<token_t> token);
+  std::string get_state_name(state_t state);
+
+  void emit_token(const comment_t &token);
+
+  void emit_token(const doctype_t &token);
+
+  void emit_token(const character_t &token);
+
+  void emit_token(const eof_t &token);
+
+  void emit_token(const tag_t &token);
 
   void emit_parse_error(const std::string &);
 
@@ -133,11 +145,25 @@ public:
   /* Used by our public lex function. */
   lexer_t(const char *next_cursor);
 
+  virtual ~lexer_t();
+
   /* Used by our public lex function. */
-  std::vector<std::shared_ptr<token_t>> lex();
+  void lex();
 
   /* Set the string and position to be tokenized, and keep state */
   char reset_cursor(const char *next_);
+
+  virtual void on_comment(const comment_t &) {}
+
+  virtual void on_doctype(const doctype_t &) {}
+
+  virtual void on_character(const character_t &) {}
+
+  virtual void on_eof(const eof_t &) {}
+
+  virtual void on_tag(const tag_t &) {}
+
+  virtual void on_parse_error(const lexer_error_t &) {}
 
 private:
 
@@ -163,12 +189,6 @@ private:
   /* Return the lexeme starting from anchor, and set anchor to null */
   std::string pop_anchor();
 
-  /* Add a token at the current position, set anchor, advance 1 character
-     and reset anchor. Used for tokens using only one character that can
-     not be included in multi character tokens. ex. left_paren, right_paren
-     etc.*/
-  void add_single_token(token_t::kind_t kind);
-
   /* Reset the temporary buffer */
   void reset_temporary_buffer();
 
@@ -193,7 +213,7 @@ private:
   void set_current_tag_self_closing(bool);
 
   /* Temporarily holds tokens while lexing */
-  std::vector<std::shared_ptr<token_t>> tokens;
+  std::vector<token_t> tokens;
 
   /* Our next position within the source text. */
   mutable const char *next_cursor;

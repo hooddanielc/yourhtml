@@ -1,6 +1,8 @@
 yourhtml lexer
 =============
 
+[![Build Status](http://jenkins.havenofcode.com/buildStatus/icon?job=yourhtml/master)](http://jenkins.havenofcode.com/job/yourhtml/job/master/)
+
 A hand rolled lexer implemented as described in [HTML Living Standard](https://html.spec.whatwg.org/multipage/parsing.html#tokenization) Tokenization.
 
 ## Building

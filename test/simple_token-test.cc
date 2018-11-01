@@ -21,6 +21,7 @@ FIXTURE(construction) {
     token_t::CHARACTER,
     token_t::CHARACTER,
     token_t::END_TAG,
+    token_t::END_OF_FILE,
   }));
 
   auto doctype = fixture.get_token_as<doctype_t>(0);
@@ -29,13 +30,13 @@ FIXTURE(construction) {
   auto second_char = fixture.get_token_as<character_t>(3);
   auto end_tag = fixture.get_token_as<tag_t>(4);
 
-  // EXPECT_EQ(doctype.get_doctype_name(), std::string("asdf"));
-  // EXPECT_EQ(start_tag.get_tag_name(), std::string("html"));
-  // EXPECT_EQ(std::string(first_char.get_data()), std::string(":"));
-  // EXPECT_EQ(std::string(second_char.get_data()), std::string(")"));
-  // EXPECT_EQ(end_tag.get_tag_name(), std::string("html"));
+  EXPECT_EQ(doctype.get_doctype_name(), std::string("html"));
+  EXPECT_EQ(start_tag.get_tag_name(), std::string("html"));
+  EXPECT_EQ(std::string(first_char.get_data()), std::string(":"));
+  EXPECT_EQ(std::string(second_char.get_data()), std::string(")"));
+  EXPECT_EQ(end_tag.get_tag_name(), std::string("asdf"));
 }
 
-FIXTURE(someotherstuff) {
-  EXPECT_EQ(std::string("asdf"), std::string("asdf1"));
+int main(int argc, char *argv[]) {
+  return dj::lick::main(argc, argv);
 }

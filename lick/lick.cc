@@ -302,8 +302,10 @@ int main(int argc, char *argv[]) {
   );
   if (!stalled) {
     std::cerr << stalled.msg << std::endl;
+    std::cout << "WE ARE EXITING FAILURE" << std::endl;
     return EXIT_FAILURE;
   }
+  std::cout << "EXIT FAILURE? " << stalled.ret << std::endl;
   return stalled.ret ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 

@@ -34,7 +34,7 @@ FIXTURE(construction) {
   EXPECT_EQ(start_tag.get_tag_name(), std::string("html"));
   EXPECT_EQ(std::string(first_char.get_data()), std::string(":"));
   EXPECT_EQ(std::string(second_char.get_data()), std::string(")"));
-  EXPECT_EQ(end_tag.get_tag_name(), std::string("html"));
+  EXPECT_EQ(end_tag.get_tag_name(), std::string("asdf"));
 }
 
 int main(int argc, char *argv[]) {

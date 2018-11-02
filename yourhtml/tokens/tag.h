@@ -29,11 +29,11 @@ public:
 
   void append_attribute_name(const std::string &text);
 
-  void append_attribue_name(char text);
+  void append_attribute_name(char text);
 
-  void append_attribue_value(const std::string &text);
+  void append_attribute_value(const std::string &text);
 
-  void append_attribue_value(char text);
+  void append_attribute_value(char text);
 
   void append_tag_name(const std::string &text);
 

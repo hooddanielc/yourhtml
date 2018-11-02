@@ -396,8 +396,7 @@ void lexer_t::lex() {
               temp_tag_token = std::make_shared<tag_t>(anchor_pos);
             } else {
               emit_parse_error("invalid-first-character-of-tag-name");
-              std::string less_than_text(1, '<');
-              emit_token(character_t(pos, c));
+              emit_token(character_t(pos, '<'));
             }
             break;
           }
@@ -472,11 +471,11 @@ void lexer_t::lex() {
       }
       case rcdata_less_than_sign: {
         if (c == '/') {
-          reset_temporary_buffer();
           pop();
+          reset_temporary_buffer();
           state = rcdata_end_tag_open;
         } else {
-          emit_token(character_t(pos, c));
+          emit_token(character_t(pos, '<'));
           state = rcdata;
         }
         break;
@@ -492,66 +491,345 @@ void lexer_t::lex() {
         break;
       }
       case rcdata_end_tag_name: {
+        switch (c) {
+          case '/': {
+            // TODO - if the current end tag token is an appropriate end tag token, then switch
+            // to the before_attribute_name state. otherwise treat is as per the anything
+            // else entry below
+            break;
+          }
+          case '>': {
+            // TODO - if the current end tag token is an appropriate end tag token, then switch
+            // to the before_attribute_name state. otherwise treat is as per the anything
+            // else entry below
+            break;
+          }
+          default: {
+            if (isspace(c)) {
+              // TODO - if the current end tag token is an appropriate end tag token, then switch
+              // to the before_attribute_name state. otherwise treat is as per the anything
+              // else entry below
+            } else if (isalpha(c)) {
+              pop();
+              if (isupper(c)) {
+                temporary_buffer << char(tolower(c));
+              } else {
+                temporary_buffer << c;
+              }
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto c: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = rcdata;
+            }
+            break;
+          }
+        }
         break;
       }
       case rawtext_less_than_sign: {
+        if (c == '/') {
+          pop();
+          reset_temporary_buffer();
+          state = rawtext_end_tag_open;
+        } else {
+          emit_token(character_t(pos, '<'));
+          state = rawtext;
+        }
         break;
       }
       case rawtext_end_tag_open: {
+        if (isalpha(c)) {
+          temp_tag_token = std::make_shared<tag_t>(pos, c);
+          state = rawtext_end_tag_name;
+        } else {
+          emit_token(character_t(pos, '<'));
+          emit_token(character_t(pos, '/'));
+          state = rawtext;
+        }
         break;
       }
       case rawtext_end_tag_name: {
+        switch (c) {
+          case '/': {
+            // TODO If the current end tag token is an appropriate end tag token,
+            // then switch to the self_closing_start_tag state. Otherwise, treat
+            // it as per the "anything else" entry below.
+            break;
+          }
+          case '>': {
+            // TODO If the current end tag token is an appropriate end tag token,
+            // then switch to the self_closing_start_tag state. Otherwise, treat
+            // it as per the "anything else" entry below.
+            break;
+          }
+          default: {
+            if (isspace(c)) {
+              // TODO If the current end tag token is an appropriate end tag token,
+              // then switch to the self_closing_start_tag state. Otherwise, treat
+              // it as per the "anything else" entry below.
+            } else if (isalpha(c)) {
+              pop();
+              if (isupper(c)) {
+                temp_tag_token->append_tag_name(char(tolower(c)));
+                temporary_buffer << char(tolower(c));
+              } else {
+                temp_tag_token->append_tag_name(c);
+                temporary_buffer << c;
+              }
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = rawtext;
+            }
+            break;
+          }
+        }
         break;
       }
       case script_data_less_than_sign: {
+        switch (c) {
+          case '/': {
+            pop();
+            reset_temporary_buffer();
+            state = script_data_end_tag_open;
+            break;
+          }
+          case '!': {
+            pop();
+            state = script_data_escape_start;
+            emit_token(character_t(pos, '<'));
+            emit_token(character_t(pos, '!'));
+            break;
+          }
+          default: {
+            emit_token(character_t(pos, '<'));
+            state = script_data;
+          }
+        }
         break;
       }
       case script_data_end_tag_open: {
+        if (isalpha(c)) {
+          pop();
+          temp_tag_token = std::make_shared<tag_t>(pos, true);
+          state = script_data_end_tag_name;
+        } else {
+          emit_token(character_t(pos, '<'));
+          emit_token(character_t(pos, '/'));
+        }
         break;
       }
       case script_data_end_tag_name: {
+        switch (c) {
+          case '/': {
+            // TODO If the current end tag token is an appropriate end tag
+            // token, then switch to the self-closing start tag state. Otherwise,
+            // treat it as per the "anything else" entry below.
+            break;
+          }
+          case '>': {
+            // TODO If the current end tag token is an appropriate end tag token,
+            // then switch to the data state and emit the current tag token. Otherwise,
+            // treat it as per the "anything else" entry below.
+            break;
+          }
+          default: {
+            if (isspace(c)) {
+              // TODO If the current end tag token is an appropriate end tag token,
+              // then switch to the before attribute name state. Otherwise, treat
+              // it as per the "anything else" entry below.
+            } else if (isalpha(c)) {
+              pop();
+              if (isupper(c)) {
+                temp_tag_token->append_tag_name(char(tolower(c)));
+                temp_tag_token->append_tag_name(char(tolower(c)));
+              } else {
+                temp_tag_token->append_tag_name(c);
+                temp_tag_token->append_tag_name(c);
+              }
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = script_data;
+            }
+          }
+        }
         break;
       }
       case script_data_escape_start: {
+        if (c == '-') {
+          pop();
+          emit_token(character_t(pos, '-'));
+          state = script_data_escape_start_dash;
+        } else {
+          state = script_data;
+        }
         break;
       }
       case script_data_escape_start_dash: {
+        if (c == '-') {
+          pop();
+          state = script_data_escaped_dash_dash;
+          emit_token(character_t(pos, '-'));
+        } else {
+          state = script_data;
+        }
         break;
       }
       case script_data_escaped: {
+        switch (c) {
+          case '-': {
+            pop();
+            state = script_data_escaped_dash;
+            emit_token(character_t(pos, '-'));
+            break;
+          }
+          case '<': {
+            pop();
+            state = script_data_escaped_less_than_sign;
+            break;
+          }
+          case '\0': {
+            emit_parse_error("eof-in-script-html-comment-like-text");
+            emit_token(eof_t(pos));
+            go = false;
+            break;
+          }
+          default: {
+            pop();
+            emit_token(character_t(pos, c));
+          }
+        }
         break;
       }
       case script_data_escaped_dash: {
+        switch (c) {
+          case '-': {
+            pop();
+            state = script_data_escaped_dash_dash;
+            emit_token(character_t(pos, '-'));
+            break;
+          }
+          case '<': {
+            pop();
+            state = script_data_escaped_less_than_sign;
+            break;
+          }
+          case '\0': {
+            emit_parse_error("eof-in-script-html-comment-like-text");
+            emit_token(eof_t(pos));
+            break;
+          }
+          default: {
+            pop();
+            state = script_data_escaped;
+            emit_token(character_t(pos, c));
+            break;
+          }
+        }
         break;
       }
       case script_data_escaped_dash_dash: {
+        switch (c) {
+          case '-': {
+            pop();
+            emit_token(character_t(pos, '-'));
+            break;
+          }
+          case '<': {
+            pop();
+            emit_token(character_t(pos, '<'));
+            break;
+          }
+          case '>': {
+            pop();
+            emit_token(character_t(pos, '>'));
+            break;
+          }
+          case '\0': {
+            emit_parse_error("eof-in-script-html-comment-like-text");
+            emit_token(eof_t(pos));
+            break;
+          }
+          default: {
+            pop();
+            state = script_data_escaped;
+            emit_token(character_t(pos, c));
+            break;
+          }
+        }
         break;
       }
       case script_data_escaped_less_than_sign: {
+        switch (c) {
+          case '/': {
+            pop();
+            reset_temporary_buffer();
+            state = script_data_escaped_end_tag_open;
+            break;
+          }
+          default: {
+            if (isalpha(c)) {
+              reset_temporary_buffer();
+              emit_token(character_t(pos, '<'));
+              state = script_data_double_escape_start;
+            } else {
+              emit_token(character_t(pos, '<'));
+              state = script_data_escaped;
+            }
+          }
+        }
         break;
       }
       case script_data_escaped_end_tag_open: {
+        if (isalpha(c)) {
+          temp_tag_token = std::make_shared<tag_t>(pos, true);
+          state = script_data_escaped_end_tag_name;
+        } else {
+          emit_token(character_t(pos, '<'));
+          emit_token(character_t(pos, '/'));
+          state = script_data_escaped;
+        }
         break;
       }
       case script_data_escaped_end_tag_name: {
+        // TODO
         break;
       }
       case script_data_double_escape_start: {
+        // TODO
         break;
       }
       case script_data_double_escaped: {
+        // TODO
         break;
       }
       case script_data_double_escaped_dash: {
+        // TODO
         break;
       }
       case script_data_double_escaped_dash_dash: {
+        // TODO
         break;
       }
       case script_data_double_escaped_less_than_sign: {
+        // TODO
         break;
       }
       case script_data_double_escape_end: {
+        // TODO
         break;
       }
       case before_attribute_name: {
@@ -573,8 +851,7 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              auto current_char_text = std::string(1, c);
-              current_token_attributes.push_back(std::pair<std::string, std::string>({"", ""}));
+              temp_tag_token->start_new_attribute();
               state = attribute_name;
             }
             break;
@@ -607,14 +884,15 @@ void lexer_t::lex() {
             if (isspace(c)) {
               state = after_attribute_name;
             } else if (isalpha(c)) {
-              if (isupper(c)) {
-                std::get<0>(current_token_attributes.back()) += char(tolower(c));
-              } else {
-                std::get<0>(current_token_attributes.back()) += c;
-              }
               pop();
+              if (isupper(c)) {
+                temp_tag_token->append_attribute_name(char(tolower(c)));
+              } else {
+                temp_tag_token->append_attribute_name(c);
+              }
             } else {
-              std::get<0>(current_token_attributes.back()) += c;
+              pop();
+              temp_tag_token->append_attribute_name(c);
             }
           }
         }
@@ -648,7 +926,7 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              current_token_attributes.push_back(std::pair<std::string, std::string>({"", ""}));
+              temp_tag_token->start_new_attribute();
               state = attribute_name;
             }
             break;
@@ -703,7 +981,7 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            std::get<1>(current_token_attributes.back()) += c;
+            temp_tag_token->append_attribute_value(c);
             pop();
             break;
           }
@@ -730,7 +1008,7 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            std::get<1>(current_token_attributes.back()) += c;
+            temp_tag_token->append_attribute_value(c);
             pop();
             break;
           }
@@ -740,8 +1018,8 @@ void lexer_t::lex() {
       case attribute_value_unquoted: {
         switch (c) {
           case '&': {
-            push_state(attribute_value_unquoted);
             pop();
+            push_state(attribute_value_unquoted);
             state = character_reference;
             break;
           }
@@ -756,9 +1034,9 @@ void lexer_t::lex() {
           case '<':
           case '=':
           case '`': {
-            emit_parse_error("unexpected-character-in-unquoted-attribute-value");
-            std::get<1>(current_token_attributes.back()) += c;
             pop();
+            emit_parse_error("unexpected-character-in-unquoted-attribute-value");
+            temp_tag_token->append_attribute_value(c);
             break;
           }
           case '\0': {
@@ -769,10 +1047,11 @@ void lexer_t::lex() {
           }
           default: {
             if (isspace(c)) {
+              pop();
               state = before_attribute_name;
             } else {
-              std::get<1>(current_token_attributes.back()) += c;
               pop();
+              temp_tag_token->append_attribute_value(c);
             }
             break;
           }
@@ -814,8 +1093,10 @@ void lexer_t::lex() {
       case self_closing_start_tag: {
         switch (c) {
           case '>': {
-            set_current_tag_self_closing(true);
+            pop();
+            temp_tag_token->set_self_closing(true);
             emit_token(*temp_tag_token);
+            state = data;
             break;
           }
           case '\0': {
@@ -835,6 +1116,7 @@ void lexer_t::lex() {
       case bogus_comment: {
         switch (c) {
           case '>': {
+            pop();
             state = data;
             emit_token(comment_t(pos));
             break;
@@ -1106,8 +1388,8 @@ void lexer_t::lex() {
             break;
           }
           case '!': {
-            state = comment_end_bang;
             pop();
+            state = comment_end_bang;
             break;
           }
           case '-': {
@@ -1259,6 +1541,9 @@ void lexer_t::lex() {
       case after_doctype_name: {
         switch (c) {
           case '>': {
+            pop();
+            emit_token(*temp_doctype_token);
+            state = data;
             break;
           }
           case '\0': {
@@ -1289,10 +1574,8 @@ void lexer_t::lex() {
               }
               if (six_chars == "public") {
                 state = after_doctype_public_keyword;
-                pop();
               } else if (six_chars == "system") {
                 state = after_doctype_system_keyword;
-                pop();
               } else {
                 emit_parse_error("invalid-character-sequence-after-doctype-name");
                 reset_cursor(current_cursor);
@@ -1353,23 +1636,21 @@ void lexer_t::lex() {
       case before_doctype_public_identifier: {
         switch (c) {
           case '"': {
-            emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            temp_doctype_token->set_public_identifier("");
             pop();
+            temp_doctype_token->set_public_identifier("");
             state = doctype_public_identifier_double_quoted;
             break;
           }
           case '\'': {
-            emit_parse_error("missing-whitespace-after-doctype-public-keyword");
+            pop();
             temp_doctype_token->set_public_identifier("");
             state = doctype_public_identifier_single_quoted;
-            pop();
             break;
           }
           case '>': {
+            pop();
             emit_parse_error("missing-doctype-public-identifier");
             temp_doctype_token->set_force_quirks(true);
-            pop();
             state = data;
             emit_token(*temp_doctype_token);
             break;
@@ -1655,7 +1936,7 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            // TODO append current token to the token's system identifier
+            temp_doctype_token->append_system_identifier(c);
             pop();
             break;
           }
@@ -1686,7 +1967,7 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            // TODO append current token to the token's system identifier
+            temp_doctype_token->append_system_identifier(c);
             pop();
             break;
           }

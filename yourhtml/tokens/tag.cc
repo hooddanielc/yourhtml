@@ -24,15 +24,15 @@ void tag_t::append_attribute_name(const std::string &text) {
   std::get<0>(attributes.back()) += text;
 }
 
-void tag_t::append_attribue_name(char text) {
+void tag_t::append_attribute_name(char text) {
   std::get<0>(attributes.back()) += text;
 }
 
-void tag_t::append_attribue_value(const std::string &text) {
+void tag_t::append_attribute_value(const std::string &text) {
   std::get<1>(attributes.back()) += text;
 }
 
-void tag_t::append_attribue_value(char text) {
+void tag_t::append_attribute_value(char text) {
   std::get<1>(attributes.back()) += text;
 }
 

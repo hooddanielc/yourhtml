@@ -805,31 +805,228 @@ void lexer_t::lex() {
         break;
       }
       case script_data_escaped_end_tag_name: {
+        switch (c) {
+          case '/': {
+            // TODO
+            // If the current end tag token is an appropriate end tag token, then switch to
+            // the self-closing start tag state. Otherwise, treat it as per the "anything else"
+            // entry below.
+            break;
+          }
+          case '>': {
+            // TODO
+            // If the current end tag token is an appropriate end tag token, then switch to
+            // the data state and emit the current tag token. Otherwise, treat it as per the
+            // "anything else" entry below.
+            break;
+          }
+          default: {
+            if (isspace(c)) {
+              // TODO
+              // If the current end tag token is an appropriate end tag token, then switch
+              // to the before attribute name state. Otherwise, treat it as per the "anything else"
+              // entry below.
+            } else if (isalpha(c)) {
+              if (isupper(c)) {
+                temp_tag_token->append_tag_name(char(tolower(c)));
+              } else {
+                temp_tag_token->append_tag_name(c);
+              }
+            } else {
+              // TODO
+              // Emit a U+003C LESS-THAN SIGN character token, a U+002F SOLIDUS character token, and
+              // a character token for each of the characters in the temporary buffer (in the order
+              // they were added to the buffer). Reconsume in the script data escaped state.
+            }
+            break;
+          }
+        }
         // TODO
         break;
       }
       case script_data_double_escape_start: {
-        // TODO
+        switch (c) {
+          case '/':
+          case '>': {
+            // If the temporary buffer is the string "script", then switch to the script data double
+            // escaped state. Otherwise, switch to the script data escaped state. Emit the current
+            // input character as a character token.
+            auto str = temporary_buffer.str();
+            if (str == "script") {
+              pop();
+              state = script_data_double_escaped;
+            } else {
+              pop();
+              state = script_data_escaped;
+              emit_token(character_t(pos, c));
+            }
+            break;
+          }
+          default: {
+            if (isspace(c)) {
+              // If the temporary buffer is the string "script", then switch to the script data double
+              // escaped state. Otherwise, switch to the script data escaped state. Emit the current
+              // input character as a character token.
+              auto str = temporary_buffer.str();
+              if (str == "script") {
+                pop();
+                state = script_data_double_escaped;
+              } else {
+                pop();
+                state = script_data_escaped;
+                emit_token(character_t(pos, c));
+              }
+            } else if (isalpha(c)) {
+              if (isupper(c)) {
+                pop();
+                temporary_buffer << char(tolower(c));
+                emit_token(character_t(pos, c));
+              } else {
+                pop();
+                temporary_buffer << c;
+                emit_token(character_t(pos, c));
+              }
+            } else {
+              state = script_data_escaped;
+            }
+          }
+        }
         break;
       }
       case script_data_double_escaped: {
-        // TODO
+        switch (c) {
+          case '-': {
+            pop();
+            state = script_data_double_escaped_dash;
+            emit_token(character_t(pos, c));
+            break;
+          }
+          case '<': {
+            pop();
+            state = script_data_double_escaped_less_than_sign;
+            emit_token(character_t(pos, c));
+            break;
+          }
+          case '\0': {
+            emit_parse_error("eof-in-script-html-comment-like-text");
+            emit_token(eof_t(pos));
+            go = false;
+            break;
+          }
+          default: {
+            pop();
+            emit_token(character_t(pos, c));
+            break;
+          }
+        }
         break;
       }
       case script_data_double_escaped_dash: {
-        // TODO
+        switch (c) {
+          case '-': {
+            pop();
+            state = script_data_double_escaped_dash_dash;
+            emit_token(character_t(pos, c));
+            break;
+          }
+          case '<': {
+            pop();
+            emit_token(character_t(pos, c));
+            state = script_data_double_escaped_less_than_sign;
+            break;
+          }
+          case '\0': {
+            emit_parse_error("eof-in-script-html-comment-like-text");
+            emit_token(eof_t(pos));
+            go = false;
+            break;
+          }
+          default: {
+            pop();
+            state = script_data_double_escaped;
+            emit_token(character_t(pos, c));
+            break;
+          }
+        }
         break;
       }
       case script_data_double_escaped_dash_dash: {
-        // TODO
+        switch (c) {
+          case '-': {
+            pop();
+            emit_token(character_t(pos, c));
+            break;
+          }
+          case '<': {
+            pop();
+            state = script_data_double_escaped_less_than_sign;
+            emit_token(character_t(pos, c));
+            break;
+          }
+          case '>': {
+            pop();
+            state = script_data;
+            emit_token(character_t(pos, c));
+            break;
+          }
+          case '\0': {
+            emit_parse_error("eof-in-script-html-comment-like-text");
+            emit_token(eof_t(pos));
+            go = false;
+            break;
+          }
+          default: {
+            pop();
+            state = script_data_double_escaped;
+            emit_token(character_t(pos, c));
+            break;
+          }
+        }
         break;
       }
       case script_data_double_escaped_less_than_sign: {
-        // TODO
+        if (c == '/') {
+          pop();
+          reset_temporary_buffer();
+          state = script_data_double_escape_end;
+          emit_token(character_t(pos, c));
+        } else {
+          state = script_data_double_escaped;
+        }
         break;
       }
       case script_data_double_escape_end: {
-        // TODO
+        switch (c) {
+          case '/':
+          case '>': {
+            auto str = temporary_buffer.str();
+            pop();
+            state = script_data_escaped;
+            if (str != "script") {
+              emit_token(character_t(pos, c));
+            }
+            break;
+          }
+          default: {
+            if (isspace(c)) {
+              auto str = temporary_buffer.str();
+              pop();
+              state = script_data_escaped;
+              if (str != "script") {
+                emit_token(character_t(pos, c));
+              }
+            } else if (isalpha(c)) {
+              if (isupper(c)) {
+                temporary_buffer << char(tolower(c));
+              } else {
+                temporary_buffer << c;
+              }
+              emit_token(character_t(pos, c));
+            } else {
+              state = script_data_double_escaped;
+            }
+          }
+        }
         break;
       }
       case before_attribute_name: {

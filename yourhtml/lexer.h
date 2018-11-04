@@ -195,6 +195,12 @@ private:
   /* Reset tag name buffer */
   void reset_tag_name_buffer();
 
+  /* Checks if current temp_tag_token is an appropriate end tag token whose tag
+     name matches the tag name of the last start tag to have been emitted from this
+     tokenizer, if any. If no start tag has been emitted from this tokenizer, then
+     no end tag token is appropriate. */
+  bool is_appropriate_end_tag();
+
   /* A character reference is said to be consumed as part of an attribute
      if the return state is either attribute value (double-quoted) state,
      attribute value (single-quoted) state or attribute value (unquoted)
@@ -270,6 +276,8 @@ private:
   std::shared_ptr<tag_t> temp_tag_token;
 
   std::shared_ptr<comment_t> temp_comment_token;
+
+  std::string last_start_tag_name;
 
 };  // lexer_t
 

@@ -279,6 +279,8 @@ private:
 
   std::string last_start_tag_name;
 
+  int temp_hex_reference_number;
+
 };  // lexer_t
 
 }   // yourcss

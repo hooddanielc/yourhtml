@@ -1,7 +1,13 @@
 #pragma once
+
+#include <string>
+#include <fstream>
+#include <streambuf>
 #include <yourhtml/lexer.h>
 
 namespace yourhtml {
+
+std::string read_file(const std::string &file_path);
 
 /**
  * All tokens except characters are appended to token type

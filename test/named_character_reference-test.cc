@@ -31,10 +31,6 @@ FIXTURE(simple) {
   auto second_char = fixture.get_token_as<character_t>(3);
   auto third_char = fixture.get_token_as<character_t>(4);
 
-  std::cout << first_char.get_data() << std::endl;
-  std::cout << second_char.get_data() << std::endl;
-  std::cout << third_char.get_data() << std::endl;
-
   std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
   EXPECT_EQ(std::string(first_char.get_data()), converter.to_bytes(160));
   EXPECT_EQ(std::string(second_char.get_data()), converter.to_bytes(8596));

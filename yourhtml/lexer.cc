@@ -247,7 +247,17 @@ void lexer_t::emit_token(const eof_t &token) {
 }
 
 void lexer_t::emit_token(const tag_t &token) {
+  if (token.get_kind() == token_t::START_TAG) {
+    last_start_tag_name = token.get_tag_name();
+  }
   this->on_tag(token);
+}
+
+bool lexer_t::is_appropriate_end_tag() {
+  return (
+    temp_tag_token->get_tag_name() == last_start_tag_name &&
+    temp_tag_token->get_kind() == token_t::END_TAG
+  );
 }
 
 void lexer_t::lex() {
@@ -493,29 +503,66 @@ void lexer_t::lex() {
       case rcdata_end_tag_name: {
         switch (c) {
           case '/': {
-            // TODO - if the current end tag token is an appropriate end tag token, then switch
-            // to the before_attribute_name state. otherwise treat is as per the anything
+            // If the current end tag token is an appropriate end tag token, then switch
+            // to the self_closing_start_tag state. otherwise treat is as per the anything
             // else entry below
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = self_closing_start_tag;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto c: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = rcdata;
+            }
             break;
           }
           case '>': {
-            // TODO - if the current end tag token is an appropriate end tag token, then switch
-            // to the before_attribute_name state. otherwise treat is as per the anything
+            // If the current end tag token is an appropriate end tag token, then switch
+            // to the data state. otherwise treat is as per the anything
             // else entry below
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = data;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto c: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = rcdata;
+            }
             break;
           }
           default: {
             if (isspace(c)) {
-              // TODO - if the current end tag token is an appropriate end tag token, then switch
+              // If the current end tag token is an appropriate end tag token, then switch
               // to the before_attribute_name state. otherwise treat is as per the anything
               // else entry below
+              if (is_appropriate_end_tag()) {
+                pop();
+                state = before_attribute_name;
+              } else {
+                emit_token(character_t(pos, '<'));
+                emit_token(character_t(pos, '/'));
+                auto str = temporary_buffer.str();
+                for (auto c: str) {
+                  emit_token(character_t(pos, c));
+                }
+                state = rcdata;
+              }
             } else if (isalpha(c)) {
               pop();
               if (isupper(c)) {
-                temporary_buffer << char(tolower(c));
+                temp_tag_token->append_tag_name(char(tolower(c)));
               } else {
-                temporary_buffer << c;
+                temp_tag_token->append_tag_name(c);
               }
+              temporary_buffer << c;
             } else {
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
@@ -555,31 +602,66 @@ void lexer_t::lex() {
       case rawtext_end_tag_name: {
         switch (c) {
           case '/': {
-            // TODO If the current end tag token is an appropriate end tag token,
+            // If the current end tag token is an appropriate end tag token,
             // then switch to the self_closing_start_tag state. Otherwise, treat
             // it as per the "anything else" entry below.
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = self_closing_start_tag;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = rawtext;
+            }
             break;
           }
           case '>': {
-            // TODO If the current end tag token is an appropriate end tag token,
-            // then switch to the self_closing_start_tag state. Otherwise, treat
+            // If the current end tag token is an appropriate end tag token,
+            // then switch to the data state. Otherwise, treat
             // it as per the "anything else" entry below.
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = data;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = rawtext;
+            }
             break;
           }
           default: {
             if (isspace(c)) {
-              // TODO If the current end tag token is an appropriate end tag token,
-              // then switch to the self_closing_start_tag state. Otherwise, treat
+              // If the current end tag token is an appropriate end tag token,
+              // then switch to the before_attribute_name state. Otherwise, treat
               // it as per the "anything else" entry below.
+              if (is_appropriate_end_tag()) {
+                pop();
+                state = before_attribute_name;
+              } else {
+                emit_token(character_t(pos, '<'));
+                emit_token(character_t(pos, '/'));
+                auto str = temporary_buffer.str();
+                for (auto character: str) {
+                  emit_token(character_t(pos, c));
+                }
+                state = rawtext;
+              }
             } else if (isalpha(c)) {
               pop();
               if (isupper(c)) {
                 temp_tag_token->append_tag_name(char(tolower(c)));
-                temporary_buffer << char(tolower(c));
               } else {
                 temp_tag_token->append_tag_name(c);
-                temporary_buffer << c;
               }
+              temporary_buffer << c;
             } else {
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
@@ -630,31 +712,66 @@ void lexer_t::lex() {
       case script_data_end_tag_name: {
         switch (c) {
           case '/': {
-            // TODO If the current end tag token is an appropriate end tag
-            // token, then switch to the self-closing start tag state. Otherwise,
-            // treat it as per the "anything else" entry below.
+            // If the current end tag token is an appropriate end tag token,
+            // then switch to the self_closing_start_tag state. Otherwise, treat
+            // it as per the "anything else" entry below.
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = self_closing_start_tag;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = script_data;
+            }
             break;
           }
           case '>': {
-            // TODO If the current end tag token is an appropriate end tag token,
+            // If the current end tag token is an appropriate end tag token,
             // then switch to the data state and emit the current tag token. Otherwise,
             // treat it as per the "anything else" entry below.
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = data;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = script_data;
+            }
             break;
           }
           default: {
             if (isspace(c)) {
-              // TODO If the current end tag token is an appropriate end tag token,
+              // If the current end tag token is an appropriate end tag token,
               // then switch to the before attribute name state. Otherwise, treat
               // it as per the "anything else" entry below.
+              if (is_appropriate_end_tag()) {
+                pop();
+                state = before_attribute_name;
+              } else {
+                emit_token(character_t(pos, '<'));
+                emit_token(character_t(pos, '/'));
+                auto str = temporary_buffer.str();
+                for (auto character: str) {
+                  emit_token(character_t(pos, c));
+                }
+                state = script_data;
+              }
             } else if (isalpha(c)) {
               pop();
               if (isupper(c)) {
                 temp_tag_token->append_tag_name(char(tolower(c)));
-                temp_tag_token->append_tag_name(char(tolower(c)));
               } else {
                 temp_tag_token->append_tag_name(c);
-                temp_tag_token->append_tag_name(c);
               }
+              temporary_buffer << c;
             } else {
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
@@ -807,41 +924,80 @@ void lexer_t::lex() {
       case script_data_escaped_end_tag_name: {
         switch (c) {
           case '/': {
-            // TODO
             // If the current end tag token is an appropriate end tag token, then switch to
             // the self-closing start tag state. Otherwise, treat it as per the "anything else"
             // entry below.
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = self_closing_start_tag;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = script_data_escaped;
+            }
             break;
           }
           case '>': {
-            // TODO
             // If the current end tag token is an appropriate end tag token, then switch to
             // the data state and emit the current tag token. Otherwise, treat it as per the
             // "anything else" entry below.
+            if (is_appropriate_end_tag()) {
+              pop();
+              state = data;
+            } else {
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = script_data_escaped;
+            }
             break;
           }
           default: {
             if (isspace(c)) {
-              // TODO
               // If the current end tag token is an appropriate end tag token, then switch
               // to the before attribute name state. Otherwise, treat it as per the "anything else"
               // entry below.
+              if (is_appropriate_end_tag()) {
+                pop();
+                state = before_attribute_name;
+              } else {
+                emit_token(character_t(pos, '<'));
+                emit_token(character_t(pos, '/'));
+                auto str = temporary_buffer.str();
+                for (auto character: str) {
+                  emit_token(character_t(pos, c));
+                }
+                state = script_data_escaped;
+              }
             } else if (isalpha(c)) {
               if (isupper(c)) {
                 temp_tag_token->append_tag_name(char(tolower(c)));
               } else {
                 temp_tag_token->append_tag_name(c);
               }
+              temporary_buffer << c;
             } else {
-              // TODO
               // Emit a U+003C LESS-THAN SIGN character token, a U+002F SOLIDUS character token, and
               // a character token for each of the characters in the temporary buffer (in the order
               // they were added to the buffer). Reconsume in the script data escaped state.
+              emit_token(character_t(pos, '<'));
+              emit_token(character_t(pos, '/'));
+              auto str = temporary_buffer.str();
+              for (auto character: str) {
+                emit_token(character_t(pos, c));
+              }
+              state = script_data_escaped;
             }
             break;
           }
         }
-        // TODO
         break;
       }
       case script_data_double_escape_start: {
@@ -877,15 +1033,13 @@ void lexer_t::lex() {
                 emit_token(character_t(pos, c));
               }
             } else if (isalpha(c)) {
+              pop();
               if (isupper(c)) {
-                pop();
-                temporary_buffer << char(tolower(c));
                 emit_token(character_t(pos, c));
               } else {
-                pop();
-                temporary_buffer << c;
                 emit_token(character_t(pos, c));
               }
+              temporary_buffer << c;
             } else {
               state = script_data_escaped;
             }
@@ -2274,6 +2428,7 @@ void lexer_t::lex() {
       case character_reference: {
         // Set the temporary buffer to the empty string. Append a U+0026 AMPERSAND (&)
         // character to the temporary buffer.
+        reset_temporary_buffer();
         temporary_buffer << '&';
         if (isalnum(c)) {
           // Reconsume in the named character reference state.

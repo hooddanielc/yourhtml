@@ -12,7 +12,7 @@ character_t::character_t(const pos_t &pos, const char *data_):
 
 character_t::~character_t() = default;
 
-const char *character_t::get_data() const {
+std::string character_t::get_data() const {
   return data;
 }
 

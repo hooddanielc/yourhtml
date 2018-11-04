@@ -18,7 +18,7 @@ public:
 
   virtual ~character_t();
 
-  const char *get_data() const;
+  std::string get_data() const;
 
   friend std::ostream &operator<<(std::ostream &strm, const character_t &that);
 
@@ -28,7 +28,7 @@ public:
 
 private:
 
-  mutable const char *data;
+  std::string data;
 
 };
 

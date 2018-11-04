@@ -21,8 +21,8 @@ void lexer_t::print_tokens(const std::vector<std::shared_ptr<token_t>> &tokens) 
   }
 }
 
-std::string lexer_t::get_state_name(state_t state) {
-  switch (state) {
+std::string lexer_t::get_state_name(state_t state_) {
+  switch (state_) {
     case idle: return "idle";
     case data: return "data";
     case rcdata: return "rcdata";
@@ -179,7 +179,7 @@ lexer_t::state_t lexer_t::pop_state() {
 }
 
 void lexer_t::push_state(state_t return_state_) {
-  if (return_state == idle) {
+  if (return_state != idle) {
     throw ice_t(pos, __FILE__, __LINE__);
   }
   return_state = return_state_;
@@ -513,8 +513,8 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
-              for (auto c: str) {
-                emit_token(character_t(pos, c));
+              for (auto character: str) {
+                emit_token(character_t(pos, character));
               }
               state = rcdata;
             }
@@ -531,8 +531,8 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
-              for (auto c: str) {
-                emit_token(character_t(pos, c));
+              for (auto character: str) {
+                emit_token(character_t(pos, character));
               }
               state = rcdata;
             }
@@ -550,8 +550,8 @@ void lexer_t::lex() {
                 emit_token(character_t(pos, '<'));
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
-                for (auto c: str) {
-                  emit_token(character_t(pos, c));
+                for (auto character: str) {
+                  emit_token(character_t(pos, character));
                 }
                 state = rcdata;
               }
@@ -567,8 +567,8 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
-              for (auto c: str) {
-                emit_token(character_t(pos, c));
+              for (auto character: str) {
+                emit_token(character_t(pos, character));
               }
               state = rcdata;
             }
@@ -613,7 +613,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = rawtext;
             }
@@ -631,7 +631,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = rawtext;
             }
@@ -650,7 +650,7 @@ void lexer_t::lex() {
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
-                  emit_token(character_t(pos, c));
+                  emit_token(character_t(pos, character));
                 }
                 state = rawtext;
               }
@@ -667,7 +667,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = rawtext;
             }
@@ -723,7 +723,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = script_data;
             }
@@ -741,7 +741,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = script_data;
             }
@@ -760,7 +760,7 @@ void lexer_t::lex() {
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
-                  emit_token(character_t(pos, c));
+                  emit_token(character_t(pos, character));
                 }
                 state = script_data;
               }
@@ -777,7 +777,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = script_data;
             }
@@ -935,7 +935,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = script_data_escaped;
             }
@@ -953,7 +953,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = script_data_escaped;
             }
@@ -972,7 +972,7 @@ void lexer_t::lex() {
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
-                  emit_token(character_t(pos, c));
+                  emit_token(character_t(pos, character));
                 }
                 state = script_data_escaped;
               }
@@ -991,7 +991,7 @@ void lexer_t::lex() {
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
-                emit_token(character_t(pos, c));
+                emit_token(character_t(pos, character));
               }
               state = script_data_escaped;
             }
@@ -2448,45 +2448,39 @@ void lexer_t::lex() {
         break;
       }
       case named_character_reference: {
-        // Consume the maximum number of characters possible, with the consumed characters
-        // matching one of the identifiers in the first column of the named character references
-        // table (in a case-sensitive manner). Append each character to the temporary buffer when
-        // it's consumed.
-        bool found_match = false;
-        std::string text;
-        while (!isspace(c) && c != ';' && !found_match) {
-          text = lookup_characters(temporary_buffer.str());
-          if (!text.empty()) {
+        // TODO - Generate a deterministric state table for properly handling
+        // named character references.
+        do {
+          if (!isspace(c) && c != '\0') {
+            // std::cout << "DEBUG named_character_reference " << c << std::endl;
             temporary_buffer << c;
-            found_match = true;
-          }
-          temporary_buffer << c;
-          pop();
-          c = peek();
-        }
-        if (!found_match) {
-          text = lookup_characters(temporary_buffer.str());
-          if (c == ';') {
-            pop();
-            c = peek();
-          }
-        }
-        if (!text.empty()) {
-          // found a match
-          if (c != ';' && is_consuming_part_of_attribute() && (c == '=' || isalpha(c))) {
-            // for historical reasons, flush cod points consumed as character reference
-            flush_consumed_as_character_reference();
-            state = pop_state();
-          } else {
-            if (c != ';') {
-              emit_parse_error("missing-semicolon-after-character-reference");
+            if (c == ';') {
+              pop();
+              c = peek();
+              break;
+            } else {
+              pop();
+              c = peek();
             }
-            flush_consumed_as_character_reference();
+          } else {
+            break;
           }
-        } else {
+        } while (true);
+
+        auto codepoints = lookup_characters(temporary_buffer.str());
+        if (codepoints.size()) {
+          // std::cout << "DEBUG: named_character_reference 'found match " << temporary_buffer.str() << "'" << std::endl;
+          reset_temporary_buffer();
+          // for (const auto &point: codepoints) {
+          //   std::cout << "DEBUG: named_character_reference 'codepoint " << point << "'" << std::endl;
+          // }
+          temporary_buffer << convert_codepoints_to_utf8(codepoints);
           flush_consumed_as_character_reference();
+          state = pop_state();
+        } else {
+          // std::cout << "DEBUG: named_character_reference 'no match " << temporary_buffer.str() << "'" << std::endl;
           state = ambiguous_ampersand;
-          pop();
+          flush_consumed_as_character_reference();
         }
         break;
       }

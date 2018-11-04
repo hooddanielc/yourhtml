@@ -113,7 +113,8 @@ lexer_t::lexer_t(const char *next_cursor_):
   anchor(nullptr),
   state(data),
   return_state(idle),
-  current_tag_self_closing(false) {}
+  current_tag_self_closing(false),
+  temp_hex_reference_number(0) {}
 
 char lexer_t::peek() const {
   if (!is_ready) {
@@ -185,11 +186,6 @@ void lexer_t::push_state(state_t return_state_) {
   return_state = return_state_;
 }
 
-// void lexer_t::emit_token(std::shared_ptr<token_t> token) {
-//   // invoke a callback here for tree construction?
-//   tokens.push_back(*token);
-// }
-
 void lexer_t::reset_temporary_buffer() {
   temporary_buffer.str("");
   temporary_buffer.clear();
@@ -215,7 +211,7 @@ bool lexer_t::is_consuming_part_of_attribute() {
 
 void lexer_t::flush_consumed_as_character_reference() {
   if (is_consuming_part_of_attribute()) {
-    attribute_value_buffer << temporary_buffer.str();
+    temp_tag_token->append_attribute_value(temporary_buffer.str());
   } else {
     auto text = temporary_buffer.str().c_str();
     emit_token(character_t(anchor_pos, text));
@@ -2506,7 +2502,7 @@ void lexer_t::lex() {
         break;
       }
       case numeric_character_reference: {
-        // TODO set character reference code to zero
+        temp_hex_reference_number = 0;
         switch (c) {
           case 'x':
           case 'X': {
@@ -2544,22 +2540,19 @@ void lexer_t::lex() {
       }
       case hexadecimal_character_reference: {
         if (isdigit(c)) {
-          // TODO
           // Multiply the character reference code by 16. Add a numeric version of
           // the current input character (subtract 0x0030 from the character's code
           // point) to the character reference code.
+          pop();
+          temp_hex_reference_number *= 16;
+          temp_hex_reference_number += (c - 0x0030);
         } else if (isxdigit(c)) {
-          if (isupper(c)) {
-            // TODO
-            // Multiply the character reference code by 16. Add a numeric version
-            // of the current input character as a hexadecimal digit (subtract
-            // 0x0037 from the character's code point) to the character reference code.
-          } else {
-            // TODO
-            // Multiply the character reference code by 16. Add a numeric version of
-            // the current input character as a hexadecimal digit (subtract 0x0057
-            // from the character's code point) to the character reference code.
-          }
+          // Multiply the character reference code by 16. Add a numeric version
+          // of the current input character as a hexadecimal digit (subtract
+          // 0x0037 from the character's code point) to the character reference code.
+          pop();
+          temp_hex_reference_number *= 16;
+          temp_hex_reference_number += (c - 0x0037);
         } else if (c == ';') {
           pop();
           state = numeric_character_reference_end;
@@ -2578,10 +2571,12 @@ void lexer_t::lex() {
           }
           default: {
             if (isdigit(c)) {
-              // TODO
               // Multiply the character reference code by 10. Add a numeric version of
               // the current input character (subtract 0x0030 from the character's code
               // point) to the character reference code.
+              pop();
+              temp_hex_reference_number *= 10;
+              temp_hex_reference_number += (c - 0x0030);
             } else {
               emit_parse_error("missing-semicolon-after-character-reference");
               state = numeric_character_reference_end;
@@ -2591,24 +2586,150 @@ void lexer_t::lex() {
         break;
       }
       case numeric_character_reference_end: {
-        // TODO: Check the character reference code:
-
-        // If the number is 0x00, then this is a null-character-reference parse error.
-        // Set the character reference code to 0xFFFD.
-
-        // If the number is greater than 0x10FFFF, then this is a
-        // character-reference-outside-unicode-range parse error.
-        // Set the character reference code to 0xFFFD.
+        switch (temp_hex_reference_number) {
+          // If the number is 0x00, then this is a null-character-reference parse error.
+          // Set the character reference code to 0xFFFD.
+          case 0x00: {
+            emit_parse_error("null-character-reference");
+            break;
+          }
+          // If the number is a noncharacter, then this is a noncharacter-character-reference
+          // parse error. A noncharacter is a code point that is in the range U+FDD0 to U+FDEF,
+          // inclusive, or U+FFFE, U+FFFF, U+1FFFE, U+1FFFF, U+2FFFE, U+2FFFF, U+3FFFE, U+3FFFF,
+          // U+4FFFE, U+4FFFF, U+5FFFE, U+5FFFF, U+6FFFE, U+6FFFF, U+7FFFE, U+7FFFF, U+8FFFE,
+          // U+8FFFF, U+9FFFE, U+9FFFF, U+AFFFE, U+AFFFF, U+BFFFE, U+BFFFF, U+CFFFE, U+CFFFF,
+          // U+DFFFE, U+DFFFF, U+EFFFE, U+EFFFF, U+FFFFE, U+FFFFF, U+10FFFE, or U+10FFFF.
+          case 0xFFFE:
+          case 0xFFFF:
+          case 0x1FFFE:
+          case 0x1FFFF:
+          case 0x2FFFE:
+          case 0x2FFFF:
+          case 0x3FFFE:
+          case 0x3FFFF:
+          case 0x4FFFE:
+          case 0x4FFFF:
+          case 0x5FFFE:
+          case 0x5FFFF:
+          case 0x6FFFE:
+          case 0x6FFFF:
+          case 0x7FFFE:
+          case 0x7FFFF:
+          case 0x8FFFE:
+          case 0x8FFFF:
+          case 0x9FFFE:
+          case 0x9FFFF:
+          case 0xAFFFE:
+          case 0xAFFFF:
+          case 0xBFFFE:
+          case 0xBFFFF:
+          case 0xCFFFE:
+          case 0xCFFFF:
+          case 0xDFFFE:
+          case 0xDFFFF:
+          case 0xEFFFE:
+          case 0xEFFFF:
+          case 0xFFFFE:
+          case 0xFFFFF:
+          case 0x10FFFE:
+          case 0x10FFFF: {
+            emit_parse_error("noncharacter-character-reference");
+            break;
+          }
+          // If the number is 0x0D then this is a control-character-reference parse error
+          case 0x0D: {
+            emit_parse_error("control-character-reference");
+            break;
+          }
+        }
 
         // If the number is a surrogate, then this is a surrogate-character-reference
         // parse error. Set the character reference code to 0xFFFD.
+        if (temp_hex_reference_number >= 0xD800 && temp_hex_reference_number <= 0xDFFF) {
+          emit_parse_error("surrogate-character-reference");
+          temp_hex_reference_number = 0xFFFD;
+        }
+        // If the number is greater than 0x10FFFF, then this is a
+        // character-reference-outside-unicode-range parse error.
+        // Set the character reference code to 0xFFFD.
+        if (temp_hex_reference_number > 0x10FFFF) {
+          emit_parse_error("character-reference-outside-unicode-range parse");
+          temp_hex_reference_number = 0xFFFD;
+        }
+        // If a character is a noncharacter in the range U+FDD0 to U+FDEF,
+        // this is a noncharacter-character-reference parse error
+        if (temp_hex_reference_number >= 0xFDD0 && temp_hex_reference_number <= 0xFDEF) {
+          emit_parse_error("noncharacter-character-reference");
+        }
+        // If the number is a control that's not ASCII whitespace, then this is a
+        // control-character-refrence parse error. A control is a C0 control or a
+        // code point in the range U+007F DELETE to U+009F APPLICATION PROGRAM COMMAND,
+        // inclusive. A C0 control is a code point in the range U+0000 NULL to U+001F
+        // INFORMATION SEPARATOR ONE, inclusive. ASCII whitespace is U+0009 TAB,
+        // U+000A LF, U+000C FF, U+000D CR,
+        // or U+0020 SPACE.
+        if (
+          temp_hex_reference_number == 0x0D ||
+          (
+            temp_hex_reference_number >= 0x007F &&
+            temp_hex_reference_number <= 0x009F
+          ) ||
+          (
+            temp_hex_reference_number >= 0x00 &&
+            temp_hex_reference_number <= 0x001F
+          )
+        ) {
+          switch (temp_hex_reference_number) {
+            case 0x0009:
+            case 0x000A:
+            case 0x000C:
+            case 0x000D:
+            case 0x0020: {
+              break;
+            }
+            default: {
+              // If the number is one of the numbers in the first column of the following
+              // table, then find the row with that number in the first column, and set
+              // the character reference code to the number in the second column of that row.
+              switch (temp_hex_reference_number) {
+                case 0x80: temp_hex_reference_number = 0x20AC; break;
+                case 0x82: temp_hex_reference_number = 0x201A; break;
+                case 0x83: temp_hex_reference_number = 0x0192; break;
+                case 0x84: temp_hex_reference_number = 0x201E; break;
+                case 0x85: temp_hex_reference_number = 0x2026; break;
+                case 0x86: temp_hex_reference_number = 0x2020; break;
+                case 0x87: temp_hex_reference_number = 0x2021; break;
+                case 0x88: temp_hex_reference_number = 0x02C6; break;
+                case 0x89: temp_hex_reference_number = 0x2030; break;
+                case 0x8A: temp_hex_reference_number = 0x0160; break;
+                case 0x8B: temp_hex_reference_number = 0x2039; break;
+                case 0x8C: temp_hex_reference_number = 0x0152; break;
+                case 0x8E: temp_hex_reference_number = 0x017D; break;
+                case 0x91: temp_hex_reference_number = 0x2018; break;
+                case 0x92: temp_hex_reference_number = 0x2019; break;
+                case 0x93: temp_hex_reference_number = 0x201C; break;
+                case 0x94: temp_hex_reference_number = 0x201D; break;
+                case 0x95: temp_hex_reference_number = 0x2022; break;
+                case 0x96: temp_hex_reference_number = 0x2013; break;
+                case 0x97: temp_hex_reference_number = 0x2014; break;
+                case 0x98: temp_hex_reference_number = 0x02DC; break;
+                case 0x99: temp_hex_reference_number = 0x2122; break;
+                case 0x9A: temp_hex_reference_number = 0x0161; break;
+                case 0x9B: temp_hex_reference_number = 0x203A; break;
+                case 0x9C: temp_hex_reference_number = 0x0153; break;
+                case 0x9E: temp_hex_reference_number = 0x017E; break;
+                case 0x9F: temp_hex_reference_number = 0x0178; break;
+              }
+              emit_parse_error("control-character-reference");
+              break;
+            }
+          }
+          break;
+        }
 
-        // If the number is a noncharacter, then this is a noncharacter-character-reference
-        // parse error.
-
-        // If the number is 0x0D, or a control that's not ASCII whitespace, then this is a control-character-reference parse error. If the number is one of the numbers in the first column of the following table, then find the row with that number in the first column, and set the character reference code to the number in the second column of that row.
         reset_temporary_buffer();
-        temporary_buffer << "?";
+        std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
+        temporary_buffer << converter.to_bytes(temp_hex_reference_number);
         flush_consumed_as_character_reference();
         state = pop_state();
         break;

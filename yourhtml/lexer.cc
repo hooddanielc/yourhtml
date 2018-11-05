@@ -481,8 +481,8 @@ void lexer_t::lex() {
           reset_temporary_buffer();
           state = rcdata_end_tag_open;
         } else {
-          emit_token(character_t(pos, '<'));
           state = rcdata;
+          emit_token(character_t(pos, '<'));
         }
         break;
       }
@@ -491,8 +491,8 @@ void lexer_t::lex() {
           temp_tag_token = std::make_shared<tag_t>(pos, true);
           state = rcdata_end_tag_name;
         } else {
-          emit_token(character_t(pos, c));
           state = rcdata;
+          emit_token(character_t(pos, c));
         }
         break;
       }
@@ -503,16 +503,16 @@ void lexer_t::lex() {
             // to the self_closing_start_tag state. otherwise treat is as per the anything
             // else entry below
             if (is_appropriate_end_tag()) {
-              pop();
               state = self_closing_start_tag;
+              pop();
             } else {
+              state = rcdata;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = rcdata;
             }
             break;
           }
@@ -524,13 +524,13 @@ void lexer_t::lex() {
               pop();
               state = data;
             } else {
+              state = rcdata;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = rcdata;
             }
             break;
           }
@@ -540,16 +540,16 @@ void lexer_t::lex() {
               // to the before_attribute_name state. otherwise treat is as per the anything
               // else entry below
               if (is_appropriate_end_tag()) {
-                pop();
                 state = before_attribute_name;
+                pop();
               } else {
+                state = rcdata;
                 emit_token(character_t(pos, '<'));
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
                   emit_token(character_t(pos, character));
                 }
-                state = rcdata;
               }
             } else if (isalpha(c)) {
               pop();
@@ -560,13 +560,13 @@ void lexer_t::lex() {
               }
               temporary_buffer << c;
             } else {
+              state = rcdata;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = rcdata;
             }
             break;
           }
@@ -575,23 +575,23 @@ void lexer_t::lex() {
       }
       case rawtext_less_than_sign: {
         if (c == '/') {
+          state = rawtext_end_tag_open;
           pop();
           reset_temporary_buffer();
-          state = rawtext_end_tag_open;
         } else {
-          emit_token(character_t(pos, '<'));
           state = rawtext;
+          emit_token(character_t(pos, '<'));
         }
         break;
       }
       case rawtext_end_tag_open: {
         if (isalpha(c)) {
-          temp_tag_token = std::make_shared<tag_t>(pos, c);
           state = rawtext_end_tag_name;
+          temp_tag_token = std::make_shared<tag_t>(pos, c);
         } else {
+          state = rawtext;
           emit_token(character_t(pos, '<'));
           emit_token(character_t(pos, '/'));
-          state = rawtext;
         }
         break;
       }
@@ -602,16 +602,16 @@ void lexer_t::lex() {
             // then switch to the self_closing_start_tag state. Otherwise, treat
             // it as per the "anything else" entry below.
             if (is_appropriate_end_tag()) {
-              pop();
               state = self_closing_start_tag;
+              pop();
             } else {
+              state = rawtext;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = rawtext;
             }
             break;
           }
@@ -620,16 +620,16 @@ void lexer_t::lex() {
             // then switch to the data state. Otherwise, treat
             // it as per the "anything else" entry below.
             if (is_appropriate_end_tag()) {
-              pop();
               state = data;
+              pop();
             } else {
+              state = rawtext;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = rawtext;
             }
             break;
           }
@@ -639,16 +639,16 @@ void lexer_t::lex() {
               // then switch to the before_attribute_name state. Otherwise, treat
               // it as per the "anything else" entry below.
               if (is_appropriate_end_tag()) {
-                pop();
                 state = before_attribute_name;
+                pop();
               } else {
+                state = rawtext;
                 emit_token(character_t(pos, '<'));
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
                   emit_token(character_t(pos, character));
                 }
-                state = rawtext;
               }
             } else if (isalpha(c)) {
               pop();
@@ -659,13 +659,13 @@ void lexer_t::lex() {
               }
               temporary_buffer << c;
             } else {
+              state = rawtext;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = rawtext;
             }
             break;
           }
@@ -675,30 +675,30 @@ void lexer_t::lex() {
       case script_data_less_than_sign: {
         switch (c) {
           case '/': {
+            state = script_data_end_tag_open;
             pop();
             reset_temporary_buffer();
-            state = script_data_end_tag_open;
             break;
           }
           case '!': {
-            pop();
             state = script_data_escape_start;
+            pop();
             emit_token(character_t(pos, '<'));
             emit_token(character_t(pos, '!'));
             break;
           }
           default: {
-            emit_token(character_t(pos, '<'));
             state = script_data;
+            emit_token(character_t(pos, '<'));
           }
         }
         break;
       }
       case script_data_end_tag_open: {
         if (isalpha(c)) {
+          state = script_data_end_tag_name;
           pop();
           temp_tag_token = std::make_shared<tag_t>(pos, true);
-          state = script_data_end_tag_name;
         } else {
           emit_token(character_t(pos, '<'));
           emit_token(character_t(pos, '/'));
@@ -712,16 +712,16 @@ void lexer_t::lex() {
             // then switch to the self_closing_start_tag state. Otherwise, treat
             // it as per the "anything else" entry below.
             if (is_appropriate_end_tag()) {
-              pop();
               state = self_closing_start_tag;
+              pop();
             } else {
+              state = script_data;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = script_data;
             }
             break;
           }
@@ -730,16 +730,16 @@ void lexer_t::lex() {
             // then switch to the data state and emit the current tag token. Otherwise,
             // treat it as per the "anything else" entry below.
             if (is_appropriate_end_tag()) {
-              pop();
               state = data;
+              pop();
             } else {
+              state = script_data;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = script_data;
             }
             break;
           }
@@ -749,16 +749,16 @@ void lexer_t::lex() {
               // then switch to the before attribute name state. Otherwise, treat
               // it as per the "anything else" entry below.
               if (is_appropriate_end_tag()) {
-                pop();
                 state = before_attribute_name;
+                pop();
               } else {
+                state = script_data;
                 emit_token(character_t(pos, '<'));
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
                   emit_token(character_t(pos, character));
                 }
-                state = script_data;
               }
             } else if (isalpha(c)) {
               pop();
@@ -769,13 +769,13 @@ void lexer_t::lex() {
               }
               temporary_buffer << c;
             } else {
+              state = script_data;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = script_data;
             }
           }
         }
@@ -783,9 +783,9 @@ void lexer_t::lex() {
       }
       case script_data_escape_start: {
         if (c == '-') {
+          state = script_data_escape_start_dash;
           pop();
           emit_token(character_t(pos, '-'));
-          state = script_data_escape_start_dash;
         } else {
           state = script_data;
         }
@@ -793,8 +793,8 @@ void lexer_t::lex() {
       }
       case script_data_escape_start_dash: {
         if (c == '-') {
-          pop();
           state = script_data_escaped_dash_dash;
+          pop();
           emit_token(character_t(pos, '-'));
         } else {
           state = script_data;
@@ -804,14 +804,14 @@ void lexer_t::lex() {
       case script_data_escaped: {
         switch (c) {
           case '-': {
-            pop();
             state = script_data_escaped_dash;
+            pop();
             emit_token(character_t(pos, '-'));
             break;
           }
           case '<': {
-            pop();
             state = script_data_escaped_less_than_sign;
+            pop();
             break;
           }
           case '\0': {
@@ -830,14 +830,14 @@ void lexer_t::lex() {
       case script_data_escaped_dash: {
         switch (c) {
           case '-': {
-            pop();
             state = script_data_escaped_dash_dash;
+            pop();
             emit_token(character_t(pos, '-'));
             break;
           }
           case '<': {
-            pop();
             state = script_data_escaped_less_than_sign;
+            pop();
             break;
           }
           case '\0': {
@@ -846,8 +846,8 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            pop();
             state = script_data_escaped;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
@@ -877,8 +877,8 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            pop();
             state = script_data_escaped;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
@@ -888,19 +888,19 @@ void lexer_t::lex() {
       case script_data_escaped_less_than_sign: {
         switch (c) {
           case '/': {
+            state = script_data_escaped_end_tag_open;
             pop();
             reset_temporary_buffer();
-            state = script_data_escaped_end_tag_open;
             break;
           }
           default: {
             if (isalpha(c)) {
+              state = script_data_double_escape_start;
               reset_temporary_buffer();
               emit_token(character_t(pos, '<'));
-              state = script_data_double_escape_start;
             } else {
-              emit_token(character_t(pos, '<'));
               state = script_data_escaped;
+              emit_token(character_t(pos, '<'));
             }
           }
         }
@@ -908,12 +908,12 @@ void lexer_t::lex() {
       }
       case script_data_escaped_end_tag_open: {
         if (isalpha(c)) {
-          temp_tag_token = std::make_shared<tag_t>(pos, true);
           state = script_data_escaped_end_tag_name;
+          temp_tag_token = std::make_shared<tag_t>(pos, true);
         } else {
+          state = script_data_escaped;
           emit_token(character_t(pos, '<'));
           emit_token(character_t(pos, '/'));
-          state = script_data_escaped;
         }
         break;
       }
@@ -924,16 +924,16 @@ void lexer_t::lex() {
             // the self-closing start tag state. Otherwise, treat it as per the "anything else"
             // entry below.
             if (is_appropriate_end_tag()) {
-              pop();
               state = self_closing_start_tag;
+              pop();
             } else {
+              state = script_data_escaped;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = script_data_escaped;
             }
             break;
           }
@@ -942,16 +942,16 @@ void lexer_t::lex() {
             // the data state and emit the current tag token. Otherwise, treat it as per the
             // "anything else" entry below.
             if (is_appropriate_end_tag()) {
-              pop();
               state = data;
+              pop();
             } else {
+              state = script_data_escaped;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = script_data_escaped;
             }
             break;
           }
@@ -961,16 +961,16 @@ void lexer_t::lex() {
               // to the before attribute name state. Otherwise, treat it as per the "anything else"
               // entry below.
               if (is_appropriate_end_tag()) {
-                pop();
                 state = before_attribute_name;
+                pop();
               } else {
+                state = script_data_escaped;
                 emit_token(character_t(pos, '<'));
                 emit_token(character_t(pos, '/'));
                 auto str = temporary_buffer.str();
                 for (auto character: str) {
                   emit_token(character_t(pos, character));
                 }
-                state = script_data_escaped;
               }
             } else if (isalpha(c)) {
               if (isupper(c)) {
@@ -983,13 +983,13 @@ void lexer_t::lex() {
               // Emit a U+003C LESS-THAN SIGN character token, a U+002F SOLIDUS character token, and
               // a character token for each of the characters in the temporary buffer (in the order
               // they were added to the buffer). Reconsume in the script data escaped state.
+              state = script_data_escaped;
               emit_token(character_t(pos, '<'));
               emit_token(character_t(pos, '/'));
               auto str = temporary_buffer.str();
               for (auto character: str) {
                 emit_token(character_t(pos, character));
               }
-              state = script_data_escaped;
             }
             break;
           }
@@ -1005,11 +1005,11 @@ void lexer_t::lex() {
             // input character as a character token.
             auto str = temporary_buffer.str();
             if (str == "script") {
-              pop();
               state = script_data_double_escaped;
-            } else {
               pop();
+            } else {
               state = script_data_escaped;
+              pop();
               emit_token(character_t(pos, c));
             }
             break;
@@ -1021,11 +1021,11 @@ void lexer_t::lex() {
               // input character as a character token.
               auto str = temporary_buffer.str();
               if (str == "script") {
-                pop();
                 state = script_data_double_escaped;
-              } else {
                 pop();
+              } else {
                 state = script_data_escaped;
+                pop();
                 emit_token(character_t(pos, c));
               }
             } else if (isalpha(c)) {
@@ -1046,14 +1046,14 @@ void lexer_t::lex() {
       case script_data_double_escaped: {
         switch (c) {
           case '-': {
-            pop();
             state = script_data_double_escaped_dash;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
           case '<': {
-            pop();
             state = script_data_double_escaped_less_than_sign;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
@@ -1074,15 +1074,15 @@ void lexer_t::lex() {
       case script_data_double_escaped_dash: {
         switch (c) {
           case '-': {
-            pop();
             state = script_data_double_escaped_dash_dash;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
           case '<': {
+            state = script_data_double_escaped_less_than_sign;
             pop();
             emit_token(character_t(pos, c));
-            state = script_data_double_escaped_less_than_sign;
             break;
           }
           case '\0': {
@@ -1092,8 +1092,8 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            pop();
             state = script_data_double_escaped;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
@@ -1108,14 +1108,14 @@ void lexer_t::lex() {
             break;
           }
           case '<': {
-            pop();
             state = script_data_double_escaped_less_than_sign;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
           case '>': {
-            pop();
             state = script_data;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
@@ -1126,8 +1126,8 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            pop();
             state = script_data_double_escaped;
+            pop();
             emit_token(character_t(pos, c));
             break;
           }
@@ -1136,9 +1136,9 @@ void lexer_t::lex() {
       }
       case script_data_double_escaped_less_than_sign: {
         if (c == '/') {
+          state = script_data_double_escape_end;
           pop();
           reset_temporary_buffer();
-          state = script_data_double_escape_end;
           emit_token(character_t(pos, c));
         } else {
           state = script_data_double_escaped;
@@ -1149,9 +1149,9 @@ void lexer_t::lex() {
         switch (c) {
           case '/':
           case '>': {
+            state = script_data_escaped;
             auto str = temporary_buffer.str();
             pop();
-            state = script_data_escaped;
             if (str != "script") {
               emit_token(character_t(pos, c));
             }
@@ -1159,9 +1159,9 @@ void lexer_t::lex() {
           }
           default: {
             if (isspace(c)) {
+              state = script_data_escaped;
               auto str = temporary_buffer.str();
               pop();
-              state = script_data_escaped;
               if (str != "script") {
                 emit_token(character_t(pos, c));
               }
@@ -1188,9 +1188,9 @@ void lexer_t::lex() {
             break;
           }
           case '=': {
+            state = attribute_name;
             emit_parse_error("unexpected-equals-sign-before-attribute-name");
             current_token_attributes.push_back(std::pair<std::string, std::string>({"=", ""}));
-            state = attribute_name;
             pop();
             break;
           }
@@ -1198,8 +1198,8 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              temp_tag_token->start_new_attribute();
               state = attribute_name;
+              temp_tag_token->start_new_attribute();
             }
             break;
           }
@@ -1215,8 +1215,8 @@ void lexer_t::lex() {
             break;
           }
           case '=': {
-            pop();
             state = before_attribute_value;
+            pop();
             break;
           }
           case '"':
@@ -1248,18 +1248,18 @@ void lexer_t::lex() {
       case after_attribute_name: {
         switch (c) {
           case '/': {
-            pop();
             state = self_closing_start_tag;
+            pop();
             break;
           }
           case '=': {
-            pop();
             state = before_attribute_value;
+            pop();
             break;
           }
           case '>': {
-            pop();
             state = data;
+            pop();
             emit_token(*temp_tag_token);
             break;
           }
@@ -1273,8 +1273,8 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              temp_tag_token->start_new_attribute();
               state = attribute_name;
+              temp_tag_token->start_new_attribute();
             }
             break;
           }
@@ -1284,13 +1284,13 @@ void lexer_t::lex() {
       case before_attribute_value: {
         switch (c) {
           case '"': {
-            pop();
             state = attribute_value_double_quoted;
+            pop();
             break;
           }
           case '\'': {
-            pop();
             state = attribute_value_single_quoted;
+            pop();
             break;
           }
           case '>': {
@@ -1312,14 +1312,14 @@ void lexer_t::lex() {
       case attribute_value_double_quoted: {
         switch (c) {
           case '"': {
-            pop();
             state = after_attribute_value_quoted;
+            pop();
             break;
           }
           case '&': {
+            state = character_reference;
             push_state(attribute_value_double_quoted);
             pop();
-            state = character_reference;
             break;
           }
           case '\0': {
@@ -1338,14 +1338,14 @@ void lexer_t::lex() {
       case attribute_value_single_quoted: {
         switch (c) {
           case '\'': {
-            pop();
             state = after_attribute_value_quoted;
+            pop();
             break;
           }
           case '&': {
+            state = character_reference;
             push_state(attribute_value_single_quoted);
             pop();
-            state = character_reference;
             break;
           }
           case '\0': {
@@ -1365,14 +1365,14 @@ void lexer_t::lex() {
       case attribute_value_unquoted: {
         switch (c) {
           case '&': {
+            state = character_reference;
             pop();
             push_state(attribute_value_unquoted);
-            state = character_reference;
             break;
           }
           case '>': {
-            pop();
             state = data;
+            pop();
             emit_token(*temp_tag_token);
             break;
           }
@@ -1394,8 +1394,8 @@ void lexer_t::lex() {
           }
           default: {
             if (isspace(c)) {
-              pop();
               state = before_attribute_name;
+              pop();
             } else {
               pop();
               temp_tag_token->append_attribute_value(c);
@@ -1408,13 +1408,13 @@ void lexer_t::lex() {
       case after_attribute_value_quoted: {
         switch (c) {
           case '/': {
-            pop();
             state = self_closing_start_tag;
+            pop();
             break;
           }
           case '>': {
-            pop();
             state = data;
+            pop();
             emit_token(*temp_tag_token);
             break;
           }
@@ -1426,11 +1426,11 @@ void lexer_t::lex() {
           }
           default: {
             if (isspace(c)) {
+              state = before_attribute_name;
               pop();
-              state = before_attribute_name;
             } else {
-              emit_parse_error("missing-whitespace-between-attributes");
               state = before_attribute_name;
+              emit_parse_error("missing-whitespace-between-attributes");
             }
             break;
           }
@@ -1440,10 +1440,10 @@ void lexer_t::lex() {
       case self_closing_start_tag: {
         switch (c) {
           case '>': {
+            state = data;
             pop();
             temp_tag_token->set_self_closing(true);
             emit_token(*temp_tag_token);
-            state = data;
             break;
           }
           case '\0': {
@@ -1453,8 +1453,8 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            emit_parse_error("unexpected-solidus-in-tag");
             state = before_attribute_name;
+            emit_parse_error("unexpected-solidus-in-tag");
             break;
           }
         }
@@ -1463,8 +1463,8 @@ void lexer_t::lex() {
       case bogus_comment: {
         switch (c) {
           case '>': {
-            pop();
             state = data;
+            pop();
             emit_token(comment_t(pos));
             break;
           }
@@ -1488,13 +1488,13 @@ void lexer_t::lex() {
             pop();
             c = peek();
             if (c == '-') {
-              pop();
               state = comment_start;
+              pop();
               break;
             }
+            state = bogus_comment;
             reset_cursor(cursor_peek);
             c = peek();
-            state = bogus_comment;
             break;
           }
           case 'D':
@@ -1518,8 +1518,8 @@ void lexer_t::lex() {
                       pop();
                       c = peek();
                       if (c == 'e' || c == 'E') {
-                        pop();
                         state = doctype;
+                        pop();
                         break;
                       }
                     }
@@ -1527,9 +1527,9 @@ void lexer_t::lex() {
                 }
               }
             }
+            state = bogus_comment;
             reset_cursor(cursor_peek);
             c = peek();
-            state = bogus_comment;
             break;
           }
           case '[': {
@@ -1553,8 +1553,8 @@ void lexer_t::lex() {
                       c = peek();
                       if (c == '[') {
                         if (stack_of_open_elements.size() > 1) {
-                          emit_parse_error("cdata-in-html-content");
                           state = bogus_comment;
+                          emit_parse_error("cdata-in-html-content");
                         } else {
                           state = cdata_section;
                         }
@@ -1565,15 +1565,15 @@ void lexer_t::lex() {
                 }
               }
             }
+            state = bogus_comment;
             reset_cursor(cursor_peek);
             c = peek();
-            state = bogus_comment;
             break;
           }
           default: {
-            emit_parse_error("incorrectly-opened-comment");
-            reset_temporary_buffer();
             state = bogus_comment;
+            reset_temporary_buffer();
+            emit_parse_error("incorrectly-opened-comment");
             break;
           }
         }
@@ -1582,15 +1582,15 @@ void lexer_t::lex() {
       case comment_start: {
         switch (c) {
           case '-': {
-            pop();
             state = comment_start_dash;
+            pop();
             break;
           }
           case '>': {
-            pop();
-            emit_parse_error("abrupt-closing-of-empty-comment");
             state = data;
+            pop();
             emit_token(comment_t(pos));
+            emit_parse_error("abrupt-closing-of-empty-comment");
             break;
           }
           default: {
@@ -1603,21 +1603,21 @@ void lexer_t::lex() {
       case comment_start_dash: {
         switch (c) {
           case '-': {
-            pop();
             state = comment_end;
+            pop();
             break;
           }
           case '>': {
-            pop();
-            emit_parse_error("abrupt-closing-of-empty-comment");
             state = data;
+            pop();
             emit_token(comment_t(pos));
+            emit_parse_error("abrupt-closing-of-empty-comment");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-comment");
             emit_token(comment_t(pos));
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-comment");
             go = false;
             break;
           }
@@ -1766,10 +1766,10 @@ void lexer_t::lex() {
             break;
           }
           case '>': {
-            pop();
-            emit_parse_error("incorrectly-closed-comment");
             state = data;
+            pop();
             emit_token(comment_t(pos));
+            emit_parse_error("incorrectly-closed-comment");
             break;
           }
           case '\0': {
@@ -1802,8 +1802,8 @@ void lexer_t::lex() {
               pop();
               state = before_doctype_name;
             } else {
-              emit_parse_error("missing-whitespace-before-doctype-name");
               state = before_doctype_name;
+              emit_parse_error("missing-whitespace-before-doctype-name");
             }
             break;
           }
@@ -1813,10 +1813,10 @@ void lexer_t::lex() {
       case before_doctype_name: {
         switch (c) {
           case '>': {
-            pop();
-            emit_parse_error("unexpected-null-character");
-            emit_token(*temp_doctype_token);
             state = data;
+            pop();
+            emit_token(*temp_doctype_token);
+            emit_parse_error("unexpected-null-character");
             break;
           }
           case '\0': {
@@ -1830,6 +1830,7 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else if (isalpha(c)) {
+              state = doctype_name;
               pop();
               temp_doctype_token = std::make_shared<doctype_t>(pos);
               if (isupper(c)) {
@@ -1837,12 +1838,11 @@ void lexer_t::lex() {
               } else {
                 temp_doctype_token->append_doctype_name(c);
               }
-              state = doctype_name;
             } else {
+              state = doctype_name;
               pop();
               temp_doctype_token = std::make_shared<doctype_t>(pos);
               temp_doctype_token->append_doctype_name(c);
-              state = doctype_name;
             }
             break;
           }
@@ -1852,23 +1852,23 @@ void lexer_t::lex() {
       case doctype_name: {
         switch (c) {
           case '>': {
+            state = data;
             pop();
             emit_token(*temp_doctype_token);
-            state = data;
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
           default: {
             if (isspace(c)) {
-              pop();
               state = after_doctype_name;
+              pop();
             } else if (isalpha(c)) {
               pop();
               if (isupper(c)) {
@@ -1888,16 +1888,16 @@ void lexer_t::lex() {
       case after_doctype_name: {
         switch (c) {
           case '>': {
+            state = data;
             pop();
             emit_token(*temp_doctype_token);
-            state = data;
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -1924,9 +1924,9 @@ void lexer_t::lex() {
               } else if (six_chars == "system") {
                 state = after_doctype_system_keyword;
               } else {
-                emit_parse_error("invalid-character-sequence-after-doctype-name");
                 reset_cursor(current_cursor);
                 state = bogus_doctype;
+                emit_parse_error("invalid-character-sequence-after-doctype-name");
               }
             }
             break;
@@ -1937,43 +1937,43 @@ void lexer_t::lex() {
       case after_doctype_public_keyword: {
         switch (c) {
           case '"': {
-            emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            temp_doctype_token->set_public_identifier("");
-            pop();
             state = doctype_public_identifier_double_quoted;
+            pop();
+            temp_doctype_token->set_public_identifier("");
+            emit_parse_error("missing-whitespace-after-doctype-public-keyword");
             break;
           }
           case '\'': {
-            emit_parse_error("missing-whitespace-after-doctype-public-keyword");
-            temp_doctype_token->set_public_identifier("");
-            state = doctype_public_identifier_single_quoted;
             pop();
+            state = doctype_public_identifier_single_quoted;
+            temp_doctype_token->set_public_identifier("");
+            emit_parse_error("missing-whitespace-after-doctype-public-keyword");
             break;
           }
           case '>': {
-            emit_parse_error("missing-doctype-public-identifier");
-            pop();
             state = data;
+            pop();
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
+            emit_parse_error("missing-doctype-public-identifier");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
           default: {
             if (isspace(c)) {
-              pop();
               state = before_doctype_public_identifier;
+              pop();
             } else {
-              emit_parse_error("missing-quote-before-doctype-public-identifier");
-              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
+              temp_doctype_token->set_force_quirks(true);
+              emit_parse_error("missing-quote-before-doctype-public-identifier");
             }
             break;
           }
@@ -1983,30 +1983,30 @@ void lexer_t::lex() {
       case before_doctype_public_identifier: {
         switch (c) {
           case '"': {
+            state = doctype_public_identifier_double_quoted;
             pop();
             temp_doctype_token->set_public_identifier("");
-            state = doctype_public_identifier_double_quoted;
             break;
           }
           case '\'': {
+            state = doctype_public_identifier_single_quoted;
             pop();
             temp_doctype_token->set_public_identifier("");
-            state = doctype_public_identifier_single_quoted;
             break;
           }
           case '>': {
-            pop();
-            emit_parse_error("missing-doctype-public-identifier");
-            temp_doctype_token->set_force_quirks(true);
             state = data;
+            pop();
+            temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
+            emit_parse_error("missing-doctype-public-identifier");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2014,9 +2014,9 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              emit_parse_error("missing-quote-before-doctype-public-identifier");
-              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
+              temp_doctype_token->set_force_quirks(true);
+              emit_parse_error("missing-quote-before-doctype-public-identifier");
             }
             break;
           }
@@ -2026,23 +2026,23 @@ void lexer_t::lex() {
       case doctype_public_identifier_double_quoted: {
         switch (c) {
           case '"': {
-            pop();
             state = after_doctype_public_identifier;
+            pop();
             break;
           }
           case '>': {
-            emit_parse_error("abrupt-doctype-public-identifier");
+            state = data;
             pop();
             temp_doctype_token->set_force_quirks(true);
-            state = data;
             emit_token(*temp_doctype_token);
+            emit_parse_error("abrupt-doctype-public-identifier");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2057,23 +2057,23 @@ void lexer_t::lex() {
       case doctype_public_identifier_single_quoted: {
         switch (c) {
           case '\'': {
-            pop();
             state = after_doctype_public_identifier;
+            pop();
             break;
           }
           case '>': {
-            emit_parse_error("abrupt-doctype-public-identifier");
-            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(*temp_doctype_token);
             pop();
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_parse_error("abrupt-doctype-public-identifier");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2088,30 +2088,30 @@ void lexer_t::lex() {
       case after_doctype_public_identifier: {
         switch (c) {
           case '>': {
-            pop();
             state = data;
+            pop();
             emit_token(*temp_doctype_token);
             break;
           }
           case '"': {
-            emit_parse_error("missing-whitespace-between-doctype-public-and-system-identifiers");
-            temp_doctype_token->set_system_identifier("");
-            pop();
             state = doctype_system_identifier_double_quoted;
+            pop();
+            temp_doctype_token->set_system_identifier("");
+            emit_parse_error("missing-whitespace-between-doctype-public-and-system-identifiers");
             break;
           }
           case '\'': {
-            emit_parse_error("missing-whitespace-between-doctype-public-and-system-identifiers");
+            state = doctype_system_identifier_single_quoted;
             pop();
             temp_doctype_token->set_system_identifier("");
-            state = doctype_system_identifier_single_quoted;
+            emit_parse_error("missing-whitespace-between-doctype-public-and-system-identifiers");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2120,9 +2120,9 @@ void lexer_t::lex() {
               pop();
               state = between_doctype_public_and_system_identifiers;
             } else {
-              emit_parse_error("missing-quote-before-doctype-system-identifier");
               temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
+              emit_parse_error("missing-quote-before-doctype-system-identifier");
             }
             break;
           }
@@ -2132,28 +2132,28 @@ void lexer_t::lex() {
       case between_doctype_public_and_system_identifiers: {
         switch (c) {
           case '>': {
-            pop();
             state = data;
+            pop();
             emit_token(*temp_doctype_token);
             break;
           }
           case '"': {
+            state = doctype_system_identifier_double_quoted;
             temp_doctype_token->set_system_identifier("");
             pop();
-            state = doctype_system_identifier_double_quoted;
             break;
           }
           case '\'': {
-            temp_doctype_token->set_system_identifier("");
-            pop();
             state = doctype_system_identifier_single_quoted;
+            pop();
+            temp_doctype_token->set_system_identifier("");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2161,9 +2161,9 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              emit_parse_error("missing-quote-before-doctype-system-identifier");
-              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
+              temp_doctype_token->set_force_quirks(true);
+              emit_parse_error("missing-quote-before-doctype-system-identifier");
             }
             break;
           }
@@ -2173,25 +2173,25 @@ void lexer_t::lex() {
       case after_doctype_system_keyword: {
         switch (c) {
           case '>': {
-            emit_parse_error("missing-doctype-system-identifier");
-            temp_doctype_token->set_force_quirks(true);
-            pop();
             state = data;
+            pop();
+            temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
+            emit_parse_error("missing-doctype-system-identifier");
             break;
           }
           case '"': {
-            temp_doctype_token->set_system_identifier("");
-            emit_parse_error("missing-whitespace-after-doctype-system-keyword");
-            pop();
             state = doctype_system_identifier_double_quoted;
+            temp_doctype_token->set_system_identifier("");
+            pop();
+            emit_parse_error("missing-whitespace-after-doctype-system-keyword");
             break;
           }
           case '\'': {
+            state = doctype_system_identifier_single_quoted;
+            pop();
             temp_doctype_token->set_system_identifier("");
             emit_parse_error("missing-whitespace-after-doctype-system-keyword");
-            pop();
-            state = doctype_system_identifier_single_quoted;
             break;
           }
           case '\0': {
@@ -2204,12 +2204,12 @@ void lexer_t::lex() {
           }
           default: {
             if (isspace(c)) {
-              pop();
               state = before_doctype_system_identifier;
+              pop();
             } else {
-              emit_parse_error("missing-quote-before-doctype-system-identifier");
-              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
+              temp_doctype_token->set_force_quirks(true);
+              emit_parse_error("missing-quote-before-doctype-system-identifier");
             }
             break;
           }
@@ -2219,30 +2219,30 @@ void lexer_t::lex() {
       case before_doctype_system_identifier: {
         switch (c) {
           case '>': {
-            emit_parse_error("missing-doctype-system-identifier");
+            state = data;
             temp_doctype_token->set_force_quirks(true);
             pop();
-            state = data;
             emit_token(*temp_doctype_token);
+            emit_parse_error("missing-doctype-system-identifier");
             break;
           }
           case '"': {
-            temp_doctype_token->set_system_identifier("");
-            pop();
             state = doctype_system_identifier_double_quoted;
+            pop();
+            temp_doctype_token->set_system_identifier("");
             break;
           }
           case '\'': {
-            temp_doctype_token->set_system_identifier("");
-            pop();
             state = doctype_system_identifier_single_quoted;
+            pop();
+            temp_doctype_token->set_system_identifier("");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2250,9 +2250,9 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              emit_parse_error("missing-quote-before-doctype-system-identifier");
-              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
+              temp_doctype_token->set_force_quirks(true);
+              emit_parse_error("missing-quote-before-doctype-system-identifier");
             }
             break;
           }
@@ -2262,23 +2262,23 @@ void lexer_t::lex() {
       case doctype_system_identifier_double_quoted: {
         switch (c) {
           case '"': {
-            pop();
             state = after_doctype_system_identifier;
+            pop();
             break;
           }
           case '>': {
-            emit_parse_error("abrupt-doctype-system-identifier");
-            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(*temp_doctype_token);
             pop();
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_parse_error("abrupt-doctype-system-identifier");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
             temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
@@ -2293,16 +2293,16 @@ void lexer_t::lex() {
       case doctype_system_identifier_single_quoted: {
         switch (c) {
           case '\'': {
-            pop();
             state = after_doctype_system_identifier;
+            pop();
             break;
           }
           case '>': {
-            emit_parse_error("abrupt-doctype-system-identifier");
-            temp_doctype_token->set_force_quirks(true);
             state = data;
-            emit_token(*temp_doctype_token);
             pop();
+            temp_doctype_token->set_force_quirks(true);
+            emit_token(*temp_doctype_token);
+            emit_parse_error("abrupt-doctype-system-identifier");
             break;
           }
           case '\0': {
@@ -2330,8 +2330,8 @@ void lexer_t::lex() {
             break;
           }
           case '\0': {
-            temp_doctype_token->set_force_quirks(true);
             emit_parse_error("eof-in-doctype");
+            temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
             go = false;
@@ -2341,8 +2341,8 @@ void lexer_t::lex() {
             if (isspace(c)) {
               pop();
             } else {
-              emit_parse_error("unexpected-character-after-doctype-system-identifier");
               state = bogus_doctype;
+              emit_parse_error("unexpected-character-after-doctype-system-identifier");
             }
           }
         }
@@ -2377,14 +2377,14 @@ void lexer_t::lex() {
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-cdata");
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-cdata");
             go = false;
             break;
           }
           default: {
-            emit_token(character_t(pos, c));
             pop();
+            emit_token(character_t(pos, c));
             break;
           }
         }
@@ -2392,11 +2392,11 @@ void lexer_t::lex() {
       }
       case cdata_section_bracket: {
         if (c == ']') {
-          pop();
           state = cdata_section_end;
+          pop();
         } else {
-          emit_token(character_t(pos, c));
           state = cdata_section;
+          emit_token(character_t(pos, c));
         }
         break;
       }
@@ -2408,14 +2408,14 @@ void lexer_t::lex() {
             break;
           }
           case '>': {
-            pop();
             state = data;
+            pop();
             break;
           }
           default: {
-            emit_token(character_t(pos, c));
-            emit_token(character_t(pos, c));
             state = cdata_section;
+            emit_token(character_t(pos, c));
+            emit_token(character_t(pos, c));
             break;
           }
         }
@@ -2432,14 +2432,14 @@ void lexer_t::lex() {
         } else if (c == '#') {
           // Append the current input character to the temporary buffer. Switch to
           // the numeric character reference state.
+          state = numeric_character_reference;
           temporary_buffer << c;
           pop();
-          state = numeric_character_reference;
         } else {
           // Flush code points consumed as a character reference. Reconsume in the
           // return state.
-          flush_consumed_as_character_reference();
           state = pop_state();
+          flush_consumed_as_character_reference();
         }
         break;
       }
@@ -2465,6 +2465,7 @@ void lexer_t::lex() {
 
         auto codepoints = lookup_characters(temporary_buffer.str());
         if (codepoints.size()) {
+          state = pop_state();
           // std::cout << "DEBUG: named_character_reference 'found match " << temporary_buffer.str() << "'" << std::endl;
           reset_temporary_buffer();
           // for (const auto &point: codepoints) {
@@ -2472,10 +2473,9 @@ void lexer_t::lex() {
           // }
           temporary_buffer << convert_codepoints_to_utf8(codepoints);
           flush_consumed_as_character_reference();
-          state = pop_state();
         } else {
-          // std::cout << "DEBUG: named_character_reference 'no match " << temporary_buffer.str() << "'" << std::endl;
           state = ambiguous_ampersand;
+          // std::cout << "DEBUG: named_character_reference 'no match " << temporary_buffer.str() << "'" << std::endl;
           flush_consumed_as_character_reference();
         }
         break;
@@ -2493,8 +2493,8 @@ void lexer_t::lex() {
         } else if (c == ';') {
           // This is an unknown-named-character-reference parse error. Reconsume in the
           // return state.
-          emit_parse_error("unknown-named-character-reference-parse-error");
           state = pop_state();
+          emit_parse_error("unknown-named-character-reference-parse-error");
         } else {
           // Reconsume in the return state
           state = pop_state();
@@ -2506,8 +2506,8 @@ void lexer_t::lex() {
         switch (c) {
           case 'x':
           case 'X': {
-            temporary_buffer << c;
             state = hexadecimal_character_reference_start;
+            temporary_buffer << c;
             pop();
             break;
           }
@@ -2522,9 +2522,9 @@ void lexer_t::lex() {
         if (isxdigit(c)) {
           state = hexadecimal_character_reference;
         } else {
-          emit_parse_error("absense-of-digits-in-numeric-character-reference");
-          flush_consumed_as_character_reference();
           state = pop_state();
+          flush_consumed_as_character_reference();
+          emit_parse_error("absense-of-digits-in-numeric-character-reference");
         }
         break;
       }
@@ -2532,9 +2532,9 @@ void lexer_t::lex() {
         if (isdigit(c)) {
           state = decimal_character_reference;
         } else {
-          emit_parse_error("absense-of-digits-in-numeric-character-reference");
-          flush_consumed_as_character_reference();
           state = pop_state();
+          flush_consumed_as_character_reference();
+          emit_parse_error("absense-of-digits-in-numeric-character-reference");
         }
         break;
       }
@@ -2554,19 +2554,19 @@ void lexer_t::lex() {
           temp_hex_reference_number *= 16;
           temp_hex_reference_number += (c - 0x0037);
         } else if (c == ';') {
+          state = numeric_character_reference_end;
           pop();
-          state = numeric_character_reference_end;
         } else {
-          emit_parse_error("missing-semicolon-after-character-reference");
           state = numeric_character_reference_end;
+          emit_parse_error("missing-semicolon-after-character-reference");
         }
         break;
       }
       case decimal_character_reference: {
         switch (c) {
           case ';': {
-            pop();
             state = numeric_character_reference_end;
+            pop();
             break;
           }
           default: {
@@ -2578,14 +2578,15 @@ void lexer_t::lex() {
               temp_hex_reference_number *= 10;
               temp_hex_reference_number += (c - 0x0030);
             } else {
-              emit_parse_error("missing-semicolon-after-character-reference");
               state = numeric_character_reference_end;
+              emit_parse_error("missing-semicolon-after-character-reference");
             }
           }
         }
         break;
       }
       case numeric_character_reference_end: {
+        state = pop_state();
         switch (temp_hex_reference_number) {
           // If the number is 0x00, then this is a null-character-reference parse error.
           // Set the character reference code to 0xFFFD.
@@ -2731,7 +2732,6 @@ void lexer_t::lex() {
         std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
         temporary_buffer << converter.to_bytes(temp_hex_reference_number);
         flush_consumed_as_character_reference();
-        state = pop_state();
         break;
       }
     }

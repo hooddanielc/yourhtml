@@ -147,11 +147,24 @@ public:
 
   virtual ~lexer_t();
 
-  /* Used by our public lex function. */
+  /* Tell the lexer to start consuming input from the current cursor
+     until there is no more input or stopped by the user (TODO). When
+     modifying existing states, be careful where the change in state
+     is placed. It is important that the state is modified BEFORE
+     the token is emitted. Assigning state after emitting a token
+     will prevent the parser from delegating state, which is required
+     for all parser algorithm implementations as described in the
+     html standard. */
   void lex();
 
   /* Set the string and position to be tokenized, and keep state */
   char reset_cursor(const char *next_);
+
+  /* TODO prevent the parser from consuming more input */
+  void stop();
+
+  /* TODO resume parsing input from the curren cursor */
+  void resume();
 
   virtual void on_comment(const comment_t &) {}
 

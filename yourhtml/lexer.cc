@@ -114,7 +114,20 @@ lexer_t::lexer_t(const char *next_cursor_):
   state(data),
   return_state(idle),
   current_tag_self_closing(false),
-  temp_hex_reference_number(0) {}
+  temp_hex_reference_number(0),
+  go(true) {}
+
+void lexer_t::set_state(lexer_t::state_t state_) {
+  state = state_;
+}
+
+void lexer_t::stop() {
+  go = false;
+}
+
+void lexer_t::resume() {
+  go = true;
+}
 
 char lexer_t::peek() const {
   if (!is_ready) {
@@ -244,20 +257,22 @@ void lexer_t::emit_token(const eof_t &token) {
 
 void lexer_t::emit_token(const tag_t &token) {
   if (token.get_kind() == token_t::START_TAG) {
-    last_start_tag_name = token.get_tag_name();
+    open_tag_names.push_back(token.get_tag_name());
+  } else if (open_tag_names.size() > 0) {
+    open_tag_names.pop_back();
   }
   this->on_tag(token);
 }
 
 bool lexer_t::is_appropriate_end_tag() {
   return (
-    temp_tag_token->get_tag_name() == last_start_tag_name &&
+    open_tag_names.size() > 0 &&
+    temp_tag_token->get_tag_name() == open_tag_names.back() &&
     temp_tag_token->get_kind() == token_t::END_TAG
   );
 }
 
 void lexer_t::lex() {
-  bool go = true;
   do {
     char c = peek();
     // std::cout << "DEBUG: " << get_state_name(state) << " " << (!isspace(c) ? c : ' ') << std::endl;
@@ -523,6 +538,7 @@ void lexer_t::lex() {
             if (is_appropriate_end_tag()) {
               pop();
               state = data;
+              emit_token(*temp_tag_token);
             } else {
               state = rcdata;
               emit_token(character_t(pos, '<'));
@@ -587,7 +603,7 @@ void lexer_t::lex() {
       case rawtext_end_tag_open: {
         if (isalpha(c)) {
           state = rawtext_end_tag_name;
-          temp_tag_token = std::make_shared<tag_t>(pos, c);
+          temp_tag_token = std::make_shared<tag_t>(pos, true);
         } else {
           state = rawtext;
           emit_token(character_t(pos, '<'));
@@ -622,6 +638,7 @@ void lexer_t::lex() {
             if (is_appropriate_end_tag()) {
               state = data;
               pop();
+              emit_token(*temp_tag_token);
             } else {
               state = rawtext;
               emit_token(character_t(pos, '<'));
@@ -697,11 +714,11 @@ void lexer_t::lex() {
       case script_data_end_tag_open: {
         if (isalpha(c)) {
           state = script_data_end_tag_name;
-          pop();
           temp_tag_token = std::make_shared<tag_t>(pos, true);
         } else {
           emit_token(character_t(pos, '<'));
           emit_token(character_t(pos, '/'));
+          state = script_data;
         }
         break;
       }
@@ -732,6 +749,7 @@ void lexer_t::lex() {
             if (is_appropriate_end_tag()) {
               state = data;
               pop();
+              emit_token(*temp_tag_token);
             } else {
               state = script_data;
               emit_token(character_t(pos, '<'));
@@ -858,17 +876,19 @@ void lexer_t::lex() {
         switch (c) {
           case '-': {
             pop();
-            emit_token(character_t(pos, '-'));
+            emit_token(character_t(pos, c));
             break;
           }
           case '<': {
+            state = script_data_escaped_less_than_sign;
             pop();
-            emit_token(character_t(pos, '<'));
+            emit_token(character_t(pos, c));
             break;
           }
           case '>': {
+            state = script_data;
             pop();
-            emit_token(character_t(pos, '>'));
+            emit_token(character_t(pos, c));
             break;
           }
           case '\0': {
@@ -944,6 +964,7 @@ void lexer_t::lex() {
             if (is_appropriate_end_tag()) {
               state = data;
               pop();
+              emit_token(*temp_tag_token);
             } else {
               state = script_data_escaped;
               emit_token(character_t(pos, '<'));
@@ -973,6 +994,7 @@ void lexer_t::lex() {
                 }
               }
             } else if (isalpha(c)) {
+              pop();
               if (isupper(c)) {
                 temp_tag_token->append_tag_name(char(tolower(c)));
               } else {
@@ -1149,23 +1171,28 @@ void lexer_t::lex() {
         switch (c) {
           case '/':
           case '>': {
-            state = script_data_escaped;
             auto str = temporary_buffer.str();
-            pop();
-            if (str != "script") {
-              emit_token(character_t(pos, c));
+            if (str == "script") {
+              state = script_data_escaped;
+            } else {
+              state = script_data_double_escaped;
             }
+            pop();
+            emit_token(character_t(pos, c));
             break;
           }
           default: {
             if (isspace(c)) {
-              state = script_data_escaped;
               auto str = temporary_buffer.str();
-              pop();
-              if (str != "script") {
-                emit_token(character_t(pos, c));
+              if (str == "script") {
+                state = script_data_escaped;
+              } else {
+                state = script_data_double_escaped;
               }
+              pop();
+              emit_token(character_t(pos, c));
             } else if (isalpha(c)) {
+              pop();
               if (isupper(c)) {
                 temporary_buffer << char(tolower(c));
               } else {

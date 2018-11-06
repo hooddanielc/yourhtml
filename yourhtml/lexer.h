@@ -157,13 +157,17 @@ public:
      html standard. */
   void lex();
 
-  /* Set the string and position to be tokenized, and keep state */
+  /* Set next state the tokenizer should transition to in lex function */
+  void set_state(state_t state);
+
+  /* Set the string and position to be tokenized, and keep state. */
   char reset_cursor(const char *next_);
 
-  /* TODO prevent the parser from consuming more input */
+  /* Prevent lexer from consuming more input in lex function. */
   void stop();
 
-  /* TODO resume parsing input from the curren cursor */
+  /* Resume parsing input from the current cursor in next in lex function.
+     lex must be called if it has stopped. */
   void resume();
 
   virtual void on_comment(const comment_t &) {}
@@ -290,9 +294,11 @@ private:
 
   std::shared_ptr<comment_t> temp_comment_token;
 
-  std::string last_start_tag_name;
-
   int temp_hex_reference_number;
+
+  bool go;
+
+  std::vector<std::string> open_tag_names;
 
 };  // lexer_t
 

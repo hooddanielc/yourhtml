@@ -1,11 +1,11 @@
-#include <lick/lick.h>
+#include <gtest/gtest.h>
 #include <yourhtml/lexer.h>
 #include <yourhtml/token.h>
 #include "util.h"
 
 using namespace yourhtml;
 
-FIXTURE(open_and_close) {
+TEST(tag_test, open_and_close) {
   const char *src = R"(
     <p></p>
   )";
@@ -27,7 +27,7 @@ FIXTURE(open_and_close) {
   EXPECT_FALSE(end_tag.is_self_closing());
 }
 
-FIXTURE(uppercase) {
+TEST(tag_test, uppercase) {
   const char *src = R"(
     <DIV></DIV>
   )";
@@ -49,7 +49,7 @@ FIXTURE(uppercase) {
   EXPECT_FALSE(end_tag.is_self_closing());
 }
 
-FIXTURE(self_closing) {
+TEST(tag_test, self_closing) {
   const char *src = R"(
     <DIV/>
     <ImG />
@@ -77,7 +77,7 @@ FIXTURE(self_closing) {
   EXPECT_TRUE(three_tag.is_self_closing());
 }
 
-FIXTURE(self_closing_child) {
+TEST(tag_test, self_closing_child) {
   const char *src = R"(
     <div>
       <img src="http://google.com" />
@@ -103,8 +103,4 @@ FIXTURE(self_closing_child) {
   EXPECT_TRUE(two_tag.is_self_closing());
   EXPECT_EQ(three_tag.get_tag_name(), std::string("div"));
   EXPECT_FALSE(three_tag.is_self_closing());
-}
-
-int main(int argc, char *argv[]) {
-  return dj::lick::main(argc, argv);
 }

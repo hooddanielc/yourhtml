@@ -1,11 +1,11 @@
-#include <lick/lick.h>
+#include <gtest/gtest.h>
 #include <yourhtml/lexer.h>
 #include <yourhtml/token.h>
 #include "util.h"
 
 using namespace yourhtml;
 
-FIXTURE(construction) {
+TEST(simple_token_test, construction) {
   const char *src = R"(
     <!doctype html>
     <html>
@@ -35,8 +35,4 @@ FIXTURE(construction) {
   EXPECT_EQ(std::string(first_char.get_data()), std::string(":"));
   EXPECT_EQ(std::string(second_char.get_data()), std::string(")"));
   EXPECT_EQ(end_tag.get_tag_name(), std::string("html"));
-}
-
-int main(int argc, char *argv[]) {
-  return dj::lick::main(argc, argv);
 }

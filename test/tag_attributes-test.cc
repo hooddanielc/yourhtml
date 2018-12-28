@@ -1,11 +1,11 @@
-#include <lick/lick.h>
+#include <gtest/gtest.h>
 #include <yourhtml/lexer.h>
 #include <yourhtml/token.h>
 #include "util.h"
 
 using namespace yourhtml;
 
-FIXTURE(construction) {
+TEST(tag_attributes, construction) {
   const char *src = R"(
     <p style="thisisstylish">Hello :)</p>
   )";
@@ -52,7 +52,7 @@ FIXTURE(construction) {
   EXPECT_EQ(std::get<1>(attributes[0]), std::string("thisisstylish"));
 }
 
-FIXTURE(self_closing_attributes) {
+TEST(tag_attributes, self_closing_attributes) {
   const char *src = R"(
     <p style="thisisstylish"/>
   )";
@@ -75,7 +75,7 @@ FIXTURE(self_closing_attributes) {
   EXPECT_EQ(std::get<1>(attributes[0]), std::string("thisisstylish"));
 }
 
-FIXTURE(multiple_attributes) {
+TEST(tag_attributes, multiple_attributes) {
   const char *src = R"(
     <p one="one" two="two" three="three"/>
   )";
@@ -101,7 +101,7 @@ FIXTURE(multiple_attributes) {
   EXPECT_EQ(std::get<1>(attributes[2]), std::string("three"));
 }
 
-FIXTURE(weird_quotes_another_without) {
+TEST(tag_attributes, weird_quotes_another_without) {
   const char *src = R"(
     <p one='one' two=two three="three"></p>
     <div one= 'one' two= two three= "three"></p>
@@ -169,7 +169,7 @@ FIXTURE(weird_quotes_another_without) {
   EXPECT_EQ(std::get<1>(fourth_attributes[2]), std::string("three"));
 }
 
-FIXTURE(weird_casing) {
+TEST(tag_attributes, weird_casing) {
   const char *src = R"(
     <p ONE='one' TWO=two THREE="ThReE"></p>
     <div OnE= 'one' TwO= TwO ThreE= "three"></p>
@@ -208,8 +208,4 @@ FIXTURE(weird_casing) {
   EXPECT_EQ(std::get<1>(second_attributes[1]), std::string("TwO"));
   EXPECT_EQ(std::get<0>(second_attributes[2]), std::string("three"));
   EXPECT_EQ(std::get<1>(second_attributes[2]), std::string("three"));
-}
-
-int main(int argc, char *argv[]) {
-  return dj::lick::main(argc, argv);
 }

@@ -10,15 +10,20 @@ const char *error_t::what() const noexcept {
   return msg.c_str();
 }
 
-error_t::error_t(const pos_t &pos):
+error_t::error_t(const pos_t &pos_):
   strm(std::make_unique<std::ostringstream>()),
-  sep_needed(false) {
-  get_strm() << pos;
+  sep_needed(false),
+  pos(pos_) {
+  get_strm() << pos_;
   end_section();
 }
 
 void error_t::end_section() {
   sep_needed = true;
+}
+
+pos_t error_t::get_pos() {
+  return pos;
 }
 
 std::ostream &error_t::get_strm() const {

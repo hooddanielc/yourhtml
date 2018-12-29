@@ -3,9 +3,16 @@
 namespace yourhtml {
 
 lexer_t::lexer_error_t::lexer_error_t(const lexer_t *lexer, const char *msg):
-  error_t(lexer->pos) { get_strm() << msg; }
+  error_t(lexer->pos),
+  type(msg) {
+  get_strm() << msg;
+}
 
 lexer_t::lexer_error_t::~lexer_error_t() = default;
+
+std::string lexer_t::lexer_error_t::get_type() const {
+  return type;
+}
 
 lexer_t::~lexer_t() = default;
 
@@ -416,8 +423,9 @@ void lexer_t::lex() {
               reset_tag_name_buffer();
               temp_tag_token = std::make_shared<tag_t>(anchor_pos);
             } else {
-              emit_parse_error("invalid-first-character-of-tag-name");
+              state = data;
               emit_token(character_t(pos, '<'));
+              emit_parse_error("invalid-first-character-of-tag-name");
             }
             break;
           }
@@ -439,6 +447,7 @@ void lexer_t::lex() {
             emit_token(character_t(pos, c));
             emit_token(eof_t(pos));
             emit_parse_error("eof-before-tag-name");
+            go = false;
             break;
           }
           default: {
@@ -471,6 +480,7 @@ void lexer_t::lex() {
           case '\0': {
             emit_parse_error("eof-in-tag");
             emit_token(eof_t(pos));
+            go = false;
             break;
           }
           default: {
@@ -861,6 +871,7 @@ void lexer_t::lex() {
           case '\0': {
             emit_parse_error("eof-in-script-html-comment-like-text");
             emit_token(eof_t(pos));
+            go = false;
             break;
           }
           default: {
@@ -894,6 +905,7 @@ void lexer_t::lex() {
           case '\0': {
             emit_parse_error("eof-in-script-html-comment-like-text");
             emit_token(eof_t(pos));
+            go = false;
             break;
           }
           default: {
@@ -1820,6 +1832,9 @@ void lexer_t::lex() {
             break;
           }
           case '\0': {
+            temp_doctype_token = std::make_shared<doctype_t>(pos);
+            emit_token(*temp_doctype_token);
+            emit_token(eof_t(pos));
             emit_parse_error("eof-in-doctype");
             go = false;
             break;
@@ -1842,21 +1857,25 @@ void lexer_t::lex() {
           case '>': {
             state = data;
             pop();
+            temp_doctype_token = std::make_shared<doctype_t>(pos);
+            temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
-            emit_parse_error("unexpected-null-character");
+            emit_parse_error("missing-doctype-name");
             break;
           }
           case '\0': {
-            emit_parse_error("eof-in-doctype");
+            temp_doctype_token = std::make_shared<doctype_t>(pos);
+            temp_doctype_token->set_force_quirks(true);
             emit_token(*temp_doctype_token);
             emit_token(eof_t(pos));
+            emit_parse_error("eof-in-doctype");
             go = false;
             break;
           }
           default: {
             if (isspace(c)) {
               pop();
-            } else if (isalpha(c)) {
+            } else {
               state = doctype_name;
               pop();
               temp_doctype_token = std::make_shared<doctype_t>(pos);
@@ -1865,11 +1884,6 @@ void lexer_t::lex() {
               } else {
                 temp_doctype_token->append_doctype_name(c);
               }
-            } else {
-              state = doctype_name;
-              pop();
-              temp_doctype_token = std::make_shared<doctype_t>(pos);
-              temp_doctype_token->append_doctype_name(c);
             }
             break;
           }
@@ -1896,16 +1910,13 @@ void lexer_t::lex() {
             if (isspace(c)) {
               state = after_doctype_name;
               pop();
-            } else if (isalpha(c)) {
+            } else {
               pop();
               if (isupper(c)) {
                 temp_doctype_token->append_doctype_name(char(tolower(c)));
               } else {
                 temp_doctype_token->append_doctype_name(c);
               }
-            } else {
-              pop();
-              temp_doctype_token->append_doctype_name(c);
             }
             break;
           }
@@ -2757,7 +2768,7 @@ void lexer_t::lex() {
 
         reset_temporary_buffer();
         std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
-        temporary_buffer << converter.to_bytes(temp_hex_reference_number);
+        temporary_buffer << converter.to_bytes(static_cast<char32_t>(temp_hex_reference_number));
         flush_consumed_as_character_reference();
         break;
       }

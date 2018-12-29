@@ -27,10 +27,8 @@ void example_fragment_parser_t::on_doctype(const doctype_t &token) {
 }
 
 void example_fragment_parser_t::on_character(const character_t &token) {
-  if (!token.is_space()) {
-    token_types.push_back(token.get_kind());
-    tokens.push_back(std::make_shared<character_t>(token));
-  }
+  token_types.push_back(token.get_kind());
+  tokens.push_back(std::make_shared<character_t>(token));
 }
 
 void example_fragment_parser_t::on_eof(const eof_t &token) {

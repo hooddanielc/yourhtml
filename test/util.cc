@@ -26,4 +26,8 @@ std::string read_file(const std::string &relative_path) {
   return str;
 }
 
+void lexer_with_errors_t::on_parse_error(const lexer_error_t &error) {
+  error_types.push_back(error.get_type());
+}
+
 }

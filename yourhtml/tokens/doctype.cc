@@ -1,4 +1,5 @@
 #include <yourhtml/tokens/doctype.h>
+#include <iostream>
 
 namespace yourhtml {
 

@@ -31,6 +31,9 @@ protected:
      inehrit from us will use this in their constructors. */
   std::ostream &get_strm() const;
 
+  /* The position in source code when the error occurred */
+  pos_t get_pos();
+
 private:
 
   /* A string-builder we use to build our diagnostic message. */
@@ -42,6 +45,8 @@ private:
 
   /* Our diagnostic message. */
   mutable std::string msg;
+
+  pos_t pos;
 
 };  // error_t
 

@@ -36,6 +36,12 @@ public:
 
     virtual ~lexer_error_t();
 
+    std::string get_type() const;
+
+  private:
+
+    std::string type;
+
   };  // lexer_t::lexer_error_t
 
   enum state_t {

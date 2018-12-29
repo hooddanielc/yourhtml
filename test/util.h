@@ -97,4 +97,17 @@ public:
   }
 };
 
+
+class lexer_with_errors_t: public type_accumlator_t {
+
+public:
+
+  using type_accumlator_t::type_accumlator_t;
+
+  std::vector<std::string> error_types;
+
+  void on_parse_error(const lexer_error_t &error);
+
+};
+
 }

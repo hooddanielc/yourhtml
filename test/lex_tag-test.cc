@@ -104,3 +104,81 @@ TEST(tag_test, self_closing_child) {
   EXPECT_EQ(three_tag.get_tag_name(), std::string("div"));
   EXPECT_FALSE(three_tag.is_self_closing());
 }
+
+inline auto get_subject_with_errors(const char *src) {
+  auto subject = std::make_shared<lexer_with_errors_t>(src);
+  subject->lex();
+  return subject;
+}
+
+TEST(tag_test, tag_open_unexpected_question_mark_instead_of_tag_name_error) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <?head>
+  )");
+
+  EXPECT_EQ(subject->tokens[1]->get_kind(), token_t::kind_t::COMMENT);
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "unexpected-question-mark-instead-of-tag-name");
+}
+
+TEST(tag_test, tag_open_invalid_first_character) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <1thug>
+  )");
+
+  EXPECT_EQ(subject->tokens[1]->get_kind(), token_t::kind_t::CHARACTER);
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "invalid-first-character-of-tag-name");
+}
+
+TEST(tag_test, tag_open_eof_before_tag_name) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <)"
+  );
+
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "eof-before-tag-name");
+}
+
+TEST(tag_test, end_tag_open_missing_end_tag_name) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <bad> cool </> </bad>
+  )");
+
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "missing-end-tag-name");
+}
+
+TEST(tag_test, end_tag_open_eof_error) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <what></)"
+  );
+
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "eof-before-tag-name");
+}
+
+TEST(tag_test, end_tag_open_invalid_first_character_of_tag_name) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <what></1what>
+  )");
+
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "invalid-first-character-of-tag-name");
+}
+
+TEST(tag_test, tag_name_eof_in_tag_name) {
+  auto subject = get_subject_with_errors(R"(
+    <!doctype html>
+    <wha)"
+  );
+
+  EXPECT_EQ(subject->error_types.size(), size_t(1));
+  EXPECT_EQ(subject->error_types[0], "eof-in-tag");
+}

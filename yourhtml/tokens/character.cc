@@ -21,9 +21,7 @@ std::ostream &operator<<(std::ostream &strm, const character_t &that) {
 
   strm << "; \"";
   if (isspace(that.data[0])) {
-    switch (that.data[0]) {
-      strm << "<space>";
-    }
+    strm << "<space>";
   } else {
     strm << that.data;
   }

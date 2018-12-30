@@ -7,6 +7,10 @@ class character_t: public token_t {
 
 public:
 
+  character_t(const std::string &data_);
+
+  character_t(const char *data_);
+
   character_t(const pos_t &pos, char c);
 
   character_t(const pos_t &pos, const char *data_);

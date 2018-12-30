@@ -9,6 +9,8 @@ public:
 
   comment_t(const pos_t &pos);
 
+  comment_t();
+
   virtual ~comment_t();
 
   comment_t(const comment_t&) = default;

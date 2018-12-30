@@ -10,6 +10,13 @@ doctype_t::doctype_t(pos_t pos):
   doctype_name_missing(true),
   system_identifier_missing(true) {}
 
+doctype_t::doctype_t():
+  token_t(token_t::DOCTYPE),
+  force_quirks(false),
+  public_identifier_missing(true),
+  doctype_name_missing(true),
+  system_identifier_missing(true) {}
+
 
 doctype_t::~doctype_t() = default;
 

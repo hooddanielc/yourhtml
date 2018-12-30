@@ -22,7 +22,7 @@ void error_t::end_section() {
   sep_needed = true;
 }
 
-pos_t error_t::get_pos() {
+pos_t error_t::get_pos() const {
   return pos;
 }
 

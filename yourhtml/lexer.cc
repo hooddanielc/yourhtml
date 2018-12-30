@@ -269,6 +269,9 @@ void lexer_t::emit_token(const tag_t &token) {
     open_tag_names.pop_back();
   }
   this->on_tag(token);
+  if (token.get_kind() == token_t::END_TAG && token.get_num_attributes() > 0) {
+    emit_parse_error("end-tag-with-attributes");
+  }
 }
 
 bool lexer_t::is_appropriate_end_tag() {
@@ -282,7 +285,7 @@ bool lexer_t::is_appropriate_end_tag() {
 void lexer_t::lex() {
   do {
     char c = peek();
-    // std::cout << "DEBUG: " << get_state_name(state) << " " << (!isspace(c) ? c : ' ') << std::endl;
+    //std::cout << "DEBUG: " << get_state_name(state) << " " << (!isspace(c) ? c : ' ') << std::endl;
 
     switch (state) {
       case idle: {
@@ -2476,41 +2479,65 @@ void lexer_t::lex() {
         } else {
           // Flush code points consumed as a character reference. Reconsume in the
           // return state.
-          state = pop_state();
           flush_consumed_as_character_reference();
+          state = pop_state();
         }
         break;
       }
       case named_character_reference: {
         // TODO - Generate a deterministric state table for properly handling
         // named character references.
+        std::vector<unsigned int> last_lookup;
         do {
           if (!isspace(c) && c != '\0') {
             // std::cout << "DEBUG named_character_reference " << c << std::endl;
             temporary_buffer << c;
-            if (c == ';') {
-              pop();
-              c = peek();
+            auto this_lookup = lookup_characters(temporary_buffer.str());
+
+            if (!this_lookup.size() && last_lookup.size()) {
               break;
             } else {
-              pop();
-              c = peek();
+              last_lookup = this_lookup;
+              if (c == ';') {
+                pop();
+                c = peek();
+                break;
+              } else {
+                pop();
+                c = peek();
+                if (this_lookup.size() && !lookup_characters(temporary_buffer.str() + c).size()) {
+                  break;
+                }
+              }
             }
           } else {
             break;
           }
         } while (true);
 
-        auto codepoints = lookup_characters(temporary_buffer.str());
-        if (codepoints.size()) {
-          state = pop_state();
-          // std::cout << "DEBUG: named_character_reference 'found match " << temporary_buffer.str() << "'" << std::endl;
-          reset_temporary_buffer();
-          // for (const auto &point: codepoints) {
-          //   std::cout << "DEBUG: named_character_reference 'codepoint " << point << "'" << std::endl;
-          // }
-          temporary_buffer << convert_codepoints_to_utf8(codepoints);
-          flush_consumed_as_character_reference();
+        if (last_lookup.size()) {
+          // If the character reference was consumed as part of an attribute, and the last
+          // character matched is not a U+003B SEMICOLON character (;), and the next input
+          // character is either a U+003D EQUALS SIGN character (=) or an ASCII alphanumeric,
+          // then, for historical reasons, flush code points consumed as a character reference
+          // and switch to the return state.
+          auto last = temporary_buffer.str().back();
+          if (is_consuming_part_of_attribute() && last != ';' && (c == '=' || isalnum(c))) {
+            flush_consumed_as_character_reference();
+            state = pop_state();
+          } else {
+            if (last != ';') {
+              emit_parse_error("missing-semicolon-after-character-reference");
+            }
+            // std::cout << "DEBUG: named_character_reference 'found match " << temporary_buffer.str() << "'" << std::endl;
+            reset_temporary_buffer();
+            // for (const auto &point: last_lookup) {
+            //   std::cout << "DEBUG: named_character_reference 'codepoint " << point << "'" << std::endl;
+            // }
+            temporary_buffer << convert_codepoints_to_utf8(last_lookup);
+            flush_consumed_as_character_reference();
+            state = pop_state();
+          }
         } else {
           state = ambiguous_ampersand;
           // std::cout << "DEBUG: named_character_reference 'no match " << temporary_buffer.str() << "'" << std::endl;
@@ -2584,13 +2611,20 @@ void lexer_t::lex() {
           pop();
           temp_hex_reference_number *= 16;
           temp_hex_reference_number += (c - 0x0030);
-        } else if (isxdigit(c)) {
+        } else if (isxdigit(c) && isupper(c)) {
           // Multiply the character reference code by 16. Add a numeric version
           // of the current input character as a hexadecimal digit (subtract
           // 0x0037 from the character's code point) to the character reference code.
           pop();
           temp_hex_reference_number *= 16;
           temp_hex_reference_number += (c - 0x0037);
+        } else if (isxdigit(c)) {
+          // Multiply the character reference code by 16. Add a numeric version of the
+          // current input character as a hexadecimal digit (subtract 0x0057 from the
+          // character's code point) to the character reference code.
+          pop();
+          temp_hex_reference_number *= 16;
+          temp_hex_reference_number += (c - 0x0057);
         } else if (c == ';') {
           state = numeric_character_reference_end;
           pop();
@@ -2614,7 +2648,7 @@ void lexer_t::lex() {
               // point) to the character reference code.
               pop();
               temp_hex_reference_number *= 10;
-              temp_hex_reference_number += (c - 0x0030);
+              temp_hex_reference_number += (codepoint(std::string{c, 1}) - 0x0030);
             } else {
               state = numeric_character_reference_end;
               emit_parse_error("missing-semicolon-after-character-reference");
@@ -2624,7 +2658,6 @@ void lexer_t::lex() {
         break;
       }
       case numeric_character_reference_end: {
-        state = pop_state();
         switch (temp_hex_reference_number) {
           // If the number is 0x00, then this is a null-character-reference parse error.
           // Set the character reference code to 0xFFFD.
@@ -2763,13 +2796,13 @@ void lexer_t::lex() {
               break;
             }
           }
-          break;
         }
 
         reset_temporary_buffer();
         std::wstring_convert<std::codecvt_utf8<char32_t>, char32_t> converter;
         temporary_buffer << converter.to_bytes(static_cast<char32_t>(temp_hex_reference_number));
         flush_consumed_as_character_reference();
+        state = pop_state();
         break;
       }
     }

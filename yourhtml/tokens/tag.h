@@ -9,6 +9,8 @@ class tag_t: public token_t {
 
 public:
 
+  tag_t(bool closing);
+
   tag_t(const pos_t &pos, bool closing = false);
 
   tag_t(const tag_t&) = default;
@@ -20,6 +22,8 @@ public:
   tag_t& operator=(tag_t&&) = default;
 
   std::string get_tag_name() const;
+
+  size_t get_num_attributes() const;
 
   std::vector<std::pair<std::string, std::string>> get_attributes() const;
 

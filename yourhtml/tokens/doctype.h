@@ -7,6 +7,8 @@ class doctype_t: public token_t {
 
 public:
 
+  doctype_t();
+
   doctype_t(pos_t);
 
   doctype_t(const doctype_t&) = default;

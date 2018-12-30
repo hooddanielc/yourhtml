@@ -10,6 +10,8 @@ public:
 
   pos_t() noexcept;
 
+  pos_t(int line, int col) noexcept;
+
   void next_col();
 
   void next_line();

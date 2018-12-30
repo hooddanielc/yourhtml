@@ -17,6 +17,7 @@
 #include "tokens/doctype.h"
 #include "tokens/tag.h"
 #include "tokens/eof.h"
+#include "util.h"
 
 
 namespace yourhtml {

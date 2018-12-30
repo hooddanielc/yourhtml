@@ -2,6 +2,10 @@
 
 namespace yourhtml {
 
+tag_t::tag_t(bool closing):
+  token_t(closing ? token_t::END_TAG : token_t::START_TAG),
+  self_closing(false) {}
+
 tag_t::tag_t(const pos_t &pos, bool closing):
   token_t(pos, closing ? token_t::END_TAG : token_t::START_TAG),
   self_closing(false) {}
@@ -18,6 +22,10 @@ bool tag_t::is_self_closing() const {
 
 void tag_t::set_self_closing(bool self_closing_) {
   self_closing = self_closing_;
+}
+
+size_t tag_t::get_num_attributes() const {
+  return attributes.size();
 }
 
 void tag_t::append_attribute_name(const std::string &text) {

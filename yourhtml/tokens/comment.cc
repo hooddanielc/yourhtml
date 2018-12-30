@@ -5,6 +5,9 @@ namespace yourhtml {
 comment_t::comment_t(const pos_t &pos):
   token_t(pos, token_t::COMMENT) {}
 
+comment_t::comment_t():
+  token_t(token_t::COMMENT) {}
+
 comment_t::~comment_t() = default;
 
 }

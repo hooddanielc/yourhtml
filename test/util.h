@@ -3,9 +3,16 @@
 #include <string>
 #include <fstream>
 #include <streambuf>
+#include <filesystem>
 #include <yourhtml/lexer.h>
 
 namespace yourhtml {
+
+namespace testfs = std::filesystem;
+
+testfs::path get_ib_src_path();
+
+testfs::path get_ib_project_path(const std::string &relative);
 
 std::string read_file(const std::string &file_path);
 
@@ -108,6 +115,6 @@ public:
 
   void on_parse_error(const lexer_error_t &error);
 
-};
+};  // lexer_with_errors_t
 
 }

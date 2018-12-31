@@ -121,4 +121,32 @@ std::ostream &operator<<(std::ostream &strm, const doctype_t *that) {
   return strm;
 }
 
+bool doctype_t::is_forcing_quirks() const {
+  return force_quirks;
+}
+
+bool operator==(const doctype_t &lhs, const doctype_t &rhs) {
+  if (
+    lhs.is_forcing_quirks() != rhs.is_forcing_quirks() ||
+    lhs.is_missing_system_identifier() != rhs.is_missing_system_identifier() ||
+    lhs.is_missing_doctype_name() != rhs.is_missing_doctype_name() ||
+    lhs.is_missing_system_identifier() != rhs.is_missing_system_identifier() ||
+    (
+      !lhs.is_missing_system_identifier() &&
+      lhs.get_system_identifier() != rhs.get_system_identifier()
+    ) ||
+    (
+      !lhs.is_missing_public_identifier() &&
+      lhs.get_public_identifier() != rhs.get_public_identifier()
+    ) ||
+    (
+      !lhs.is_missing_doctype_name() &&
+      lhs.get_doctype_name() != rhs.get_doctype_name()
+    )
+  ) {
+    return false;
+  }
+  return true;
+}
+
 }

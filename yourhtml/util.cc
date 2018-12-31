@@ -4,6 +4,65 @@
 
 namespace yourhtml {
 
+// A surrogate is a code point that is in the range U+D800
+// to U+DFFF, inclusive.
+bool is_surrogate(int codepoint) {
+  return 0xD800 <= codepoint && codepoint <= 0xDFFF;
+}
+
+bool is_non_character(int codepoint) {
+  if (0xFDD0 <= codepoint && codepoint <= 0xFDEF) {
+    return true;
+  } else {
+    switch (codepoint) {
+      case 0xFFFE:
+      case 0xFFFF:
+      case 0x1FFFE:
+      case 0x1FFFF:
+      case 0x2FFFE:
+      case 0x2FFFF:
+      case 0x3FFFE:
+      case 0x3FFFF:
+      case 0x4FFFE:
+      case 0x4FFFF:
+      case 0x5FFFE:
+      case 0x5FFFF:
+      case 0x6FFFE:
+      case 0x6FFFF:
+      case 0x7FFFE:
+      case 0x7FFFF:
+      case 0x8FFFE:
+      case 0x8FFFF:
+      case 0x9FFFE:
+      case 0x9FFFF:
+      case 0xAFFFE:
+      case 0xAFFFF:
+      case 0xBFFFE:
+      case 0xBFFFF:
+      case 0xCFFFE:
+      case 0xCFFFF:
+      case 0xDFFFE:
+      case 0xDFFFF:
+      case 0xEFFFE:
+      case 0xEFFFF:
+      case 0xFFFFE:
+      case 0xFFFFF:
+      case 0x10FFFF:
+      case 0x10FFFE: {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+bool is_control_character(int codepoint) {
+  return  (
+    (0x0000 <= codepoint && codepoint <= 0x001F) ||
+    (0x007F <= codepoint && codepoint <= 0x009F)
+  );
+}
+
 int codepoint(const std::string &u) {
   auto l = u.length();
   if (l < 1) {
@@ -43,6 +102,19 @@ std::string codepointhex(const std::string &u) {
   ss << std::showbase << std::hex << codepoint(u);
   ss >> s;
   return s;
+}
+
+bool is_ascii_ws(char c) {
+  switch (c) {
+    case 0x0009:
+    case 0x000A:
+    case 0x000C:
+    case 0x000D:
+    case 0x0020: {
+      return true;
+    }
+  }
+  return false;
 }
 
 std::string utf8chr(int cp) {

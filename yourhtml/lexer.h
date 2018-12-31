@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstring>
 #include <cctype>
 #include <iostream>
 #include <map>
@@ -152,6 +153,15 @@ public:
   /* Used by our public lex function. */
   lexer_t(const char *next_cursor);
 
+  lexer_t(const char *next_cursor, size_t len);
+
+  /* To conform to HTML living standard, this lexer supports input
+     containing multiple null characters (U+0000). For most
+     applications, this is not needed. To handle this,
+     provide the string length in contructor so it can
+     safely emit null characters. */
+  lexer_t(const char *next_cursor, const char *end);
+
   virtual ~lexer_t();
 
   /* Tell the lexer to start consuming input from the current cursor
@@ -177,6 +187,10 @@ public:
      lex must be called if it has stopped. */
   void resume();
 
+  /* Return true if their are no more characters in the input stream.
+     This is required by html spec. */
+  bool is_eof();
+
   virtual void on_comment(const comment_t &) {}
 
   virtual void on_doctype(const doctype_t &) {}
@@ -199,7 +213,7 @@ private:
 
   /* Return the current character from the source text but don't advance to
      the next one. */
-  char peek() const;
+  char peek();
 
   /* Return the current character from the source text and advance to the
      next one. */
@@ -215,9 +229,6 @@ private:
 
   /* Reset the temporary buffer */
   void reset_temporary_buffer();
-
-  /* Reset tag name buffer */
-  void reset_tag_name_buffer();
 
   /* Checks if current temp_tag_token is an appropriate end tag token whose tag
      name matches the tag name of the last start tag to have been emitted from this
@@ -268,6 +279,9 @@ private:
   /* Position in source text for anchor */
   mutable const char *anchor;
 
+  /* The last cursor position for the current buffer */
+  mutable const char *end;
+
   /* The state of the lexer */
   state_t state;
 
@@ -279,9 +293,6 @@ private:
 
   /* Attribute value buffer */
   std::stringstream attribute_value_buffer;
-
-  /* Tag name buffer */
-  std::stringstream tag_name_buffer;
 
   /* Current tag token */
   std::vector<std::shared_ptr<token_t>> stack_of_open_elements;

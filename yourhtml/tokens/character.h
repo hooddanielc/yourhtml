@@ -28,6 +28,8 @@ public:
 
   friend std::ostream &operator<<(std::ostream &strm, const character_t *that);
 
+  friend bool operator==(const character_t &lhs, const character_t &rhs);
+
   bool is_space() const;
 
 private:

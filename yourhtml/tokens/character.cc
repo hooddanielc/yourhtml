@@ -28,10 +28,24 @@ std::ostream &operator<<(std::ostream &strm, const character_t &that) {
   strm << that.pos << "; " << character_t::get_desc(that.kind);
 
   strm << "; \"";
-  if (isspace(that.data[0])) {
-    strm << "<space>";
-  } else {
-    strm << that.data;
+  for (auto c: that.data) {
+    switch (c) {
+      case '\n': {
+        strm << "\\n";
+        break;
+      }
+      case 0x000B: {
+        strm << "<tab>";
+        break;
+      }
+      default: {
+        if (isspace(c)) {
+          strm << "<space>";
+        } else {
+          strm << c;
+        }
+      }
+    }
   }
   strm << "\"";
 
@@ -45,6 +59,13 @@ std::ostream &operator<<(std::ostream &strm, const character_t *that) {
 
 bool character_t::is_space() const {
   return isspace(data[0]);
+}
+
+bool operator==(const character_t &lhs, const character_t &rhs) {
+  if (lhs.get_data() != rhs.get_data()) {
+    return false;
+  }
+  return true;
 }
 
 }

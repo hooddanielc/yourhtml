@@ -10,7 +10,7 @@ void html5lib_test_lexer_t::on_character(const character_t &token) {
       (data + token.get_data()).c_str()
     );
   } else {
-    lexer_with_errors_t::on_character(token);
+    tokens.push_back(std::make_shared<character_t>(token));
   }
 }
 
@@ -53,6 +53,7 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
     html5lib_test_param_t test_param = {
       "",
       "",
+      "",
       std::nullopt,
       std::nullopt
     };
@@ -63,10 +64,15 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
       throw std::runtime_error("all lexer tests must have description string");
     }
     if (obj.HasMember("input") && obj["input"].IsString()) {
-      test_param.input = obj["input"].GetString();
+      test_param.input = std::string{
+        obj["input"].GetString(),
+        obj["input"].GetStringLength()
+      };
     } else {
       throw std::runtime_error("all lexer tests must have input string");
     }
+
+    test_param.id = testfs::path(filename).stem().string() + "_" + std::to_string(i);
 
     if (obj.HasMember("errors") && obj["errors"].IsArray()) {
       std::vector<std::pair<std::string, pos_t>> errors;
@@ -147,15 +153,21 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
               if (token_val.Size() >= 3) {
                 if (token_val[2].IsObject()) {
                   auto attr_val = token_val[2].GetObject();
-                  for (rapidjson::Value::ConstMemberIterator iter = attr_val.MemberBegin(); iter != attr_val.MemberEnd(); ++iter) {
-                    if (!token->get_attributes().size() || !std::get<0>(token->get_attributes().back()).empty()) {
-                      token->start_new_attribute();
-                    }
-                    token->append_attribute_name(iter->name.GetString());
-                    token->append_attribute_value(iter->value.GetString());
+                  for (auto iter = attr_val.MemberBegin(); iter != attr_val.MemberEnd(); ++iter) {
+                    token->start_new_attribute();
+                    token->append_attribute_name(std::string{iter->name.GetString(), iter->name.GetStringLength()});
+                    token->append_attribute_value(std::string{iter->value.GetString(), iter->value.GetStringLength()});
                   }
                 } else {
                   throw std::runtime_error("tag token expected output 3rd item must be object");
+                }
+              }
+              if (token_val.Size() >= 4) {
+                if (token_val[3].IsBool()) {
+                  auto self_closing = token_val[3].GetBool();
+                  token->set_self_closing(self_closing);
+                } else {
+                  throw std::runtime_error("tag token expected output 4th item must be boolean");
                 }
               }
               tokens.push_back(token);
@@ -178,25 +190,18 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
 }
 
 std::string html5lib_tokenizer_test_title_generator_t::operator()(const testing::TestParamInfo<html5lib_test_param_t> &test_param_info) {
-  std::string name = "";
-  for (auto c: test_param_info.param.description) {
-    if (isalnum(c)) {
-      name += c;
-    } else if (name.back() != '_') {
-      name += "_";
-    }
-  }
-  return name;
+  return test_param_info.param.id;
 }
 
 TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
   auto param = GetParam();
-  html5lib_test_lexer_t lexer(param.input.c_str());
-  lexer.lex();
-
   std::cout << "TESTING USING INPUT: ```" << std::endl;
   std::cout << param.input << std::endl;
   std::cout << "```" << std::endl;
+  std::cout << "TOTAL INPUT SIZE: " << param.input.size() << std::endl;
+  html5lib_test_lexer_t lexer(param.input.c_str(), param.input.size());
+  lexer.lex();
+
 
   if (param.errors) {
     for (auto actual_error: lexer.error_types) {
@@ -211,68 +216,31 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
   }
 
   if (param.output) {
-    std::cout << "EXPECTED OUTPUT: ";
-    for (auto token: *(param.output)) {
-      switch (token->get_kind()) {
-        case token_t::CHARACTER: {
-          std::cout << dynamic_cast<character_t*>(token.get()) << " ";
-          break;
-        }
-        case token_t::START_TAG: {
-          std::cout << dynamic_cast<tag_t*>(token.get()) << " ";
-          break;
-        }
-        default: {
-          std::cout << token << " ";
-          break;
-        }
-      }
-    }
-    std::cout << std::endl;
-    std::cout << "ACTUAL OUTPUT: ";
-    for (auto token: lexer.tokens) {
-      switch (token->get_kind()) {
-        case token_t::CHARACTER: {
-          std::cout << dynamic_cast<character_t*>(token.get()) << " ";
-          break;
-        }
-        case token_t::START_TAG: {
-          std::cout << dynamic_cast<tag_t*>(token.get()) << " ";
-          break;
-        }
-        default: {
-          std::cout << token << " ";
-          break;
-        }
-      }
-    }
-    std::cout << std::endl;
-  }
-
-  if (param.output) {
     auto expected = (*param.output);
     auto actual = lexer.tokens;
     EXPECT_EQ(actual.size(), expected.size());
     for (size_t i = 0; i < actual.size(); ++i) {
+      std::cout << "ACTUAL: " << actual[i] << std::endl;
+      std::cout << "EXPECTED: " << expected[i] << std::endl;
       EXPECT_EQ(actual[i]->get_kind(), expected[i]->get_kind());
-      switch (actual[i]->get_kind()) {
-        case token_t::START_TAG: {
-          auto actual_token = dynamic_cast<tag_t*>(actual[i].get());
-          auto expected_token = dynamic_cast<tag_t*>(expected[i].get());
-          EXPECT_EQ(actual_token->get_tag_name(), expected_token->get_tag_name());
-          break;
-        }
-        case token_t::END_TAG: {
-          auto actual_token = dynamic_cast<tag_t*>(actual[i].get());
-          auto expected_token = dynamic_cast<tag_t*>(expected[i].get());
-          EXPECT_EQ(actual_token->get_tag_name(), expected_token->get_tag_name());
-          break;
-        }
-        case token_t::CHARACTER: {
-          auto actual_token = dynamic_cast<character_t*>(actual[i].get());
-          auto expected_token = dynamic_cast<character_t*>(expected[i].get());
-          EXPECT_EQ(actual_token->get_data(), expected_token->get_data());
-          break;
+      if (actual[i]->get_kind() == expected[i]->get_kind()) {
+        switch (actual[i]->get_kind()) {
+          case token_t::END_TAG:
+          case token_t::START_TAG: {
+            auto actual_token = dynamic_cast<tag_t*>(actual[i].get());
+            auto expected_token = dynamic_cast<tag_t*>(expected[i].get());
+            EXPECT_EQ(*actual_token, *expected_token);
+            break;
+          }
+          case token_t::CHARACTER: {
+            auto actual_token = dynamic_cast<character_t*>(actual[i].get());
+            auto expected_token = dynamic_cast<character_t*>(expected[i].get());
+            EXPECT_EQ(*actual_token, *expected_token);
+            break;
+          }
+          default: {
+            //EXPECT_EQ(*actual[i], *expected[i]);
+          }
         }
       }
     }

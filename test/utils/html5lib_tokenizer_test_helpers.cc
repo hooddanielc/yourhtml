@@ -38,9 +38,12 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
     {"EndTag", token_t::END_TAG}
   });
 
-  auto test_src = read_file(filename);
+  FILE* fp = fopen(filename.c_str(), "rb"); // non-Windows use "r"
+  char readBuffer[65536];
+  rapidjson::FileReadStream is(fp, readBuffer, sizeof(readBuffer));
   rapidjson::Document document;
-  document.Parse(test_src.c_str());
+  document.ParseStream(is);
+  fclose(fp);
 
   if (!document["tests"].IsArray()) {
     throw std::runtime_error("no tests array in json");

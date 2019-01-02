@@ -1,13 +1,16 @@
 #pragma once
+#include <cstdio>
 #include <optional>
 #include <algorithm>
 #include <functional>
-#include <gtest/gtest.h>
-#include <test/utils/dat.h>
-#include <test/util.h>
 #include <rapidjson/document.h>
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/writer.h>
+#include <rapidjson/filereadstream.h>
+#include <gtest/gtest.h>
+#include <test/utils/dat.h>
+#include <test/util.h>
+
 
 class html5lib_test_lexer_t: public yourhtml::lexer_with_errors_t {
 

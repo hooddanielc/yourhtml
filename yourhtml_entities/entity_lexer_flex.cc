@@ -6036,7 +6036,7 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 5 "/tmp/input.flex"
-return -1;
+yyout << YYText(); return -1;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP

@@ -43,7 +43,7 @@ const input = `
 %option noyywrap
 
 %%
-.       return -1;
+.       yyout << YYText(); return -1;
 ${rules.join('\n')}
 %%
 

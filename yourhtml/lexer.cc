@@ -307,7 +307,7 @@ bool lexer_t::is_eof() {
 void lexer_t::lex() {
   do {
     char c = peek();
-    std::cout << "DEBUG: " << get_state_name(state) << " '" << (!isspace(c) ? c : ' ') << "' '" << codepoint(std::string{c}) << "'" << std::endl;
+    // std::cout << "DEBUG: " << get_state_name(state) << " '" << (!isspace(c) ? c : ' ') << "' '" << codepoint(std::string{c}) << "'" << std::endl;
 
     switch (state) {
       case idle: {
@@ -2815,43 +2815,27 @@ void lexer_t::lex() {
         break;
       }
       case named_character_reference: {
-        // TODO - Generate a deterministric state table for properly handling
-        // named character references.
-        std::vector<unsigned int> last_lookup;
-        do {
-          if (!isspace(c) && c != '\0') {
-            // std::cout << "DEBUG named_character_reference " << c << std::endl;
-            temporary_buffer << c;
-            auto this_lookup = lookup_characters(temporary_buffer.str());
+        std::ostringstream utf8match;
+        auto match = match_entity(
+          const_cast<char*>(cursor - 1),
+          const_cast<char*>(end),
+          utf8match
+        );
 
-            if (!this_lookup.size() && last_lookup.size()) {
-              break;
-            } else {
-              last_lookup = this_lookup;
-              if (c == ';') {
-                pop();
-                c = peek();
-                break;
-              } else {
-                pop();
-                c = peek();
-                if (this_lookup.size() && !lookup_characters(temporary_buffer.str() + c).size()) {
-                  break;
-                }
-              }
-            }
-          } else {
-            break;
+        auto ustr = utf8match.str();
+        if (match > -1) {
+          std::string entity_text(entity_names[match]);
+          for (auto iter = entity_text.begin() + 1; iter != entity_text.end(); ++iter) {
+            temporary_buffer << *iter;
+            pop();
+            c = peek();
           }
-        } while (true);
-
-        if (last_lookup.size()) {
           // If the character reference was consumed as part of an attribute, and the last
           // character matched is not a U+003B SEMICOLON character (;), and the next input
           // character is either a U+003D EQUALS SIGN character (=) or an ASCII alphanumeric,
           // then, for historical reasons, flush code points consumed as a character reference
           // and switch to the return state.
-          auto last = temporary_buffer.str().back();
+          auto last = entity_text.back();
           if (is_consuming_part_of_attribute() && last != ';' && (c == '=' || isalnum(c))) {
             flush_consumed_as_character_reference();
             state = pop_state();
@@ -2859,18 +2843,18 @@ void lexer_t::lex() {
             if (last != ';') {
               emit_parse_error("missing-semicolon-after-character-reference");
             }
-            // std::cout << "DEBUG: named_character_reference 'found match " << temporary_buffer.str() << "'" << std::endl;
             reset_temporary_buffer();
-            // for (const auto &point: last_lookup) {
-            //   std::cout << "DEBUG: named_character_reference 'codepoint " << point << "'" << std::endl;
-            // }
-            temporary_buffer << convert_codepoints_to_utf8(last_lookup);
+            temporary_buffer << ustr;
             flush_consumed_as_character_reference();
             state = pop_state();
           }
         } else {
+          do {
+            temporary_buffer << c;
+            pop();
+            c = peek();
+          } while (c != ';' && c != '\0');
           state = ambiguous_ampersand;
-          // std::cout << "DEBUG: named_character_reference 'no match " << temporary_buffer.str() << "'" << std::endl;
           flush_consumed_as_character_reference();
         }
         break;
@@ -2885,6 +2869,7 @@ void lexer_t::lex() {
           } else {
             emit_token(character_t(pos, c));
           }
+          pop();
         } else if (c == ';') {
           // This is an unknown-named-character-reference parse error. Reconsume in the
           // return state.

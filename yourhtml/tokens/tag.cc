@@ -41,9 +41,7 @@ void tag_t::append_attribute_value(const std::string &text) {
 }
 
 void tag_t::append_attribute_value(char text) {
-  std::cout << "APPEND BEFORE : " << std::get<1>(attributes.back()).size() << std::endl;
   std::get<1>(attributes.back()) += text;
-  std::cout << "APPEND AFTER : " << std::get<1>(attributes.back()).size() << std::endl;
 }
 
 void tag_t::start_new_attribute() {

@@ -27,7 +27,7 @@ namespace yourhtml {
      return 0;
    }
 */
-int match_entity(char *start, char *end, std::stringstream &ss);
+int match_entity(char *start, char *end, std::ostringstream &os);
 
 /* A stream but used in std::istringstream class
    that does not copy an internal buffer */

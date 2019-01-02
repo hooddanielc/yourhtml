@@ -6,12 +6,13 @@
 #include <map>
 #include <vector>
 #include <memory>
+#include <locale>
+#include <codecvt>
 
 #include "error.h"
 #include "ice.h"
 #include "token.h"
 #include "pos.h"
-#include "lookup_character_reference.h"
 
 #include "tokens/character.h"
 #include "tokens/comment.h"

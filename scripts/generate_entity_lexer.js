@@ -18,8 +18,11 @@ const characters_path = path.resolve(
 
 const characters = JSON.parse(fs.readFileSync(characters_path, 'utf8'));
 const rules = [];
+const entity_names = [];
 
-Object.keys(characters).forEach((key, i) => {
+Object.keys(characters).forEach((key, index) => {
+  const name = key;
+  entity_names.push(`  "${key}",`);
   const u8char = characters[key].codepoints
     .map((i) => {
       if (String.fromCodePoint(i) === '\n') {
@@ -33,7 +36,7 @@ Object.keys(characters).forEach((key, i) => {
     })
     .join(' << ');
 
-  rules.push(`"${key}"    yyout << ${u8char}; return ${i};`);
+  rules.push(`"${key}"    yyout << ${u8char}; return ${index};`);
 });
 
 const input = `
@@ -43,25 +46,6 @@ const input = `
 .       return -1;
 ${rules.join('\n')}
 %%
-
-/* Example Usage
-
-int main(int, char**) {
-  FlexLexer *lexer = new FlexLexer;
-  std::istringstream is("&nbsp;input");
-  std::ostringstream os("");
-  std::cout << "CURRENT: " << os.str() << std::endl;
-  int result = 0;
-  do {
-    result = lexer->yylex(is, os);
-    std::cout << "THE RETURN IS " << result << std::endl;
-    std::cout << "CURRENT: " << os.str() << std::endl;
-  } while (result != 0);
-  std::cout << os.str() << std::endl;
-  return 0;
-}
-
-*/
 
 `;
 
@@ -112,3 +96,17 @@ child_process.exec(cmd, (err, res) => {
     #pragma clang diagnostic pop\n`
   );
 });
+
+
+const entity_name_array_h = `#pragma once
+namespace yourhtml {
+
+static const char *entity_names[] = {
+${entity_names.join("\n")}
+};
+
+}
+`;
+
+const entity_names_path = path.resolve(__dirname, '..', 'yourhtml_entities', 'entity_names.h');
+fs.writeFileSync(entity_names_path, entity_name_array_h);

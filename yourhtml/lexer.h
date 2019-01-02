@@ -19,6 +19,7 @@
 #include "tokens/tag.h"
 #include "tokens/eof.h"
 #include "util.h"
+#include <yourhtml_entities/entity_lexer.h>
 
 
 namespace yourhtml {

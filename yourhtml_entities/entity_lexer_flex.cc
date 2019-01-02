@@ -18164,25 +18164,6 @@ void yyfree (void * ptr )
 #line 2237 "/tmp/input.flex"
 
 
-/* Example Usage
-
-int main(int, char**) {
-  FlexLexer *lexer = new FlexLexer;
-  std::istringstream is("&nbsp;input");
-  std::ostringstream os("");
-  std::cout << "CURRENT: " << os.str() << std::endl;
-  int result = 0;
-  do {
-    result = lexer->yylex(is, os);
-    std::cout << "THE RETURN IS " << result << std::endl;
-    std::cout << "CURRENT: " << os.str() << std::endl;
-  } while (result != 0);
-  std::cout << os.str() << std::endl;
-  return 0;
-}
-
-*/
-
 
 
     #pragma clang diagnostic pop

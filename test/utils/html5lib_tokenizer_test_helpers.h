@@ -1,5 +1,6 @@
 #pragma once
 #include <optional>
+#include <algorithm>
 #include <functional>
 #include <gtest/gtest.h>
 #include <test/utils/dat.h>
@@ -54,6 +55,7 @@ struct html5lib_test_param_t {
     return os;
   }
 };
+
 
 class html5lib_tokenizer_test_t : public testing::TestWithParam<html5lib_test_param_t> {
 

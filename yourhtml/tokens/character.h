@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include <yourhtml/token.h>
 
 namespace yourhtml {
@@ -10,6 +11,8 @@ public:
   character_t(const std::string &data_);
 
   character_t(const char *data_);
+
+  character_t(const pos_t &pos, const std::string &data_);
 
   character_t(const pos_t &pos, char c);
 

@@ -10,6 +10,10 @@ character_t::character_t(const char *data_):
   token_t(token_t::CHARACTER),
   data(data_) {}
 
+character_t::character_t(const pos_t &pos, const std::string &data_):
+  token_t(pos, token_t::CHARACTER),
+  data(data_) {}
+
 character_t::character_t(const pos_t &pos, char c):
   token_t(pos, token_t::CHARACTER),
   data(new char[2]{c, '\0'}) {}

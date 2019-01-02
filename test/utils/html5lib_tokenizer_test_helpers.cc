@@ -193,15 +193,23 @@ std::string html5lib_tokenizer_test_title_generator_t::operator()(const testing:
   return test_param_info.param.id;
 }
 
+::testing::AssertionResult HasLexerError(html5lib_test_lexer_t &lexer, const std::string &code) {
+  auto iter = std::find(lexer.error_types.begin(), lexer.error_types.end(), code);
+  if (iter == lexer.error_types.end()) {
+    return ::testing::AssertionFailure() << "expecting error code " << code << " but found none";
+  } else {
+    return ::testing::AssertionSuccess() << "contains error code " << code;
+  }
+}
+
 TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
   auto param = GetParam();
   std::cout << "TESTING USING INPUT: ```" << std::endl;
-  std::cout << param.input << std::endl;
+  std::cout << "(" << param.input << std::endl << ")";
   std::cout << "```" << std::endl;
   std::cout << "TOTAL INPUT SIZE: " << param.input.size() << std::endl;
   html5lib_test_lexer_t lexer(param.input.c_str(), param.input.size());
   lexer.lex();
-
 
   if (param.errors) {
     for (auto actual_error: lexer.error_types) {
@@ -210,7 +218,17 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
     for (auto expected_error: (*param.errors)) {
       std::cout << "EXPECTING ERROR: " << std::get<0>(expected_error) << std::endl;
     }
-    EXPECT_EQ((*param.errors).size(), lexer.error_types.size());
+    for (auto error_type: (*param.errors)) {
+      auto str = std::get<0>(error_type);
+      EXPECT_TRUE(HasLexerError(lexer, str));
+      // auto iter = std::find(lexer.error_types.begin(), lexer.error_types.end(), str);
+      // if (iter == lexer.error_types.end()) {
+      //   ::testing::AssertionFailure() << "expecting error " << str << " but found none";
+      // }
+    }
+    if ((*param.errors).size() != lexer.error_types.size()) {
+      std::cout << "Mismatching expected and actual tokenizer errors" << std::endl;
+    }
   } else {
     EXPECT_EQ(lexer.error_types.size(), size_t(0));
   }

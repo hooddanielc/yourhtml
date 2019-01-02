@@ -32,17 +32,11 @@ Object.keys(characters).forEach((key, i) => {
       return `u8"${String.fromCodePoint(i)}"`;
     })
     .join(' << ');
-  
+
   rules.push(`"${key}"    yyout << ${u8char}; return ${i};`);
 });
 
 const input = `
-%{
-#include <sstream>
-#include <iostream>
-%}
-
-%option prefix="entity"
 %option noyywrap
 
 %%
@@ -53,7 +47,7 @@ ${rules.join('\n')}
 /* Example Usage
 
 int main(int, char**) {
-  FlexLexer *lexer = new entity_lexer_t;
+  FlexLexer *lexer = new FlexLexer;
   std::istringstream is("&nbsp;input");
   std::ostringstream os("");
   std::cout << "CURRENT: " << os.str() << std::endl;
@@ -73,17 +67,17 @@ int main(int, char**) {
 
 const read_flex_lexer_h = () => {
   if (fs.existsSync('/usr/include/FlexLexer.h')) {
-    return fs.readFileSync('/usr/include/FlexLexer.h');
+    return fs.readFileSync('/usr/include/FlexLexer.h', 'utf8');
   } else if (fs.existsSync('/usr/local/include/FlexLexer.h')) {
-    return fs.readFileSync('/usr/local/include/FlexLexer.h');
+    return fs.readFileSync('/usr/local/include/FlexLexer.h', 'utf8');
   } else {
     throw new Error('unable to find FlexLexer.h in /usr/include || /usr/local/include');
   }
 }
 
 fs.writeFileSync('/tmp/input.flex', input);
-const output_h = path.resolve(__dirname, '..', 'yourhtml_entities/entity_lexer.h');
-const output = path.resolve(__dirname, '..', 'yourhtml_entities/entity_lexer.cc');
+const output_h = path.resolve(__dirname, '..', 'yourhtml_entities/entity_lexer_flex.h');
+const output = path.resolve(__dirname, '..', 'yourhtml_entities/entity_lexer_flex.cc');
 const cmd = `flex -o ${output} --c++ /tmp/input.flex`;
 console.log('executing: ', cmd);
 child_process.exec(cmd, (err, res) => {
@@ -91,11 +85,12 @@ child_process.exec(cmd, (err, res) => {
     console.log('exec returned result:', err, res);
     throw new err;
   }
-  console.log('successfully generated yourhtml_entities/entity_lexer.cc');
+  console.log('successfully generated yourhtml_entities/entity_lexer_flex.cc');
 
   // rename
   const entity_lexer_src = fs.readFileSync(output, 'utf8')
-    .replace('<FlexLexer.h>', "<yourhtml_entities/entity_lexer.h>");
+    .replace('<FlexLexer.h>', "<yourhtml_entities/entity_lexer_flex.h>");
+  const entity_lexer_src_h = read_flex_lexer_h();
   fs.writeFileSync(output, `
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wunused-macros"
@@ -113,8 +108,7 @@ child_process.exec(cmd, (err, res) => {
     #pragma clang diagnostic ignored "-Wreserved-id-macro"
     #pragma clang diagnostic ignored "-Wweak-vtables"
     #pragma clang diagnostic ignored "-Wzero-as-null-pointer-constant"
-    ${read_flex_lexer_h()}
-    using entity_lexer_t = entityFlexLexer;
+    ${entity_lexer_src_h}
     #pragma clang diagnostic pop\n`
   );
 });

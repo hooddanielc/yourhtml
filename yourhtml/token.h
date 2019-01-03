@@ -5,6 +5,7 @@
 #include <utility>
 #include <map>
 #include <memory>
+#include <vector>
 #include "pos.h"
 
 namespace yourhtml {
@@ -59,12 +60,16 @@ public:
     return *(dynamic_cast<as_t*>(this));
   }
 
-protected:
-
   /* Writes a human-readable dump of the token. */
   friend std::ostream &operator<<(std::ostream &strm, const token_t &that);
 
   friend std::ostream &operator<<(std::ostream &strm, const token_t *that);
+
+  friend std::ostream &operator<<(std::ostream &str, const std::vector<token_t*> &that);
+
+  friend std::ostream &operator<<(std::ostream &str, const std::vector<std::shared_ptr<token_t>> &that);
+
+protected:
 
   /* See accessors. */
   pos_t pos;

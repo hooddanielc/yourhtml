@@ -4,6 +4,10 @@ namespace yourhtml {
 
 pos_t::pos_t() noexcept: line_number(1), col_number(1) {}
 
+pos_t::pos_t(int line_number_, int col_number_) noexcept:
+  line_number(line_number_),
+  col_number(col_number_) {}
+
 void pos_t::next_col() {
   ++col_number;
 }

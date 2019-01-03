@@ -1,6 +1,12 @@
+#include "tokens/character.h"
+#include "tokens/tag.h"
 #include "token.h"
 
 namespace yourhtml {
+
+class character_t;
+
+class tag_t;
 
 token_t::token_t(token_t::kind_t kind_):
   kind(kind_){}
@@ -53,7 +59,35 @@ std::ostream &operator<<(std::ostream &strm, const token_t &that) {
 }
 
 std::ostream &operator<<(std::ostream &strm, const token_t *that) {
-  strm << *that;
+  switch (that->get_kind()) {
+    case token_t::CHARACTER: {
+      strm << dynamic_cast<const character_t*>(that);
+      break;
+    }
+    case token_t::END_TAG:
+    case token_t::START_TAG: {
+      strm << dynamic_cast<const tag_t*>(that);
+      break;
+    }
+    default: {
+      strm << *that;
+      break;
+    }
+  }
+  return strm;
+}
+
+std::ostream &operator<<(std::ostream &strm, const std::vector<token_t*> &that) {
+  for (auto item: that) {
+    strm << that << " ";
+  }
+  return strm;
+}
+
+std::ostream &operator<<(std::ostream &strm, const std::vector<std::shared_ptr<token_t>> &that) {
+  for (auto item: that) {
+    strm << item.get() << " ";
+  }
   return strm;
 }
 

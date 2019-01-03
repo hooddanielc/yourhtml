@@ -18,6 +18,9 @@ public:
 
   virtual ~error_t() override;
 
+  /* The position in source code when the error occurred */
+  pos_t get_pos() const;
+
 protected:
 
   /* Do-little. */
@@ -30,9 +33,6 @@ protected:
   /* The stream to which to write our diagnostic message.  The classes which
      inehrit from us will use this in their constructors. */
   std::ostream &get_strm() const;
-
-  /* The position in source code when the error occurred */
-  pos_t get_pos();
 
 private:
 

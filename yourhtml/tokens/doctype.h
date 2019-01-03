@@ -7,6 +7,8 @@ class doctype_t: public token_t {
 
 public:
 
+  doctype_t();
+
   doctype_t(pos_t);
 
   doctype_t(const doctype_t&) = default;
@@ -43,7 +45,7 @@ public:
 
   void append_system_identifier(char c);
 
-  bool is_forcing_quirks();
+  bool is_forcing_quirks() const;
 
   bool is_missing_public_identifier() const;
 
@@ -56,6 +58,8 @@ public:
   friend std::ostream &operator<<(std::ostream &strm, const doctype_t &that);
 
   friend std::ostream &operator<<(std::ostream &strm, const doctype_t *that);
+
+  friend bool operator==(const doctype_t &lhs, const doctype_t &rhs);
 
 private:
 

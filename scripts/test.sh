@@ -1,7 +1,13 @@
 #!/bin/bash -xe
+
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 TEST_DIR="$( dirname "${DIR}" )/test"
 cd "$( dirname "${DIR}" )"
+
+# update git submodules
+git submodule update --init
+
 
 OUT_DIR="../out"
 
@@ -17,9 +23,9 @@ FILE_LIST=(../out/coverage/*.profraw)
 TARGET_LIST=(../out/test/test/*-test)
 
 llvm-profdata merge -sparse "${FILE_LIST[@]}" -o "${OUT_DIR}/coverage/all.profdata"
-llvm-cov show "${TARGET_LIST[@]}" -instr-profile="${OUT_DIR}/coverage/all.profdata"
-llvm-cov report "${TARGET_LIST[@]}" -instr-profile="${OUT_DIR}/coverage/all.profdata"
-llvm-cov export "${TARGET_LIST[@]}" -instr-profile="${OUT_DIR}/coverage/all.profdata" > "${OUT_DIR}/coverage/report.json"
+llvm-cov show "${TARGET_LIST[@]}" -instr-profile="${OUT_DIR}/coverage/all.profdata" --ignore-filename-regex='yourhtml_entities/*'
+llvm-cov report "${TARGET_LIST[@]}" -instr-profile="${OUT_DIR}/coverage/all.profdata" --ignore-filename-regex='yourhtml_entities/*'
+llvm-cov export "${TARGET_LIST[@]}" -instr-profile="${OUT_DIR}/coverage/all.profdata" --ignore-filename-regex='yourhtml_entities/*' > "${OUT_DIR}/coverage/report.json"
 echo ''
 echo 'coverage report written to ../out/coverage/report.json'
 echo ''

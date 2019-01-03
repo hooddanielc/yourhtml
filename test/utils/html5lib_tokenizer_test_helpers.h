@@ -11,7 +11,6 @@
 #include <test/utils/dat.h>
 #include <test/util.h>
 
-
 class html5lib_test_lexer_t: public yourhtml::lexer_with_errors_t {
 
 public:
@@ -75,3 +74,5 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
 struct html5lib_tokenizer_test_title_generator_t {
   std::string operator()(const testing::TestParamInfo<html5lib_test_param_t> &test_param_info);
 };
+
+::testing::AssertionResult has_lexer_error(html5lib_test_lexer_t &lexer, const std::string &code);

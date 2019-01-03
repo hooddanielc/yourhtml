@@ -196,7 +196,7 @@ std::string html5lib_tokenizer_test_title_generator_t::operator()(const testing:
   return test_param_info.param.id;
 }
 
-::testing::AssertionResult HasLexerError(html5lib_test_lexer_t &lexer, const std::string &code) {
+::testing::AssertionResult has_lexer_error(html5lib_test_lexer_t &lexer, const std::string &code) {
   auto iter = std::find(lexer.error_types.begin(), lexer.error_types.end(), code);
   if (iter == lexer.error_types.end()) {
     return ::testing::AssertionFailure() << "expecting error code " << code << " but found none";
@@ -223,7 +223,7 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
     }
     for (auto error_type: (*param.errors)) {
       auto str = std::get<0>(error_type);
-      EXPECT_TRUE(HasLexerError(lexer, str));
+      EXPECT_TRUE(has_lexer_error(lexer, str));
       // auto iter = std::find(lexer.error_types.begin(), lexer.error_types.end(), str);
       // if (iter == lexer.error_types.end()) {
       //   ::testing::AssertionFailure() << "expecting error " << str << " but found none";
@@ -259,10 +259,12 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
             EXPECT_EQ(*actual_token, *expected_token);
             break;
           }
-          default: {
-            //EXPECT_EQ(*actual[i], *expected[i]);
-          }
+          case token_t::DOCTYPE:
+          case token_t::COMMENT:
+          case token_t::END_OF_FILE: {}
         }
+      } else {
+        EXPECT_EQ(actual[i]->get_kind(), expected[i]->get_kind());
       }
     }
   }

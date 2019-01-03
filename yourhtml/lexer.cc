@@ -231,16 +231,14 @@ void lexer_t::reset_temporary_buffer() {
 }
 
 bool lexer_t::is_consuming_part_of_attribute() {
-  switch (return_state) {
-    case attribute_value_double_quoted:
-    case attribute_value_single_quoted:
-    case attribute_value_unquoted: {
-      return true;
-    }
-    default: {
-      return false;
-    }
+  if (
+    return_state == attribute_value_double_quoted ||
+    return_state == attribute_value_single_quoted ||
+    return_state == attribute_value_unquoted
+  ) {
+    return true;
   }
+  return false;
 }
 
 void lexer_t::flush_consumed_as_character_reference() {

@@ -7,26 +7,6 @@
 
 namespace yourhtml {
 
-/*
-   Efficient method for matching an html entity
-   against an existing buffer. Example usage:
-   
-   int main(int, char**) {
-     const char *src = "&notin;try it";
-     //const char *src = "This will fail. &notin;try it";
-     const char *start = src;
-     const char *end = start + 10;
-   
-     auto match = match_entity(
-       const_cast<char*>(start),
-       const_cast<char*>(end)
-     );
-   
-     std::cout << "SIZE: " << match.size() << std::endl;
-     std::cout << "MATCH: '" << match << "'" << std::endl;
-     return 0;
-   }
-*/
 int match_entity(char *start, char *end, std::ostringstream &os);
 
 /* A stream but used in std::istringstream class

@@ -69,7 +69,9 @@ std::ostream &operator<<(std::ostream &strm, const token_t *that) {
       strm << dynamic_cast<const tag_t*>(that);
       break;
     }
-    default: {
+    case token_t::DOCTYPE:
+    case token_t::COMMENT:
+    case token_t::END_OF_FILE: {
       strm << *that;
       break;
     }
@@ -79,7 +81,7 @@ std::ostream &operator<<(std::ostream &strm, const token_t *that) {
 
 std::ostream &operator<<(std::ostream &strm, const std::vector<token_t*> &that) {
   for (auto item: that) {
-    strm << that << " ";
+    strm << item << " ";
   }
   return strm;
 }

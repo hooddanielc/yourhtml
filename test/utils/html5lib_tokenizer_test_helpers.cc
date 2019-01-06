@@ -29,7 +29,7 @@ void print_json(const rapidjson::Value &val) {
   val.Accept(writer);
 }
 
-testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in(const std::string &filename) {
+testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in(const std::string &filename, const std::string &test_key) {
   std::unordered_map<std::string, token_t::kind_t> token_kind_map({
     {"Comment", token_t::COMMENT},
     {"DOCTYPE", token_t::DOCTYPE},
@@ -45,11 +45,11 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
   document.ParseStream(is);
   fclose(fp);
 
-  if (!document["tests"].IsArray()) {
+  if (!document[test_key.c_str()].IsArray()) {
     throw std::runtime_error("no tests array in json");
   }
 
-  auto tests = document["tests"].GetArray();
+  auto tests = document[test_key.c_str()].GetArray();
   std::vector<html5lib_test_param_t> lexer_test_params;
   for (rapidjson::SizeType i = 0; i < tests.Size(); ++i) {
     auto obj = tests[i].GetObject();
@@ -58,8 +58,15 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
       "",
       "",
       std::nullopt,
+      std::nullopt,
+      std::nullopt,
       std::nullopt
     };
+
+    if (test_key == "xmlViolationTests") {
+      test_param.replacement_chars = " ";
+      test_param.form_feed_chars = " ";
+    }
 
     if (obj.HasMember("description") && obj["description"].IsString()) {
       test_param.description = obj["description"].GetString();
@@ -128,6 +135,18 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
             }
             case token_t::DOCTYPE: {
               auto token = std::make_shared<doctype_t>();
+              if (token_val.Size() >= 2 && token_val[1].IsString()) {
+                token->set_doctype_name(token_val[1].GetString());
+              }
+              if (token_val.Size() >= 3 && token_val[2].IsString()) {
+                token->set_public_identifier(token_val[2].GetString());
+              }
+              if (token_val.Size() >= 4 && token_val[3].IsString()) {
+                token->set_system_identifier(token_val[3].GetString());
+              }
+              if (token_val.Size() >= 5 && token_val[4].IsBool()) {
+                token->set_force_quirks(!token_val[4].GetBool());
+              }
               tokens.push_back(token);
               break;
             }
@@ -209,31 +228,41 @@ std::string html5lib_tokenizer_test_title_generator_t::operator()(const testing:
 
 TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
   auto param = GetParam();
-  std::cout << "TESTING USING INPUT: ```" << std::endl;
-  std::cout << "(" << param.input << std::endl << ")";
-  std::cout << "```" << std::endl;
-  std::cout << "TOTAL INPUT SIZE: " << param.input.size() << std::endl;
+  
+  if (getenv("GTEST_FILTER")) {
+    std::cout << "TESTING USING INPUT: ```" << std::endl;
+    std::cout << "(" << param.input << std::endl << ")";
+    std::cout << "```" << std::endl;
+    std::cout << "TOTAL INPUT SIZE: " << param.input.size() << std::endl;
+  }
+
   html5lib_test_lexer_t lexer(param.input.c_str(), param.input.size());
   lexer.lex();
 
   if (param.errors) {
-    for (auto actual_error: lexer.error_types) {
-      std::cout << "ERROR ACTUAL: " << actual_error << std::endl;
-    }
-    for (auto expected_error: (*param.errors)) {
-      std::cout << "EXPECTING ERROR: " << std::get<0>(expected_error) << std::endl;
+    if (getenv("GTEST_FILTER")) {
+      for (auto actual_error: lexer.error_types) {
+        std::cout << "ERROR ACTUAL: " << actual_error << std::endl;
+      }
+      for (auto expected_error: (*param.errors)) {
+        std::cout << "EXPECTING ERROR: " << std::get<0>(expected_error) << std::endl;
+      }
     }
     for (auto error_type: (*param.errors)) {
       auto str = std::get<0>(error_type);
       EXPECT_TRUE(has_lexer_error(lexer, str));
     }
-    if ((*param.errors).size() != lexer.error_types.size()) {
-      std::cout << "Mismatching expected and actual tokenizer errors" << std::endl;
+    if (getenv("GTEST_FILTER")) {
+      if ((*param.errors).size() != lexer.error_types.size()) {
+        std::cout << "Mismatching expected and actual tokenizer errors" << std::endl;
+      }
     }
   } else {
     EXPECT_EQ(lexer.error_types.size(), size_t(0));
-    for (auto actual_error: lexer.error_types) {
-      std::cout << "ERROR ACTUAL: " << actual_error << std::endl;
+    if (getenv("GTEST_FILTER")) {
+      for (auto actual_error: lexer.error_types) {
+        std::cout << "ERROR ACTUAL: " << actual_error << std::endl;
+      }
     }
   }
 
@@ -242,8 +271,6 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
     auto actual = lexer.tokens;
     EXPECT_EQ(actual.size(), expected.size());
     for (size_t i = 0; i < actual.size(); ++i) {
-      std::cout << "ACTUAL: " << actual[i] << std::endl;
-      std::cout << "EXPECTED: " << expected[i] << std::endl;
       EXPECT_EQ(actual[i]->get_kind(), expected[i]->get_kind());
       if (actual[i]->get_kind() == expected[i]->get_kind()) {
         switch (actual[i]->get_kind()) {
@@ -260,7 +287,12 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
             EXPECT_EQ(*actual_token, *expected_token);
             break;
           }
-          case token_t::DOCTYPE:
+          case token_t::DOCTYPE: {
+            auto actual_token = dynamic_cast<doctype_t*>(actual[i].get());
+            auto expected_token = dynamic_cast<doctype_t*>(expected[i].get());
+            EXPECT_EQ(*actual_token, *expected_token);
+            break;
+          }
           case token_t::COMMENT:
           case token_t::END_OF_FILE: {}
         }
@@ -270,5 +302,7 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
     }
   }
 
-  std::cout << "==========================" << std::endl;
+  if (getenv("GTEST_FILTER")) {
+    std::cout << "==========================" << std::endl;
+  }
 }

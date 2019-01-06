@@ -116,7 +116,8 @@ bool operator==(const tag_t &lhs, const tag_t &rhs) {
   if (
     lhs.get_kind() != rhs.get_kind() ||
     lhs.is_self_closing() != rhs.is_self_closing() ||
-    lhs.get_attributes().size() != rhs.get_attributes().size()
+    lhs.get_attributes().size() != rhs.get_attributes().size() ||
+    lhs.get_tag_name() != rhs.get_tag_name()
   ) {
     return false;
   }

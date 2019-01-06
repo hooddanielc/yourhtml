@@ -3,7 +3,6 @@
 
 using namespace yourhtml;
 
-
 inline ::testing::AssertionResult is_invalid_sequence(utf8_decoder_t &decoder, const char *str) {
   try {
     for (size_t i = 0; i < sizeof(str); ++i) {

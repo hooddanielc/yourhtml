@@ -48,6 +48,10 @@ void tag_t::start_new_attribute() {
   attributes.push_back(std::pair<std::string, std::string>({std::string(), std::string()}));
 }
 
+void tag_t::remove_all_attributes() {
+  attributes.clear();
+}
+
 int tag_t::remove_duplicate_attributes() {
   int num_removed = 0;
   std::vector<std::pair<std::string, std::string>> new_attributes;

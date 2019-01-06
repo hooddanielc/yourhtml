@@ -50,6 +50,8 @@ public:
 
   void start_new_attribute();
 
+  void remove_all_attributes();
+
   int remove_duplicate_attributes();
 
   virtual ~tag_t();

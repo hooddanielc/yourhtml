@@ -67,9 +67,11 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
       throw std::runtime_error("all lexer tests must have description string");
     }
     if (obj.HasMember("input") && obj["input"].IsString()) {
+      const char *str = obj["input"].GetString();
+      size_t size = obj["input"].GetStringLength();
       test_param.input = std::string{
-        obj["input"].GetString(),
-        obj["input"].GetStringLength()
+        str,
+        size
       };
     } else {
       throw std::runtime_error("all lexer tests must have input string");
@@ -224,16 +226,15 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
     for (auto error_type: (*param.errors)) {
       auto str = std::get<0>(error_type);
       EXPECT_TRUE(has_lexer_error(lexer, str));
-      // auto iter = std::find(lexer.error_types.begin(), lexer.error_types.end(), str);
-      // if (iter == lexer.error_types.end()) {
-      //   ::testing::AssertionFailure() << "expecting error " << str << " but found none";
-      // }
     }
     if ((*param.errors).size() != lexer.error_types.size()) {
       std::cout << "Mismatching expected and actual tokenizer errors" << std::endl;
     }
   } else {
     EXPECT_EQ(lexer.error_types.size(), size_t(0));
+    for (auto actual_error: lexer.error_types) {
+      std::cout << "ERROR ACTUAL: " << actual_error << std::endl;
+    }
   }
 
   if (param.output) {

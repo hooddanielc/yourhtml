@@ -123,6 +123,7 @@ lexer_t::lexer_t(const char *next_cursor_, size_t len):
 lexer_t::lexer_t(const char *next_cursor_, const char *end_):
   next_cursor(next_cursor_),
   is_ready(false),
+  cursor(nullptr),
   anchor(nullptr),
   end(end_),
   state(data),
@@ -147,7 +148,19 @@ char lexer_t::peek() {
   if (!is_ready) {
     cursor = next_cursor;
     pos = next_pos;
+    char c = *next_cursor;
     switch (*cursor) {
+      // normalize new line characters
+      // by replacing loan \r characters with
+      // \n as well as \r\n characters
+      case '\r': {
+        if (*(cursor + 1) == '\n') {
+          ++next_cursor;
+          cursor = next_cursor;
+        }
+        c = '\n';
+        [[fallthrough]];
+      }
       case '\n': {
         ++next_cursor;
         next_pos.next_line();
@@ -162,18 +175,36 @@ char lexer_t::peek() {
       default: {
         ++next_cursor;
         next_pos.next_col();
-        auto c = *cursor;
 
-        if (is_surrogate(c)) {
-          emit_parse_error("surrogate-in-input-stream");
-        } else if (is_non_character(c)) {
-          emit_parse_error("noncharacter-in-input-stream");
-        } else if (c != '\0' && !is_ascii_ws(c) && is_control_character(c)) {
-          emit_parse_error("control-character-in-input-stream");
+        try {
+          // std::cout << "DECODER: " << decoder << std::endl;
+          auto uc = decoder(static_cast<uint8_t>(c));
+          if (uc != nullptr) {
+            auto n = static_cast<int>(uc[0]);
+            // std::cout << "N = " << n << std::endl;
+            if (is_surrogate(n)) {
+              emit_parse_error("surrogate-in-input-stream");
+            } else if (is_non_character(n)) {
+              emit_parse_error("noncharacter-in-input-stream");
+            } else if (!is_ascii_ws(n) && is_control_character(n)) {
+              emit_parse_error("control-character-in-input-stream");
+            }
+          }
+        } catch (const std::exception &e) {
+          // std::cout << "DECODER EXCEPTION: " << decoder << " " << e.what() << std::endl;
+          auto cp = static_cast<int>(static_cast<unsigned char>(c));
+          if (is_surrogate(cp)) {
+            emit_parse_error("surrogate-in-input-stream");
+          } else if (is_non_character(cp)) {
+            emit_parse_error("noncharacter-in-input-stream");
+          } else if (cp != '\0' && !is_ascii_ws(cp) && is_control_character(cp)) {
+            emit_parse_error("control-character-in-input-stream");
+          }
         }
       }
     }  // switch
     is_ready = true;
+    return c;
   }
   return *cursor;
 }
@@ -243,9 +274,7 @@ bool lexer_t::is_consuming_part_of_attribute() {
 
 void lexer_t::flush_consumed_as_character_reference() {
   if (is_consuming_part_of_attribute()) {
-    if (temp_tag_token->get_kind() != token_t::END_TAG) {
-      temp_tag_token->append_attribute_value(temporary_buffer.str());
-    }
+    temp_tag_token->append_attribute_value(temporary_buffer.str());
   } else {
     auto text = temporary_buffer.str().c_str();
     emit_token(character_t(anchor_pos, text));
@@ -286,6 +315,15 @@ void lexer_t::emit_token(const tag_t &token) {
   // emit duplicate-attribute error for each duplicate tag removed
   for (int i = 0; i < mutable_tag.remove_duplicate_attributes(); ++i) {
     emit_parse_error("duplicate-attribute");
+  }
+  // remove all tag attributes if emitting end tag
+  if (mutable_tag.get_kind() == token_t::END_TAG) {
+    mutable_tag.remove_all_attributes();
+    // end tags do should not have self closing flag set to on
+    if (mutable_tag.is_self_closing()) {
+      emit_parse_error("end-tag-with-trailing-solidus");
+      mutable_tag.set_self_closing(false);
+    }
   }
   this->on_tag(mutable_tag);
 }
@@ -1340,10 +1378,9 @@ void lexer_t::lex() {
           case '=': {
             state = attribute_name;
             emit_parse_error("unexpected-equals-sign-before-attribute-name");
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->start_new_attribute();
-              temp_tag_token->append_attribute_name(c);
-            } else {
+            temp_tag_token->start_new_attribute();
+            temp_tag_token->append_attribute_name(c);
+            if (temp_tag_token->get_kind() == token_t::END_TAG) {
               emit_parse_error("end-tag-with-attributes");
             }
             pop();
@@ -1357,9 +1394,8 @@ void lexer_t::lex() {
             [[fallthrough]];
           }
           default: {
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->start_new_attribute();
-            } else {
+            temp_tag_token->start_new_attribute();
+            if (temp_tag_token->get_kind() == token_t::END_TAG) {
               emit_parse_error("end-tag-with-attributes");
             }
             state = attribute_name;
@@ -1388,9 +1424,7 @@ void lexer_t::lex() {
           case '"':
           case '\'':
           case '<': {
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->append_attribute_name(c);
-            }
+            temp_tag_token->append_attribute_name(c);
             pop();
             emit_parse_error("unexpected-character-in-attribute-name");
             break;
@@ -1400,9 +1434,7 @@ void lexer_t::lex() {
               state = after_attribute_name;
             } else {
               emit_parse_error("unexpected-null-character");
-              if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                temp_tag_token->append_attribute_name(utf8chr(0xFFFD));
-              }
+              temp_tag_token->append_attribute_name(utf8chr(0xFFFD));
               pop();
             }
             break;
@@ -1411,19 +1443,13 @@ void lexer_t::lex() {
             if (isalpha(c)) {
               pop();
               if (isupper(c)) {
-                if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                  temp_tag_token->append_attribute_name(char(tolower(c)));
-                }
+                temp_tag_token->append_attribute_name(char(tolower(c)));
               } else {
-                if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                  temp_tag_token->append_attribute_name(c);
-                }
+                temp_tag_token->append_attribute_name(c);
               }
             } else {
               pop();
-              if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                temp_tag_token->append_attribute_name(c);
-              }
+              temp_tag_token->append_attribute_name(c);
             }
           }
         }
@@ -1466,9 +1492,8 @@ void lexer_t::lex() {
           }
           default: {
             state = attribute_name;
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->start_new_attribute();
-            } else {
+            temp_tag_token->start_new_attribute();
+            if (temp_tag_token->get_kind() == token_t::END_TAG) {
               emit_parse_error("end-tag-with-attributes");
             }
             break;
@@ -1529,17 +1554,13 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
-              }
+              temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
               pop();
             }
             break;
           }
           default: {
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->append_attribute_value(c);
-            }
+            temp_tag_token->append_attribute_value(c);
             pop();
             break;
           }
@@ -1566,17 +1587,13 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
-              }
+              temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
               pop();
             }
             break;
           }
           default: {
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->append_attribute_value(c);
-            }
+            temp_tag_token->append_attribute_value(c);
             pop();
             break;
           }
@@ -1612,9 +1629,7 @@ void lexer_t::lex() {
           case '`': {
             pop();
             emit_parse_error("unexpected-character-in-unquoted-attribute-value");
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->append_attribute_value(c);
-            }
+            temp_tag_token->append_attribute_value(c);
             break;
           }
           case '\0': {
@@ -1624,18 +1639,14 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              if (temp_tag_token->get_kind() != token_t::END_TAG) {
-                temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
-              }
+              temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
               pop();
             }
             break;
           }
           default: {
             pop();
-            if (temp_tag_token->get_kind() != token_t::END_TAG) {
-              temp_tag_token->append_attribute_value(c);
-            }
+            temp_tag_token->append_attribute_value(c);
             break;
           }
         }
@@ -1727,6 +1738,7 @@ void lexer_t::lex() {
           }
           default: {
             pop();
+            c = peek();
             break;
           }
         }
@@ -2847,23 +2859,18 @@ void lexer_t::lex() {
             state = pop_state();
           }
         } else {
-          do {
-            temporary_buffer << c;
-            pop();
-            c = peek();
-          } while (c != ';' && c != '\0');
-          state = ambiguous_ampersand;
           flush_consumed_as_character_reference();
+          state = ambiguous_ampersand;
         }
         break;
       }
       case ambiguous_ampersand: {
-        if (isalnum(c)) {
+        if (is_ascii_alphanumeric(c)) {
           // If the character reference was consumed as part of an attribute, then
           // append the current input character to the current attribute's value. Otherwise,
           // emit the current input character as a character token.
           if (is_consuming_part_of_attribute()) {
-            attribute_value_buffer << c;
+            temp_tag_token->append_attribute_value(c);;
           } else {
             emit_token(character_t(pos, c));
           }
@@ -2917,34 +2924,45 @@ void lexer_t::lex() {
         break;
       }
       case hexadecimal_character_reference: {
-        if (isdigit(c)) {
+        auto temp = temp_hex_reference_number;
+        if (c == ';') {
+          state = numeric_character_reference_end;
+          pop();
+        } else if (temp > 0x10FFFF) {
+          // ignore the character
+          pop();
+        } else if (isdigit(c)) {
           // Multiply the character reference code by 16. Add a numeric version of
           // the current input character (subtract 0x0030 from the character's code
           // point) to the character reference code.
           pop();
-          temp_hex_reference_number *= 16;
-          temp_hex_reference_number += (c - 0x0030);
+          temp *= 16;
+          temp += (c - 0x0030);
         } else if (isxdigit(c) && isupper(c)) {
           // Multiply the character reference code by 16. Add a numeric version
           // of the current input character as a hexadecimal digit (subtract
           // 0x0037 from the character's code point) to the character reference code.
           pop();
-          temp_hex_reference_number *= 16;
-          temp_hex_reference_number += (c - 0x0037);
+          temp *= 16;
+          temp += (c - 0x0037);
         } else if (isxdigit(c)) {
           // Multiply the character reference code by 16. Add a numeric version of the
           // current input character as a hexadecimal digit (subtract 0x0057 from the
           // character's code point) to the character reference code.
           pop();
-          temp_hex_reference_number *= 16;
-          temp_hex_reference_number += (c - 0x0057);
-        } else if (c == ';') {
-          state = numeric_character_reference_end;
-          pop();
+          temp *= 16;
+          temp += (c - 0x0057);
         } else {
           state = numeric_character_reference_end;
           emit_parse_error("missing-semicolon-after-character-reference");
         }
+
+        if (temp < temp_hex_reference_number) {
+          temp = (0x10FFFF) + 1;
+        }
+
+        temp_hex_reference_number = temp;
+        std::cout << "THE TEMP HEX REF NUM: " << temp_hex_reference_number << std::endl;
         break;
       }
       case decimal_character_reference: {
@@ -2955,17 +2973,27 @@ void lexer_t::lex() {
             break;
           }
           default: {
+            auto temp = temp_hex_reference_number;
             if (isdigit(c)) {
-              // Multiply the character reference code by 10. Add a numeric version of
-              // the current input character (subtract 0x0030 from the character's code
-              // point) to the character reference code.
-              pop();
-              temp_hex_reference_number *= 10;
-              temp_hex_reference_number += (codepoint(std::string{c, 1}) - 0x0030);
+              if (temp > 0x10FFFF) {
+                // ignore the character
+                pop();
+              } else {
+                // Multiply the character reference code by 10. Add a numeric version of
+                // the current input character (subtract 0x0030 from the character's code
+                // point) to the character reference code.
+                pop();
+                temp *= 10;
+                temp += (codepoint(std::string{c, 1}) - 0x0030);
+              }
             } else {
               state = numeric_character_reference_end;
               emit_parse_error("missing-semicolon-after-character-reference");
             }
+            if (temp < temp_hex_reference_number) {
+              temp = (0x10FFFF) + 1;
+            }
+            temp_hex_reference_number = temp;
           }
         }
         break;
@@ -2978,6 +3006,8 @@ void lexer_t::lex() {
             break;
           }
           default: {
+            std::cout << "IS IT? " << temp_hex_reference_number << std::endl;
+            std::cout << "WHAT " << (temp_hex_reference_number > 0x10FFFF) << std::endl;
             if (temp_hex_reference_number > 0x10FFFF) {
               temp_hex_reference_number = 0xFFFD;
               emit_parse_error("character-reference-outside-unicode-range");

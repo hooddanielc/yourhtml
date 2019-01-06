@@ -4,6 +4,26 @@
 
 namespace yourhtml {
 
+bool is_ascii_upper_alpha(int c) {
+  return 0x0041 <= c && c <= 0x005A;
+}
+
+bool is_ascii_lower_alpha(int c) {
+  return 0x0061 <= c && c <= 0x007A;
+}
+
+bool is_ascii_digit(int c) {
+  return 0x0030 <= c && c <= 0x0039;
+}
+
+bool is_ascii_alpha(int c) {
+  return is_ascii_lower_alpha(c) || is_ascii_upper_alpha(c);
+}
+
+bool is_ascii_alphanumeric(int c) {
+  return is_ascii_alpha(c) || is_ascii_digit(c);
+}
+
 // A surrogate is a code point that is in the range U+D800
 // to U+DFFF, inclusive.
 bool is_surrogate(int codepoint) {
@@ -104,7 +124,7 @@ std::string codepointhex(const std::string &u) {
   return s;
 }
 
-bool is_ascii_ws(char c) {
+bool is_ascii_ws(int c) {
   switch (c) {
     case 0x0009:
     case 0x000A:

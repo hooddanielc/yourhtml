@@ -20,6 +20,7 @@
 #include "tokens/tag.h"
 #include "tokens/eof.h"
 #include "util.h"
+#include "utf8.h"
 #include <yourhtml_entities/entity_lexer.h>
 
 
@@ -206,6 +207,8 @@ public:
   virtual void on_parse_error(const lexer_error_t &) {}
 
 private:
+
+  utf8_decoder_t decoder;
 
   /* Sets the return state. Throws if return state is not idle */
   void push_state(state_t return_state);

@@ -36,6 +36,8 @@ struct html5lib_test_param_t {
   std::string id;
   std::optional<std::vector<std::shared_ptr<yourhtml::token_t>>> output;
   std::optional<std::vector<std::pair<std::string, yourhtml::pos_t>>> errors;
+  std::optional<const char *> replacement_chars;
+  std::optional<const char *> form_feed_chars;
 
   friend std::ostream& operator<<(std::ostream &os, const html5lib_test_param_t &that) {
     os << "```" << std::endl;
@@ -69,7 +71,7 @@ public:
 
 void print_json(const rapidjson::Value &val);
 
-testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in(const std::string &filename);
+testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in(const std::string &filename, const std::string &test_key = "tests");
 
 struct html5lib_tokenizer_test_title_generator_t {
   std::string operator()(const testing::TestParamInfo<html5lib_test_param_t> &test_param_info);

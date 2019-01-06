@@ -147,6 +147,8 @@ public:
 
   void emit_parse_error(const std::string &);
 
+  void print_state() noexcept;
+
   /* Heper method to print tokens returned from lex */
   static void print_tokens(const std::vector<token_t> &tokens);
 
@@ -255,9 +257,6 @@ private:
      token otherwise. */
   void flush_consumed_as_character_reference();
 
-  /* Set the current tag as self closing or not self closing */
-  void set_current_tag_self_closing(bool);
-
   /* Temporarily holds tokens while lexing */
   std::vector<token_t> tokens;
 
@@ -307,9 +306,6 @@ private:
 
   /* The current tag's attributes */
   std::vector<std::pair<std::string, std::string>> current_token_attributes;
-
-  /* Is the current tag self closing? */
-  bool current_tag_self_closing;
 
   std::shared_ptr<doctype_t> temp_doctype_token;
 

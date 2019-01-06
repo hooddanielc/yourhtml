@@ -113,6 +113,11 @@ std::ostream &operator<<(std::ostream &strm, const doctype_t &that) {
   if (!that.is_missing_system_identifier()) {
     strm << "; system_identifier=\"" << that.get_system_identifier() << "\"";
   }
+  if (that.is_forcing_quirks()) {
+    strm << "; force quirks = true";
+  } else {
+    strm << "; force quirks = false";
+  }
   return strm;
 }
 
@@ -130,7 +135,7 @@ bool operator==(const doctype_t &lhs, const doctype_t &rhs) {
     lhs.is_forcing_quirks() != rhs.is_forcing_quirks() ||
     lhs.is_missing_system_identifier() != rhs.is_missing_system_identifier() ||
     lhs.is_missing_doctype_name() != rhs.is_missing_doctype_name() ||
-    lhs.is_missing_system_identifier() != rhs.is_missing_system_identifier() ||
+    lhs.is_missing_public_identifier() != rhs.is_missing_public_identifier() ||
     (
       !lhs.is_missing_system_identifier() &&
       lhs.get_system_identifier() != rhs.get_system_identifier()

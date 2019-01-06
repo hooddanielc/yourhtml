@@ -128,7 +128,6 @@ lexer_t::lexer_t(const char *next_cursor_, const char *end_):
   end(end_),
   state(data),
   return_state(idle),
-  current_tag_self_closing(false),
   temp_hex_reference_number(0),
   go(true) {}
 
@@ -177,11 +176,9 @@ char lexer_t::peek() {
         next_pos.next_col();
 
         try {
-          // std::cout << "DECODER: " << decoder << std::endl;
           auto uc = decoder(static_cast<uint8_t>(c));
           if (uc != nullptr) {
             auto n = static_cast<int>(uc[0]);
-            // std::cout << "N = " << n << std::endl;
             if (is_surrogate(n)) {
               emit_parse_error("surrogate-in-input-stream");
             } else if (is_non_character(n)) {
@@ -191,7 +188,6 @@ char lexer_t::peek() {
             }
           }
         } catch (const std::exception &e) {
-          // std::cout << "DECODER EXCEPTION: " << decoder << " " << e.what() << std::endl;
           auto cp = static_cast<int>(static_cast<unsigned char>(c));
           if (is_surrogate(cp)) {
             emit_parse_error("surrogate-in-input-stream");
@@ -285,10 +281,6 @@ void lexer_t::emit_parse_error(const std::string &error) {
   this->on_parse_error(lexer_error_t(this, error.c_str()));
 }
 
-void lexer_t::set_current_tag_self_closing(bool current_tag_self_closing_) {
-  current_tag_self_closing = current_tag_self_closing_;
-}
-
 void lexer_t::emit_token(const comment_t &token) {
   this->on_comment(token);
 }
@@ -340,11 +332,14 @@ bool lexer_t::is_eof() {
   return end == cursor;
 }
 
+void lexer_t::print_state() noexcept {
+  char c = peek();
+  std::cout << "DEBUG: " << get_state_name(state) << " '" << (!isspace(c) ? c : ' ') << "'" << std::endl;
+}
+
 void lexer_t::lex() {
   do {
     char c = peek();
-    // std::cout << "DEBUG: " << get_state_name(state) << " '" << (!isspace(c) ? c : ' ') << "' '" << codepoint(std::string{c}) << "'" << std::endl;
-
     switch (state) {
       case idle: {
         throw ice_t(pos, __FILE__, __LINE__);
@@ -401,7 +396,7 @@ void lexer_t::lex() {
               emit_token(eof_t(pos));
               go = false;
             } else {
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               emit_parse_error("unexpected-null-character");
               pop();
             }
@@ -427,7 +422,7 @@ void lexer_t::lex() {
               emit_token(eof_t(pos));
               go = false;
             } else {
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               emit_parse_error("unexpected-null-character");
               pop();
             }
@@ -453,7 +448,7 @@ void lexer_t::lex() {
               emit_token(eof_t(pos));
               go = false;
             } else {
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               emit_parse_error("unexpected-null-character");
               pop();
             }
@@ -473,7 +468,7 @@ void lexer_t::lex() {
             emit_token(eof_t(pos));
             go = false;
           } else {
-            emit_token(character_t(pos, utf8chr(0xFFFD)));
+            emit_token(character_t(pos, "\xef\xbf\xbd"));
             emit_parse_error("unexpected-null-character");
             pop();
           }
@@ -585,7 +580,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_tag_token->append_tag_name(utf8chr(0xFFFD));
+              temp_tag_token->append_tag_name("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -950,7 +945,7 @@ void lexer_t::lex() {
               emit_token(eof_t(pos));
               go = false;
             } else {
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               emit_parse_error("unexpected-null-character");
               pop();
             }
@@ -984,7 +979,7 @@ void lexer_t::lex() {
             } else {
               state = script_data_double_escaped;
               emit_parse_error("unexpected-null-character");
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               pop();
             }
             break;
@@ -1025,7 +1020,7 @@ void lexer_t::lex() {
             } else {
               state = script_data_double_escaped;
               emit_parse_error("unexpected-null-character");
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               pop();
             }
             break;
@@ -1220,7 +1215,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               pop();
             }
             break;
@@ -1255,7 +1250,7 @@ void lexer_t::lex() {
             } else {
               state = script_data_double_escaped;
               emit_parse_error("unexpected-null-character");
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               pop();
             }
             break;
@@ -1296,7 +1291,7 @@ void lexer_t::lex() {
             } else {
               state = script_data_double_escaped;
               emit_parse_error("unexpected-null-character");
-              emit_token(character_t(pos, utf8chr(0xFFFD)));
+              emit_token(character_t(pos, "\xef\xbf\xbd"));
               pop();
             }
             break;
@@ -1434,7 +1429,7 @@ void lexer_t::lex() {
               state = after_attribute_name;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_tag_token->append_attribute_name(utf8chr(0xFFFD));
+              temp_tag_token->append_attribute_name("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -1554,7 +1549,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
+              temp_tag_token->append_attribute_value("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -1587,7 +1582,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
+              temp_tag_token->append_attribute_value("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -1639,7 +1634,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_tag_token->append_attribute_value(utf8chr(0xFFFD));
+              temp_tag_token->append_attribute_value("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -2088,6 +2083,7 @@ void lexer_t::lex() {
           case '\0': {
             if (is_eof()) {
               temp_doctype_token = std::make_shared<doctype_t>(pos);
+              temp_doctype_token->set_force_quirks(true);
               emit_token(*temp_doctype_token);
               emit_token(eof_t(pos));
               emit_parse_error("eof-in-doctype");
@@ -2106,6 +2102,13 @@ void lexer_t::lex() {
       }
       case before_doctype_name: {
         switch (c) {
+          case 0x0009:   // (tab)
+          case 0x000A:   // (lf)
+          case 0x000C:   // (ff)
+          case 0x0020: { // space
+            pop();
+            break;
+          }
           case '>': {
             state = data;
             pop();
@@ -2125,7 +2128,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               temp_doctype_token = std::make_shared<doctype_t>(pos);
-              temp_doctype_token->append_doctype_name(utf8chr(0xFFFD));
+              temp_doctype_token->append_doctype_name("\xef\xbf\xbd");
               state = doctype_name;
               emit_parse_error("unexpected-null-character");
               pop();
@@ -2133,17 +2136,13 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            if (isspace(c)) {
-              pop();
+            state = doctype_name;
+            pop();
+            temp_doctype_token = std::make_shared<doctype_t>(pos);
+            if (isupper(c)) {
+              temp_doctype_token->append_doctype_name(char(tolower(c)));
             } else {
-              state = doctype_name;
-              pop();
-              temp_doctype_token = std::make_shared<doctype_t>(pos);
-              if (isupper(c)) {
-                temp_doctype_token->append_doctype_name(char(tolower(c)));
-              } else {
-                temp_doctype_token->append_doctype_name(c);
-              }
+              temp_doctype_token->append_doctype_name(c);
             }
             break;
           }
@@ -2152,6 +2151,14 @@ void lexer_t::lex() {
       }
       case doctype_name: {
         switch (c) {
+          case 0x0009:   // (tab)
+          case 0x000A:   // (lf)
+          case 0x000C:   // (ff)
+          case 0x0020: { // space
+            state = after_doctype_name;
+            pop();
+            break;
+          }
           case '>': {
             state = data;
             pop();
@@ -2168,22 +2175,17 @@ void lexer_t::lex() {
             } else {
               emit_parse_error("unexpected-null-character");
               temp_doctype_token->set_force_quirks(true);
-              temp_doctype_token->append_doctype_name(utf8chr(0xFFFD));
+              temp_doctype_token->append_doctype_name("\xef\xbf\xbd");
               pop();
             }
             break;
           }
           default: {
-            if (isspace(c)) {
-              state = after_doctype_name;
-              pop();
+            pop();
+            if (isupper(c)) {
+              temp_doctype_token->append_doctype_name(char(tolower(c)));
             } else {
-              pop();
-              if (isupper(c)) {
-                temp_doctype_token->append_doctype_name(char(tolower(c)));
-              } else {
-                temp_doctype_token->append_doctype_name(c);
-              }
+              temp_doctype_token->append_doctype_name(c);
             }
             break;
           }
@@ -2238,6 +2240,7 @@ void lexer_t::lex() {
               state = after_doctype_system_keyword;
             } else {
               reset_cursor(current_cursor);
+              temp_doctype_token->set_force_quirks(true);
               state = bogus_doctype;
               emit_parse_error("invalid-character-sequence-after-doctype-name");
             }
@@ -2369,7 +2372,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_doctype_token->append_public_identifier(utf8chr(0xFFFD));
+              temp_doctype_token->append_public_identifier("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -2406,7 +2409,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_doctype_token->append_public_identifier(utf8chr(0xFFFD));
+              temp_doctype_token->append_public_identifier("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -2637,7 +2640,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_doctype_token->append_system_identifier(utf8chr(0xFFFD));
+              temp_doctype_token->append_system_identifier("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -2674,7 +2677,7 @@ void lexer_t::lex() {
               go = false;
             } else {
               emit_parse_error("unexpected-null-character");
-              temp_doctype_token->append_system_identifier(utf8chr(0xFFFD));
+              temp_doctype_token->append_system_identifier("\xef\xbf\xbd");
               pop();
             }
             break;
@@ -2879,7 +2882,7 @@ void lexer_t::lex() {
           // This is an unknown-named-character-reference parse error. Reconsume in the
           // return state.
           state = pop_state();
-          emit_parse_error("unknown-named-character-reference-parse-error");
+          emit_parse_error("unknown-named-character-reference");
         } else {
           // Reconsume in the return state
           state = pop_state();
@@ -2962,7 +2965,6 @@ void lexer_t::lex() {
         }
 
         temp_hex_reference_number = temp;
-        std::cout << "THE TEMP HEX REF NUM: " << temp_hex_reference_number << std::endl;
         break;
       }
       case decimal_character_reference: {
@@ -3006,8 +3008,6 @@ void lexer_t::lex() {
             break;
           }
           default: {
-            std::cout << "IS IT? " << temp_hex_reference_number << std::endl;
-            std::cout << "WHAT " << (temp_hex_reference_number > 0x10FFFF) << std::endl;
             if (temp_hex_reference_number > 0x10FFFF) {
               temp_hex_reference_number = 0xFFFD;
               emit_parse_error("character-reference-outside-unicode-range");
@@ -3020,7 +3020,7 @@ void lexer_t::lex() {
               temp_hex_reference_number == 0x0D ||
               (
                 is_control_character(temp_hex_reference_number) &&
-                !isspace(temp_hex_reference_number)
+                !is_ascii_ws(temp_hex_reference_number)
               )
             ) {
               emit_parse_error("control-character-reference");

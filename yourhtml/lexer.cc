@@ -339,6 +339,7 @@ void lexer_t::print_state() noexcept {
 
 void lexer_t::lex() {
   do {
+    print_state();
     char c = peek();
     switch (state) {
       case idle: {

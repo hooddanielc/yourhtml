@@ -2,6 +2,57 @@
 
 using namespace yourhtml;
 
+template <typename json_val_t>
+inline std::string get_string(json_val_t &val, bool double_escaped) {
+  std::string str{val.GetString(), val.GetStringLength()};
+  if (!double_escaped) {
+    return str;
+  }
+  enum state_t {
+    data,
+    slash,
+    hex
+  } state;
+  state = data;
+  std::stringstream temp;
+  std::stringstream out;
+  for (auto c: str) {
+    switch (state) {
+      case data: {
+        if (c == '\\') {
+          state = slash;
+        } else {
+          out << c;
+        }
+        break;
+      }
+      case slash: {
+        if (c == 'u') {
+          state = hex;
+        } else {
+          out << '\\';
+          out << c;
+        }
+        break;
+      }
+      case hex: {
+        if (!is_ascii_digit(c)) {
+          state = data;
+          unsigned int codepoint;
+          temp >> codepoint;
+          out << utf8chr(static_cast<int>(codepoint));
+          temp.str("");
+          temp.clear();
+        } else {
+          temp << std::hex << c;
+        }
+        break;
+      }
+    }
+  }
+  return out.str();
+}
+
 void html5lib_test_lexer_t::on_character(const character_t &token) {
   if (tokens.size() > 0 && tokens.back()->get_kind() == token_t::CHARACTER) {
     auto data = dynamic_cast<character_t*>(tokens.back().get())->get_data();
@@ -53,38 +104,54 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
   std::vector<html5lib_test_param_t> lexer_test_params;
   for (rapidjson::SizeType i = 0; i < tests.Size(); ++i) {
     auto obj = tests[i].GetObject();
-    html5lib_test_param_t test_param = {
-      "",
-      "",
-      "",
-      std::nullopt,
-      std::nullopt,
-      std::nullopt,
-      std::nullopt
-    };
-
-    if (test_key == "xmlViolationTests") {
-      test_param.replacement_chars = " ";
-      test_param.form_feed_chars = " ";
-    }
+    html5lib_test_param_t test_param;
 
     if (obj.HasMember("description") && obj["description"].IsString()) {
       test_param.description = obj["description"].GetString();
     } else {
       throw std::runtime_error("all lexer tests must have description string");
     }
+    bool double_escaped = false;
+    if (obj.HasMember("doubleEscaped") && obj["doubleEscaped"].IsBool()) {
+      double_escaped = obj["doubleEscaped"].GetBool();
+    }
     if (obj.HasMember("input") && obj["input"].IsString()) {
-      const char *str = obj["input"].GetString();
-      size_t size = obj["input"].GetStringLength();
-      test_param.input = std::string{
-        str,
-        size
-      };
+      auto str = get_string(obj["input"], double_escaped);
+      test_param.input = str;
     } else {
       throw std::runtime_error("all lexer tests must have input string");
     }
 
     test_param.id = testfs::path(filename).stem().string() + "_" + std::to_string(i);
+
+    if (obj.HasMember("initialStates")) {
+      auto initial_states_val = obj["initialStates"].GetArray();
+      for (rapidjson::SizeType ei = 0; ei < initial_states_val.Size(); ++ei) {
+        if (!initial_states_val[ei].IsString()) {
+          throw std::runtime_error("Expected initial states to be a list of strings");
+        }
+        std::string initial_state(initial_states_val[ei].GetString());
+        if (initial_state == "Data state") {
+          test_param.initial_states.push_back(lexer_t::state_t::data);
+        } else if (initial_state == "PLAINTEXT state") {
+          test_param.initial_states.push_back(lexer_t::state_t::plaintext);
+        } else if (initial_state == "RCDATA state") {
+          test_param.initial_states.push_back(lexer_t::state_t::rcdata);
+        } else if (initial_state == "RAWTEXT state") {
+          test_param.initial_states.push_back(lexer_t::state_t::rawtext);
+        } else if (initial_state == "Script data state") {
+          test_param.initial_states.push_back(lexer_t::state_t::script_data);
+        } else if (initial_state == "CDATA section state") {
+          test_param.initial_states.push_back(lexer_t::state_t::cdata_section);
+        } else {
+          throw std::runtime_error("Invalid initial state " + initial_state);
+        }
+      }
+    }
+
+    if (test_param.initial_states.size() == 0) {
+      test_param.initial_states.push_back(lexer_t::state_t::data);
+    }
 
     if (obj.HasMember("errors") && obj["errors"].IsArray()) {
       std::vector<std::pair<std::string, pos_t>> errors;
@@ -226,9 +293,8 @@ std::string html5lib_tokenizer_test_title_generator_t::operator()(const testing:
   }
 }
 
-TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
-  auto param = GetParam();
-  
+template <typename tokenizer_t, typename param_t>
+inline void run_tokenizer_test(tokenizer_t &lexer, param_t &param) {
   if (getenv("GTEST_FILTER")) {
     std::cout << "TESTING USING INPUT: ```" << std::endl;
     std::cout << "(" << param.input << std::endl << ")";
@@ -236,7 +302,6 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
     std::cout << "TOTAL INPUT SIZE: " << param.input.size() << std::endl;
   }
 
-  html5lib_test_lexer_t lexer(param.input.c_str(), param.input.size());
   lexer.lex();
 
   if (param.errors) {
@@ -304,5 +369,15 @@ TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
 
   if (getenv("GTEST_FILTER")) {
     std::cout << "==========================" << std::endl;
+  }
+}
+
+TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
+  auto param = GetParam();
+
+  for (auto state: param.initial_states) {
+    html5lib_test_lexer_t lexer(param.input.c_str(), param.input.size());
+    lexer.set_state(state);
+    run_tokenizer_test(lexer, param);
   }
 }

@@ -36,8 +36,7 @@ struct html5lib_test_param_t {
   std::string id;
   std::optional<std::vector<std::shared_ptr<yourhtml::token_t>>> output;
   std::optional<std::vector<std::pair<std::string, yourhtml::pos_t>>> errors;
-  std::optional<const char *> replacement_chars;
-  std::optional<const char *> form_feed_chars;
+  std::vector<yourhtml::lexer_t::state_t> initial_states;
 
   friend std::ostream& operator<<(std::ostream &os, const html5lib_test_param_t &that) {
     os << "```" << std::endl;

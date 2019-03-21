@@ -21,10 +21,10 @@ public:
   /* The position in source code when the error occurred */
   pos_t get_pos() const;
 
-protected:
-
   /* Do-little. */
   error_t(const pos_t &pos);
+
+protected:
 
   /* Mark the end of a section of a diagnostic message.  The classes which
      inehrit from us will use this in their constructors. */

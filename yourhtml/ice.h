@@ -6,7 +6,7 @@
 namespace yourhtml {
 
 /* The dreaded internal compiler error. */
-class ice_t final: public error_t {
+class ice_t: public error_t {
 
 public:
 

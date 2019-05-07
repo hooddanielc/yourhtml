@@ -34,6 +34,10 @@ std::ostream &operator<<(std::ostream &strm, const character_t &that) {
   strm << "; \"";
   for (auto c: that.data) {
     switch (c) {
+      case '\r': {
+        strm << "\\r";
+        break;
+      }
       case '\n': {
         strm << "\\n";
         break;

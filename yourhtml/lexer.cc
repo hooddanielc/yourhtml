@@ -157,8 +157,10 @@ char lexer_t::peek() {
           ++next_cursor;
           cursor = next_cursor;
         }
+        ++next_cursor;
+        next_pos.next_line();
         c = '\n';
-        [[fallthrough]];
+        break;
       }
       case '\n': {
         ++next_cursor;
@@ -202,7 +204,15 @@ char lexer_t::peek() {
     is_ready = true;
     return c;
   }
-  return *cursor;
+
+  switch (*cursor) {
+    case '\r': {
+      return '\n';
+    }
+    default: {
+      return *cursor;
+    }
+  }
 }
 
 char lexer_t::reset_cursor(const char *saved_cursor) {
@@ -334,11 +344,12 @@ bool lexer_t::is_eof() {
 
 void lexer_t::print_state() noexcept {
   char c = peek();
-  std::cout << "DEBUG: " << get_state_name(state) << " '" << (!isspace(c) ? c : ' ') << "'" << std::endl;
+  // std::cout << "DEBUG: " << get_state_name(state) << " '" << (!isspace(c) ? c : ' ') << "'" << std::endl;
 }
 
 void lexer_t::lex() {
   do {
+    print_state();
     char c = peek();
     switch (state) {
       case idle: {
@@ -2873,7 +2884,7 @@ void lexer_t::lex() {
           // append the current input character to the current attribute's value. Otherwise,
           // emit the current input character as a character token.
           if (is_consuming_part_of_attribute()) {
-            temp_tag_token->append_attribute_value(c);;
+            temp_tag_token->append_attribute_value(c);
           } else {
             emit_token(character_t(pos, c));
           }

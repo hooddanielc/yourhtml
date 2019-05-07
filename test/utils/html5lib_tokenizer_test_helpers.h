@@ -10,6 +10,7 @@
 #include <gtest/gtest.h>
 #include <test/utils/dat.h>
 #include <test/util.h>
+#include <test/utils/ignored_tests.h>
 
 class html5lib_test_lexer_t: public yourhtml::lexer_with_errors_t {
 
@@ -38,6 +39,7 @@ struct html5lib_test_param_t {
   std::optional<std::vector<std::pair<std::string, yourhtml::pos_t>>> errors;
   std::optional<const char *> replacement_chars;
   std::optional<const char *> form_feed_chars;
+  std::optional<bool> ignored;
 
   friend std::ostream& operator<<(std::ostream &os, const html5lib_test_param_t &that) {
     os << "```" << std::endl;
@@ -59,7 +61,6 @@ struct html5lib_test_param_t {
     return os;
   }
 };
-
 
 class html5lib_tokenizer_test_t : public testing::TestWithParam<html5lib_test_param_t> {
 

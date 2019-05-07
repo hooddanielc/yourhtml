@@ -6041,1627 +6041,1627 @@ yyout << YYText(); return -1;
 case 2:
 YY_RULE_SETUP
 #line 6 "/tmp/input.flex"
-yyout << u8"Æ"; return 0;
+yyout << "Æ"; return 0;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 7 "/tmp/input.flex"
-yyout << u8"Æ"; return 1;
+yyout << "Æ"; return 1;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 8 "/tmp/input.flex"
-yyout << u8"&"; return 2;
+yyout << "&"; return 2;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 9 "/tmp/input.flex"
-yyout << u8"&"; return 3;
+yyout << "&"; return 3;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 10 "/tmp/input.flex"
-yyout << u8"Á"; return 4;
+yyout << "Á"; return 4;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 11 "/tmp/input.flex"
-yyout << u8"Á"; return 5;
+yyout << "Á"; return 5;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 12 "/tmp/input.flex"
-yyout << u8"Ă"; return 6;
+yyout << "Ă"; return 6;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 13 "/tmp/input.flex"
-yyout << u8"Â"; return 7;
+yyout << "Â"; return 7;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 14 "/tmp/input.flex"
-yyout << u8"Â"; return 8;
+yyout << "Â"; return 8;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 15 "/tmp/input.flex"
-yyout << u8"А"; return 9;
+yyout << "А"; return 9;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 16 "/tmp/input.flex"
-yyout << u8"𝔄"; return 10;
+yyout << "𝔄"; return 10;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 17 "/tmp/input.flex"
-yyout << u8"À"; return 11;
+yyout << "À"; return 11;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 18 "/tmp/input.flex"
-yyout << u8"À"; return 12;
+yyout << "À"; return 12;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 19 "/tmp/input.flex"
-yyout << u8"Α"; return 13;
+yyout << "Α"; return 13;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 20 "/tmp/input.flex"
-yyout << u8"Ā"; return 14;
+yyout << "Ā"; return 14;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 21 "/tmp/input.flex"
-yyout << u8"⩓"; return 15;
+yyout << "⩓"; return 15;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 22 "/tmp/input.flex"
-yyout << u8"Ą"; return 16;
+yyout << "Ą"; return 16;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 23 "/tmp/input.flex"
-yyout << u8"𝔸"; return 17;
+yyout << "𝔸"; return 17;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
 #line 24 "/tmp/input.flex"
-yyout << u8"⁡"; return 18;
+yyout << "⁡"; return 18;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
 #line 25 "/tmp/input.flex"
-yyout << u8"Å"; return 19;
+yyout << "Å"; return 19;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
 #line 26 "/tmp/input.flex"
-yyout << u8"Å"; return 20;
+yyout << "Å"; return 20;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
 #line 27 "/tmp/input.flex"
-yyout << u8"𝒜"; return 21;
+yyout << "𝒜"; return 21;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
 #line 28 "/tmp/input.flex"
-yyout << u8"≔"; return 22;
+yyout << "≔"; return 22;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
 #line 29 "/tmp/input.flex"
-yyout << u8"Ã"; return 23;
+yyout << "Ã"; return 23;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
 #line 30 "/tmp/input.flex"
-yyout << u8"Ã"; return 24;
+yyout << "Ã"; return 24;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
 #line 31 "/tmp/input.flex"
-yyout << u8"Ä"; return 25;
+yyout << "Ä"; return 25;
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
 #line 32 "/tmp/input.flex"
-yyout << u8"Ä"; return 26;
+yyout << "Ä"; return 26;
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
 #line 33 "/tmp/input.flex"
-yyout << u8"∖"; return 27;
+yyout << "∖"; return 27;
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
 #line 34 "/tmp/input.flex"
-yyout << u8"⫧"; return 28;
+yyout << "⫧"; return 28;
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
 #line 35 "/tmp/input.flex"
-yyout << u8"⌆"; return 29;
+yyout << "⌆"; return 29;
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
 #line 36 "/tmp/input.flex"
-yyout << u8"Б"; return 30;
+yyout << "Б"; return 30;
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
 #line 37 "/tmp/input.flex"
-yyout << u8"∵"; return 31;
+yyout << "∵"; return 31;
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
 #line 38 "/tmp/input.flex"
-yyout << u8"ℬ"; return 32;
+yyout << "ℬ"; return 32;
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
 #line 39 "/tmp/input.flex"
-yyout << u8"Β"; return 33;
+yyout << "Β"; return 33;
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
 #line 40 "/tmp/input.flex"
-yyout << u8"𝔅"; return 34;
+yyout << "𝔅"; return 34;
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
 #line 41 "/tmp/input.flex"
-yyout << u8"𝔹"; return 35;
+yyout << "𝔹"; return 35;
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
 #line 42 "/tmp/input.flex"
-yyout << u8"˘"; return 36;
+yyout << "˘"; return 36;
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
 #line 43 "/tmp/input.flex"
-yyout << u8"ℬ"; return 37;
+yyout << "ℬ"; return 37;
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
 #line 44 "/tmp/input.flex"
-yyout << u8"≎"; return 38;
+yyout << "≎"; return 38;
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
 #line 45 "/tmp/input.flex"
-yyout << u8"Ч"; return 39;
+yyout << "Ч"; return 39;
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
 #line 46 "/tmp/input.flex"
-yyout << u8"©"; return 40;
+yyout << "©"; return 40;
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
 #line 47 "/tmp/input.flex"
-yyout << u8"©"; return 41;
+yyout << "©"; return 41;
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
 #line 48 "/tmp/input.flex"
-yyout << u8"Ć"; return 42;
+yyout << "Ć"; return 42;
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
 #line 49 "/tmp/input.flex"
-yyout << u8"⋒"; return 43;
+yyout << "⋒"; return 43;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
 #line 50 "/tmp/input.flex"
-yyout << u8"ⅅ"; return 44;
+yyout << "ⅅ"; return 44;
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
 #line 51 "/tmp/input.flex"
-yyout << u8"ℭ"; return 45;
+yyout << "ℭ"; return 45;
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
 #line 52 "/tmp/input.flex"
-yyout << u8"Č"; return 46;
+yyout << "Č"; return 46;
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
 #line 53 "/tmp/input.flex"
-yyout << u8"Ç"; return 47;
+yyout << "Ç"; return 47;
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
 #line 54 "/tmp/input.flex"
-yyout << u8"Ç"; return 48;
+yyout << "Ç"; return 48;
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
 #line 55 "/tmp/input.flex"
-yyout << u8"Ĉ"; return 49;
+yyout << "Ĉ"; return 49;
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
 #line 56 "/tmp/input.flex"
-yyout << u8"∰"; return 50;
+yyout << "∰"; return 50;
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
 #line 57 "/tmp/input.flex"
-yyout << u8"Ċ"; return 51;
+yyout << "Ċ"; return 51;
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
 #line 58 "/tmp/input.flex"
-yyout << u8"¸"; return 52;
+yyout << "¸"; return 52;
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
 #line 59 "/tmp/input.flex"
-yyout << u8"·"; return 53;
+yyout << "·"; return 53;
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
 #line 60 "/tmp/input.flex"
-yyout << u8"ℭ"; return 54;
+yyout << "ℭ"; return 54;
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
 #line 61 "/tmp/input.flex"
-yyout << u8"Χ"; return 55;
+yyout << "Χ"; return 55;
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
 #line 62 "/tmp/input.flex"
-yyout << u8"⊙"; return 56;
+yyout << "⊙"; return 56;
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
 #line 63 "/tmp/input.flex"
-yyout << u8"⊖"; return 57;
+yyout << "⊖"; return 57;
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
 #line 64 "/tmp/input.flex"
-yyout << u8"⊕"; return 58;
+yyout << "⊕"; return 58;
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
 #line 65 "/tmp/input.flex"
-yyout << u8"⊗"; return 59;
+yyout << "⊗"; return 59;
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
 #line 66 "/tmp/input.flex"
-yyout << u8"∲"; return 60;
+yyout << "∲"; return 60;
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
 #line 67 "/tmp/input.flex"
-yyout << u8"”"; return 61;
+yyout << "”"; return 61;
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
 #line 68 "/tmp/input.flex"
-yyout << u8"’"; return 62;
+yyout << "’"; return 62;
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
 #line 69 "/tmp/input.flex"
-yyout << u8"∷"; return 63;
+yyout << "∷"; return 63;
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
 #line 70 "/tmp/input.flex"
-yyout << u8"⩴"; return 64;
+yyout << "⩴"; return 64;
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
 #line 71 "/tmp/input.flex"
-yyout << u8"≡"; return 65;
+yyout << "≡"; return 65;
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
 #line 72 "/tmp/input.flex"
-yyout << u8"∯"; return 66;
+yyout << "∯"; return 66;
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
 #line 73 "/tmp/input.flex"
-yyout << u8"∮"; return 67;
+yyout << "∮"; return 67;
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
 #line 74 "/tmp/input.flex"
-yyout << u8"ℂ"; return 68;
+yyout << "ℂ"; return 68;
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
 #line 75 "/tmp/input.flex"
-yyout << u8"∐"; return 69;
+yyout << "∐"; return 69;
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
 #line 76 "/tmp/input.flex"
-yyout << u8"∳"; return 70;
+yyout << "∳"; return 70;
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
 #line 77 "/tmp/input.flex"
-yyout << u8"⨯"; return 71;
+yyout << "⨯"; return 71;
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
 #line 78 "/tmp/input.flex"
-yyout << u8"𝒞"; return 72;
+yyout << "𝒞"; return 72;
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
 #line 79 "/tmp/input.flex"
-yyout << u8"⋓"; return 73;
+yyout << "⋓"; return 73;
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
 #line 80 "/tmp/input.flex"
-yyout << u8"≍"; return 74;
+yyout << "≍"; return 74;
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
 #line 81 "/tmp/input.flex"
-yyout << u8"ⅅ"; return 75;
+yyout << "ⅅ"; return 75;
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
 #line 82 "/tmp/input.flex"
-yyout << u8"⤑"; return 76;
+yyout << "⤑"; return 76;
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
 #line 83 "/tmp/input.flex"
-yyout << u8"Ђ"; return 77;
+yyout << "Ђ"; return 77;
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
 #line 84 "/tmp/input.flex"
-yyout << u8"Ѕ"; return 78;
+yyout << "Ѕ"; return 78;
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
 #line 85 "/tmp/input.flex"
-yyout << u8"Џ"; return 79;
+yyout << "Џ"; return 79;
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
 #line 86 "/tmp/input.flex"
-yyout << u8"‡"; return 80;
+yyout << "‡"; return 80;
 	YY_BREAK
 case 83:
 YY_RULE_SETUP
 #line 87 "/tmp/input.flex"
-yyout << u8"↡"; return 81;
+yyout << "↡"; return 81;
 	YY_BREAK
 case 84:
 YY_RULE_SETUP
 #line 88 "/tmp/input.flex"
-yyout << u8"⫤"; return 82;
+yyout << "⫤"; return 82;
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
 #line 89 "/tmp/input.flex"
-yyout << u8"Ď"; return 83;
+yyout << "Ď"; return 83;
 	YY_BREAK
 case 86:
 YY_RULE_SETUP
 #line 90 "/tmp/input.flex"
-yyout << u8"Д"; return 84;
+yyout << "Д"; return 84;
 	YY_BREAK
 case 87:
 YY_RULE_SETUP
 #line 91 "/tmp/input.flex"
-yyout << u8"∇"; return 85;
+yyout << "∇"; return 85;
 	YY_BREAK
 case 88:
 YY_RULE_SETUP
 #line 92 "/tmp/input.flex"
-yyout << u8"Δ"; return 86;
+yyout << "Δ"; return 86;
 	YY_BREAK
 case 89:
 YY_RULE_SETUP
 #line 93 "/tmp/input.flex"
-yyout << u8"𝔇"; return 87;
+yyout << "𝔇"; return 87;
 	YY_BREAK
 case 90:
 YY_RULE_SETUP
 #line 94 "/tmp/input.flex"
-yyout << u8"´"; return 88;
+yyout << "´"; return 88;
 	YY_BREAK
 case 91:
 YY_RULE_SETUP
 #line 95 "/tmp/input.flex"
-yyout << u8"˙"; return 89;
+yyout << "˙"; return 89;
 	YY_BREAK
 case 92:
 YY_RULE_SETUP
 #line 96 "/tmp/input.flex"
-yyout << u8"˝"; return 90;
+yyout << "˝"; return 90;
 	YY_BREAK
 case 93:
 YY_RULE_SETUP
 #line 97 "/tmp/input.flex"
-yyout << u8"`"; return 91;
+yyout << "`"; return 91;
 	YY_BREAK
 case 94:
 YY_RULE_SETUP
 #line 98 "/tmp/input.flex"
-yyout << u8"˜"; return 92;
+yyout << "˜"; return 92;
 	YY_BREAK
 case 95:
 YY_RULE_SETUP
 #line 99 "/tmp/input.flex"
-yyout << u8"⋄"; return 93;
+yyout << "⋄"; return 93;
 	YY_BREAK
 case 96:
 YY_RULE_SETUP
 #line 100 "/tmp/input.flex"
-yyout << u8"ⅆ"; return 94;
+yyout << "ⅆ"; return 94;
 	YY_BREAK
 case 97:
 YY_RULE_SETUP
 #line 101 "/tmp/input.flex"
-yyout << u8"𝔻"; return 95;
+yyout << "𝔻"; return 95;
 	YY_BREAK
 case 98:
 YY_RULE_SETUP
 #line 102 "/tmp/input.flex"
-yyout << u8"¨"; return 96;
+yyout << "¨"; return 96;
 	YY_BREAK
 case 99:
 YY_RULE_SETUP
 #line 103 "/tmp/input.flex"
-yyout << u8"⃜"; return 97;
+yyout << "⃜"; return 97;
 	YY_BREAK
 case 100:
 YY_RULE_SETUP
 #line 104 "/tmp/input.flex"
-yyout << u8"≐"; return 98;
+yyout << "≐"; return 98;
 	YY_BREAK
 case 101:
 YY_RULE_SETUP
 #line 105 "/tmp/input.flex"
-yyout << u8"∯"; return 99;
+yyout << "∯"; return 99;
 	YY_BREAK
 case 102:
 YY_RULE_SETUP
 #line 106 "/tmp/input.flex"
-yyout << u8"¨"; return 100;
+yyout << "¨"; return 100;
 	YY_BREAK
 case 103:
 YY_RULE_SETUP
 #line 107 "/tmp/input.flex"
-yyout << u8"⇓"; return 101;
+yyout << "⇓"; return 101;
 	YY_BREAK
 case 104:
 YY_RULE_SETUP
 #line 108 "/tmp/input.flex"
-yyout << u8"⇐"; return 102;
+yyout << "⇐"; return 102;
 	YY_BREAK
 case 105:
 YY_RULE_SETUP
 #line 109 "/tmp/input.flex"
-yyout << u8"⇔"; return 103;
+yyout << "⇔"; return 103;
 	YY_BREAK
 case 106:
 YY_RULE_SETUP
 #line 110 "/tmp/input.flex"
-yyout << u8"⫤"; return 104;
+yyout << "⫤"; return 104;
 	YY_BREAK
 case 107:
 YY_RULE_SETUP
 #line 111 "/tmp/input.flex"
-yyout << u8"⟸"; return 105;
+yyout << "⟸"; return 105;
 	YY_BREAK
 case 108:
 YY_RULE_SETUP
 #line 112 "/tmp/input.flex"
-yyout << u8"⟺"; return 106;
+yyout << "⟺"; return 106;
 	YY_BREAK
 case 109:
 YY_RULE_SETUP
 #line 113 "/tmp/input.flex"
-yyout << u8"⟹"; return 107;
+yyout << "⟹"; return 107;
 	YY_BREAK
 case 110:
 YY_RULE_SETUP
 #line 114 "/tmp/input.flex"
-yyout << u8"⇒"; return 108;
+yyout << "⇒"; return 108;
 	YY_BREAK
 case 111:
 YY_RULE_SETUP
 #line 115 "/tmp/input.flex"
-yyout << u8"⊨"; return 109;
+yyout << "⊨"; return 109;
 	YY_BREAK
 case 112:
 YY_RULE_SETUP
 #line 116 "/tmp/input.flex"
-yyout << u8"⇑"; return 110;
+yyout << "⇑"; return 110;
 	YY_BREAK
 case 113:
 YY_RULE_SETUP
 #line 117 "/tmp/input.flex"
-yyout << u8"⇕"; return 111;
+yyout << "⇕"; return 111;
 	YY_BREAK
 case 114:
 YY_RULE_SETUP
 #line 118 "/tmp/input.flex"
-yyout << u8"∥"; return 112;
+yyout << "∥"; return 112;
 	YY_BREAK
 case 115:
 YY_RULE_SETUP
 #line 119 "/tmp/input.flex"
-yyout << u8"↓"; return 113;
+yyout << "↓"; return 113;
 	YY_BREAK
 case 116:
 YY_RULE_SETUP
 #line 120 "/tmp/input.flex"
-yyout << u8"⤓"; return 114;
+yyout << "⤓"; return 114;
 	YY_BREAK
 case 117:
 YY_RULE_SETUP
 #line 121 "/tmp/input.flex"
-yyout << u8"⇵"; return 115;
+yyout << "⇵"; return 115;
 	YY_BREAK
 case 118:
 YY_RULE_SETUP
 #line 122 "/tmp/input.flex"
-yyout << u8"̑"; return 116;
+yyout << "̑"; return 116;
 	YY_BREAK
 case 119:
 YY_RULE_SETUP
 #line 123 "/tmp/input.flex"
-yyout << u8"⥐"; return 117;
+yyout << "⥐"; return 117;
 	YY_BREAK
 case 120:
 YY_RULE_SETUP
 #line 124 "/tmp/input.flex"
-yyout << u8"⥞"; return 118;
+yyout << "⥞"; return 118;
 	YY_BREAK
 case 121:
 YY_RULE_SETUP
 #line 125 "/tmp/input.flex"
-yyout << u8"↽"; return 119;
+yyout << "↽"; return 119;
 	YY_BREAK
 case 122:
 YY_RULE_SETUP
 #line 126 "/tmp/input.flex"
-yyout << u8"⥖"; return 120;
+yyout << "⥖"; return 120;
 	YY_BREAK
 case 123:
 YY_RULE_SETUP
 #line 127 "/tmp/input.flex"
-yyout << u8"⥟"; return 121;
+yyout << "⥟"; return 121;
 	YY_BREAK
 case 124:
 YY_RULE_SETUP
 #line 128 "/tmp/input.flex"
-yyout << u8"⇁"; return 122;
+yyout << "⇁"; return 122;
 	YY_BREAK
 case 125:
 YY_RULE_SETUP
 #line 129 "/tmp/input.flex"
-yyout << u8"⥗"; return 123;
+yyout << "⥗"; return 123;
 	YY_BREAK
 case 126:
 YY_RULE_SETUP
 #line 130 "/tmp/input.flex"
-yyout << u8"⊤"; return 124;
+yyout << "⊤"; return 124;
 	YY_BREAK
 case 127:
 YY_RULE_SETUP
 #line 131 "/tmp/input.flex"
-yyout << u8"↧"; return 125;
+yyout << "↧"; return 125;
 	YY_BREAK
 case 128:
 YY_RULE_SETUP
 #line 132 "/tmp/input.flex"
-yyout << u8"⇓"; return 126;
+yyout << "⇓"; return 126;
 	YY_BREAK
 case 129:
 YY_RULE_SETUP
 #line 133 "/tmp/input.flex"
-yyout << u8"𝒟"; return 127;
+yyout << "𝒟"; return 127;
 	YY_BREAK
 case 130:
 YY_RULE_SETUP
 #line 134 "/tmp/input.flex"
-yyout << u8"Đ"; return 128;
+yyout << "Đ"; return 128;
 	YY_BREAK
 case 131:
 YY_RULE_SETUP
 #line 135 "/tmp/input.flex"
-yyout << u8"Ŋ"; return 129;
+yyout << "Ŋ"; return 129;
 	YY_BREAK
 case 132:
 YY_RULE_SETUP
 #line 136 "/tmp/input.flex"
-yyout << u8"Ð"; return 130;
+yyout << "Ð"; return 130;
 	YY_BREAK
 case 133:
 YY_RULE_SETUP
 #line 137 "/tmp/input.flex"
-yyout << u8"Ð"; return 131;
+yyout << "Ð"; return 131;
 	YY_BREAK
 case 134:
 YY_RULE_SETUP
 #line 138 "/tmp/input.flex"
-yyout << u8"É"; return 132;
+yyout << "É"; return 132;
 	YY_BREAK
 case 135:
 YY_RULE_SETUP
 #line 139 "/tmp/input.flex"
-yyout << u8"É"; return 133;
+yyout << "É"; return 133;
 	YY_BREAK
 case 136:
 YY_RULE_SETUP
 #line 140 "/tmp/input.flex"
-yyout << u8"Ě"; return 134;
+yyout << "Ě"; return 134;
 	YY_BREAK
 case 137:
 YY_RULE_SETUP
 #line 141 "/tmp/input.flex"
-yyout << u8"Ê"; return 135;
+yyout << "Ê"; return 135;
 	YY_BREAK
 case 138:
 YY_RULE_SETUP
 #line 142 "/tmp/input.flex"
-yyout << u8"Ê"; return 136;
+yyout << "Ê"; return 136;
 	YY_BREAK
 case 139:
 YY_RULE_SETUP
 #line 143 "/tmp/input.flex"
-yyout << u8"Э"; return 137;
+yyout << "Э"; return 137;
 	YY_BREAK
 case 140:
 YY_RULE_SETUP
 #line 144 "/tmp/input.flex"
-yyout << u8"Ė"; return 138;
+yyout << "Ė"; return 138;
 	YY_BREAK
 case 141:
 YY_RULE_SETUP
 #line 145 "/tmp/input.flex"
-yyout << u8"𝔈"; return 139;
+yyout << "𝔈"; return 139;
 	YY_BREAK
 case 142:
 YY_RULE_SETUP
 #line 146 "/tmp/input.flex"
-yyout << u8"È"; return 140;
+yyout << "È"; return 140;
 	YY_BREAK
 case 143:
 YY_RULE_SETUP
 #line 147 "/tmp/input.flex"
-yyout << u8"È"; return 141;
+yyout << "È"; return 141;
 	YY_BREAK
 case 144:
 YY_RULE_SETUP
 #line 148 "/tmp/input.flex"
-yyout << u8"∈"; return 142;
+yyout << "∈"; return 142;
 	YY_BREAK
 case 145:
 YY_RULE_SETUP
 #line 149 "/tmp/input.flex"
-yyout << u8"Ē"; return 143;
+yyout << "Ē"; return 143;
 	YY_BREAK
 case 146:
 YY_RULE_SETUP
 #line 150 "/tmp/input.flex"
-yyout << u8"◻"; return 144;
+yyout << "◻"; return 144;
 	YY_BREAK
 case 147:
 YY_RULE_SETUP
 #line 151 "/tmp/input.flex"
-yyout << u8"▫"; return 145;
+yyout << "▫"; return 145;
 	YY_BREAK
 case 148:
 YY_RULE_SETUP
 #line 152 "/tmp/input.flex"
-yyout << u8"Ę"; return 146;
+yyout << "Ę"; return 146;
 	YY_BREAK
 case 149:
 YY_RULE_SETUP
 #line 153 "/tmp/input.flex"
-yyout << u8"𝔼"; return 147;
+yyout << "𝔼"; return 147;
 	YY_BREAK
 case 150:
 YY_RULE_SETUP
 #line 154 "/tmp/input.flex"
-yyout << u8"Ε"; return 148;
+yyout << "Ε"; return 148;
 	YY_BREAK
 case 151:
 YY_RULE_SETUP
 #line 155 "/tmp/input.flex"
-yyout << u8"⩵"; return 149;
+yyout << "⩵"; return 149;
 	YY_BREAK
 case 152:
 YY_RULE_SETUP
 #line 156 "/tmp/input.flex"
-yyout << u8"≂"; return 150;
+yyout << "≂"; return 150;
 	YY_BREAK
 case 153:
 YY_RULE_SETUP
 #line 157 "/tmp/input.flex"
-yyout << u8"⇌"; return 151;
+yyout << "⇌"; return 151;
 	YY_BREAK
 case 154:
 YY_RULE_SETUP
 #line 158 "/tmp/input.flex"
-yyout << u8"ℰ"; return 152;
+yyout << "ℰ"; return 152;
 	YY_BREAK
 case 155:
 YY_RULE_SETUP
 #line 159 "/tmp/input.flex"
-yyout << u8"⩳"; return 153;
+yyout << "⩳"; return 153;
 	YY_BREAK
 case 156:
 YY_RULE_SETUP
 #line 160 "/tmp/input.flex"
-yyout << u8"Η"; return 154;
+yyout << "Η"; return 154;
 	YY_BREAK
 case 157:
 YY_RULE_SETUP
 #line 161 "/tmp/input.flex"
-yyout << u8"Ë"; return 155;
+yyout << "Ë"; return 155;
 	YY_BREAK
 case 158:
 YY_RULE_SETUP
 #line 162 "/tmp/input.flex"
-yyout << u8"Ë"; return 156;
+yyout << "Ë"; return 156;
 	YY_BREAK
 case 159:
 YY_RULE_SETUP
 #line 163 "/tmp/input.flex"
-yyout << u8"∃"; return 157;
+yyout << "∃"; return 157;
 	YY_BREAK
 case 160:
 YY_RULE_SETUP
 #line 164 "/tmp/input.flex"
-yyout << u8"ⅇ"; return 158;
+yyout << "ⅇ"; return 158;
 	YY_BREAK
 case 161:
 YY_RULE_SETUP
 #line 165 "/tmp/input.flex"
-yyout << u8"Ф"; return 159;
+yyout << "Ф"; return 159;
 	YY_BREAK
 case 162:
 YY_RULE_SETUP
 #line 166 "/tmp/input.flex"
-yyout << u8"𝔉"; return 160;
+yyout << "𝔉"; return 160;
 	YY_BREAK
 case 163:
 YY_RULE_SETUP
 #line 167 "/tmp/input.flex"
-yyout << u8"◼"; return 161;
+yyout << "◼"; return 161;
 	YY_BREAK
 case 164:
 YY_RULE_SETUP
 #line 168 "/tmp/input.flex"
-yyout << u8"▪"; return 162;
+yyout << "▪"; return 162;
 	YY_BREAK
 case 165:
 YY_RULE_SETUP
 #line 169 "/tmp/input.flex"
-yyout << u8"𝔽"; return 163;
+yyout << "𝔽"; return 163;
 	YY_BREAK
 case 166:
 YY_RULE_SETUP
 #line 170 "/tmp/input.flex"
-yyout << u8"∀"; return 164;
+yyout << "∀"; return 164;
 	YY_BREAK
 case 167:
 YY_RULE_SETUP
 #line 171 "/tmp/input.flex"
-yyout << u8"ℱ"; return 165;
+yyout << "ℱ"; return 165;
 	YY_BREAK
 case 168:
 YY_RULE_SETUP
 #line 172 "/tmp/input.flex"
-yyout << u8"ℱ"; return 166;
+yyout << "ℱ"; return 166;
 	YY_BREAK
 case 169:
 YY_RULE_SETUP
 #line 173 "/tmp/input.flex"
-yyout << u8"Ѓ"; return 167;
+yyout << "Ѓ"; return 167;
 	YY_BREAK
 case 170:
 YY_RULE_SETUP
 #line 174 "/tmp/input.flex"
-yyout << u8">"; return 168;
+yyout << ">"; return 168;
 	YY_BREAK
 case 171:
 YY_RULE_SETUP
 #line 175 "/tmp/input.flex"
-yyout << u8">"; return 169;
+yyout << ">"; return 169;
 	YY_BREAK
 case 172:
 YY_RULE_SETUP
 #line 176 "/tmp/input.flex"
-yyout << u8"Γ"; return 170;
+yyout << "Γ"; return 170;
 	YY_BREAK
 case 173:
 YY_RULE_SETUP
 #line 177 "/tmp/input.flex"
-yyout << u8"Ϝ"; return 171;
+yyout << "Ϝ"; return 171;
 	YY_BREAK
 case 174:
 YY_RULE_SETUP
 #line 178 "/tmp/input.flex"
-yyout << u8"Ğ"; return 172;
+yyout << "Ğ"; return 172;
 	YY_BREAK
 case 175:
 YY_RULE_SETUP
 #line 179 "/tmp/input.flex"
-yyout << u8"Ģ"; return 173;
+yyout << "Ģ"; return 173;
 	YY_BREAK
 case 176:
 YY_RULE_SETUP
 #line 180 "/tmp/input.flex"
-yyout << u8"Ĝ"; return 174;
+yyout << "Ĝ"; return 174;
 	YY_BREAK
 case 177:
 YY_RULE_SETUP
 #line 181 "/tmp/input.flex"
-yyout << u8"Г"; return 175;
+yyout << "Г"; return 175;
 	YY_BREAK
 case 178:
 YY_RULE_SETUP
 #line 182 "/tmp/input.flex"
-yyout << u8"Ġ"; return 176;
+yyout << "Ġ"; return 176;
 	YY_BREAK
 case 179:
 YY_RULE_SETUP
 #line 183 "/tmp/input.flex"
-yyout << u8"𝔊"; return 177;
+yyout << "𝔊"; return 177;
 	YY_BREAK
 case 180:
 YY_RULE_SETUP
 #line 184 "/tmp/input.flex"
-yyout << u8"⋙"; return 178;
+yyout << "⋙"; return 178;
 	YY_BREAK
 case 181:
 YY_RULE_SETUP
 #line 185 "/tmp/input.flex"
-yyout << u8"𝔾"; return 179;
+yyout << "𝔾"; return 179;
 	YY_BREAK
 case 182:
 YY_RULE_SETUP
 #line 186 "/tmp/input.flex"
-yyout << u8"≥"; return 180;
+yyout << "≥"; return 180;
 	YY_BREAK
 case 183:
 YY_RULE_SETUP
 #line 187 "/tmp/input.flex"
-yyout << u8"⋛"; return 181;
+yyout << "⋛"; return 181;
 	YY_BREAK
 case 184:
 YY_RULE_SETUP
 #line 188 "/tmp/input.flex"
-yyout << u8"≧"; return 182;
+yyout << "≧"; return 182;
 	YY_BREAK
 case 185:
 YY_RULE_SETUP
 #line 189 "/tmp/input.flex"
-yyout << u8"⪢"; return 183;
+yyout << "⪢"; return 183;
 	YY_BREAK
 case 186:
 YY_RULE_SETUP
 #line 190 "/tmp/input.flex"
-yyout << u8"≷"; return 184;
+yyout << "≷"; return 184;
 	YY_BREAK
 case 187:
 YY_RULE_SETUP
 #line 191 "/tmp/input.flex"
-yyout << u8"⩾"; return 185;
+yyout << "⩾"; return 185;
 	YY_BREAK
 case 188:
 YY_RULE_SETUP
 #line 192 "/tmp/input.flex"
-yyout << u8"≳"; return 186;
+yyout << "≳"; return 186;
 	YY_BREAK
 case 189:
 YY_RULE_SETUP
 #line 193 "/tmp/input.flex"
-yyout << u8"𝒢"; return 187;
+yyout << "𝒢"; return 187;
 	YY_BREAK
 case 190:
 YY_RULE_SETUP
 #line 194 "/tmp/input.flex"
-yyout << u8"≫"; return 188;
+yyout << "≫"; return 188;
 	YY_BREAK
 case 191:
 YY_RULE_SETUP
 #line 195 "/tmp/input.flex"
-yyout << u8"Ъ"; return 189;
+yyout << "Ъ"; return 189;
 	YY_BREAK
 case 192:
 YY_RULE_SETUP
 #line 196 "/tmp/input.flex"
-yyout << u8"ˇ"; return 190;
+yyout << "ˇ"; return 190;
 	YY_BREAK
 case 193:
 YY_RULE_SETUP
 #line 197 "/tmp/input.flex"
-yyout << u8"^"; return 191;
+yyout << "^"; return 191;
 	YY_BREAK
 case 194:
 YY_RULE_SETUP
 #line 198 "/tmp/input.flex"
-yyout << u8"Ĥ"; return 192;
+yyout << "Ĥ"; return 192;
 	YY_BREAK
 case 195:
 YY_RULE_SETUP
 #line 199 "/tmp/input.flex"
-yyout << u8"ℌ"; return 193;
+yyout << "ℌ"; return 193;
 	YY_BREAK
 case 196:
 YY_RULE_SETUP
 #line 200 "/tmp/input.flex"
-yyout << u8"ℋ"; return 194;
+yyout << "ℋ"; return 194;
 	YY_BREAK
 case 197:
 YY_RULE_SETUP
 #line 201 "/tmp/input.flex"
-yyout << u8"ℍ"; return 195;
+yyout << "ℍ"; return 195;
 	YY_BREAK
 case 198:
 YY_RULE_SETUP
 #line 202 "/tmp/input.flex"
-yyout << u8"─"; return 196;
+yyout << "─"; return 196;
 	YY_BREAK
 case 199:
 YY_RULE_SETUP
 #line 203 "/tmp/input.flex"
-yyout << u8"ℋ"; return 197;
+yyout << "ℋ"; return 197;
 	YY_BREAK
 case 200:
 YY_RULE_SETUP
 #line 204 "/tmp/input.flex"
-yyout << u8"Ħ"; return 198;
+yyout << "Ħ"; return 198;
 	YY_BREAK
 case 201:
 YY_RULE_SETUP
 #line 205 "/tmp/input.flex"
-yyout << u8"≎"; return 199;
+yyout << "≎"; return 199;
 	YY_BREAK
 case 202:
 YY_RULE_SETUP
 #line 206 "/tmp/input.flex"
-yyout << u8"≏"; return 200;
+yyout << "≏"; return 200;
 	YY_BREAK
 case 203:
 YY_RULE_SETUP
 #line 207 "/tmp/input.flex"
-yyout << u8"Е"; return 201;
+yyout << "Е"; return 201;
 	YY_BREAK
 case 204:
 YY_RULE_SETUP
 #line 208 "/tmp/input.flex"
-yyout << u8"Ĳ"; return 202;
+yyout << "Ĳ"; return 202;
 	YY_BREAK
 case 205:
 YY_RULE_SETUP
 #line 209 "/tmp/input.flex"
-yyout << u8"Ё"; return 203;
+yyout << "Ё"; return 203;
 	YY_BREAK
 case 206:
 YY_RULE_SETUP
 #line 210 "/tmp/input.flex"
-yyout << u8"Í"; return 204;
+yyout << "Í"; return 204;
 	YY_BREAK
 case 207:
 YY_RULE_SETUP
 #line 211 "/tmp/input.flex"
-yyout << u8"Í"; return 205;
+yyout << "Í"; return 205;
 	YY_BREAK
 case 208:
 YY_RULE_SETUP
 #line 212 "/tmp/input.flex"
-yyout << u8"Î"; return 206;
+yyout << "Î"; return 206;
 	YY_BREAK
 case 209:
 YY_RULE_SETUP
 #line 213 "/tmp/input.flex"
-yyout << u8"Î"; return 207;
+yyout << "Î"; return 207;
 	YY_BREAK
 case 210:
 YY_RULE_SETUP
 #line 214 "/tmp/input.flex"
-yyout << u8"И"; return 208;
+yyout << "И"; return 208;
 	YY_BREAK
 case 211:
 YY_RULE_SETUP
 #line 215 "/tmp/input.flex"
-yyout << u8"İ"; return 209;
+yyout << "İ"; return 209;
 	YY_BREAK
 case 212:
 YY_RULE_SETUP
 #line 216 "/tmp/input.flex"
-yyout << u8"ℑ"; return 210;
+yyout << "ℑ"; return 210;
 	YY_BREAK
 case 213:
 YY_RULE_SETUP
 #line 217 "/tmp/input.flex"
-yyout << u8"Ì"; return 211;
+yyout << "Ì"; return 211;
 	YY_BREAK
 case 214:
 YY_RULE_SETUP
 #line 218 "/tmp/input.flex"
-yyout << u8"Ì"; return 212;
+yyout << "Ì"; return 212;
 	YY_BREAK
 case 215:
 YY_RULE_SETUP
 #line 219 "/tmp/input.flex"
-yyout << u8"ℑ"; return 213;
+yyout << "ℑ"; return 213;
 	YY_BREAK
 case 216:
 YY_RULE_SETUP
 #line 220 "/tmp/input.flex"
-yyout << u8"Ī"; return 214;
+yyout << "Ī"; return 214;
 	YY_BREAK
 case 217:
 YY_RULE_SETUP
 #line 221 "/tmp/input.flex"
-yyout << u8"ⅈ"; return 215;
+yyout << "ⅈ"; return 215;
 	YY_BREAK
 case 218:
 YY_RULE_SETUP
 #line 222 "/tmp/input.flex"
-yyout << u8"⇒"; return 216;
+yyout << "⇒"; return 216;
 	YY_BREAK
 case 219:
 YY_RULE_SETUP
 #line 223 "/tmp/input.flex"
-yyout << u8"∬"; return 217;
+yyout << "∬"; return 217;
 	YY_BREAK
 case 220:
 YY_RULE_SETUP
 #line 224 "/tmp/input.flex"
-yyout << u8"∫"; return 218;
+yyout << "∫"; return 218;
 	YY_BREAK
 case 221:
 YY_RULE_SETUP
 #line 225 "/tmp/input.flex"
-yyout << u8"⋂"; return 219;
+yyout << "⋂"; return 219;
 	YY_BREAK
 case 222:
 YY_RULE_SETUP
 #line 226 "/tmp/input.flex"
-yyout << u8"⁣"; return 220;
+yyout << "⁣"; return 220;
 	YY_BREAK
 case 223:
 YY_RULE_SETUP
 #line 227 "/tmp/input.flex"
-yyout << u8"⁢"; return 221;
+yyout << "⁢"; return 221;
 	YY_BREAK
 case 224:
 YY_RULE_SETUP
 #line 228 "/tmp/input.flex"
-yyout << u8"Į"; return 222;
+yyout << "Į"; return 222;
 	YY_BREAK
 case 225:
 YY_RULE_SETUP
 #line 229 "/tmp/input.flex"
-yyout << u8"𝕀"; return 223;
+yyout << "𝕀"; return 223;
 	YY_BREAK
 case 226:
 YY_RULE_SETUP
 #line 230 "/tmp/input.flex"
-yyout << u8"Ι"; return 224;
+yyout << "Ι"; return 224;
 	YY_BREAK
 case 227:
 YY_RULE_SETUP
 #line 231 "/tmp/input.flex"
-yyout << u8"ℐ"; return 225;
+yyout << "ℐ"; return 225;
 	YY_BREAK
 case 228:
 YY_RULE_SETUP
 #line 232 "/tmp/input.flex"
-yyout << u8"Ĩ"; return 226;
+yyout << "Ĩ"; return 226;
 	YY_BREAK
 case 229:
 YY_RULE_SETUP
 #line 233 "/tmp/input.flex"
-yyout << u8"І"; return 227;
+yyout << "І"; return 227;
 	YY_BREAK
 case 230:
 YY_RULE_SETUP
 #line 234 "/tmp/input.flex"
-yyout << u8"Ï"; return 228;
+yyout << "Ï"; return 228;
 	YY_BREAK
 case 231:
 YY_RULE_SETUP
 #line 235 "/tmp/input.flex"
-yyout << u8"Ï"; return 229;
+yyout << "Ï"; return 229;
 	YY_BREAK
 case 232:
 YY_RULE_SETUP
 #line 236 "/tmp/input.flex"
-yyout << u8"Ĵ"; return 230;
+yyout << "Ĵ"; return 230;
 	YY_BREAK
 case 233:
 YY_RULE_SETUP
 #line 237 "/tmp/input.flex"
-yyout << u8"Й"; return 231;
+yyout << "Й"; return 231;
 	YY_BREAK
 case 234:
 YY_RULE_SETUP
 #line 238 "/tmp/input.flex"
-yyout << u8"𝔍"; return 232;
+yyout << "𝔍"; return 232;
 	YY_BREAK
 case 235:
 YY_RULE_SETUP
 #line 239 "/tmp/input.flex"
-yyout << u8"𝕁"; return 233;
+yyout << "𝕁"; return 233;
 	YY_BREAK
 case 236:
 YY_RULE_SETUP
 #line 240 "/tmp/input.flex"
-yyout << u8"𝒥"; return 234;
+yyout << "𝒥"; return 234;
 	YY_BREAK
 case 237:
 YY_RULE_SETUP
 #line 241 "/tmp/input.flex"
-yyout << u8"Ј"; return 235;
+yyout << "Ј"; return 235;
 	YY_BREAK
 case 238:
 YY_RULE_SETUP
 #line 242 "/tmp/input.flex"
-yyout << u8"Є"; return 236;
+yyout << "Є"; return 236;
 	YY_BREAK
 case 239:
 YY_RULE_SETUP
 #line 243 "/tmp/input.flex"
-yyout << u8"Х"; return 237;
+yyout << "Х"; return 237;
 	YY_BREAK
 case 240:
 YY_RULE_SETUP
 #line 244 "/tmp/input.flex"
-yyout << u8"Ќ"; return 238;
+yyout << "Ќ"; return 238;
 	YY_BREAK
 case 241:
 YY_RULE_SETUP
 #line 245 "/tmp/input.flex"
-yyout << u8"Κ"; return 239;
+yyout << "Κ"; return 239;
 	YY_BREAK
 case 242:
 YY_RULE_SETUP
 #line 246 "/tmp/input.flex"
-yyout << u8"Ķ"; return 240;
+yyout << "Ķ"; return 240;
 	YY_BREAK
 case 243:
 YY_RULE_SETUP
 #line 247 "/tmp/input.flex"
-yyout << u8"К"; return 241;
+yyout << "К"; return 241;
 	YY_BREAK
 case 244:
 YY_RULE_SETUP
 #line 248 "/tmp/input.flex"
-yyout << u8"𝔎"; return 242;
+yyout << "𝔎"; return 242;
 	YY_BREAK
 case 245:
 YY_RULE_SETUP
 #line 249 "/tmp/input.flex"
-yyout << u8"𝕂"; return 243;
+yyout << "𝕂"; return 243;
 	YY_BREAK
 case 246:
 YY_RULE_SETUP
 #line 250 "/tmp/input.flex"
-yyout << u8"𝒦"; return 244;
+yyout << "𝒦"; return 244;
 	YY_BREAK
 case 247:
 YY_RULE_SETUP
 #line 251 "/tmp/input.flex"
-yyout << u8"Љ"; return 245;
+yyout << "Љ"; return 245;
 	YY_BREAK
 case 248:
 YY_RULE_SETUP
 #line 252 "/tmp/input.flex"
-yyout << u8"<"; return 246;
+yyout << "<"; return 246;
 	YY_BREAK
 case 249:
 YY_RULE_SETUP
 #line 253 "/tmp/input.flex"
-yyout << u8"<"; return 247;
+yyout << "<"; return 247;
 	YY_BREAK
 case 250:
 YY_RULE_SETUP
 #line 254 "/tmp/input.flex"
-yyout << u8"Ĺ"; return 248;
+yyout << "Ĺ"; return 248;
 	YY_BREAK
 case 251:
 YY_RULE_SETUP
 #line 255 "/tmp/input.flex"
-yyout << u8"Λ"; return 249;
+yyout << "Λ"; return 249;
 	YY_BREAK
 case 252:
 YY_RULE_SETUP
 #line 256 "/tmp/input.flex"
-yyout << u8"⟪"; return 250;
+yyout << "⟪"; return 250;
 	YY_BREAK
 case 253:
 YY_RULE_SETUP
 #line 257 "/tmp/input.flex"
-yyout << u8"ℒ"; return 251;
+yyout << "ℒ"; return 251;
 	YY_BREAK
 case 254:
 YY_RULE_SETUP
 #line 258 "/tmp/input.flex"
-yyout << u8"↞"; return 252;
+yyout << "↞"; return 252;
 	YY_BREAK
 case 255:
 YY_RULE_SETUP
 #line 259 "/tmp/input.flex"
-yyout << u8"Ľ"; return 253;
+yyout << "Ľ"; return 253;
 	YY_BREAK
 case 256:
 YY_RULE_SETUP
 #line 260 "/tmp/input.flex"
-yyout << u8"Ļ"; return 254;
+yyout << "Ļ"; return 254;
 	YY_BREAK
 case 257:
 YY_RULE_SETUP
 #line 261 "/tmp/input.flex"
-yyout << u8"Л"; return 255;
+yyout << "Л"; return 255;
 	YY_BREAK
 case 258:
 YY_RULE_SETUP
 #line 262 "/tmp/input.flex"
-yyout << u8"⟨"; return 256;
+yyout << "⟨"; return 256;
 	YY_BREAK
 case 259:
 YY_RULE_SETUP
 #line 263 "/tmp/input.flex"
-yyout << u8"←"; return 257;
+yyout << "←"; return 257;
 	YY_BREAK
 case 260:
 YY_RULE_SETUP
 #line 264 "/tmp/input.flex"
-yyout << u8"⇤"; return 258;
+yyout << "⇤"; return 258;
 	YY_BREAK
 case 261:
 YY_RULE_SETUP
 #line 265 "/tmp/input.flex"
-yyout << u8"⇆"; return 259;
+yyout << "⇆"; return 259;
 	YY_BREAK
 case 262:
 YY_RULE_SETUP
 #line 266 "/tmp/input.flex"
-yyout << u8"⌈"; return 260;
+yyout << "⌈"; return 260;
 	YY_BREAK
 case 263:
 YY_RULE_SETUP
 #line 267 "/tmp/input.flex"
-yyout << u8"⟦"; return 261;
+yyout << "⟦"; return 261;
 	YY_BREAK
 case 264:
 YY_RULE_SETUP
 #line 268 "/tmp/input.flex"
-yyout << u8"⥡"; return 262;
+yyout << "⥡"; return 262;
 	YY_BREAK
 case 265:
 YY_RULE_SETUP
 #line 269 "/tmp/input.flex"
-yyout << u8"⇃"; return 263;
+yyout << "⇃"; return 263;
 	YY_BREAK
 case 266:
 YY_RULE_SETUP
 #line 270 "/tmp/input.flex"
-yyout << u8"⥙"; return 264;
+yyout << "⥙"; return 264;
 	YY_BREAK
 case 267:
 YY_RULE_SETUP
 #line 271 "/tmp/input.flex"
-yyout << u8"⌊"; return 265;
+yyout << "⌊"; return 265;
 	YY_BREAK
 case 268:
 YY_RULE_SETUP
 #line 272 "/tmp/input.flex"
-yyout << u8"↔"; return 266;
+yyout << "↔"; return 266;
 	YY_BREAK
 case 269:
 YY_RULE_SETUP
 #line 273 "/tmp/input.flex"
-yyout << u8"⥎"; return 267;
+yyout << "⥎"; return 267;
 	YY_BREAK
 case 270:
 YY_RULE_SETUP
 #line 274 "/tmp/input.flex"
-yyout << u8"⊣"; return 268;
+yyout << "⊣"; return 268;
 	YY_BREAK
 case 271:
 YY_RULE_SETUP
 #line 275 "/tmp/input.flex"
-yyout << u8"↤"; return 269;
+yyout << "↤"; return 269;
 	YY_BREAK
 case 272:
 YY_RULE_SETUP
 #line 276 "/tmp/input.flex"
-yyout << u8"⥚"; return 270;
+yyout << "⥚"; return 270;
 	YY_BREAK
 case 273:
 YY_RULE_SETUP
 #line 277 "/tmp/input.flex"
-yyout << u8"⊲"; return 271;
+yyout << "⊲"; return 271;
 	YY_BREAK
 case 274:
 YY_RULE_SETUP
 #line 278 "/tmp/input.flex"
-yyout << u8"⧏"; return 272;
+yyout << "⧏"; return 272;
 	YY_BREAK
 case 275:
 YY_RULE_SETUP
 #line 279 "/tmp/input.flex"
-yyout << u8"⊴"; return 273;
+yyout << "⊴"; return 273;
 	YY_BREAK
 case 276:
 YY_RULE_SETUP
 #line 280 "/tmp/input.flex"
-yyout << u8"⥑"; return 274;
+yyout << "⥑"; return 274;
 	YY_BREAK
 case 277:
 YY_RULE_SETUP
 #line 281 "/tmp/input.flex"
-yyout << u8"⥠"; return 275;
+yyout << "⥠"; return 275;
 	YY_BREAK
 case 278:
 YY_RULE_SETUP
 #line 282 "/tmp/input.flex"
-yyout << u8"↿"; return 276;
+yyout << "↿"; return 276;
 	YY_BREAK
 case 279:
 YY_RULE_SETUP
 #line 283 "/tmp/input.flex"
-yyout << u8"⥘"; return 277;
+yyout << "⥘"; return 277;
 	YY_BREAK
 case 280:
 YY_RULE_SETUP
 #line 284 "/tmp/input.flex"
-yyout << u8"↼"; return 278;
+yyout << "↼"; return 278;
 	YY_BREAK
 case 281:
 YY_RULE_SETUP
 #line 285 "/tmp/input.flex"
-yyout << u8"⥒"; return 279;
+yyout << "⥒"; return 279;
 	YY_BREAK
 case 282:
 YY_RULE_SETUP
 #line 286 "/tmp/input.flex"
-yyout << u8"⇐"; return 280;
+yyout << "⇐"; return 280;
 	YY_BREAK
 case 283:
 YY_RULE_SETUP
 #line 287 "/tmp/input.flex"
-yyout << u8"⇔"; return 281;
+yyout << "⇔"; return 281;
 	YY_BREAK
 case 284:
 YY_RULE_SETUP
 #line 288 "/tmp/input.flex"
-yyout << u8"⋚"; return 282;
+yyout << "⋚"; return 282;
 	YY_BREAK
 case 285:
 YY_RULE_SETUP
 #line 289 "/tmp/input.flex"
-yyout << u8"≦"; return 283;
+yyout << "≦"; return 283;
 	YY_BREAK
 case 286:
 YY_RULE_SETUP
 #line 290 "/tmp/input.flex"
-yyout << u8"≶"; return 284;
+yyout << "≶"; return 284;
 	YY_BREAK
 case 287:
 YY_RULE_SETUP
 #line 291 "/tmp/input.flex"
-yyout << u8"⪡"; return 285;
+yyout << "⪡"; return 285;
 	YY_BREAK
 case 288:
 YY_RULE_SETUP
 #line 292 "/tmp/input.flex"
-yyout << u8"⩽"; return 286;
+yyout << "⩽"; return 286;
 	YY_BREAK
 case 289:
 YY_RULE_SETUP
 #line 293 "/tmp/input.flex"
-yyout << u8"≲"; return 287;
+yyout << "≲"; return 287;
 	YY_BREAK
 case 290:
 YY_RULE_SETUP
 #line 294 "/tmp/input.flex"
-yyout << u8"𝔏"; return 288;
+yyout << "𝔏"; return 288;
 	YY_BREAK
 case 291:
 YY_RULE_SETUP
 #line 295 "/tmp/input.flex"
-yyout << u8"⋘"; return 289;
+yyout << "⋘"; return 289;
 	YY_BREAK
 case 292:
 YY_RULE_SETUP
 #line 296 "/tmp/input.flex"
-yyout << u8"⇚"; return 290;
+yyout << "⇚"; return 290;
 	YY_BREAK
 case 293:
 YY_RULE_SETUP
 #line 297 "/tmp/input.flex"
-yyout << u8"Ŀ"; return 291;
+yyout << "Ŀ"; return 291;
 	YY_BREAK
 case 294:
 YY_RULE_SETUP
 #line 298 "/tmp/input.flex"
-yyout << u8"⟵"; return 292;
+yyout << "⟵"; return 292;
 	YY_BREAK
 case 295:
 YY_RULE_SETUP
 #line 299 "/tmp/input.flex"
-yyout << u8"⟷"; return 293;
+yyout << "⟷"; return 293;
 	YY_BREAK
 case 296:
 YY_RULE_SETUP
 #line 300 "/tmp/input.flex"
-yyout << u8"⟶"; return 294;
+yyout << "⟶"; return 294;
 	YY_BREAK
 case 297:
 YY_RULE_SETUP
 #line 301 "/tmp/input.flex"
-yyout << u8"⟸"; return 295;
+yyout << "⟸"; return 295;
 	YY_BREAK
 case 298:
 YY_RULE_SETUP
 #line 302 "/tmp/input.flex"
-yyout << u8"⟺"; return 296;
+yyout << "⟺"; return 296;
 	YY_BREAK
 case 299:
 YY_RULE_SETUP
 #line 303 "/tmp/input.flex"
-yyout << u8"⟹"; return 297;
+yyout << "⟹"; return 297;
 	YY_BREAK
 case 300:
 YY_RULE_SETUP
 #line 304 "/tmp/input.flex"
-yyout << u8"𝕃"; return 298;
+yyout << "𝕃"; return 298;
 	YY_BREAK
 case 301:
 YY_RULE_SETUP
 #line 305 "/tmp/input.flex"
-yyout << u8"↙"; return 299;
+yyout << "↙"; return 299;
 	YY_BREAK
 case 302:
 YY_RULE_SETUP
 #line 306 "/tmp/input.flex"
-yyout << u8"↘"; return 300;
+yyout << "↘"; return 300;
 	YY_BREAK
 case 303:
 YY_RULE_SETUP
 #line 307 "/tmp/input.flex"
-yyout << u8"ℒ"; return 301;
+yyout << "ℒ"; return 301;
 	YY_BREAK
 case 304:
 YY_RULE_SETUP
 #line 308 "/tmp/input.flex"
-yyout << u8"↰"; return 302;
+yyout << "↰"; return 302;
 	YY_BREAK
 case 305:
 YY_RULE_SETUP
 #line 309 "/tmp/input.flex"
-yyout << u8"Ł"; return 303;
+yyout << "Ł"; return 303;
 	YY_BREAK
 case 306:
 YY_RULE_SETUP
 #line 310 "/tmp/input.flex"
-yyout << u8"≪"; return 304;
+yyout << "≪"; return 304;
 	YY_BREAK
 case 307:
 YY_RULE_SETUP
 #line 311 "/tmp/input.flex"
-yyout << u8"⤅"; return 305;
+yyout << "⤅"; return 305;
 	YY_BREAK
 case 308:
 YY_RULE_SETUP
 #line 312 "/tmp/input.flex"
-yyout << u8"М"; return 306;
+yyout << "М"; return 306;
 	YY_BREAK
 case 309:
 YY_RULE_SETUP
 #line 313 "/tmp/input.flex"
-yyout << u8" "; return 307;
+yyout << " "; return 307;
 	YY_BREAK
 case 310:
 YY_RULE_SETUP
 #line 314 "/tmp/input.flex"
-yyout << u8"ℳ"; return 308;
+yyout << "ℳ"; return 308;
 	YY_BREAK
 case 311:
 YY_RULE_SETUP
 #line 315 "/tmp/input.flex"
-yyout << u8"𝔐"; return 309;
+yyout << "𝔐"; return 309;
 	YY_BREAK
 case 312:
 YY_RULE_SETUP
 #line 316 "/tmp/input.flex"
-yyout << u8"∓"; return 310;
+yyout << "∓"; return 310;
 	YY_BREAK
 case 313:
 YY_RULE_SETUP
 #line 317 "/tmp/input.flex"
-yyout << u8"𝕄"; return 311;
+yyout << "𝕄"; return 311;
 	YY_BREAK
 case 314:
 YY_RULE_SETUP
 #line 318 "/tmp/input.flex"
-yyout << u8"ℳ"; return 312;
+yyout << "ℳ"; return 312;
 	YY_BREAK
 case 315:
 YY_RULE_SETUP
 #line 319 "/tmp/input.flex"
-yyout << u8"Μ"; return 313;
+yyout << "Μ"; return 313;
 	YY_BREAK
 case 316:
 YY_RULE_SETUP
 #line 320 "/tmp/input.flex"
-yyout << u8"Њ"; return 314;
+yyout << "Њ"; return 314;
 	YY_BREAK
 case 317:
 YY_RULE_SETUP
 #line 321 "/tmp/input.flex"
-yyout << u8"Ń"; return 315;
+yyout << "Ń"; return 315;
 	YY_BREAK
 case 318:
 YY_RULE_SETUP
 #line 322 "/tmp/input.flex"
-yyout << u8"Ň"; return 316;
+yyout << "Ň"; return 316;
 	YY_BREAK
 case 319:
 YY_RULE_SETUP
 #line 323 "/tmp/input.flex"
-yyout << u8"Ņ"; return 317;
+yyout << "Ņ"; return 317;
 	YY_BREAK
 case 320:
 YY_RULE_SETUP
 #line 324 "/tmp/input.flex"
-yyout << u8"Н"; return 318;
+yyout << "Н"; return 318;
 	YY_BREAK
 case 321:
 YY_RULE_SETUP
 #line 325 "/tmp/input.flex"
-yyout << u8"​"; return 319;
+yyout << "​"; return 319;
 	YY_BREAK
 case 322:
 YY_RULE_SETUP
 #line 326 "/tmp/input.flex"
-yyout << u8"​"; return 320;
+yyout << "​"; return 320;
 	YY_BREAK
 case 323:
 YY_RULE_SETUP
 #line 327 "/tmp/input.flex"
-yyout << u8"​"; return 321;
+yyout << "​"; return 321;
 	YY_BREAK
 case 324:
 YY_RULE_SETUP
 #line 328 "/tmp/input.flex"
-yyout << u8"​"; return 322;
+yyout << "​"; return 322;
 	YY_BREAK
 case 325:
 YY_RULE_SETUP
 #line 329 "/tmp/input.flex"
-yyout << u8"≫"; return 323;
+yyout << "≫"; return 323;
 	YY_BREAK
 case 326:
 YY_RULE_SETUP
 #line 330 "/tmp/input.flex"
-yyout << u8"≪"; return 324;
+yyout << "≪"; return 324;
 	YY_BREAK
 case 327:
 YY_RULE_SETUP
@@ -7671,542 +7671,542 @@ yyout << '\n'; return 325;
 case 328:
 YY_RULE_SETUP
 #line 332 "/tmp/input.flex"
-yyout << u8"𝔑"; return 326;
+yyout << "𝔑"; return 326;
 	YY_BREAK
 case 329:
 YY_RULE_SETUP
 #line 333 "/tmp/input.flex"
-yyout << u8"⁠"; return 327;
+yyout << "⁠"; return 327;
 	YY_BREAK
 case 330:
 YY_RULE_SETUP
 #line 334 "/tmp/input.flex"
-yyout << u8" "; return 328;
+yyout << " "; return 328;
 	YY_BREAK
 case 331:
 YY_RULE_SETUP
 #line 335 "/tmp/input.flex"
-yyout << u8"ℕ"; return 329;
+yyout << "ℕ"; return 329;
 	YY_BREAK
 case 332:
 YY_RULE_SETUP
 #line 336 "/tmp/input.flex"
-yyout << u8"⫬"; return 330;
+yyout << "⫬"; return 330;
 	YY_BREAK
 case 333:
 YY_RULE_SETUP
 #line 337 "/tmp/input.flex"
-yyout << u8"≢"; return 331;
+yyout << "≢"; return 331;
 	YY_BREAK
 case 334:
 YY_RULE_SETUP
 #line 338 "/tmp/input.flex"
-yyout << u8"≭"; return 332;
+yyout << "≭"; return 332;
 	YY_BREAK
 case 335:
 YY_RULE_SETUP
 #line 339 "/tmp/input.flex"
-yyout << u8"∦"; return 333;
+yyout << "∦"; return 333;
 	YY_BREAK
 case 336:
 YY_RULE_SETUP
 #line 340 "/tmp/input.flex"
-yyout << u8"∉"; return 334;
+yyout << "∉"; return 334;
 	YY_BREAK
 case 337:
 YY_RULE_SETUP
 #line 341 "/tmp/input.flex"
-yyout << u8"≠"; return 335;
+yyout << "≠"; return 335;
 	YY_BREAK
 case 338:
 YY_RULE_SETUP
 #line 342 "/tmp/input.flex"
-yyout << u8"≂" << u8"̸"; return 336;
+yyout << "≂" << "̸"; return 336;
 	YY_BREAK
 case 339:
 YY_RULE_SETUP
 #line 343 "/tmp/input.flex"
-yyout << u8"∄"; return 337;
+yyout << "∄"; return 337;
 	YY_BREAK
 case 340:
 YY_RULE_SETUP
 #line 344 "/tmp/input.flex"
-yyout << u8"≯"; return 338;
+yyout << "≯"; return 338;
 	YY_BREAK
 case 341:
 YY_RULE_SETUP
 #line 345 "/tmp/input.flex"
-yyout << u8"≱"; return 339;
+yyout << "≱"; return 339;
 	YY_BREAK
 case 342:
 YY_RULE_SETUP
 #line 346 "/tmp/input.flex"
-yyout << u8"≧" << u8"̸"; return 340;
+yyout << "≧" << "̸"; return 340;
 	YY_BREAK
 case 343:
 YY_RULE_SETUP
 #line 347 "/tmp/input.flex"
-yyout << u8"≫" << u8"̸"; return 341;
+yyout << "≫" << "̸"; return 341;
 	YY_BREAK
 case 344:
 YY_RULE_SETUP
 #line 348 "/tmp/input.flex"
-yyout << u8"≹"; return 342;
+yyout << "≹"; return 342;
 	YY_BREAK
 case 345:
 YY_RULE_SETUP
 #line 349 "/tmp/input.flex"
-yyout << u8"⩾" << u8"̸"; return 343;
+yyout << "⩾" << "̸"; return 343;
 	YY_BREAK
 case 346:
 YY_RULE_SETUP
 #line 350 "/tmp/input.flex"
-yyout << u8"≵"; return 344;
+yyout << "≵"; return 344;
 	YY_BREAK
 case 347:
 YY_RULE_SETUP
 #line 351 "/tmp/input.flex"
-yyout << u8"≎" << u8"̸"; return 345;
+yyout << "≎" << "̸"; return 345;
 	YY_BREAK
 case 348:
 YY_RULE_SETUP
 #line 352 "/tmp/input.flex"
-yyout << u8"≏" << u8"̸"; return 346;
+yyout << "≏" << "̸"; return 346;
 	YY_BREAK
 case 349:
 YY_RULE_SETUP
 #line 353 "/tmp/input.flex"
-yyout << u8"⋪"; return 347;
+yyout << "⋪"; return 347;
 	YY_BREAK
 case 350:
 YY_RULE_SETUP
 #line 354 "/tmp/input.flex"
-yyout << u8"⧏" << u8"̸"; return 348;
+yyout << "⧏" << "̸"; return 348;
 	YY_BREAK
 case 351:
 YY_RULE_SETUP
 #line 355 "/tmp/input.flex"
-yyout << u8"⋬"; return 349;
+yyout << "⋬"; return 349;
 	YY_BREAK
 case 352:
 YY_RULE_SETUP
 #line 356 "/tmp/input.flex"
-yyout << u8"≮"; return 350;
+yyout << "≮"; return 350;
 	YY_BREAK
 case 353:
 YY_RULE_SETUP
 #line 357 "/tmp/input.flex"
-yyout << u8"≰"; return 351;
+yyout << "≰"; return 351;
 	YY_BREAK
 case 354:
 YY_RULE_SETUP
 #line 358 "/tmp/input.flex"
-yyout << u8"≸"; return 352;
+yyout << "≸"; return 352;
 	YY_BREAK
 case 355:
 YY_RULE_SETUP
 #line 359 "/tmp/input.flex"
-yyout << u8"≪" << u8"̸"; return 353;
+yyout << "≪" << "̸"; return 353;
 	YY_BREAK
 case 356:
 YY_RULE_SETUP
 #line 360 "/tmp/input.flex"
-yyout << u8"⩽" << u8"̸"; return 354;
+yyout << "⩽" << "̸"; return 354;
 	YY_BREAK
 case 357:
 YY_RULE_SETUP
 #line 361 "/tmp/input.flex"
-yyout << u8"≴"; return 355;
+yyout << "≴"; return 355;
 	YY_BREAK
 case 358:
 YY_RULE_SETUP
 #line 362 "/tmp/input.flex"
-yyout << u8"⪢" << u8"̸"; return 356;
+yyout << "⪢" << "̸"; return 356;
 	YY_BREAK
 case 359:
 YY_RULE_SETUP
 #line 363 "/tmp/input.flex"
-yyout << u8"⪡" << u8"̸"; return 357;
+yyout << "⪡" << "̸"; return 357;
 	YY_BREAK
 case 360:
 YY_RULE_SETUP
 #line 364 "/tmp/input.flex"
-yyout << u8"⊀"; return 358;
+yyout << "⊀"; return 358;
 	YY_BREAK
 case 361:
 YY_RULE_SETUP
 #line 365 "/tmp/input.flex"
-yyout << u8"⪯" << u8"̸"; return 359;
+yyout << "⪯" << "̸"; return 359;
 	YY_BREAK
 case 362:
 YY_RULE_SETUP
 #line 366 "/tmp/input.flex"
-yyout << u8"⋠"; return 360;
+yyout << "⋠"; return 360;
 	YY_BREAK
 case 363:
 YY_RULE_SETUP
 #line 367 "/tmp/input.flex"
-yyout << u8"∌"; return 361;
+yyout << "∌"; return 361;
 	YY_BREAK
 case 364:
 YY_RULE_SETUP
 #line 368 "/tmp/input.flex"
-yyout << u8"⋫"; return 362;
+yyout << "⋫"; return 362;
 	YY_BREAK
 case 365:
 YY_RULE_SETUP
 #line 369 "/tmp/input.flex"
-yyout << u8"⧐" << u8"̸"; return 363;
+yyout << "⧐" << "̸"; return 363;
 	YY_BREAK
 case 366:
 YY_RULE_SETUP
 #line 370 "/tmp/input.flex"
-yyout << u8"⋭"; return 364;
+yyout << "⋭"; return 364;
 	YY_BREAK
 case 367:
 YY_RULE_SETUP
 #line 371 "/tmp/input.flex"
-yyout << u8"⊏" << u8"̸"; return 365;
+yyout << "⊏" << "̸"; return 365;
 	YY_BREAK
 case 368:
 YY_RULE_SETUP
 #line 372 "/tmp/input.flex"
-yyout << u8"⋢"; return 366;
+yyout << "⋢"; return 366;
 	YY_BREAK
 case 369:
 YY_RULE_SETUP
 #line 373 "/tmp/input.flex"
-yyout << u8"⊐" << u8"̸"; return 367;
+yyout << "⊐" << "̸"; return 367;
 	YY_BREAK
 case 370:
 YY_RULE_SETUP
 #line 374 "/tmp/input.flex"
-yyout << u8"⋣"; return 368;
+yyout << "⋣"; return 368;
 	YY_BREAK
 case 371:
 YY_RULE_SETUP
 #line 375 "/tmp/input.flex"
-yyout << u8"⊂" << u8"⃒"; return 369;
+yyout << "⊂" << "⃒"; return 369;
 	YY_BREAK
 case 372:
 YY_RULE_SETUP
 #line 376 "/tmp/input.flex"
-yyout << u8"⊈"; return 370;
+yyout << "⊈"; return 370;
 	YY_BREAK
 case 373:
 YY_RULE_SETUP
 #line 377 "/tmp/input.flex"
-yyout << u8"⊁"; return 371;
+yyout << "⊁"; return 371;
 	YY_BREAK
 case 374:
 YY_RULE_SETUP
 #line 378 "/tmp/input.flex"
-yyout << u8"⪰" << u8"̸"; return 372;
+yyout << "⪰" << "̸"; return 372;
 	YY_BREAK
 case 375:
 YY_RULE_SETUP
 #line 379 "/tmp/input.flex"
-yyout << u8"⋡"; return 373;
+yyout << "⋡"; return 373;
 	YY_BREAK
 case 376:
 YY_RULE_SETUP
 #line 380 "/tmp/input.flex"
-yyout << u8"≿" << u8"̸"; return 374;
+yyout << "≿" << "̸"; return 374;
 	YY_BREAK
 case 377:
 YY_RULE_SETUP
 #line 381 "/tmp/input.flex"
-yyout << u8"⊃" << u8"⃒"; return 375;
+yyout << "⊃" << "⃒"; return 375;
 	YY_BREAK
 case 378:
 YY_RULE_SETUP
 #line 382 "/tmp/input.flex"
-yyout << u8"⊉"; return 376;
+yyout << "⊉"; return 376;
 	YY_BREAK
 case 379:
 YY_RULE_SETUP
 #line 383 "/tmp/input.flex"
-yyout << u8"≁"; return 377;
+yyout << "≁"; return 377;
 	YY_BREAK
 case 380:
 YY_RULE_SETUP
 #line 384 "/tmp/input.flex"
-yyout << u8"≄"; return 378;
+yyout << "≄"; return 378;
 	YY_BREAK
 case 381:
 YY_RULE_SETUP
 #line 385 "/tmp/input.flex"
-yyout << u8"≇"; return 379;
+yyout << "≇"; return 379;
 	YY_BREAK
 case 382:
 YY_RULE_SETUP
 #line 386 "/tmp/input.flex"
-yyout << u8"≉"; return 380;
+yyout << "≉"; return 380;
 	YY_BREAK
 case 383:
 YY_RULE_SETUP
 #line 387 "/tmp/input.flex"
-yyout << u8"∤"; return 381;
+yyout << "∤"; return 381;
 	YY_BREAK
 case 384:
 YY_RULE_SETUP
 #line 388 "/tmp/input.flex"
-yyout << u8"𝒩"; return 382;
+yyout << "𝒩"; return 382;
 	YY_BREAK
 case 385:
 YY_RULE_SETUP
 #line 389 "/tmp/input.flex"
-yyout << u8"Ñ"; return 383;
+yyout << "Ñ"; return 383;
 	YY_BREAK
 case 386:
 YY_RULE_SETUP
 #line 390 "/tmp/input.flex"
-yyout << u8"Ñ"; return 384;
+yyout << "Ñ"; return 384;
 	YY_BREAK
 case 387:
 YY_RULE_SETUP
 #line 391 "/tmp/input.flex"
-yyout << u8"Ν"; return 385;
+yyout << "Ν"; return 385;
 	YY_BREAK
 case 388:
 YY_RULE_SETUP
 #line 392 "/tmp/input.flex"
-yyout << u8"Œ"; return 386;
+yyout << "Œ"; return 386;
 	YY_BREAK
 case 389:
 YY_RULE_SETUP
 #line 393 "/tmp/input.flex"
-yyout << u8"Ó"; return 387;
+yyout << "Ó"; return 387;
 	YY_BREAK
 case 390:
 YY_RULE_SETUP
 #line 394 "/tmp/input.flex"
-yyout << u8"Ó"; return 388;
+yyout << "Ó"; return 388;
 	YY_BREAK
 case 391:
 YY_RULE_SETUP
 #line 395 "/tmp/input.flex"
-yyout << u8"Ô"; return 389;
+yyout << "Ô"; return 389;
 	YY_BREAK
 case 392:
 YY_RULE_SETUP
 #line 396 "/tmp/input.flex"
-yyout << u8"Ô"; return 390;
+yyout << "Ô"; return 390;
 	YY_BREAK
 case 393:
 YY_RULE_SETUP
 #line 397 "/tmp/input.flex"
-yyout << u8"О"; return 391;
+yyout << "О"; return 391;
 	YY_BREAK
 case 394:
 YY_RULE_SETUP
 #line 398 "/tmp/input.flex"
-yyout << u8"Ő"; return 392;
+yyout << "Ő"; return 392;
 	YY_BREAK
 case 395:
 YY_RULE_SETUP
 #line 399 "/tmp/input.flex"
-yyout << u8"𝔒"; return 393;
+yyout << "𝔒"; return 393;
 	YY_BREAK
 case 396:
 YY_RULE_SETUP
 #line 400 "/tmp/input.flex"
-yyout << u8"Ò"; return 394;
+yyout << "Ò"; return 394;
 	YY_BREAK
 case 397:
 YY_RULE_SETUP
 #line 401 "/tmp/input.flex"
-yyout << u8"Ò"; return 395;
+yyout << "Ò"; return 395;
 	YY_BREAK
 case 398:
 YY_RULE_SETUP
 #line 402 "/tmp/input.flex"
-yyout << u8"Ō"; return 396;
+yyout << "Ō"; return 396;
 	YY_BREAK
 case 399:
 YY_RULE_SETUP
 #line 403 "/tmp/input.flex"
-yyout << u8"Ω"; return 397;
+yyout << "Ω"; return 397;
 	YY_BREAK
 case 400:
 YY_RULE_SETUP
 #line 404 "/tmp/input.flex"
-yyout << u8"Ο"; return 398;
+yyout << "Ο"; return 398;
 	YY_BREAK
 case 401:
 YY_RULE_SETUP
 #line 405 "/tmp/input.flex"
-yyout << u8"𝕆"; return 399;
+yyout << "𝕆"; return 399;
 	YY_BREAK
 case 402:
 YY_RULE_SETUP
 #line 406 "/tmp/input.flex"
-yyout << u8"“"; return 400;
+yyout << "“"; return 400;
 	YY_BREAK
 case 403:
 YY_RULE_SETUP
 #line 407 "/tmp/input.flex"
-yyout << u8"‘"; return 401;
+yyout << "‘"; return 401;
 	YY_BREAK
 case 404:
 YY_RULE_SETUP
 #line 408 "/tmp/input.flex"
-yyout << u8"⩔"; return 402;
+yyout << "⩔"; return 402;
 	YY_BREAK
 case 405:
 YY_RULE_SETUP
 #line 409 "/tmp/input.flex"
-yyout << u8"𝒪"; return 403;
+yyout << "𝒪"; return 403;
 	YY_BREAK
 case 406:
 YY_RULE_SETUP
 #line 410 "/tmp/input.flex"
-yyout << u8"Ø"; return 404;
+yyout << "Ø"; return 404;
 	YY_BREAK
 case 407:
 YY_RULE_SETUP
 #line 411 "/tmp/input.flex"
-yyout << u8"Ø"; return 405;
+yyout << "Ø"; return 405;
 	YY_BREAK
 case 408:
 YY_RULE_SETUP
 #line 412 "/tmp/input.flex"
-yyout << u8"Õ"; return 406;
+yyout << "Õ"; return 406;
 	YY_BREAK
 case 409:
 YY_RULE_SETUP
 #line 413 "/tmp/input.flex"
-yyout << u8"Õ"; return 407;
+yyout << "Õ"; return 407;
 	YY_BREAK
 case 410:
 YY_RULE_SETUP
 #line 414 "/tmp/input.flex"
-yyout << u8"⨷"; return 408;
+yyout << "⨷"; return 408;
 	YY_BREAK
 case 411:
 YY_RULE_SETUP
 #line 415 "/tmp/input.flex"
-yyout << u8"Ö"; return 409;
+yyout << "Ö"; return 409;
 	YY_BREAK
 case 412:
 YY_RULE_SETUP
 #line 416 "/tmp/input.flex"
-yyout << u8"Ö"; return 410;
+yyout << "Ö"; return 410;
 	YY_BREAK
 case 413:
 YY_RULE_SETUP
 #line 417 "/tmp/input.flex"
-yyout << u8"‾"; return 411;
+yyout << "‾"; return 411;
 	YY_BREAK
 case 414:
 YY_RULE_SETUP
 #line 418 "/tmp/input.flex"
-yyout << u8"⏞"; return 412;
+yyout << "⏞"; return 412;
 	YY_BREAK
 case 415:
 YY_RULE_SETUP
 #line 419 "/tmp/input.flex"
-yyout << u8"⎴"; return 413;
+yyout << "⎴"; return 413;
 	YY_BREAK
 case 416:
 YY_RULE_SETUP
 #line 420 "/tmp/input.flex"
-yyout << u8"⏜"; return 414;
+yyout << "⏜"; return 414;
 	YY_BREAK
 case 417:
 YY_RULE_SETUP
 #line 421 "/tmp/input.flex"
-yyout << u8"∂"; return 415;
+yyout << "∂"; return 415;
 	YY_BREAK
 case 418:
 YY_RULE_SETUP
 #line 422 "/tmp/input.flex"
-yyout << u8"П"; return 416;
+yyout << "П"; return 416;
 	YY_BREAK
 case 419:
 YY_RULE_SETUP
 #line 423 "/tmp/input.flex"
-yyout << u8"𝔓"; return 417;
+yyout << "𝔓"; return 417;
 	YY_BREAK
 case 420:
 YY_RULE_SETUP
 #line 424 "/tmp/input.flex"
-yyout << u8"Φ"; return 418;
+yyout << "Φ"; return 418;
 	YY_BREAK
 case 421:
 YY_RULE_SETUP
 #line 425 "/tmp/input.flex"
-yyout << u8"Π"; return 419;
+yyout << "Π"; return 419;
 	YY_BREAK
 case 422:
 YY_RULE_SETUP
 #line 426 "/tmp/input.flex"
-yyout << u8"±"; return 420;
+yyout << "±"; return 420;
 	YY_BREAK
 case 423:
 YY_RULE_SETUP
 #line 427 "/tmp/input.flex"
-yyout << u8"ℌ"; return 421;
+yyout << "ℌ"; return 421;
 	YY_BREAK
 case 424:
 YY_RULE_SETUP
 #line 428 "/tmp/input.flex"
-yyout << u8"ℙ"; return 422;
+yyout << "ℙ"; return 422;
 	YY_BREAK
 case 425:
 YY_RULE_SETUP
 #line 429 "/tmp/input.flex"
-yyout << u8"⪻"; return 423;
+yyout << "⪻"; return 423;
 	YY_BREAK
 case 426:
 YY_RULE_SETUP
 #line 430 "/tmp/input.flex"
-yyout << u8"≺"; return 424;
+yyout << "≺"; return 424;
 	YY_BREAK
 case 427:
 YY_RULE_SETUP
 #line 431 "/tmp/input.flex"
-yyout << u8"⪯"; return 425;
+yyout << "⪯"; return 425;
 	YY_BREAK
 case 428:
 YY_RULE_SETUP
 #line 432 "/tmp/input.flex"
-yyout << u8"≼"; return 426;
+yyout << "≼"; return 426;
 	YY_BREAK
 case 429:
 YY_RULE_SETUP
 #line 433 "/tmp/input.flex"
-yyout << u8"≾"; return 427;
+yyout << "≾"; return 427;
 	YY_BREAK
 case 430:
 YY_RULE_SETUP
 #line 434 "/tmp/input.flex"
-yyout << u8"″"; return 428;
+yyout << "″"; return 428;
 	YY_BREAK
 case 431:
 YY_RULE_SETUP
 #line 435 "/tmp/input.flex"
-yyout << u8"∏"; return 429;
+yyout << "∏"; return 429;
 	YY_BREAK
 case 432:
 YY_RULE_SETUP
 #line 436 "/tmp/input.flex"
-yyout << u8"∷"; return 430;
+yyout << "∷"; return 430;
 	YY_BREAK
 case 433:
 YY_RULE_SETUP
 #line 437 "/tmp/input.flex"
-yyout << u8"∝"; return 431;
+yyout << "∝"; return 431;
 	YY_BREAK
 case 434:
 YY_RULE_SETUP
 #line 438 "/tmp/input.flex"
-yyout << u8"𝒫"; return 432;
+yyout << "𝒫"; return 432;
 	YY_BREAK
 case 435:
 YY_RULE_SETUP
 #line 439 "/tmp/input.flex"
-yyout << u8"Ψ"; return 433;
+yyout << "Ψ"; return 433;
 	YY_BREAK
 case 436:
 YY_RULE_SETUP
@@ -8221,1872 +8221,1872 @@ yyout << '"'; return 435;
 case 438:
 YY_RULE_SETUP
 #line 442 "/tmp/input.flex"
-yyout << u8"𝔔"; return 436;
+yyout << "𝔔"; return 436;
 	YY_BREAK
 case 439:
 YY_RULE_SETUP
 #line 443 "/tmp/input.flex"
-yyout << u8"ℚ"; return 437;
+yyout << "ℚ"; return 437;
 	YY_BREAK
 case 440:
 YY_RULE_SETUP
 #line 444 "/tmp/input.flex"
-yyout << u8"𝒬"; return 438;
+yyout << "𝒬"; return 438;
 	YY_BREAK
 case 441:
 YY_RULE_SETUP
 #line 445 "/tmp/input.flex"
-yyout << u8"⤐"; return 439;
+yyout << "⤐"; return 439;
 	YY_BREAK
 case 442:
 YY_RULE_SETUP
 #line 446 "/tmp/input.flex"
-yyout << u8"®"; return 440;
+yyout << "®"; return 440;
 	YY_BREAK
 case 443:
 YY_RULE_SETUP
 #line 447 "/tmp/input.flex"
-yyout << u8"®"; return 441;
+yyout << "®"; return 441;
 	YY_BREAK
 case 444:
 YY_RULE_SETUP
 #line 448 "/tmp/input.flex"
-yyout << u8"Ŕ"; return 442;
+yyout << "Ŕ"; return 442;
 	YY_BREAK
 case 445:
 YY_RULE_SETUP
 #line 449 "/tmp/input.flex"
-yyout << u8"⟫"; return 443;
+yyout << "⟫"; return 443;
 	YY_BREAK
 case 446:
 YY_RULE_SETUP
 #line 450 "/tmp/input.flex"
-yyout << u8"↠"; return 444;
+yyout << "↠"; return 444;
 	YY_BREAK
 case 447:
 YY_RULE_SETUP
 #line 451 "/tmp/input.flex"
-yyout << u8"⤖"; return 445;
+yyout << "⤖"; return 445;
 	YY_BREAK
 case 448:
 YY_RULE_SETUP
 #line 452 "/tmp/input.flex"
-yyout << u8"Ř"; return 446;
+yyout << "Ř"; return 446;
 	YY_BREAK
 case 449:
 YY_RULE_SETUP
 #line 453 "/tmp/input.flex"
-yyout << u8"Ŗ"; return 447;
+yyout << "Ŗ"; return 447;
 	YY_BREAK
 case 450:
 YY_RULE_SETUP
 #line 454 "/tmp/input.flex"
-yyout << u8"Р"; return 448;
+yyout << "Р"; return 448;
 	YY_BREAK
 case 451:
 YY_RULE_SETUP
 #line 455 "/tmp/input.flex"
-yyout << u8"ℜ"; return 449;
+yyout << "ℜ"; return 449;
 	YY_BREAK
 case 452:
 YY_RULE_SETUP
 #line 456 "/tmp/input.flex"
-yyout << u8"∋"; return 450;
+yyout << "∋"; return 450;
 	YY_BREAK
 case 453:
 YY_RULE_SETUP
 #line 457 "/tmp/input.flex"
-yyout << u8"⇋"; return 451;
+yyout << "⇋"; return 451;
 	YY_BREAK
 case 454:
 YY_RULE_SETUP
 #line 458 "/tmp/input.flex"
-yyout << u8"⥯"; return 452;
+yyout << "⥯"; return 452;
 	YY_BREAK
 case 455:
 YY_RULE_SETUP
 #line 459 "/tmp/input.flex"
-yyout << u8"ℜ"; return 453;
+yyout << "ℜ"; return 453;
 	YY_BREAK
 case 456:
 YY_RULE_SETUP
 #line 460 "/tmp/input.flex"
-yyout << u8"Ρ"; return 454;
+yyout << "Ρ"; return 454;
 	YY_BREAK
 case 457:
 YY_RULE_SETUP
 #line 461 "/tmp/input.flex"
-yyout << u8"⟩"; return 455;
+yyout << "⟩"; return 455;
 	YY_BREAK
 case 458:
 YY_RULE_SETUP
 #line 462 "/tmp/input.flex"
-yyout << u8"→"; return 456;
+yyout << "→"; return 456;
 	YY_BREAK
 case 459:
 YY_RULE_SETUP
 #line 463 "/tmp/input.flex"
-yyout << u8"⇥"; return 457;
+yyout << "⇥"; return 457;
 	YY_BREAK
 case 460:
 YY_RULE_SETUP
 #line 464 "/tmp/input.flex"
-yyout << u8"⇄"; return 458;
+yyout << "⇄"; return 458;
 	YY_BREAK
 case 461:
 YY_RULE_SETUP
 #line 465 "/tmp/input.flex"
-yyout << u8"⌉"; return 459;
+yyout << "⌉"; return 459;
 	YY_BREAK
 case 462:
 YY_RULE_SETUP
 #line 466 "/tmp/input.flex"
-yyout << u8"⟧"; return 460;
+yyout << "⟧"; return 460;
 	YY_BREAK
 case 463:
 YY_RULE_SETUP
 #line 467 "/tmp/input.flex"
-yyout << u8"⥝"; return 461;
+yyout << "⥝"; return 461;
 	YY_BREAK
 case 464:
 YY_RULE_SETUP
 #line 468 "/tmp/input.flex"
-yyout << u8"⇂"; return 462;
+yyout << "⇂"; return 462;
 	YY_BREAK
 case 465:
 YY_RULE_SETUP
 #line 469 "/tmp/input.flex"
-yyout << u8"⥕"; return 463;
+yyout << "⥕"; return 463;
 	YY_BREAK
 case 466:
 YY_RULE_SETUP
 #line 470 "/tmp/input.flex"
-yyout << u8"⌋"; return 464;
+yyout << "⌋"; return 464;
 	YY_BREAK
 case 467:
 YY_RULE_SETUP
 #line 471 "/tmp/input.flex"
-yyout << u8"⊢"; return 465;
+yyout << "⊢"; return 465;
 	YY_BREAK
 case 468:
 YY_RULE_SETUP
 #line 472 "/tmp/input.flex"
-yyout << u8"↦"; return 466;
+yyout << "↦"; return 466;
 	YY_BREAK
 case 469:
 YY_RULE_SETUP
 #line 473 "/tmp/input.flex"
-yyout << u8"⥛"; return 467;
+yyout << "⥛"; return 467;
 	YY_BREAK
 case 470:
 YY_RULE_SETUP
 #line 474 "/tmp/input.flex"
-yyout << u8"⊳"; return 468;
+yyout << "⊳"; return 468;
 	YY_BREAK
 case 471:
 YY_RULE_SETUP
 #line 475 "/tmp/input.flex"
-yyout << u8"⧐"; return 469;
+yyout << "⧐"; return 469;
 	YY_BREAK
 case 472:
 YY_RULE_SETUP
 #line 476 "/tmp/input.flex"
-yyout << u8"⊵"; return 470;
+yyout << "⊵"; return 470;
 	YY_BREAK
 case 473:
 YY_RULE_SETUP
 #line 477 "/tmp/input.flex"
-yyout << u8"⥏"; return 471;
+yyout << "⥏"; return 471;
 	YY_BREAK
 case 474:
 YY_RULE_SETUP
 #line 478 "/tmp/input.flex"
-yyout << u8"⥜"; return 472;
+yyout << "⥜"; return 472;
 	YY_BREAK
 case 475:
 YY_RULE_SETUP
 #line 479 "/tmp/input.flex"
-yyout << u8"↾"; return 473;
+yyout << "↾"; return 473;
 	YY_BREAK
 case 476:
 YY_RULE_SETUP
 #line 480 "/tmp/input.flex"
-yyout << u8"⥔"; return 474;
+yyout << "⥔"; return 474;
 	YY_BREAK
 case 477:
 YY_RULE_SETUP
 #line 481 "/tmp/input.flex"
-yyout << u8"⇀"; return 475;
+yyout << "⇀"; return 475;
 	YY_BREAK
 case 478:
 YY_RULE_SETUP
 #line 482 "/tmp/input.flex"
-yyout << u8"⥓"; return 476;
+yyout << "⥓"; return 476;
 	YY_BREAK
 case 479:
 YY_RULE_SETUP
 #line 483 "/tmp/input.flex"
-yyout << u8"⇒"; return 477;
+yyout << "⇒"; return 477;
 	YY_BREAK
 case 480:
 YY_RULE_SETUP
 #line 484 "/tmp/input.flex"
-yyout << u8"ℝ"; return 478;
+yyout << "ℝ"; return 478;
 	YY_BREAK
 case 481:
 YY_RULE_SETUP
 #line 485 "/tmp/input.flex"
-yyout << u8"⥰"; return 479;
+yyout << "⥰"; return 479;
 	YY_BREAK
 case 482:
 YY_RULE_SETUP
 #line 486 "/tmp/input.flex"
-yyout << u8"⇛"; return 480;
+yyout << "⇛"; return 480;
 	YY_BREAK
 case 483:
 YY_RULE_SETUP
 #line 487 "/tmp/input.flex"
-yyout << u8"ℛ"; return 481;
+yyout << "ℛ"; return 481;
 	YY_BREAK
 case 484:
 YY_RULE_SETUP
 #line 488 "/tmp/input.flex"
-yyout << u8"↱"; return 482;
+yyout << "↱"; return 482;
 	YY_BREAK
 case 485:
 YY_RULE_SETUP
 #line 489 "/tmp/input.flex"
-yyout << u8"⧴"; return 483;
+yyout << "⧴"; return 483;
 	YY_BREAK
 case 486:
 YY_RULE_SETUP
 #line 490 "/tmp/input.flex"
-yyout << u8"Щ"; return 484;
+yyout << "Щ"; return 484;
 	YY_BREAK
 case 487:
 YY_RULE_SETUP
 #line 491 "/tmp/input.flex"
-yyout << u8"Ш"; return 485;
+yyout << "Ш"; return 485;
 	YY_BREAK
 case 488:
 YY_RULE_SETUP
 #line 492 "/tmp/input.flex"
-yyout << u8"Ь"; return 486;
+yyout << "Ь"; return 486;
 	YY_BREAK
 case 489:
 YY_RULE_SETUP
 #line 493 "/tmp/input.flex"
-yyout << u8"Ś"; return 487;
+yyout << "Ś"; return 487;
 	YY_BREAK
 case 490:
 YY_RULE_SETUP
 #line 494 "/tmp/input.flex"
-yyout << u8"⪼"; return 488;
+yyout << "⪼"; return 488;
 	YY_BREAK
 case 491:
 YY_RULE_SETUP
 #line 495 "/tmp/input.flex"
-yyout << u8"Š"; return 489;
+yyout << "Š"; return 489;
 	YY_BREAK
 case 492:
 YY_RULE_SETUP
 #line 496 "/tmp/input.flex"
-yyout << u8"Ş"; return 490;
+yyout << "Ş"; return 490;
 	YY_BREAK
 case 493:
 YY_RULE_SETUP
 #line 497 "/tmp/input.flex"
-yyout << u8"Ŝ"; return 491;
+yyout << "Ŝ"; return 491;
 	YY_BREAK
 case 494:
 YY_RULE_SETUP
 #line 498 "/tmp/input.flex"
-yyout << u8"С"; return 492;
+yyout << "С"; return 492;
 	YY_BREAK
 case 495:
 YY_RULE_SETUP
 #line 499 "/tmp/input.flex"
-yyout << u8"𝔖"; return 493;
+yyout << "𝔖"; return 493;
 	YY_BREAK
 case 496:
 YY_RULE_SETUP
 #line 500 "/tmp/input.flex"
-yyout << u8"↓"; return 494;
+yyout << "↓"; return 494;
 	YY_BREAK
 case 497:
 YY_RULE_SETUP
 #line 501 "/tmp/input.flex"
-yyout << u8"←"; return 495;
+yyout << "←"; return 495;
 	YY_BREAK
 case 498:
 YY_RULE_SETUP
 #line 502 "/tmp/input.flex"
-yyout << u8"→"; return 496;
+yyout << "→"; return 496;
 	YY_BREAK
 case 499:
 YY_RULE_SETUP
 #line 503 "/tmp/input.flex"
-yyout << u8"↑"; return 497;
+yyout << "↑"; return 497;
 	YY_BREAK
 case 500:
 YY_RULE_SETUP
 #line 504 "/tmp/input.flex"
-yyout << u8"Σ"; return 498;
+yyout << "Σ"; return 498;
 	YY_BREAK
 case 501:
 YY_RULE_SETUP
 #line 505 "/tmp/input.flex"
-yyout << u8"∘"; return 499;
+yyout << "∘"; return 499;
 	YY_BREAK
 case 502:
 YY_RULE_SETUP
 #line 506 "/tmp/input.flex"
-yyout << u8"𝕊"; return 500;
+yyout << "𝕊"; return 500;
 	YY_BREAK
 case 503:
 YY_RULE_SETUP
 #line 507 "/tmp/input.flex"
-yyout << u8"√"; return 501;
+yyout << "√"; return 501;
 	YY_BREAK
 case 504:
 YY_RULE_SETUP
 #line 508 "/tmp/input.flex"
-yyout << u8"□"; return 502;
+yyout << "□"; return 502;
 	YY_BREAK
 case 505:
 YY_RULE_SETUP
 #line 509 "/tmp/input.flex"
-yyout << u8"⊓"; return 503;
+yyout << "⊓"; return 503;
 	YY_BREAK
 case 506:
 YY_RULE_SETUP
 #line 510 "/tmp/input.flex"
-yyout << u8"⊏"; return 504;
+yyout << "⊏"; return 504;
 	YY_BREAK
 case 507:
 YY_RULE_SETUP
 #line 511 "/tmp/input.flex"
-yyout << u8"⊑"; return 505;
+yyout << "⊑"; return 505;
 	YY_BREAK
 case 508:
 YY_RULE_SETUP
 #line 512 "/tmp/input.flex"
-yyout << u8"⊐"; return 506;
+yyout << "⊐"; return 506;
 	YY_BREAK
 case 509:
 YY_RULE_SETUP
 #line 513 "/tmp/input.flex"
-yyout << u8"⊒"; return 507;
+yyout << "⊒"; return 507;
 	YY_BREAK
 case 510:
 YY_RULE_SETUP
 #line 514 "/tmp/input.flex"
-yyout << u8"⊔"; return 508;
+yyout << "⊔"; return 508;
 	YY_BREAK
 case 511:
 YY_RULE_SETUP
 #line 515 "/tmp/input.flex"
-yyout << u8"𝒮"; return 509;
+yyout << "𝒮"; return 509;
 	YY_BREAK
 case 512:
 YY_RULE_SETUP
 #line 516 "/tmp/input.flex"
-yyout << u8"⋆"; return 510;
+yyout << "⋆"; return 510;
 	YY_BREAK
 case 513:
 YY_RULE_SETUP
 #line 517 "/tmp/input.flex"
-yyout << u8"⋐"; return 511;
+yyout << "⋐"; return 511;
 	YY_BREAK
 case 514:
 YY_RULE_SETUP
 #line 518 "/tmp/input.flex"
-yyout << u8"⋐"; return 512;
+yyout << "⋐"; return 512;
 	YY_BREAK
 case 515:
 YY_RULE_SETUP
 #line 519 "/tmp/input.flex"
-yyout << u8"⊆"; return 513;
+yyout << "⊆"; return 513;
 	YY_BREAK
 case 516:
 YY_RULE_SETUP
 #line 520 "/tmp/input.flex"
-yyout << u8"≻"; return 514;
+yyout << "≻"; return 514;
 	YY_BREAK
 case 517:
 YY_RULE_SETUP
 #line 521 "/tmp/input.flex"
-yyout << u8"⪰"; return 515;
+yyout << "⪰"; return 515;
 	YY_BREAK
 case 518:
 YY_RULE_SETUP
 #line 522 "/tmp/input.flex"
-yyout << u8"≽"; return 516;
+yyout << "≽"; return 516;
 	YY_BREAK
 case 519:
 YY_RULE_SETUP
 #line 523 "/tmp/input.flex"
-yyout << u8"≿"; return 517;
+yyout << "≿"; return 517;
 	YY_BREAK
 case 520:
 YY_RULE_SETUP
 #line 524 "/tmp/input.flex"
-yyout << u8"∋"; return 518;
+yyout << "∋"; return 518;
 	YY_BREAK
 case 521:
 YY_RULE_SETUP
 #line 525 "/tmp/input.flex"
-yyout << u8"∑"; return 519;
+yyout << "∑"; return 519;
 	YY_BREAK
 case 522:
 YY_RULE_SETUP
 #line 526 "/tmp/input.flex"
-yyout << u8"⋑"; return 520;
+yyout << "⋑"; return 520;
 	YY_BREAK
 case 523:
 YY_RULE_SETUP
 #line 527 "/tmp/input.flex"
-yyout << u8"⊃"; return 521;
+yyout << "⊃"; return 521;
 	YY_BREAK
 case 524:
 YY_RULE_SETUP
 #line 528 "/tmp/input.flex"
-yyout << u8"⊇"; return 522;
+yyout << "⊇"; return 522;
 	YY_BREAK
 case 525:
 YY_RULE_SETUP
 #line 529 "/tmp/input.flex"
-yyout << u8"⋑"; return 523;
+yyout << "⋑"; return 523;
 	YY_BREAK
 case 526:
 YY_RULE_SETUP
 #line 530 "/tmp/input.flex"
-yyout << u8"Þ"; return 524;
+yyout << "Þ"; return 524;
 	YY_BREAK
 case 527:
 YY_RULE_SETUP
 #line 531 "/tmp/input.flex"
-yyout << u8"Þ"; return 525;
+yyout << "Þ"; return 525;
 	YY_BREAK
 case 528:
 YY_RULE_SETUP
 #line 532 "/tmp/input.flex"
-yyout << u8"™"; return 526;
+yyout << "™"; return 526;
 	YY_BREAK
 case 529:
 YY_RULE_SETUP
 #line 533 "/tmp/input.flex"
-yyout << u8"Ћ"; return 527;
+yyout << "Ћ"; return 527;
 	YY_BREAK
 case 530:
 YY_RULE_SETUP
 #line 534 "/tmp/input.flex"
-yyout << u8"Ц"; return 528;
+yyout << "Ц"; return 528;
 	YY_BREAK
 case 531:
 YY_RULE_SETUP
 #line 535 "/tmp/input.flex"
-yyout << u8"	"; return 529;
+yyout << "	"; return 529;
 	YY_BREAK
 case 532:
 YY_RULE_SETUP
 #line 536 "/tmp/input.flex"
-yyout << u8"Τ"; return 530;
+yyout << "Τ"; return 530;
 	YY_BREAK
 case 533:
 YY_RULE_SETUP
 #line 537 "/tmp/input.flex"
-yyout << u8"Ť"; return 531;
+yyout << "Ť"; return 531;
 	YY_BREAK
 case 534:
 YY_RULE_SETUP
 #line 538 "/tmp/input.flex"
-yyout << u8"Ţ"; return 532;
+yyout << "Ţ"; return 532;
 	YY_BREAK
 case 535:
 YY_RULE_SETUP
 #line 539 "/tmp/input.flex"
-yyout << u8"Т"; return 533;
+yyout << "Т"; return 533;
 	YY_BREAK
 case 536:
 YY_RULE_SETUP
 #line 540 "/tmp/input.flex"
-yyout << u8"𝔗"; return 534;
+yyout << "𝔗"; return 534;
 	YY_BREAK
 case 537:
 YY_RULE_SETUP
 #line 541 "/tmp/input.flex"
-yyout << u8"∴"; return 535;
+yyout << "∴"; return 535;
 	YY_BREAK
 case 538:
 YY_RULE_SETUP
 #line 542 "/tmp/input.flex"
-yyout << u8"Θ"; return 536;
+yyout << "Θ"; return 536;
 	YY_BREAK
 case 539:
 YY_RULE_SETUP
 #line 543 "/tmp/input.flex"
-yyout << u8" " << u8" "; return 537;
+yyout << " " << " "; return 537;
 	YY_BREAK
 case 540:
 YY_RULE_SETUP
 #line 544 "/tmp/input.flex"
-yyout << u8" "; return 538;
+yyout << " "; return 538;
 	YY_BREAK
 case 541:
 YY_RULE_SETUP
 #line 545 "/tmp/input.flex"
-yyout << u8"∼"; return 539;
+yyout << "∼"; return 539;
 	YY_BREAK
 case 542:
 YY_RULE_SETUP
 #line 546 "/tmp/input.flex"
-yyout << u8"≃"; return 540;
+yyout << "≃"; return 540;
 	YY_BREAK
 case 543:
 YY_RULE_SETUP
 #line 547 "/tmp/input.flex"
-yyout << u8"≅"; return 541;
+yyout << "≅"; return 541;
 	YY_BREAK
 case 544:
 YY_RULE_SETUP
 #line 548 "/tmp/input.flex"
-yyout << u8"≈"; return 542;
+yyout << "≈"; return 542;
 	YY_BREAK
 case 545:
 YY_RULE_SETUP
 #line 549 "/tmp/input.flex"
-yyout << u8"𝕋"; return 543;
+yyout << "𝕋"; return 543;
 	YY_BREAK
 case 546:
 YY_RULE_SETUP
 #line 550 "/tmp/input.flex"
-yyout << u8"⃛"; return 544;
+yyout << "⃛"; return 544;
 	YY_BREAK
 case 547:
 YY_RULE_SETUP
 #line 551 "/tmp/input.flex"
-yyout << u8"𝒯"; return 545;
+yyout << "𝒯"; return 545;
 	YY_BREAK
 case 548:
 YY_RULE_SETUP
 #line 552 "/tmp/input.flex"
-yyout << u8"Ŧ"; return 546;
+yyout << "Ŧ"; return 546;
 	YY_BREAK
 case 549:
 YY_RULE_SETUP
 #line 553 "/tmp/input.flex"
-yyout << u8"Ú"; return 547;
+yyout << "Ú"; return 547;
 	YY_BREAK
 case 550:
 YY_RULE_SETUP
 #line 554 "/tmp/input.flex"
-yyout << u8"Ú"; return 548;
+yyout << "Ú"; return 548;
 	YY_BREAK
 case 551:
 YY_RULE_SETUP
 #line 555 "/tmp/input.flex"
-yyout << u8"↟"; return 549;
+yyout << "↟"; return 549;
 	YY_BREAK
 case 552:
 YY_RULE_SETUP
 #line 556 "/tmp/input.flex"
-yyout << u8"⥉"; return 550;
+yyout << "⥉"; return 550;
 	YY_BREAK
 case 553:
 YY_RULE_SETUP
 #line 557 "/tmp/input.flex"
-yyout << u8"Ў"; return 551;
+yyout << "Ў"; return 551;
 	YY_BREAK
 case 554:
 YY_RULE_SETUP
 #line 558 "/tmp/input.flex"
-yyout << u8"Ŭ"; return 552;
+yyout << "Ŭ"; return 552;
 	YY_BREAK
 case 555:
 YY_RULE_SETUP
 #line 559 "/tmp/input.flex"
-yyout << u8"Û"; return 553;
+yyout << "Û"; return 553;
 	YY_BREAK
 case 556:
 YY_RULE_SETUP
 #line 560 "/tmp/input.flex"
-yyout << u8"Û"; return 554;
+yyout << "Û"; return 554;
 	YY_BREAK
 case 557:
 YY_RULE_SETUP
 #line 561 "/tmp/input.flex"
-yyout << u8"У"; return 555;
+yyout << "У"; return 555;
 	YY_BREAK
 case 558:
 YY_RULE_SETUP
 #line 562 "/tmp/input.flex"
-yyout << u8"Ű"; return 556;
+yyout << "Ű"; return 556;
 	YY_BREAK
 case 559:
 YY_RULE_SETUP
 #line 563 "/tmp/input.flex"
-yyout << u8"𝔘"; return 557;
+yyout << "𝔘"; return 557;
 	YY_BREAK
 case 560:
 YY_RULE_SETUP
 #line 564 "/tmp/input.flex"
-yyout << u8"Ù"; return 558;
+yyout << "Ù"; return 558;
 	YY_BREAK
 case 561:
 YY_RULE_SETUP
 #line 565 "/tmp/input.flex"
-yyout << u8"Ù"; return 559;
+yyout << "Ù"; return 559;
 	YY_BREAK
 case 562:
 YY_RULE_SETUP
 #line 566 "/tmp/input.flex"
-yyout << u8"Ū"; return 560;
+yyout << "Ū"; return 560;
 	YY_BREAK
 case 563:
 YY_RULE_SETUP
 #line 567 "/tmp/input.flex"
-yyout << u8"_"; return 561;
+yyout << "_"; return 561;
 	YY_BREAK
 case 564:
 YY_RULE_SETUP
 #line 568 "/tmp/input.flex"
-yyout << u8"⏟"; return 562;
+yyout << "⏟"; return 562;
 	YY_BREAK
 case 565:
 YY_RULE_SETUP
 #line 569 "/tmp/input.flex"
-yyout << u8"⎵"; return 563;
+yyout << "⎵"; return 563;
 	YY_BREAK
 case 566:
 YY_RULE_SETUP
 #line 570 "/tmp/input.flex"
-yyout << u8"⏝"; return 564;
+yyout << "⏝"; return 564;
 	YY_BREAK
 case 567:
 YY_RULE_SETUP
 #line 571 "/tmp/input.flex"
-yyout << u8"⋃"; return 565;
+yyout << "⋃"; return 565;
 	YY_BREAK
 case 568:
 YY_RULE_SETUP
 #line 572 "/tmp/input.flex"
-yyout << u8"⊎"; return 566;
+yyout << "⊎"; return 566;
 	YY_BREAK
 case 569:
 YY_RULE_SETUP
 #line 573 "/tmp/input.flex"
-yyout << u8"Ų"; return 567;
+yyout << "Ų"; return 567;
 	YY_BREAK
 case 570:
 YY_RULE_SETUP
 #line 574 "/tmp/input.flex"
-yyout << u8"𝕌"; return 568;
+yyout << "𝕌"; return 568;
 	YY_BREAK
 case 571:
 YY_RULE_SETUP
 #line 575 "/tmp/input.flex"
-yyout << u8"↑"; return 569;
+yyout << "↑"; return 569;
 	YY_BREAK
 case 572:
 YY_RULE_SETUP
 #line 576 "/tmp/input.flex"
-yyout << u8"⤒"; return 570;
+yyout << "⤒"; return 570;
 	YY_BREAK
 case 573:
 YY_RULE_SETUP
 #line 577 "/tmp/input.flex"
-yyout << u8"⇅"; return 571;
+yyout << "⇅"; return 571;
 	YY_BREAK
 case 574:
 YY_RULE_SETUP
 #line 578 "/tmp/input.flex"
-yyout << u8"↕"; return 572;
+yyout << "↕"; return 572;
 	YY_BREAK
 case 575:
 YY_RULE_SETUP
 #line 579 "/tmp/input.flex"
-yyout << u8"⥮"; return 573;
+yyout << "⥮"; return 573;
 	YY_BREAK
 case 576:
 YY_RULE_SETUP
 #line 580 "/tmp/input.flex"
-yyout << u8"⊥"; return 574;
+yyout << "⊥"; return 574;
 	YY_BREAK
 case 577:
 YY_RULE_SETUP
 #line 581 "/tmp/input.flex"
-yyout << u8"↥"; return 575;
+yyout << "↥"; return 575;
 	YY_BREAK
 case 578:
 YY_RULE_SETUP
 #line 582 "/tmp/input.flex"
-yyout << u8"⇑"; return 576;
+yyout << "⇑"; return 576;
 	YY_BREAK
 case 579:
 YY_RULE_SETUP
 #line 583 "/tmp/input.flex"
-yyout << u8"⇕"; return 577;
+yyout << "⇕"; return 577;
 	YY_BREAK
 case 580:
 YY_RULE_SETUP
 #line 584 "/tmp/input.flex"
-yyout << u8"↖"; return 578;
+yyout << "↖"; return 578;
 	YY_BREAK
 case 581:
 YY_RULE_SETUP
 #line 585 "/tmp/input.flex"
-yyout << u8"↗"; return 579;
+yyout << "↗"; return 579;
 	YY_BREAK
 case 582:
 YY_RULE_SETUP
 #line 586 "/tmp/input.flex"
-yyout << u8"ϒ"; return 580;
+yyout << "ϒ"; return 580;
 	YY_BREAK
 case 583:
 YY_RULE_SETUP
 #line 587 "/tmp/input.flex"
-yyout << u8"Υ"; return 581;
+yyout << "Υ"; return 581;
 	YY_BREAK
 case 584:
 YY_RULE_SETUP
 #line 588 "/tmp/input.flex"
-yyout << u8"Ů"; return 582;
+yyout << "Ů"; return 582;
 	YY_BREAK
 case 585:
 YY_RULE_SETUP
 #line 589 "/tmp/input.flex"
-yyout << u8"𝒰"; return 583;
+yyout << "𝒰"; return 583;
 	YY_BREAK
 case 586:
 YY_RULE_SETUP
 #line 590 "/tmp/input.flex"
-yyout << u8"Ũ"; return 584;
+yyout << "Ũ"; return 584;
 	YY_BREAK
 case 587:
 YY_RULE_SETUP
 #line 591 "/tmp/input.flex"
-yyout << u8"Ü"; return 585;
+yyout << "Ü"; return 585;
 	YY_BREAK
 case 588:
 YY_RULE_SETUP
 #line 592 "/tmp/input.flex"
-yyout << u8"Ü"; return 586;
+yyout << "Ü"; return 586;
 	YY_BREAK
 case 589:
 YY_RULE_SETUP
 #line 593 "/tmp/input.flex"
-yyout << u8"⊫"; return 587;
+yyout << "⊫"; return 587;
 	YY_BREAK
 case 590:
 YY_RULE_SETUP
 #line 594 "/tmp/input.flex"
-yyout << u8"⫫"; return 588;
+yyout << "⫫"; return 588;
 	YY_BREAK
 case 591:
 YY_RULE_SETUP
 #line 595 "/tmp/input.flex"
-yyout << u8"В"; return 589;
+yyout << "В"; return 589;
 	YY_BREAK
 case 592:
 YY_RULE_SETUP
 #line 596 "/tmp/input.flex"
-yyout << u8"⊩"; return 590;
+yyout << "⊩"; return 590;
 	YY_BREAK
 case 593:
 YY_RULE_SETUP
 #line 597 "/tmp/input.flex"
-yyout << u8"⫦"; return 591;
+yyout << "⫦"; return 591;
 	YY_BREAK
 case 594:
 YY_RULE_SETUP
 #line 598 "/tmp/input.flex"
-yyout << u8"⋁"; return 592;
+yyout << "⋁"; return 592;
 	YY_BREAK
 case 595:
 YY_RULE_SETUP
 #line 599 "/tmp/input.flex"
-yyout << u8"‖"; return 593;
+yyout << "‖"; return 593;
 	YY_BREAK
 case 596:
 YY_RULE_SETUP
 #line 600 "/tmp/input.flex"
-yyout << u8"‖"; return 594;
+yyout << "‖"; return 594;
 	YY_BREAK
 case 597:
 YY_RULE_SETUP
 #line 601 "/tmp/input.flex"
-yyout << u8"∣"; return 595;
+yyout << "∣"; return 595;
 	YY_BREAK
 case 598:
 YY_RULE_SETUP
 #line 602 "/tmp/input.flex"
-yyout << u8"|"; return 596;
+yyout << "|"; return 596;
 	YY_BREAK
 case 599:
 YY_RULE_SETUP
 #line 603 "/tmp/input.flex"
-yyout << u8"❘"; return 597;
+yyout << "❘"; return 597;
 	YY_BREAK
 case 600:
 YY_RULE_SETUP
 #line 604 "/tmp/input.flex"
-yyout << u8"≀"; return 598;
+yyout << "≀"; return 598;
 	YY_BREAK
 case 601:
 YY_RULE_SETUP
 #line 605 "/tmp/input.flex"
-yyout << u8" "; return 599;
+yyout << " "; return 599;
 	YY_BREAK
 case 602:
 YY_RULE_SETUP
 #line 606 "/tmp/input.flex"
-yyout << u8"𝔙"; return 600;
+yyout << "𝔙"; return 600;
 	YY_BREAK
 case 603:
 YY_RULE_SETUP
 #line 607 "/tmp/input.flex"
-yyout << u8"𝕍"; return 601;
+yyout << "𝕍"; return 601;
 	YY_BREAK
 case 604:
 YY_RULE_SETUP
 #line 608 "/tmp/input.flex"
-yyout << u8"𝒱"; return 602;
+yyout << "𝒱"; return 602;
 	YY_BREAK
 case 605:
 YY_RULE_SETUP
 #line 609 "/tmp/input.flex"
-yyout << u8"⊪"; return 603;
+yyout << "⊪"; return 603;
 	YY_BREAK
 case 606:
 YY_RULE_SETUP
 #line 610 "/tmp/input.flex"
-yyout << u8"Ŵ"; return 604;
+yyout << "Ŵ"; return 604;
 	YY_BREAK
 case 607:
 YY_RULE_SETUP
 #line 611 "/tmp/input.flex"
-yyout << u8"⋀"; return 605;
+yyout << "⋀"; return 605;
 	YY_BREAK
 case 608:
 YY_RULE_SETUP
 #line 612 "/tmp/input.flex"
-yyout << u8"𝔚"; return 606;
+yyout << "𝔚"; return 606;
 	YY_BREAK
 case 609:
 YY_RULE_SETUP
 #line 613 "/tmp/input.flex"
-yyout << u8"𝕎"; return 607;
+yyout << "𝕎"; return 607;
 	YY_BREAK
 case 610:
 YY_RULE_SETUP
 #line 614 "/tmp/input.flex"
-yyout << u8"𝒲"; return 608;
+yyout << "𝒲"; return 608;
 	YY_BREAK
 case 611:
 YY_RULE_SETUP
 #line 615 "/tmp/input.flex"
-yyout << u8"𝔛"; return 609;
+yyout << "𝔛"; return 609;
 	YY_BREAK
 case 612:
 YY_RULE_SETUP
 #line 616 "/tmp/input.flex"
-yyout << u8"Ξ"; return 610;
+yyout << "Ξ"; return 610;
 	YY_BREAK
 case 613:
 YY_RULE_SETUP
 #line 617 "/tmp/input.flex"
-yyout << u8"𝕏"; return 611;
+yyout << "𝕏"; return 611;
 	YY_BREAK
 case 614:
 YY_RULE_SETUP
 #line 618 "/tmp/input.flex"
-yyout << u8"𝒳"; return 612;
+yyout << "𝒳"; return 612;
 	YY_BREAK
 case 615:
 YY_RULE_SETUP
 #line 619 "/tmp/input.flex"
-yyout << u8"Я"; return 613;
+yyout << "Я"; return 613;
 	YY_BREAK
 case 616:
 YY_RULE_SETUP
 #line 620 "/tmp/input.flex"
-yyout << u8"Ї"; return 614;
+yyout << "Ї"; return 614;
 	YY_BREAK
 case 617:
 YY_RULE_SETUP
 #line 621 "/tmp/input.flex"
-yyout << u8"Ю"; return 615;
+yyout << "Ю"; return 615;
 	YY_BREAK
 case 618:
 YY_RULE_SETUP
 #line 622 "/tmp/input.flex"
-yyout << u8"Ý"; return 616;
+yyout << "Ý"; return 616;
 	YY_BREAK
 case 619:
 YY_RULE_SETUP
 #line 623 "/tmp/input.flex"
-yyout << u8"Ý"; return 617;
+yyout << "Ý"; return 617;
 	YY_BREAK
 case 620:
 YY_RULE_SETUP
 #line 624 "/tmp/input.flex"
-yyout << u8"Ŷ"; return 618;
+yyout << "Ŷ"; return 618;
 	YY_BREAK
 case 621:
 YY_RULE_SETUP
 #line 625 "/tmp/input.flex"
-yyout << u8"Ы"; return 619;
+yyout << "Ы"; return 619;
 	YY_BREAK
 case 622:
 YY_RULE_SETUP
 #line 626 "/tmp/input.flex"
-yyout << u8"𝔜"; return 620;
+yyout << "𝔜"; return 620;
 	YY_BREAK
 case 623:
 YY_RULE_SETUP
 #line 627 "/tmp/input.flex"
-yyout << u8"𝕐"; return 621;
+yyout << "𝕐"; return 621;
 	YY_BREAK
 case 624:
 YY_RULE_SETUP
 #line 628 "/tmp/input.flex"
-yyout << u8"𝒴"; return 622;
+yyout << "𝒴"; return 622;
 	YY_BREAK
 case 625:
 YY_RULE_SETUP
 #line 629 "/tmp/input.flex"
-yyout << u8"Ÿ"; return 623;
+yyout << "Ÿ"; return 623;
 	YY_BREAK
 case 626:
 YY_RULE_SETUP
 #line 630 "/tmp/input.flex"
-yyout << u8"Ж"; return 624;
+yyout << "Ж"; return 624;
 	YY_BREAK
 case 627:
 YY_RULE_SETUP
 #line 631 "/tmp/input.flex"
-yyout << u8"Ź"; return 625;
+yyout << "Ź"; return 625;
 	YY_BREAK
 case 628:
 YY_RULE_SETUP
 #line 632 "/tmp/input.flex"
-yyout << u8"Ž"; return 626;
+yyout << "Ž"; return 626;
 	YY_BREAK
 case 629:
 YY_RULE_SETUP
 #line 633 "/tmp/input.flex"
-yyout << u8"З"; return 627;
+yyout << "З"; return 627;
 	YY_BREAK
 case 630:
 YY_RULE_SETUP
 #line 634 "/tmp/input.flex"
-yyout << u8"Ż"; return 628;
+yyout << "Ż"; return 628;
 	YY_BREAK
 case 631:
 YY_RULE_SETUP
 #line 635 "/tmp/input.flex"
-yyout << u8"​"; return 629;
+yyout << "​"; return 629;
 	YY_BREAK
 case 632:
 YY_RULE_SETUP
 #line 636 "/tmp/input.flex"
-yyout << u8"Ζ"; return 630;
+yyout << "Ζ"; return 630;
 	YY_BREAK
 case 633:
 YY_RULE_SETUP
 #line 637 "/tmp/input.flex"
-yyout << u8"ℨ"; return 631;
+yyout << "ℨ"; return 631;
 	YY_BREAK
 case 634:
 YY_RULE_SETUP
 #line 638 "/tmp/input.flex"
-yyout << u8"ℤ"; return 632;
+yyout << "ℤ"; return 632;
 	YY_BREAK
 case 635:
 YY_RULE_SETUP
 #line 639 "/tmp/input.flex"
-yyout << u8"𝒵"; return 633;
+yyout << "𝒵"; return 633;
 	YY_BREAK
 case 636:
 YY_RULE_SETUP
 #line 640 "/tmp/input.flex"
-yyout << u8"á"; return 634;
+yyout << "á"; return 634;
 	YY_BREAK
 case 637:
 YY_RULE_SETUP
 #line 641 "/tmp/input.flex"
-yyout << u8"á"; return 635;
+yyout << "á"; return 635;
 	YY_BREAK
 case 638:
 YY_RULE_SETUP
 #line 642 "/tmp/input.flex"
-yyout << u8"ă"; return 636;
+yyout << "ă"; return 636;
 	YY_BREAK
 case 639:
 YY_RULE_SETUP
 #line 643 "/tmp/input.flex"
-yyout << u8"∾"; return 637;
+yyout << "∾"; return 637;
 	YY_BREAK
 case 640:
 YY_RULE_SETUP
 #line 644 "/tmp/input.flex"
-yyout << u8"∾" << u8"̳"; return 638;
+yyout << "∾" << "̳"; return 638;
 	YY_BREAK
 case 641:
 YY_RULE_SETUP
 #line 645 "/tmp/input.flex"
-yyout << u8"∿"; return 639;
+yyout << "∿"; return 639;
 	YY_BREAK
 case 642:
 YY_RULE_SETUP
 #line 646 "/tmp/input.flex"
-yyout << u8"â"; return 640;
+yyout << "â"; return 640;
 	YY_BREAK
 case 643:
 YY_RULE_SETUP
 #line 647 "/tmp/input.flex"
-yyout << u8"â"; return 641;
+yyout << "â"; return 641;
 	YY_BREAK
 case 644:
 YY_RULE_SETUP
 #line 648 "/tmp/input.flex"
-yyout << u8"´"; return 642;
+yyout << "´"; return 642;
 	YY_BREAK
 case 645:
 YY_RULE_SETUP
 #line 649 "/tmp/input.flex"
-yyout << u8"´"; return 643;
+yyout << "´"; return 643;
 	YY_BREAK
 case 646:
 YY_RULE_SETUP
 #line 650 "/tmp/input.flex"
-yyout << u8"а"; return 644;
+yyout << "а"; return 644;
 	YY_BREAK
 case 647:
 YY_RULE_SETUP
 #line 651 "/tmp/input.flex"
-yyout << u8"æ"; return 645;
+yyout << "æ"; return 645;
 	YY_BREAK
 case 648:
 YY_RULE_SETUP
 #line 652 "/tmp/input.flex"
-yyout << u8"æ"; return 646;
+yyout << "æ"; return 646;
 	YY_BREAK
 case 649:
 YY_RULE_SETUP
 #line 653 "/tmp/input.flex"
-yyout << u8"⁡"; return 647;
+yyout << "⁡"; return 647;
 	YY_BREAK
 case 650:
 YY_RULE_SETUP
 #line 654 "/tmp/input.flex"
-yyout << u8"𝔞"; return 648;
+yyout << "𝔞"; return 648;
 	YY_BREAK
 case 651:
 YY_RULE_SETUP
 #line 655 "/tmp/input.flex"
-yyout << u8"à"; return 649;
+yyout << "à"; return 649;
 	YY_BREAK
 case 652:
 YY_RULE_SETUP
 #line 656 "/tmp/input.flex"
-yyout << u8"à"; return 650;
+yyout << "à"; return 650;
 	YY_BREAK
 case 653:
 YY_RULE_SETUP
 #line 657 "/tmp/input.flex"
-yyout << u8"ℵ"; return 651;
+yyout << "ℵ"; return 651;
 	YY_BREAK
 case 654:
 YY_RULE_SETUP
 #line 658 "/tmp/input.flex"
-yyout << u8"ℵ"; return 652;
+yyout << "ℵ"; return 652;
 	YY_BREAK
 case 655:
 YY_RULE_SETUP
 #line 659 "/tmp/input.flex"
-yyout << u8"α"; return 653;
+yyout << "α"; return 653;
 	YY_BREAK
 case 656:
 YY_RULE_SETUP
 #line 660 "/tmp/input.flex"
-yyout << u8"ā"; return 654;
+yyout << "ā"; return 654;
 	YY_BREAK
 case 657:
 YY_RULE_SETUP
 #line 661 "/tmp/input.flex"
-yyout << u8"⨿"; return 655;
+yyout << "⨿"; return 655;
 	YY_BREAK
 case 658:
 YY_RULE_SETUP
 #line 662 "/tmp/input.flex"
-yyout << u8"&"; return 656;
+yyout << "&"; return 656;
 	YY_BREAK
 case 659:
 YY_RULE_SETUP
 #line 663 "/tmp/input.flex"
-yyout << u8"&"; return 657;
+yyout << "&"; return 657;
 	YY_BREAK
 case 660:
 YY_RULE_SETUP
 #line 664 "/tmp/input.flex"
-yyout << u8"∧"; return 658;
+yyout << "∧"; return 658;
 	YY_BREAK
 case 661:
 YY_RULE_SETUP
 #line 665 "/tmp/input.flex"
-yyout << u8"⩕"; return 659;
+yyout << "⩕"; return 659;
 	YY_BREAK
 case 662:
 YY_RULE_SETUP
 #line 666 "/tmp/input.flex"
-yyout << u8"⩜"; return 660;
+yyout << "⩜"; return 660;
 	YY_BREAK
 case 663:
 YY_RULE_SETUP
 #line 667 "/tmp/input.flex"
-yyout << u8"⩘"; return 661;
+yyout << "⩘"; return 661;
 	YY_BREAK
 case 664:
 YY_RULE_SETUP
 #line 668 "/tmp/input.flex"
-yyout << u8"⩚"; return 662;
+yyout << "⩚"; return 662;
 	YY_BREAK
 case 665:
 YY_RULE_SETUP
 #line 669 "/tmp/input.flex"
-yyout << u8"∠"; return 663;
+yyout << "∠"; return 663;
 	YY_BREAK
 case 666:
 YY_RULE_SETUP
 #line 670 "/tmp/input.flex"
-yyout << u8"⦤"; return 664;
+yyout << "⦤"; return 664;
 	YY_BREAK
 case 667:
 YY_RULE_SETUP
 #line 671 "/tmp/input.flex"
-yyout << u8"∠"; return 665;
+yyout << "∠"; return 665;
 	YY_BREAK
 case 668:
 YY_RULE_SETUP
 #line 672 "/tmp/input.flex"
-yyout << u8"∡"; return 666;
+yyout << "∡"; return 666;
 	YY_BREAK
 case 669:
 YY_RULE_SETUP
 #line 673 "/tmp/input.flex"
-yyout << u8"⦨"; return 667;
+yyout << "⦨"; return 667;
 	YY_BREAK
 case 670:
 YY_RULE_SETUP
 #line 674 "/tmp/input.flex"
-yyout << u8"⦩"; return 668;
+yyout << "⦩"; return 668;
 	YY_BREAK
 case 671:
 YY_RULE_SETUP
 #line 675 "/tmp/input.flex"
-yyout << u8"⦪"; return 669;
+yyout << "⦪"; return 669;
 	YY_BREAK
 case 672:
 YY_RULE_SETUP
 #line 676 "/tmp/input.flex"
-yyout << u8"⦫"; return 670;
+yyout << "⦫"; return 670;
 	YY_BREAK
 case 673:
 YY_RULE_SETUP
 #line 677 "/tmp/input.flex"
-yyout << u8"⦬"; return 671;
+yyout << "⦬"; return 671;
 	YY_BREAK
 case 674:
 YY_RULE_SETUP
 #line 678 "/tmp/input.flex"
-yyout << u8"⦭"; return 672;
+yyout << "⦭"; return 672;
 	YY_BREAK
 case 675:
 YY_RULE_SETUP
 #line 679 "/tmp/input.flex"
-yyout << u8"⦮"; return 673;
+yyout << "⦮"; return 673;
 	YY_BREAK
 case 676:
 YY_RULE_SETUP
 #line 680 "/tmp/input.flex"
-yyout << u8"⦯"; return 674;
+yyout << "⦯"; return 674;
 	YY_BREAK
 case 677:
 YY_RULE_SETUP
 #line 681 "/tmp/input.flex"
-yyout << u8"∟"; return 675;
+yyout << "∟"; return 675;
 	YY_BREAK
 case 678:
 YY_RULE_SETUP
 #line 682 "/tmp/input.flex"
-yyout << u8"⊾"; return 676;
+yyout << "⊾"; return 676;
 	YY_BREAK
 case 679:
 YY_RULE_SETUP
 #line 683 "/tmp/input.flex"
-yyout << u8"⦝"; return 677;
+yyout << "⦝"; return 677;
 	YY_BREAK
 case 680:
 YY_RULE_SETUP
 #line 684 "/tmp/input.flex"
-yyout << u8"∢"; return 678;
+yyout << "∢"; return 678;
 	YY_BREAK
 case 681:
 YY_RULE_SETUP
 #line 685 "/tmp/input.flex"
-yyout << u8"Å"; return 679;
+yyout << "Å"; return 679;
 	YY_BREAK
 case 682:
 YY_RULE_SETUP
 #line 686 "/tmp/input.flex"
-yyout << u8"⍼"; return 680;
+yyout << "⍼"; return 680;
 	YY_BREAK
 case 683:
 YY_RULE_SETUP
 #line 687 "/tmp/input.flex"
-yyout << u8"ą"; return 681;
+yyout << "ą"; return 681;
 	YY_BREAK
 case 684:
 YY_RULE_SETUP
 #line 688 "/tmp/input.flex"
-yyout << u8"𝕒"; return 682;
+yyout << "𝕒"; return 682;
 	YY_BREAK
 case 685:
 YY_RULE_SETUP
 #line 689 "/tmp/input.flex"
-yyout << u8"≈"; return 683;
+yyout << "≈"; return 683;
 	YY_BREAK
 case 686:
 YY_RULE_SETUP
 #line 690 "/tmp/input.flex"
-yyout << u8"⩰"; return 684;
+yyout << "⩰"; return 684;
 	YY_BREAK
 case 687:
 YY_RULE_SETUP
 #line 691 "/tmp/input.flex"
-yyout << u8"⩯"; return 685;
+yyout << "⩯"; return 685;
 	YY_BREAK
 case 688:
 YY_RULE_SETUP
 #line 692 "/tmp/input.flex"
-yyout << u8"≊"; return 686;
+yyout << "≊"; return 686;
 	YY_BREAK
 case 689:
 YY_RULE_SETUP
 #line 693 "/tmp/input.flex"
-yyout << u8"≋"; return 687;
+yyout << "≋"; return 687;
 	YY_BREAK
 case 690:
 YY_RULE_SETUP
 #line 694 "/tmp/input.flex"
-yyout << u8"'"; return 688;
+yyout << "'"; return 688;
 	YY_BREAK
 case 691:
 YY_RULE_SETUP
 #line 695 "/tmp/input.flex"
-yyout << u8"≈"; return 689;
+yyout << "≈"; return 689;
 	YY_BREAK
 case 692:
 YY_RULE_SETUP
 #line 696 "/tmp/input.flex"
-yyout << u8"≊"; return 690;
+yyout << "≊"; return 690;
 	YY_BREAK
 case 693:
 YY_RULE_SETUP
 #line 697 "/tmp/input.flex"
-yyout << u8"å"; return 691;
+yyout << "å"; return 691;
 	YY_BREAK
 case 694:
 YY_RULE_SETUP
 #line 698 "/tmp/input.flex"
-yyout << u8"å"; return 692;
+yyout << "å"; return 692;
 	YY_BREAK
 case 695:
 YY_RULE_SETUP
 #line 699 "/tmp/input.flex"
-yyout << u8"𝒶"; return 693;
+yyout << "𝒶"; return 693;
 	YY_BREAK
 case 696:
 YY_RULE_SETUP
 #line 700 "/tmp/input.flex"
-yyout << u8"*"; return 694;
+yyout << "*"; return 694;
 	YY_BREAK
 case 697:
 YY_RULE_SETUP
 #line 701 "/tmp/input.flex"
-yyout << u8"≈"; return 695;
+yyout << "≈"; return 695;
 	YY_BREAK
 case 698:
 YY_RULE_SETUP
 #line 702 "/tmp/input.flex"
-yyout << u8"≍"; return 696;
+yyout << "≍"; return 696;
 	YY_BREAK
 case 699:
 YY_RULE_SETUP
 #line 703 "/tmp/input.flex"
-yyout << u8"ã"; return 697;
+yyout << "ã"; return 697;
 	YY_BREAK
 case 700:
 YY_RULE_SETUP
 #line 704 "/tmp/input.flex"
-yyout << u8"ã"; return 698;
+yyout << "ã"; return 698;
 	YY_BREAK
 case 701:
 YY_RULE_SETUP
 #line 705 "/tmp/input.flex"
-yyout << u8"ä"; return 699;
+yyout << "ä"; return 699;
 	YY_BREAK
 case 702:
 YY_RULE_SETUP
 #line 706 "/tmp/input.flex"
-yyout << u8"ä"; return 700;
+yyout << "ä"; return 700;
 	YY_BREAK
 case 703:
 YY_RULE_SETUP
 #line 707 "/tmp/input.flex"
-yyout << u8"∳"; return 701;
+yyout << "∳"; return 701;
 	YY_BREAK
 case 704:
 YY_RULE_SETUP
 #line 708 "/tmp/input.flex"
-yyout << u8"⨑"; return 702;
+yyout << "⨑"; return 702;
 	YY_BREAK
 case 705:
 YY_RULE_SETUP
 #line 709 "/tmp/input.flex"
-yyout << u8"⫭"; return 703;
+yyout << "⫭"; return 703;
 	YY_BREAK
 case 706:
 YY_RULE_SETUP
 #line 710 "/tmp/input.flex"
-yyout << u8"≌"; return 704;
+yyout << "≌"; return 704;
 	YY_BREAK
 case 707:
 YY_RULE_SETUP
 #line 711 "/tmp/input.flex"
-yyout << u8"϶"; return 705;
+yyout << "϶"; return 705;
 	YY_BREAK
 case 708:
 YY_RULE_SETUP
 #line 712 "/tmp/input.flex"
-yyout << u8"‵"; return 706;
+yyout << "‵"; return 706;
 	YY_BREAK
 case 709:
 YY_RULE_SETUP
 #line 713 "/tmp/input.flex"
-yyout << u8"∽"; return 707;
+yyout << "∽"; return 707;
 	YY_BREAK
 case 710:
 YY_RULE_SETUP
 #line 714 "/tmp/input.flex"
-yyout << u8"⋍"; return 708;
+yyout << "⋍"; return 708;
 	YY_BREAK
 case 711:
 YY_RULE_SETUP
 #line 715 "/tmp/input.flex"
-yyout << u8"⊽"; return 709;
+yyout << "⊽"; return 709;
 	YY_BREAK
 case 712:
 YY_RULE_SETUP
 #line 716 "/tmp/input.flex"
-yyout << u8"⌅"; return 710;
+yyout << "⌅"; return 710;
 	YY_BREAK
 case 713:
 YY_RULE_SETUP
 #line 717 "/tmp/input.flex"
-yyout << u8"⌅"; return 711;
+yyout << "⌅"; return 711;
 	YY_BREAK
 case 714:
 YY_RULE_SETUP
 #line 718 "/tmp/input.flex"
-yyout << u8"⎵"; return 712;
+yyout << "⎵"; return 712;
 	YY_BREAK
 case 715:
 YY_RULE_SETUP
 #line 719 "/tmp/input.flex"
-yyout << u8"⎶"; return 713;
+yyout << "⎶"; return 713;
 	YY_BREAK
 case 716:
 YY_RULE_SETUP
 #line 720 "/tmp/input.flex"
-yyout << u8"≌"; return 714;
+yyout << "≌"; return 714;
 	YY_BREAK
 case 717:
 YY_RULE_SETUP
 #line 721 "/tmp/input.flex"
-yyout << u8"б"; return 715;
+yyout << "б"; return 715;
 	YY_BREAK
 case 718:
 YY_RULE_SETUP
 #line 722 "/tmp/input.flex"
-yyout << u8"„"; return 716;
+yyout << "„"; return 716;
 	YY_BREAK
 case 719:
 YY_RULE_SETUP
 #line 723 "/tmp/input.flex"
-yyout << u8"∵"; return 717;
+yyout << "∵"; return 717;
 	YY_BREAK
 case 720:
 YY_RULE_SETUP
 #line 724 "/tmp/input.flex"
-yyout << u8"∵"; return 718;
+yyout << "∵"; return 718;
 	YY_BREAK
 case 721:
 YY_RULE_SETUP
 #line 725 "/tmp/input.flex"
-yyout << u8"⦰"; return 719;
+yyout << "⦰"; return 719;
 	YY_BREAK
 case 722:
 YY_RULE_SETUP
 #line 726 "/tmp/input.flex"
-yyout << u8"϶"; return 720;
+yyout << "϶"; return 720;
 	YY_BREAK
 case 723:
 YY_RULE_SETUP
 #line 727 "/tmp/input.flex"
-yyout << u8"ℬ"; return 721;
+yyout << "ℬ"; return 721;
 	YY_BREAK
 case 724:
 YY_RULE_SETUP
 #line 728 "/tmp/input.flex"
-yyout << u8"β"; return 722;
+yyout << "β"; return 722;
 	YY_BREAK
 case 725:
 YY_RULE_SETUP
 #line 729 "/tmp/input.flex"
-yyout << u8"ℶ"; return 723;
+yyout << "ℶ"; return 723;
 	YY_BREAK
 case 726:
 YY_RULE_SETUP
 #line 730 "/tmp/input.flex"
-yyout << u8"≬"; return 724;
+yyout << "≬"; return 724;
 	YY_BREAK
 case 727:
 YY_RULE_SETUP
 #line 731 "/tmp/input.flex"
-yyout << u8"𝔟"; return 725;
+yyout << "𝔟"; return 725;
 	YY_BREAK
 case 728:
 YY_RULE_SETUP
 #line 732 "/tmp/input.flex"
-yyout << u8"⋂"; return 726;
+yyout << "⋂"; return 726;
 	YY_BREAK
 case 729:
 YY_RULE_SETUP
 #line 733 "/tmp/input.flex"
-yyout << u8"◯"; return 727;
+yyout << "◯"; return 727;
 	YY_BREAK
 case 730:
 YY_RULE_SETUP
 #line 734 "/tmp/input.flex"
-yyout << u8"⋃"; return 728;
+yyout << "⋃"; return 728;
 	YY_BREAK
 case 731:
 YY_RULE_SETUP
 #line 735 "/tmp/input.flex"
-yyout << u8"⨀"; return 729;
+yyout << "⨀"; return 729;
 	YY_BREAK
 case 732:
 YY_RULE_SETUP
 #line 736 "/tmp/input.flex"
-yyout << u8"⨁"; return 730;
+yyout << "⨁"; return 730;
 	YY_BREAK
 case 733:
 YY_RULE_SETUP
 #line 737 "/tmp/input.flex"
-yyout << u8"⨂"; return 731;
+yyout << "⨂"; return 731;
 	YY_BREAK
 case 734:
 YY_RULE_SETUP
 #line 738 "/tmp/input.flex"
-yyout << u8"⨆"; return 732;
+yyout << "⨆"; return 732;
 	YY_BREAK
 case 735:
 YY_RULE_SETUP
 #line 739 "/tmp/input.flex"
-yyout << u8"★"; return 733;
+yyout << "★"; return 733;
 	YY_BREAK
 case 736:
 YY_RULE_SETUP
 #line 740 "/tmp/input.flex"
-yyout << u8"▽"; return 734;
+yyout << "▽"; return 734;
 	YY_BREAK
 case 737:
 YY_RULE_SETUP
 #line 741 "/tmp/input.flex"
-yyout << u8"△"; return 735;
+yyout << "△"; return 735;
 	YY_BREAK
 case 738:
 YY_RULE_SETUP
 #line 742 "/tmp/input.flex"
-yyout << u8"⨄"; return 736;
+yyout << "⨄"; return 736;
 	YY_BREAK
 case 739:
 YY_RULE_SETUP
 #line 743 "/tmp/input.flex"
-yyout << u8"⋁"; return 737;
+yyout << "⋁"; return 737;
 	YY_BREAK
 case 740:
 YY_RULE_SETUP
 #line 744 "/tmp/input.flex"
-yyout << u8"⋀"; return 738;
+yyout << "⋀"; return 738;
 	YY_BREAK
 case 741:
 YY_RULE_SETUP
 #line 745 "/tmp/input.flex"
-yyout << u8"⤍"; return 739;
+yyout << "⤍"; return 739;
 	YY_BREAK
 case 742:
 YY_RULE_SETUP
 #line 746 "/tmp/input.flex"
-yyout << u8"⧫"; return 740;
+yyout << "⧫"; return 740;
 	YY_BREAK
 case 743:
 YY_RULE_SETUP
 #line 747 "/tmp/input.flex"
-yyout << u8"▪"; return 741;
+yyout << "▪"; return 741;
 	YY_BREAK
 case 744:
 YY_RULE_SETUP
 #line 748 "/tmp/input.flex"
-yyout << u8"▴"; return 742;
+yyout << "▴"; return 742;
 	YY_BREAK
 case 745:
 YY_RULE_SETUP
 #line 749 "/tmp/input.flex"
-yyout << u8"▾"; return 743;
+yyout << "▾"; return 743;
 	YY_BREAK
 case 746:
 YY_RULE_SETUP
 #line 750 "/tmp/input.flex"
-yyout << u8"◂"; return 744;
+yyout << "◂"; return 744;
 	YY_BREAK
 case 747:
 YY_RULE_SETUP
 #line 751 "/tmp/input.flex"
-yyout << u8"▸"; return 745;
+yyout << "▸"; return 745;
 	YY_BREAK
 case 748:
 YY_RULE_SETUP
 #line 752 "/tmp/input.flex"
-yyout << u8"␣"; return 746;
+yyout << "␣"; return 746;
 	YY_BREAK
 case 749:
 YY_RULE_SETUP
 #line 753 "/tmp/input.flex"
-yyout << u8"▒"; return 747;
+yyout << "▒"; return 747;
 	YY_BREAK
 case 750:
 YY_RULE_SETUP
 #line 754 "/tmp/input.flex"
-yyout << u8"░"; return 748;
+yyout << "░"; return 748;
 	YY_BREAK
 case 751:
 YY_RULE_SETUP
 #line 755 "/tmp/input.flex"
-yyout << u8"▓"; return 749;
+yyout << "▓"; return 749;
 	YY_BREAK
 case 752:
 YY_RULE_SETUP
 #line 756 "/tmp/input.flex"
-yyout << u8"█"; return 750;
+yyout << "█"; return 750;
 	YY_BREAK
 case 753:
 YY_RULE_SETUP
 #line 757 "/tmp/input.flex"
-yyout << u8"=" << u8"⃥"; return 751;
+yyout << "=" << "⃥"; return 751;
 	YY_BREAK
 case 754:
 YY_RULE_SETUP
 #line 758 "/tmp/input.flex"
-yyout << u8"≡" << u8"⃥"; return 752;
+yyout << "≡" << "⃥"; return 752;
 	YY_BREAK
 case 755:
 YY_RULE_SETUP
 #line 759 "/tmp/input.flex"
-yyout << u8"⌐"; return 753;
+yyout << "⌐"; return 753;
 	YY_BREAK
 case 756:
 YY_RULE_SETUP
 #line 760 "/tmp/input.flex"
-yyout << u8"𝕓"; return 754;
+yyout << "𝕓"; return 754;
 	YY_BREAK
 case 757:
 YY_RULE_SETUP
 #line 761 "/tmp/input.flex"
-yyout << u8"⊥"; return 755;
+yyout << "⊥"; return 755;
 	YY_BREAK
 case 758:
 YY_RULE_SETUP
 #line 762 "/tmp/input.flex"
-yyout << u8"⊥"; return 756;
+yyout << "⊥"; return 756;
 	YY_BREAK
 case 759:
 YY_RULE_SETUP
 #line 763 "/tmp/input.flex"
-yyout << u8"⋈"; return 757;
+yyout << "⋈"; return 757;
 	YY_BREAK
 case 760:
 YY_RULE_SETUP
 #line 764 "/tmp/input.flex"
-yyout << u8"╗"; return 758;
+yyout << "╗"; return 758;
 	YY_BREAK
 case 761:
 YY_RULE_SETUP
 #line 765 "/tmp/input.flex"
-yyout << u8"╔"; return 759;
+yyout << "╔"; return 759;
 	YY_BREAK
 case 762:
 YY_RULE_SETUP
 #line 766 "/tmp/input.flex"
-yyout << u8"╖"; return 760;
+yyout << "╖"; return 760;
 	YY_BREAK
 case 763:
 YY_RULE_SETUP
 #line 767 "/tmp/input.flex"
-yyout << u8"╓"; return 761;
+yyout << "╓"; return 761;
 	YY_BREAK
 case 764:
 YY_RULE_SETUP
 #line 768 "/tmp/input.flex"
-yyout << u8"═"; return 762;
+yyout << "═"; return 762;
 	YY_BREAK
 case 765:
 YY_RULE_SETUP
 #line 769 "/tmp/input.flex"
-yyout << u8"╦"; return 763;
+yyout << "╦"; return 763;
 	YY_BREAK
 case 766:
 YY_RULE_SETUP
 #line 770 "/tmp/input.flex"
-yyout << u8"╩"; return 764;
+yyout << "╩"; return 764;
 	YY_BREAK
 case 767:
 YY_RULE_SETUP
 #line 771 "/tmp/input.flex"
-yyout << u8"╤"; return 765;
+yyout << "╤"; return 765;
 	YY_BREAK
 case 768:
 YY_RULE_SETUP
 #line 772 "/tmp/input.flex"
-yyout << u8"╧"; return 766;
+yyout << "╧"; return 766;
 	YY_BREAK
 case 769:
 YY_RULE_SETUP
 #line 773 "/tmp/input.flex"
-yyout << u8"╝"; return 767;
+yyout << "╝"; return 767;
 	YY_BREAK
 case 770:
 YY_RULE_SETUP
 #line 774 "/tmp/input.flex"
-yyout << u8"╚"; return 768;
+yyout << "╚"; return 768;
 	YY_BREAK
 case 771:
 YY_RULE_SETUP
 #line 775 "/tmp/input.flex"
-yyout << u8"╜"; return 769;
+yyout << "╜"; return 769;
 	YY_BREAK
 case 772:
 YY_RULE_SETUP
 #line 776 "/tmp/input.flex"
-yyout << u8"╙"; return 770;
+yyout << "╙"; return 770;
 	YY_BREAK
 case 773:
 YY_RULE_SETUP
 #line 777 "/tmp/input.flex"
-yyout << u8"║"; return 771;
+yyout << "║"; return 771;
 	YY_BREAK
 case 774:
 YY_RULE_SETUP
 #line 778 "/tmp/input.flex"
-yyout << u8"╬"; return 772;
+yyout << "╬"; return 772;
 	YY_BREAK
 case 775:
 YY_RULE_SETUP
 #line 779 "/tmp/input.flex"
-yyout << u8"╣"; return 773;
+yyout << "╣"; return 773;
 	YY_BREAK
 case 776:
 YY_RULE_SETUP
 #line 780 "/tmp/input.flex"
-yyout << u8"╠"; return 774;
+yyout << "╠"; return 774;
 	YY_BREAK
 case 777:
 YY_RULE_SETUP
 #line 781 "/tmp/input.flex"
-yyout << u8"╫"; return 775;
+yyout << "╫"; return 775;
 	YY_BREAK
 case 778:
 YY_RULE_SETUP
 #line 782 "/tmp/input.flex"
-yyout << u8"╢"; return 776;
+yyout << "╢"; return 776;
 	YY_BREAK
 case 779:
 YY_RULE_SETUP
 #line 783 "/tmp/input.flex"
-yyout << u8"╟"; return 777;
+yyout << "╟"; return 777;
 	YY_BREAK
 case 780:
 YY_RULE_SETUP
 #line 784 "/tmp/input.flex"
-yyout << u8"⧉"; return 778;
+yyout << "⧉"; return 778;
 	YY_BREAK
 case 781:
 YY_RULE_SETUP
 #line 785 "/tmp/input.flex"
-yyout << u8"╕"; return 779;
+yyout << "╕"; return 779;
 	YY_BREAK
 case 782:
 YY_RULE_SETUP
 #line 786 "/tmp/input.flex"
-yyout << u8"╒"; return 780;
+yyout << "╒"; return 780;
 	YY_BREAK
 case 783:
 YY_RULE_SETUP
 #line 787 "/tmp/input.flex"
-yyout << u8"┐"; return 781;
+yyout << "┐"; return 781;
 	YY_BREAK
 case 784:
 YY_RULE_SETUP
 #line 788 "/tmp/input.flex"
-yyout << u8"┌"; return 782;
+yyout << "┌"; return 782;
 	YY_BREAK
 case 785:
 YY_RULE_SETUP
 #line 789 "/tmp/input.flex"
-yyout << u8"─"; return 783;
+yyout << "─"; return 783;
 	YY_BREAK
 case 786:
 YY_RULE_SETUP
 #line 790 "/tmp/input.flex"
-yyout << u8"╥"; return 784;
+yyout << "╥"; return 784;
 	YY_BREAK
 case 787:
 YY_RULE_SETUP
 #line 791 "/tmp/input.flex"
-yyout << u8"╨"; return 785;
+yyout << "╨"; return 785;
 	YY_BREAK
 case 788:
 YY_RULE_SETUP
 #line 792 "/tmp/input.flex"
-yyout << u8"┬"; return 786;
+yyout << "┬"; return 786;
 	YY_BREAK
 case 789:
 YY_RULE_SETUP
 #line 793 "/tmp/input.flex"
-yyout << u8"┴"; return 787;
+yyout << "┴"; return 787;
 	YY_BREAK
 case 790:
 YY_RULE_SETUP
 #line 794 "/tmp/input.flex"
-yyout << u8"⊟"; return 788;
+yyout << "⊟"; return 788;
 	YY_BREAK
 case 791:
 YY_RULE_SETUP
 #line 795 "/tmp/input.flex"
-yyout << u8"⊞"; return 789;
+yyout << "⊞"; return 789;
 	YY_BREAK
 case 792:
 YY_RULE_SETUP
 #line 796 "/tmp/input.flex"
-yyout << u8"⊠"; return 790;
+yyout << "⊠"; return 790;
 	YY_BREAK
 case 793:
 YY_RULE_SETUP
 #line 797 "/tmp/input.flex"
-yyout << u8"╛"; return 791;
+yyout << "╛"; return 791;
 	YY_BREAK
 case 794:
 YY_RULE_SETUP
 #line 798 "/tmp/input.flex"
-yyout << u8"╘"; return 792;
+yyout << "╘"; return 792;
 	YY_BREAK
 case 795:
 YY_RULE_SETUP
 #line 799 "/tmp/input.flex"
-yyout << u8"┘"; return 793;
+yyout << "┘"; return 793;
 	YY_BREAK
 case 796:
 YY_RULE_SETUP
 #line 800 "/tmp/input.flex"
-yyout << u8"└"; return 794;
+yyout << "└"; return 794;
 	YY_BREAK
 case 797:
 YY_RULE_SETUP
 #line 801 "/tmp/input.flex"
-yyout << u8"│"; return 795;
+yyout << "│"; return 795;
 	YY_BREAK
 case 798:
 YY_RULE_SETUP
 #line 802 "/tmp/input.flex"
-yyout << u8"╪"; return 796;
+yyout << "╪"; return 796;
 	YY_BREAK
 case 799:
 YY_RULE_SETUP
 #line 803 "/tmp/input.flex"
-yyout << u8"╡"; return 797;
+yyout << "╡"; return 797;
 	YY_BREAK
 case 800:
 YY_RULE_SETUP
 #line 804 "/tmp/input.flex"
-yyout << u8"╞"; return 798;
+yyout << "╞"; return 798;
 	YY_BREAK
 case 801:
 YY_RULE_SETUP
 #line 805 "/tmp/input.flex"
-yyout << u8"┼"; return 799;
+yyout << "┼"; return 799;
 	YY_BREAK
 case 802:
 YY_RULE_SETUP
 #line 806 "/tmp/input.flex"
-yyout << u8"┤"; return 800;
+yyout << "┤"; return 800;
 	YY_BREAK
 case 803:
 YY_RULE_SETUP
 #line 807 "/tmp/input.flex"
-yyout << u8"├"; return 801;
+yyout << "├"; return 801;
 	YY_BREAK
 case 804:
 YY_RULE_SETUP
 #line 808 "/tmp/input.flex"
-yyout << u8"‵"; return 802;
+yyout << "‵"; return 802;
 	YY_BREAK
 case 805:
 YY_RULE_SETUP
 #line 809 "/tmp/input.flex"
-yyout << u8"˘"; return 803;
+yyout << "˘"; return 803;
 	YY_BREAK
 case 806:
 YY_RULE_SETUP
 #line 810 "/tmp/input.flex"
-yyout << u8"¦"; return 804;
+yyout << "¦"; return 804;
 	YY_BREAK
 case 807:
 YY_RULE_SETUP
 #line 811 "/tmp/input.flex"
-yyout << u8"¦"; return 805;
+yyout << "¦"; return 805;
 	YY_BREAK
 case 808:
 YY_RULE_SETUP
 #line 812 "/tmp/input.flex"
-yyout << u8"𝒷"; return 806;
+yyout << "𝒷"; return 806;
 	YY_BREAK
 case 809:
 YY_RULE_SETUP
 #line 813 "/tmp/input.flex"
-yyout << u8"⁏"; return 807;
+yyout << "⁏"; return 807;
 	YY_BREAK
 case 810:
 YY_RULE_SETUP
 #line 814 "/tmp/input.flex"
-yyout << u8"∽"; return 808;
+yyout << "∽"; return 808;
 	YY_BREAK
 case 811:
 YY_RULE_SETUP
 #line 815 "/tmp/input.flex"
-yyout << u8"⋍"; return 809;
+yyout << "⋍"; return 809;
 	YY_BREAK
 case 812:
 YY_RULE_SETUP
@@ -10096,4712 +10096,4712 @@ yyout << '\\'; return 810;
 case 813:
 YY_RULE_SETUP
 #line 817 "/tmp/input.flex"
-yyout << u8"⧅"; return 811;
+yyout << "⧅"; return 811;
 	YY_BREAK
 case 814:
 YY_RULE_SETUP
 #line 818 "/tmp/input.flex"
-yyout << u8"⟈"; return 812;
+yyout << "⟈"; return 812;
 	YY_BREAK
 case 815:
 YY_RULE_SETUP
 #line 819 "/tmp/input.flex"
-yyout << u8"•"; return 813;
+yyout << "•"; return 813;
 	YY_BREAK
 case 816:
 YY_RULE_SETUP
 #line 820 "/tmp/input.flex"
-yyout << u8"•"; return 814;
+yyout << "•"; return 814;
 	YY_BREAK
 case 817:
 YY_RULE_SETUP
 #line 821 "/tmp/input.flex"
-yyout << u8"≎"; return 815;
+yyout << "≎"; return 815;
 	YY_BREAK
 case 818:
 YY_RULE_SETUP
 #line 822 "/tmp/input.flex"
-yyout << u8"⪮"; return 816;
+yyout << "⪮"; return 816;
 	YY_BREAK
 case 819:
 YY_RULE_SETUP
 #line 823 "/tmp/input.flex"
-yyout << u8"≏"; return 817;
+yyout << "≏"; return 817;
 	YY_BREAK
 case 820:
 YY_RULE_SETUP
 #line 824 "/tmp/input.flex"
-yyout << u8"≏"; return 818;
+yyout << "≏"; return 818;
 	YY_BREAK
 case 821:
 YY_RULE_SETUP
 #line 825 "/tmp/input.flex"
-yyout << u8"ć"; return 819;
+yyout << "ć"; return 819;
 	YY_BREAK
 case 822:
 YY_RULE_SETUP
 #line 826 "/tmp/input.flex"
-yyout << u8"∩"; return 820;
+yyout << "∩"; return 820;
 	YY_BREAK
 case 823:
 YY_RULE_SETUP
 #line 827 "/tmp/input.flex"
-yyout << u8"⩄"; return 821;
+yyout << "⩄"; return 821;
 	YY_BREAK
 case 824:
 YY_RULE_SETUP
 #line 828 "/tmp/input.flex"
-yyout << u8"⩉"; return 822;
+yyout << "⩉"; return 822;
 	YY_BREAK
 case 825:
 YY_RULE_SETUP
 #line 829 "/tmp/input.flex"
-yyout << u8"⩋"; return 823;
+yyout << "⩋"; return 823;
 	YY_BREAK
 case 826:
 YY_RULE_SETUP
 #line 830 "/tmp/input.flex"
-yyout << u8"⩇"; return 824;
+yyout << "⩇"; return 824;
 	YY_BREAK
 case 827:
 YY_RULE_SETUP
 #line 831 "/tmp/input.flex"
-yyout << u8"⩀"; return 825;
+yyout << "⩀"; return 825;
 	YY_BREAK
 case 828:
 YY_RULE_SETUP
 #line 832 "/tmp/input.flex"
-yyout << u8"∩" << u8"︀"; return 826;
+yyout << "∩" << "︀"; return 826;
 	YY_BREAK
 case 829:
 YY_RULE_SETUP
 #line 833 "/tmp/input.flex"
-yyout << u8"⁁"; return 827;
+yyout << "⁁"; return 827;
 	YY_BREAK
 case 830:
 YY_RULE_SETUP
 #line 834 "/tmp/input.flex"
-yyout << u8"ˇ"; return 828;
+yyout << "ˇ"; return 828;
 	YY_BREAK
 case 831:
 YY_RULE_SETUP
 #line 835 "/tmp/input.flex"
-yyout << u8"⩍"; return 829;
+yyout << "⩍"; return 829;
 	YY_BREAK
 case 832:
 YY_RULE_SETUP
 #line 836 "/tmp/input.flex"
-yyout << u8"č"; return 830;
+yyout << "č"; return 830;
 	YY_BREAK
 case 833:
 YY_RULE_SETUP
 #line 837 "/tmp/input.flex"
-yyout << u8"ç"; return 831;
+yyout << "ç"; return 831;
 	YY_BREAK
 case 834:
 YY_RULE_SETUP
 #line 838 "/tmp/input.flex"
-yyout << u8"ç"; return 832;
+yyout << "ç"; return 832;
 	YY_BREAK
 case 835:
 YY_RULE_SETUP
 #line 839 "/tmp/input.flex"
-yyout << u8"ĉ"; return 833;
+yyout << "ĉ"; return 833;
 	YY_BREAK
 case 836:
 YY_RULE_SETUP
 #line 840 "/tmp/input.flex"
-yyout << u8"⩌"; return 834;
+yyout << "⩌"; return 834;
 	YY_BREAK
 case 837:
 YY_RULE_SETUP
 #line 841 "/tmp/input.flex"
-yyout << u8"⩐"; return 835;
+yyout << "⩐"; return 835;
 	YY_BREAK
 case 838:
 YY_RULE_SETUP
 #line 842 "/tmp/input.flex"
-yyout << u8"ċ"; return 836;
+yyout << "ċ"; return 836;
 	YY_BREAK
 case 839:
 YY_RULE_SETUP
 #line 843 "/tmp/input.flex"
-yyout << u8"¸"; return 837;
+yyout << "¸"; return 837;
 	YY_BREAK
 case 840:
 YY_RULE_SETUP
 #line 844 "/tmp/input.flex"
-yyout << u8"¸"; return 838;
+yyout << "¸"; return 838;
 	YY_BREAK
 case 841:
 YY_RULE_SETUP
 #line 845 "/tmp/input.flex"
-yyout << u8"⦲"; return 839;
+yyout << "⦲"; return 839;
 	YY_BREAK
 case 842:
 YY_RULE_SETUP
 #line 846 "/tmp/input.flex"
-yyout << u8"¢"; return 840;
+yyout << "¢"; return 840;
 	YY_BREAK
 case 843:
 YY_RULE_SETUP
 #line 847 "/tmp/input.flex"
-yyout << u8"¢"; return 841;
+yyout << "¢"; return 841;
 	YY_BREAK
 case 844:
 YY_RULE_SETUP
 #line 848 "/tmp/input.flex"
-yyout << u8"·"; return 842;
+yyout << "·"; return 842;
 	YY_BREAK
 case 845:
 YY_RULE_SETUP
 #line 849 "/tmp/input.flex"
-yyout << u8"𝔠"; return 843;
+yyout << "𝔠"; return 843;
 	YY_BREAK
 case 846:
 YY_RULE_SETUP
 #line 850 "/tmp/input.flex"
-yyout << u8"ч"; return 844;
+yyout << "ч"; return 844;
 	YY_BREAK
 case 847:
 YY_RULE_SETUP
 #line 851 "/tmp/input.flex"
-yyout << u8"✓"; return 845;
+yyout << "✓"; return 845;
 	YY_BREAK
 case 848:
 YY_RULE_SETUP
 #line 852 "/tmp/input.flex"
-yyout << u8"✓"; return 846;
+yyout << "✓"; return 846;
 	YY_BREAK
 case 849:
 YY_RULE_SETUP
 #line 853 "/tmp/input.flex"
-yyout << u8"χ"; return 847;
+yyout << "χ"; return 847;
 	YY_BREAK
 case 850:
 YY_RULE_SETUP
 #line 854 "/tmp/input.flex"
-yyout << u8"○"; return 848;
+yyout << "○"; return 848;
 	YY_BREAK
 case 851:
 YY_RULE_SETUP
 #line 855 "/tmp/input.flex"
-yyout << u8"⧃"; return 849;
+yyout << "⧃"; return 849;
 	YY_BREAK
 case 852:
 YY_RULE_SETUP
 #line 856 "/tmp/input.flex"
-yyout << u8"ˆ"; return 850;
+yyout << "ˆ"; return 850;
 	YY_BREAK
 case 853:
 YY_RULE_SETUP
 #line 857 "/tmp/input.flex"
-yyout << u8"≗"; return 851;
+yyout << "≗"; return 851;
 	YY_BREAK
 case 854:
 YY_RULE_SETUP
 #line 858 "/tmp/input.flex"
-yyout << u8"↺"; return 852;
+yyout << "↺"; return 852;
 	YY_BREAK
 case 855:
 YY_RULE_SETUP
 #line 859 "/tmp/input.flex"
-yyout << u8"↻"; return 853;
+yyout << "↻"; return 853;
 	YY_BREAK
 case 856:
 YY_RULE_SETUP
 #line 860 "/tmp/input.flex"
-yyout << u8"®"; return 854;
+yyout << "®"; return 854;
 	YY_BREAK
 case 857:
 YY_RULE_SETUP
 #line 861 "/tmp/input.flex"
-yyout << u8"Ⓢ"; return 855;
+yyout << "Ⓢ"; return 855;
 	YY_BREAK
 case 858:
 YY_RULE_SETUP
 #line 862 "/tmp/input.flex"
-yyout << u8"⊛"; return 856;
+yyout << "⊛"; return 856;
 	YY_BREAK
 case 859:
 YY_RULE_SETUP
 #line 863 "/tmp/input.flex"
-yyout << u8"⊚"; return 857;
+yyout << "⊚"; return 857;
 	YY_BREAK
 case 860:
 YY_RULE_SETUP
 #line 864 "/tmp/input.flex"
-yyout << u8"⊝"; return 858;
+yyout << "⊝"; return 858;
 	YY_BREAK
 case 861:
 YY_RULE_SETUP
 #line 865 "/tmp/input.flex"
-yyout << u8"≗"; return 859;
+yyout << "≗"; return 859;
 	YY_BREAK
 case 862:
 YY_RULE_SETUP
 #line 866 "/tmp/input.flex"
-yyout << u8"⨐"; return 860;
+yyout << "⨐"; return 860;
 	YY_BREAK
 case 863:
 YY_RULE_SETUP
 #line 867 "/tmp/input.flex"
-yyout << u8"⫯"; return 861;
+yyout << "⫯"; return 861;
 	YY_BREAK
 case 864:
 YY_RULE_SETUP
 #line 868 "/tmp/input.flex"
-yyout << u8"⧂"; return 862;
+yyout << "⧂"; return 862;
 	YY_BREAK
 case 865:
 YY_RULE_SETUP
 #line 869 "/tmp/input.flex"
-yyout << u8"♣"; return 863;
+yyout << "♣"; return 863;
 	YY_BREAK
 case 866:
 YY_RULE_SETUP
 #line 870 "/tmp/input.flex"
-yyout << u8"♣"; return 864;
+yyout << "♣"; return 864;
 	YY_BREAK
 case 867:
 YY_RULE_SETUP
 #line 871 "/tmp/input.flex"
-yyout << u8":"; return 865;
+yyout << ":"; return 865;
 	YY_BREAK
 case 868:
 YY_RULE_SETUP
 #line 872 "/tmp/input.flex"
-yyout << u8"≔"; return 866;
+yyout << "≔"; return 866;
 	YY_BREAK
 case 869:
 YY_RULE_SETUP
 #line 873 "/tmp/input.flex"
-yyout << u8"≔"; return 867;
+yyout << "≔"; return 867;
 	YY_BREAK
 case 870:
 YY_RULE_SETUP
 #line 874 "/tmp/input.flex"
-yyout << u8","; return 868;
+yyout << ","; return 868;
 	YY_BREAK
 case 871:
 YY_RULE_SETUP
 #line 875 "/tmp/input.flex"
-yyout << u8"@"; return 869;
+yyout << "@"; return 869;
 	YY_BREAK
 case 872:
 YY_RULE_SETUP
 #line 876 "/tmp/input.flex"
-yyout << u8"∁"; return 870;
+yyout << "∁"; return 870;
 	YY_BREAK
 case 873:
 YY_RULE_SETUP
 #line 877 "/tmp/input.flex"
-yyout << u8"∘"; return 871;
+yyout << "∘"; return 871;
 	YY_BREAK
 case 874:
 YY_RULE_SETUP
 #line 878 "/tmp/input.flex"
-yyout << u8"∁"; return 872;
+yyout << "∁"; return 872;
 	YY_BREAK
 case 875:
 YY_RULE_SETUP
 #line 879 "/tmp/input.flex"
-yyout << u8"ℂ"; return 873;
+yyout << "ℂ"; return 873;
 	YY_BREAK
 case 876:
 YY_RULE_SETUP
 #line 880 "/tmp/input.flex"
-yyout << u8"≅"; return 874;
+yyout << "≅"; return 874;
 	YY_BREAK
 case 877:
 YY_RULE_SETUP
 #line 881 "/tmp/input.flex"
-yyout << u8"⩭"; return 875;
+yyout << "⩭"; return 875;
 	YY_BREAK
 case 878:
 YY_RULE_SETUP
 #line 882 "/tmp/input.flex"
-yyout << u8"∮"; return 876;
+yyout << "∮"; return 876;
 	YY_BREAK
 case 879:
 YY_RULE_SETUP
 #line 883 "/tmp/input.flex"
-yyout << u8"𝕔"; return 877;
+yyout << "𝕔"; return 877;
 	YY_BREAK
 case 880:
 YY_RULE_SETUP
 #line 884 "/tmp/input.flex"
-yyout << u8"∐"; return 878;
+yyout << "∐"; return 878;
 	YY_BREAK
 case 881:
 YY_RULE_SETUP
 #line 885 "/tmp/input.flex"
-yyout << u8"©"; return 879;
+yyout << "©"; return 879;
 	YY_BREAK
 case 882:
 YY_RULE_SETUP
 #line 886 "/tmp/input.flex"
-yyout << u8"©"; return 880;
+yyout << "©"; return 880;
 	YY_BREAK
 case 883:
 YY_RULE_SETUP
 #line 887 "/tmp/input.flex"
-yyout << u8"℗"; return 881;
+yyout << "℗"; return 881;
 	YY_BREAK
 case 884:
 YY_RULE_SETUP
 #line 888 "/tmp/input.flex"
-yyout << u8"↵"; return 882;
+yyout << "↵"; return 882;
 	YY_BREAK
 case 885:
 YY_RULE_SETUP
 #line 889 "/tmp/input.flex"
-yyout << u8"✗"; return 883;
+yyout << "✗"; return 883;
 	YY_BREAK
 case 886:
 YY_RULE_SETUP
 #line 890 "/tmp/input.flex"
-yyout << u8"𝒸"; return 884;
+yyout << "𝒸"; return 884;
 	YY_BREAK
 case 887:
 YY_RULE_SETUP
 #line 891 "/tmp/input.flex"
-yyout << u8"⫏"; return 885;
+yyout << "⫏"; return 885;
 	YY_BREAK
 case 888:
 YY_RULE_SETUP
 #line 892 "/tmp/input.flex"
-yyout << u8"⫑"; return 886;
+yyout << "⫑"; return 886;
 	YY_BREAK
 case 889:
 YY_RULE_SETUP
 #line 893 "/tmp/input.flex"
-yyout << u8"⫐"; return 887;
+yyout << "⫐"; return 887;
 	YY_BREAK
 case 890:
 YY_RULE_SETUP
 #line 894 "/tmp/input.flex"
-yyout << u8"⫒"; return 888;
+yyout << "⫒"; return 888;
 	YY_BREAK
 case 891:
 YY_RULE_SETUP
 #line 895 "/tmp/input.flex"
-yyout << u8"⋯"; return 889;
+yyout << "⋯"; return 889;
 	YY_BREAK
 case 892:
 YY_RULE_SETUP
 #line 896 "/tmp/input.flex"
-yyout << u8"⤸"; return 890;
+yyout << "⤸"; return 890;
 	YY_BREAK
 case 893:
 YY_RULE_SETUP
 #line 897 "/tmp/input.flex"
-yyout << u8"⤵"; return 891;
+yyout << "⤵"; return 891;
 	YY_BREAK
 case 894:
 YY_RULE_SETUP
 #line 898 "/tmp/input.flex"
-yyout << u8"⋞"; return 892;
+yyout << "⋞"; return 892;
 	YY_BREAK
 case 895:
 YY_RULE_SETUP
 #line 899 "/tmp/input.flex"
-yyout << u8"⋟"; return 893;
+yyout << "⋟"; return 893;
 	YY_BREAK
 case 896:
 YY_RULE_SETUP
 #line 900 "/tmp/input.flex"
-yyout << u8"↶"; return 894;
+yyout << "↶"; return 894;
 	YY_BREAK
 case 897:
 YY_RULE_SETUP
 #line 901 "/tmp/input.flex"
-yyout << u8"⤽"; return 895;
+yyout << "⤽"; return 895;
 	YY_BREAK
 case 898:
 YY_RULE_SETUP
 #line 902 "/tmp/input.flex"
-yyout << u8"∪"; return 896;
+yyout << "∪"; return 896;
 	YY_BREAK
 case 899:
 YY_RULE_SETUP
 #line 903 "/tmp/input.flex"
-yyout << u8"⩈"; return 897;
+yyout << "⩈"; return 897;
 	YY_BREAK
 case 900:
 YY_RULE_SETUP
 #line 904 "/tmp/input.flex"
-yyout << u8"⩆"; return 898;
+yyout << "⩆"; return 898;
 	YY_BREAK
 case 901:
 YY_RULE_SETUP
 #line 905 "/tmp/input.flex"
-yyout << u8"⩊"; return 899;
+yyout << "⩊"; return 899;
 	YY_BREAK
 case 902:
 YY_RULE_SETUP
 #line 906 "/tmp/input.flex"
-yyout << u8"⊍"; return 900;
+yyout << "⊍"; return 900;
 	YY_BREAK
 case 903:
 YY_RULE_SETUP
 #line 907 "/tmp/input.flex"
-yyout << u8"⩅"; return 901;
+yyout << "⩅"; return 901;
 	YY_BREAK
 case 904:
 YY_RULE_SETUP
 #line 908 "/tmp/input.flex"
-yyout << u8"∪" << u8"︀"; return 902;
+yyout << "∪" << "︀"; return 902;
 	YY_BREAK
 case 905:
 YY_RULE_SETUP
 #line 909 "/tmp/input.flex"
-yyout << u8"↷"; return 903;
+yyout << "↷"; return 903;
 	YY_BREAK
 case 906:
 YY_RULE_SETUP
 #line 910 "/tmp/input.flex"
-yyout << u8"⤼"; return 904;
+yyout << "⤼"; return 904;
 	YY_BREAK
 case 907:
 YY_RULE_SETUP
 #line 911 "/tmp/input.flex"
-yyout << u8"⋞"; return 905;
+yyout << "⋞"; return 905;
 	YY_BREAK
 case 908:
 YY_RULE_SETUP
 #line 912 "/tmp/input.flex"
-yyout << u8"⋟"; return 906;
+yyout << "⋟"; return 906;
 	YY_BREAK
 case 909:
 YY_RULE_SETUP
 #line 913 "/tmp/input.flex"
-yyout << u8"⋎"; return 907;
+yyout << "⋎"; return 907;
 	YY_BREAK
 case 910:
 YY_RULE_SETUP
 #line 914 "/tmp/input.flex"
-yyout << u8"⋏"; return 908;
+yyout << "⋏"; return 908;
 	YY_BREAK
 case 911:
 YY_RULE_SETUP
 #line 915 "/tmp/input.flex"
-yyout << u8"¤"; return 909;
+yyout << "¤"; return 909;
 	YY_BREAK
 case 912:
 YY_RULE_SETUP
 #line 916 "/tmp/input.flex"
-yyout << u8"¤"; return 910;
+yyout << "¤"; return 910;
 	YY_BREAK
 case 913:
 YY_RULE_SETUP
 #line 917 "/tmp/input.flex"
-yyout << u8"↶"; return 911;
+yyout << "↶"; return 911;
 	YY_BREAK
 case 914:
 YY_RULE_SETUP
 #line 918 "/tmp/input.flex"
-yyout << u8"↷"; return 912;
+yyout << "↷"; return 912;
 	YY_BREAK
 case 915:
 YY_RULE_SETUP
 #line 919 "/tmp/input.flex"
-yyout << u8"⋎"; return 913;
+yyout << "⋎"; return 913;
 	YY_BREAK
 case 916:
 YY_RULE_SETUP
 #line 920 "/tmp/input.flex"
-yyout << u8"⋏"; return 914;
+yyout << "⋏"; return 914;
 	YY_BREAK
 case 917:
 YY_RULE_SETUP
 #line 921 "/tmp/input.flex"
-yyout << u8"∲"; return 915;
+yyout << "∲"; return 915;
 	YY_BREAK
 case 918:
 YY_RULE_SETUP
 #line 922 "/tmp/input.flex"
-yyout << u8"∱"; return 916;
+yyout << "∱"; return 916;
 	YY_BREAK
 case 919:
 YY_RULE_SETUP
 #line 923 "/tmp/input.flex"
-yyout << u8"⌭"; return 917;
+yyout << "⌭"; return 917;
 	YY_BREAK
 case 920:
 YY_RULE_SETUP
 #line 924 "/tmp/input.flex"
-yyout << u8"⇓"; return 918;
+yyout << "⇓"; return 918;
 	YY_BREAK
 case 921:
 YY_RULE_SETUP
 #line 925 "/tmp/input.flex"
-yyout << u8"⥥"; return 919;
+yyout << "⥥"; return 919;
 	YY_BREAK
 case 922:
 YY_RULE_SETUP
 #line 926 "/tmp/input.flex"
-yyout << u8"†"; return 920;
+yyout << "†"; return 920;
 	YY_BREAK
 case 923:
 YY_RULE_SETUP
 #line 927 "/tmp/input.flex"
-yyout << u8"ℸ"; return 921;
+yyout << "ℸ"; return 921;
 	YY_BREAK
 case 924:
 YY_RULE_SETUP
 #line 928 "/tmp/input.flex"
-yyout << u8"↓"; return 922;
+yyout << "↓"; return 922;
 	YY_BREAK
 case 925:
 YY_RULE_SETUP
 #line 929 "/tmp/input.flex"
-yyout << u8"‐"; return 923;
+yyout << "‐"; return 923;
 	YY_BREAK
 case 926:
 YY_RULE_SETUP
 #line 930 "/tmp/input.flex"
-yyout << u8"⊣"; return 924;
+yyout << "⊣"; return 924;
 	YY_BREAK
 case 927:
 YY_RULE_SETUP
 #line 931 "/tmp/input.flex"
-yyout << u8"⤏"; return 925;
+yyout << "⤏"; return 925;
 	YY_BREAK
 case 928:
 YY_RULE_SETUP
 #line 932 "/tmp/input.flex"
-yyout << u8"˝"; return 926;
+yyout << "˝"; return 926;
 	YY_BREAK
 case 929:
 YY_RULE_SETUP
 #line 933 "/tmp/input.flex"
-yyout << u8"ď"; return 927;
+yyout << "ď"; return 927;
 	YY_BREAK
 case 930:
 YY_RULE_SETUP
 #line 934 "/tmp/input.flex"
-yyout << u8"д"; return 928;
+yyout << "д"; return 928;
 	YY_BREAK
 case 931:
 YY_RULE_SETUP
 #line 935 "/tmp/input.flex"
-yyout << u8"ⅆ"; return 929;
+yyout << "ⅆ"; return 929;
 	YY_BREAK
 case 932:
 YY_RULE_SETUP
 #line 936 "/tmp/input.flex"
-yyout << u8"‡"; return 930;
+yyout << "‡"; return 930;
 	YY_BREAK
 case 933:
 YY_RULE_SETUP
 #line 937 "/tmp/input.flex"
-yyout << u8"⇊"; return 931;
+yyout << "⇊"; return 931;
 	YY_BREAK
 case 934:
 YY_RULE_SETUP
 #line 938 "/tmp/input.flex"
-yyout << u8"⩷"; return 932;
+yyout << "⩷"; return 932;
 	YY_BREAK
 case 935:
 YY_RULE_SETUP
 #line 939 "/tmp/input.flex"
-yyout << u8"°"; return 933;
+yyout << "°"; return 933;
 	YY_BREAK
 case 936:
 YY_RULE_SETUP
 #line 940 "/tmp/input.flex"
-yyout << u8"°"; return 934;
+yyout << "°"; return 934;
 	YY_BREAK
 case 937:
 YY_RULE_SETUP
 #line 941 "/tmp/input.flex"
-yyout << u8"δ"; return 935;
+yyout << "δ"; return 935;
 	YY_BREAK
 case 938:
 YY_RULE_SETUP
 #line 942 "/tmp/input.flex"
-yyout << u8"⦱"; return 936;
+yyout << "⦱"; return 936;
 	YY_BREAK
 case 939:
 YY_RULE_SETUP
 #line 943 "/tmp/input.flex"
-yyout << u8"⥿"; return 937;
+yyout << "⥿"; return 937;
 	YY_BREAK
 case 940:
 YY_RULE_SETUP
 #line 944 "/tmp/input.flex"
-yyout << u8"𝔡"; return 938;
+yyout << "𝔡"; return 938;
 	YY_BREAK
 case 941:
 YY_RULE_SETUP
 #line 945 "/tmp/input.flex"
-yyout << u8"⇃"; return 939;
+yyout << "⇃"; return 939;
 	YY_BREAK
 case 942:
 YY_RULE_SETUP
 #line 946 "/tmp/input.flex"
-yyout << u8"⇂"; return 940;
+yyout << "⇂"; return 940;
 	YY_BREAK
 case 943:
 YY_RULE_SETUP
 #line 947 "/tmp/input.flex"
-yyout << u8"⋄"; return 941;
+yyout << "⋄"; return 941;
 	YY_BREAK
 case 944:
 YY_RULE_SETUP
 #line 948 "/tmp/input.flex"
-yyout << u8"⋄"; return 942;
+yyout << "⋄"; return 942;
 	YY_BREAK
 case 945:
 YY_RULE_SETUP
 #line 949 "/tmp/input.flex"
-yyout << u8"♦"; return 943;
+yyout << "♦"; return 943;
 	YY_BREAK
 case 946:
 YY_RULE_SETUP
 #line 950 "/tmp/input.flex"
-yyout << u8"♦"; return 944;
+yyout << "♦"; return 944;
 	YY_BREAK
 case 947:
 YY_RULE_SETUP
 #line 951 "/tmp/input.flex"
-yyout << u8"¨"; return 945;
+yyout << "¨"; return 945;
 	YY_BREAK
 case 948:
 YY_RULE_SETUP
 #line 952 "/tmp/input.flex"
-yyout << u8"ϝ"; return 946;
+yyout << "ϝ"; return 946;
 	YY_BREAK
 case 949:
 YY_RULE_SETUP
 #line 953 "/tmp/input.flex"
-yyout << u8"⋲"; return 947;
+yyout << "⋲"; return 947;
 	YY_BREAK
 case 950:
 YY_RULE_SETUP
 #line 954 "/tmp/input.flex"
-yyout << u8"÷"; return 948;
+yyout << "÷"; return 948;
 	YY_BREAK
 case 951:
 YY_RULE_SETUP
 #line 955 "/tmp/input.flex"
-yyout << u8"÷"; return 949;
+yyout << "÷"; return 949;
 	YY_BREAK
 case 952:
 YY_RULE_SETUP
 #line 956 "/tmp/input.flex"
-yyout << u8"÷"; return 950;
+yyout << "÷"; return 950;
 	YY_BREAK
 case 953:
 YY_RULE_SETUP
 #line 957 "/tmp/input.flex"
-yyout << u8"⋇"; return 951;
+yyout << "⋇"; return 951;
 	YY_BREAK
 case 954:
 YY_RULE_SETUP
 #line 958 "/tmp/input.flex"
-yyout << u8"⋇"; return 952;
+yyout << "⋇"; return 952;
 	YY_BREAK
 case 955:
 YY_RULE_SETUP
 #line 959 "/tmp/input.flex"
-yyout << u8"ђ"; return 953;
+yyout << "ђ"; return 953;
 	YY_BREAK
 case 956:
 YY_RULE_SETUP
 #line 960 "/tmp/input.flex"
-yyout << u8"⌞"; return 954;
+yyout << "⌞"; return 954;
 	YY_BREAK
 case 957:
 YY_RULE_SETUP
 #line 961 "/tmp/input.flex"
-yyout << u8"⌍"; return 955;
+yyout << "⌍"; return 955;
 	YY_BREAK
 case 958:
 YY_RULE_SETUP
 #line 962 "/tmp/input.flex"
-yyout << u8"$"; return 956;
+yyout << "$"; return 956;
 	YY_BREAK
 case 959:
 YY_RULE_SETUP
 #line 963 "/tmp/input.flex"
-yyout << u8"𝕕"; return 957;
+yyout << "𝕕"; return 957;
 	YY_BREAK
 case 960:
 YY_RULE_SETUP
 #line 964 "/tmp/input.flex"
-yyout << u8"˙"; return 958;
+yyout << "˙"; return 958;
 	YY_BREAK
 case 961:
 YY_RULE_SETUP
 #line 965 "/tmp/input.flex"
-yyout << u8"≐"; return 959;
+yyout << "≐"; return 959;
 	YY_BREAK
 case 962:
 YY_RULE_SETUP
 #line 966 "/tmp/input.flex"
-yyout << u8"≑"; return 960;
+yyout << "≑"; return 960;
 	YY_BREAK
 case 963:
 YY_RULE_SETUP
 #line 967 "/tmp/input.flex"
-yyout << u8"∸"; return 961;
+yyout << "∸"; return 961;
 	YY_BREAK
 case 964:
 YY_RULE_SETUP
 #line 968 "/tmp/input.flex"
-yyout << u8"∔"; return 962;
+yyout << "∔"; return 962;
 	YY_BREAK
 case 965:
 YY_RULE_SETUP
 #line 969 "/tmp/input.flex"
-yyout << u8"⊡"; return 963;
+yyout << "⊡"; return 963;
 	YY_BREAK
 case 966:
 YY_RULE_SETUP
 #line 970 "/tmp/input.flex"
-yyout << u8"⌆"; return 964;
+yyout << "⌆"; return 964;
 	YY_BREAK
 case 967:
 YY_RULE_SETUP
 #line 971 "/tmp/input.flex"
-yyout << u8"↓"; return 965;
+yyout << "↓"; return 965;
 	YY_BREAK
 case 968:
 YY_RULE_SETUP
 #line 972 "/tmp/input.flex"
-yyout << u8"⇊"; return 966;
+yyout << "⇊"; return 966;
 	YY_BREAK
 case 969:
 YY_RULE_SETUP
 #line 973 "/tmp/input.flex"
-yyout << u8"⇃"; return 967;
+yyout << "⇃"; return 967;
 	YY_BREAK
 case 970:
 YY_RULE_SETUP
 #line 974 "/tmp/input.flex"
-yyout << u8"⇂"; return 968;
+yyout << "⇂"; return 968;
 	YY_BREAK
 case 971:
 YY_RULE_SETUP
 #line 975 "/tmp/input.flex"
-yyout << u8"⤐"; return 969;
+yyout << "⤐"; return 969;
 	YY_BREAK
 case 972:
 YY_RULE_SETUP
 #line 976 "/tmp/input.flex"
-yyout << u8"⌟"; return 970;
+yyout << "⌟"; return 970;
 	YY_BREAK
 case 973:
 YY_RULE_SETUP
 #line 977 "/tmp/input.flex"
-yyout << u8"⌌"; return 971;
+yyout << "⌌"; return 971;
 	YY_BREAK
 case 974:
 YY_RULE_SETUP
 #line 978 "/tmp/input.flex"
-yyout << u8"𝒹"; return 972;
+yyout << "𝒹"; return 972;
 	YY_BREAK
 case 975:
 YY_RULE_SETUP
 #line 979 "/tmp/input.flex"
-yyout << u8"ѕ"; return 973;
+yyout << "ѕ"; return 973;
 	YY_BREAK
 case 976:
 YY_RULE_SETUP
 #line 980 "/tmp/input.flex"
-yyout << u8"⧶"; return 974;
+yyout << "⧶"; return 974;
 	YY_BREAK
 case 977:
 YY_RULE_SETUP
 #line 981 "/tmp/input.flex"
-yyout << u8"đ"; return 975;
+yyout << "đ"; return 975;
 	YY_BREAK
 case 978:
 YY_RULE_SETUP
 #line 982 "/tmp/input.flex"
-yyout << u8"⋱"; return 976;
+yyout << "⋱"; return 976;
 	YY_BREAK
 case 979:
 YY_RULE_SETUP
 #line 983 "/tmp/input.flex"
-yyout << u8"▿"; return 977;
+yyout << "▿"; return 977;
 	YY_BREAK
 case 980:
 YY_RULE_SETUP
 #line 984 "/tmp/input.flex"
-yyout << u8"▾"; return 978;
+yyout << "▾"; return 978;
 	YY_BREAK
 case 981:
 YY_RULE_SETUP
 #line 985 "/tmp/input.flex"
-yyout << u8"⇵"; return 979;
+yyout << "⇵"; return 979;
 	YY_BREAK
 case 982:
 YY_RULE_SETUP
 #line 986 "/tmp/input.flex"
-yyout << u8"⥯"; return 980;
+yyout << "⥯"; return 980;
 	YY_BREAK
 case 983:
 YY_RULE_SETUP
 #line 987 "/tmp/input.flex"
-yyout << u8"⦦"; return 981;
+yyout << "⦦"; return 981;
 	YY_BREAK
 case 984:
 YY_RULE_SETUP
 #line 988 "/tmp/input.flex"
-yyout << u8"џ"; return 982;
+yyout << "џ"; return 982;
 	YY_BREAK
 case 985:
 YY_RULE_SETUP
 #line 989 "/tmp/input.flex"
-yyout << u8"⟿"; return 983;
+yyout << "⟿"; return 983;
 	YY_BREAK
 case 986:
 YY_RULE_SETUP
 #line 990 "/tmp/input.flex"
-yyout << u8"⩷"; return 984;
+yyout << "⩷"; return 984;
 	YY_BREAK
 case 987:
 YY_RULE_SETUP
 #line 991 "/tmp/input.flex"
-yyout << u8"≑"; return 985;
+yyout << "≑"; return 985;
 	YY_BREAK
 case 988:
 YY_RULE_SETUP
 #line 992 "/tmp/input.flex"
-yyout << u8"é"; return 986;
+yyout << "é"; return 986;
 	YY_BREAK
 case 989:
 YY_RULE_SETUP
 #line 993 "/tmp/input.flex"
-yyout << u8"é"; return 987;
+yyout << "é"; return 987;
 	YY_BREAK
 case 990:
 YY_RULE_SETUP
 #line 994 "/tmp/input.flex"
-yyout << u8"⩮"; return 988;
+yyout << "⩮"; return 988;
 	YY_BREAK
 case 991:
 YY_RULE_SETUP
 #line 995 "/tmp/input.flex"
-yyout << u8"ě"; return 989;
+yyout << "ě"; return 989;
 	YY_BREAK
 case 992:
 YY_RULE_SETUP
 #line 996 "/tmp/input.flex"
-yyout << u8"≖"; return 990;
+yyout << "≖"; return 990;
 	YY_BREAK
 case 993:
 YY_RULE_SETUP
 #line 997 "/tmp/input.flex"
-yyout << u8"ê"; return 991;
+yyout << "ê"; return 991;
 	YY_BREAK
 case 994:
 YY_RULE_SETUP
 #line 998 "/tmp/input.flex"
-yyout << u8"ê"; return 992;
+yyout << "ê"; return 992;
 	YY_BREAK
 case 995:
 YY_RULE_SETUP
 #line 999 "/tmp/input.flex"
-yyout << u8"≕"; return 993;
+yyout << "≕"; return 993;
 	YY_BREAK
 case 996:
 YY_RULE_SETUP
 #line 1000 "/tmp/input.flex"
-yyout << u8"э"; return 994;
+yyout << "э"; return 994;
 	YY_BREAK
 case 997:
 YY_RULE_SETUP
 #line 1001 "/tmp/input.flex"
-yyout << u8"ė"; return 995;
+yyout << "ė"; return 995;
 	YY_BREAK
 case 998:
 YY_RULE_SETUP
 #line 1002 "/tmp/input.flex"
-yyout << u8"ⅇ"; return 996;
+yyout << "ⅇ"; return 996;
 	YY_BREAK
 case 999:
 YY_RULE_SETUP
 #line 1003 "/tmp/input.flex"
-yyout << u8"≒"; return 997;
+yyout << "≒"; return 997;
 	YY_BREAK
 case 1000:
 YY_RULE_SETUP
 #line 1004 "/tmp/input.flex"
-yyout << u8"𝔢"; return 998;
+yyout << "𝔢"; return 998;
 	YY_BREAK
 case 1001:
 YY_RULE_SETUP
 #line 1005 "/tmp/input.flex"
-yyout << u8"⪚"; return 999;
+yyout << "⪚"; return 999;
 	YY_BREAK
 case 1002:
 YY_RULE_SETUP
 #line 1006 "/tmp/input.flex"
-yyout << u8"è"; return 1000;
+yyout << "è"; return 1000;
 	YY_BREAK
 case 1003:
 YY_RULE_SETUP
 #line 1007 "/tmp/input.flex"
-yyout << u8"è"; return 1001;
+yyout << "è"; return 1001;
 	YY_BREAK
 case 1004:
 YY_RULE_SETUP
 #line 1008 "/tmp/input.flex"
-yyout << u8"⪖"; return 1002;
+yyout << "⪖"; return 1002;
 	YY_BREAK
 case 1005:
 YY_RULE_SETUP
 #line 1009 "/tmp/input.flex"
-yyout << u8"⪘"; return 1003;
+yyout << "⪘"; return 1003;
 	YY_BREAK
 case 1006:
 YY_RULE_SETUP
 #line 1010 "/tmp/input.flex"
-yyout << u8"⪙"; return 1004;
+yyout << "⪙"; return 1004;
 	YY_BREAK
 case 1007:
 YY_RULE_SETUP
 #line 1011 "/tmp/input.flex"
-yyout << u8"⏧"; return 1005;
+yyout << "⏧"; return 1005;
 	YY_BREAK
 case 1008:
 YY_RULE_SETUP
 #line 1012 "/tmp/input.flex"
-yyout << u8"ℓ"; return 1006;
+yyout << "ℓ"; return 1006;
 	YY_BREAK
 case 1009:
 YY_RULE_SETUP
 #line 1013 "/tmp/input.flex"
-yyout << u8"⪕"; return 1007;
+yyout << "⪕"; return 1007;
 	YY_BREAK
 case 1010:
 YY_RULE_SETUP
 #line 1014 "/tmp/input.flex"
-yyout << u8"⪗"; return 1008;
+yyout << "⪗"; return 1008;
 	YY_BREAK
 case 1011:
 YY_RULE_SETUP
 #line 1015 "/tmp/input.flex"
-yyout << u8"ē"; return 1009;
+yyout << "ē"; return 1009;
 	YY_BREAK
 case 1012:
 YY_RULE_SETUP
 #line 1016 "/tmp/input.flex"
-yyout << u8"∅"; return 1010;
+yyout << "∅"; return 1010;
 	YY_BREAK
 case 1013:
 YY_RULE_SETUP
 #line 1017 "/tmp/input.flex"
-yyout << u8"∅"; return 1011;
+yyout << "∅"; return 1011;
 	YY_BREAK
 case 1014:
 YY_RULE_SETUP
 #line 1018 "/tmp/input.flex"
-yyout << u8"∅"; return 1012;
+yyout << "∅"; return 1012;
 	YY_BREAK
 case 1015:
 YY_RULE_SETUP
 #line 1019 "/tmp/input.flex"
-yyout << u8" "; return 1013;
+yyout << " "; return 1013;
 	YY_BREAK
 case 1016:
 YY_RULE_SETUP
 #line 1020 "/tmp/input.flex"
-yyout << u8" "; return 1014;
+yyout << " "; return 1014;
 	YY_BREAK
 case 1017:
 YY_RULE_SETUP
 #line 1021 "/tmp/input.flex"
-yyout << u8" "; return 1015;
+yyout << " "; return 1015;
 	YY_BREAK
 case 1018:
 YY_RULE_SETUP
 #line 1022 "/tmp/input.flex"
-yyout << u8"ŋ"; return 1016;
+yyout << "ŋ"; return 1016;
 	YY_BREAK
 case 1019:
 YY_RULE_SETUP
 #line 1023 "/tmp/input.flex"
-yyout << u8" "; return 1017;
+yyout << " "; return 1017;
 	YY_BREAK
 case 1020:
 YY_RULE_SETUP
 #line 1024 "/tmp/input.flex"
-yyout << u8"ę"; return 1018;
+yyout << "ę"; return 1018;
 	YY_BREAK
 case 1021:
 YY_RULE_SETUP
 #line 1025 "/tmp/input.flex"
-yyout << u8"𝕖"; return 1019;
+yyout << "𝕖"; return 1019;
 	YY_BREAK
 case 1022:
 YY_RULE_SETUP
 #line 1026 "/tmp/input.flex"
-yyout << u8"⋕"; return 1020;
+yyout << "⋕"; return 1020;
 	YY_BREAK
 case 1023:
 YY_RULE_SETUP
 #line 1027 "/tmp/input.flex"
-yyout << u8"⧣"; return 1021;
+yyout << "⧣"; return 1021;
 	YY_BREAK
 case 1024:
 YY_RULE_SETUP
 #line 1028 "/tmp/input.flex"
-yyout << u8"⩱"; return 1022;
+yyout << "⩱"; return 1022;
 	YY_BREAK
 case 1025:
 YY_RULE_SETUP
 #line 1029 "/tmp/input.flex"
-yyout << u8"ε"; return 1023;
+yyout << "ε"; return 1023;
 	YY_BREAK
 case 1026:
 YY_RULE_SETUP
 #line 1030 "/tmp/input.flex"
-yyout << u8"ε"; return 1024;
+yyout << "ε"; return 1024;
 	YY_BREAK
 case 1027:
 YY_RULE_SETUP
 #line 1031 "/tmp/input.flex"
-yyout << u8"ϵ"; return 1025;
+yyout << "ϵ"; return 1025;
 	YY_BREAK
 case 1028:
 YY_RULE_SETUP
 #line 1032 "/tmp/input.flex"
-yyout << u8"≖"; return 1026;
+yyout << "≖"; return 1026;
 	YY_BREAK
 case 1029:
 YY_RULE_SETUP
 #line 1033 "/tmp/input.flex"
-yyout << u8"≕"; return 1027;
+yyout << "≕"; return 1027;
 	YY_BREAK
 case 1030:
 YY_RULE_SETUP
 #line 1034 "/tmp/input.flex"
-yyout << u8"≂"; return 1028;
+yyout << "≂"; return 1028;
 	YY_BREAK
 case 1031:
 YY_RULE_SETUP
 #line 1035 "/tmp/input.flex"
-yyout << u8"⪖"; return 1029;
+yyout << "⪖"; return 1029;
 	YY_BREAK
 case 1032:
 YY_RULE_SETUP
 #line 1036 "/tmp/input.flex"
-yyout << u8"⪕"; return 1030;
+yyout << "⪕"; return 1030;
 	YY_BREAK
 case 1033:
 YY_RULE_SETUP
 #line 1037 "/tmp/input.flex"
-yyout << u8"="; return 1031;
+yyout << "="; return 1031;
 	YY_BREAK
 case 1034:
 YY_RULE_SETUP
 #line 1038 "/tmp/input.flex"
-yyout << u8"≟"; return 1032;
+yyout << "≟"; return 1032;
 	YY_BREAK
 case 1035:
 YY_RULE_SETUP
 #line 1039 "/tmp/input.flex"
-yyout << u8"≡"; return 1033;
+yyout << "≡"; return 1033;
 	YY_BREAK
 case 1036:
 YY_RULE_SETUP
 #line 1040 "/tmp/input.flex"
-yyout << u8"⩸"; return 1034;
+yyout << "⩸"; return 1034;
 	YY_BREAK
 case 1037:
 YY_RULE_SETUP
 #line 1041 "/tmp/input.flex"
-yyout << u8"⧥"; return 1035;
+yyout << "⧥"; return 1035;
 	YY_BREAK
 case 1038:
 YY_RULE_SETUP
 #line 1042 "/tmp/input.flex"
-yyout << u8"≓"; return 1036;
+yyout << "≓"; return 1036;
 	YY_BREAK
 case 1039:
 YY_RULE_SETUP
 #line 1043 "/tmp/input.flex"
-yyout << u8"⥱"; return 1037;
+yyout << "⥱"; return 1037;
 	YY_BREAK
 case 1040:
 YY_RULE_SETUP
 #line 1044 "/tmp/input.flex"
-yyout << u8"ℯ"; return 1038;
+yyout << "ℯ"; return 1038;
 	YY_BREAK
 case 1041:
 YY_RULE_SETUP
 #line 1045 "/tmp/input.flex"
-yyout << u8"≐"; return 1039;
+yyout << "≐"; return 1039;
 	YY_BREAK
 case 1042:
 YY_RULE_SETUP
 #line 1046 "/tmp/input.flex"
-yyout << u8"≂"; return 1040;
+yyout << "≂"; return 1040;
 	YY_BREAK
 case 1043:
 YY_RULE_SETUP
 #line 1047 "/tmp/input.flex"
-yyout << u8"η"; return 1041;
+yyout << "η"; return 1041;
 	YY_BREAK
 case 1044:
 YY_RULE_SETUP
 #line 1048 "/tmp/input.flex"
-yyout << u8"ð"; return 1042;
+yyout << "ð"; return 1042;
 	YY_BREAK
 case 1045:
 YY_RULE_SETUP
 #line 1049 "/tmp/input.flex"
-yyout << u8"ð"; return 1043;
+yyout << "ð"; return 1043;
 	YY_BREAK
 case 1046:
 YY_RULE_SETUP
 #line 1050 "/tmp/input.flex"
-yyout << u8"ë"; return 1044;
+yyout << "ë"; return 1044;
 	YY_BREAK
 case 1047:
 YY_RULE_SETUP
 #line 1051 "/tmp/input.flex"
-yyout << u8"ë"; return 1045;
+yyout << "ë"; return 1045;
 	YY_BREAK
 case 1048:
 YY_RULE_SETUP
 #line 1052 "/tmp/input.flex"
-yyout << u8"€"; return 1046;
+yyout << "€"; return 1046;
 	YY_BREAK
 case 1049:
 YY_RULE_SETUP
 #line 1053 "/tmp/input.flex"
-yyout << u8"!"; return 1047;
+yyout << "!"; return 1047;
 	YY_BREAK
 case 1050:
 YY_RULE_SETUP
 #line 1054 "/tmp/input.flex"
-yyout << u8"∃"; return 1048;
+yyout << "∃"; return 1048;
 	YY_BREAK
 case 1051:
 YY_RULE_SETUP
 #line 1055 "/tmp/input.flex"
-yyout << u8"ℰ"; return 1049;
+yyout << "ℰ"; return 1049;
 	YY_BREAK
 case 1052:
 YY_RULE_SETUP
 #line 1056 "/tmp/input.flex"
-yyout << u8"ⅇ"; return 1050;
+yyout << "ⅇ"; return 1050;
 	YY_BREAK
 case 1053:
 YY_RULE_SETUP
 #line 1057 "/tmp/input.flex"
-yyout << u8"≒"; return 1051;
+yyout << "≒"; return 1051;
 	YY_BREAK
 case 1054:
 YY_RULE_SETUP
 #line 1058 "/tmp/input.flex"
-yyout << u8"ф"; return 1052;
+yyout << "ф"; return 1052;
 	YY_BREAK
 case 1055:
 YY_RULE_SETUP
 #line 1059 "/tmp/input.flex"
-yyout << u8"♀"; return 1053;
+yyout << "♀"; return 1053;
 	YY_BREAK
 case 1056:
 YY_RULE_SETUP
 #line 1060 "/tmp/input.flex"
-yyout << u8"ﬃ"; return 1054;
+yyout << "ﬃ"; return 1054;
 	YY_BREAK
 case 1057:
 YY_RULE_SETUP
 #line 1061 "/tmp/input.flex"
-yyout << u8"ﬀ"; return 1055;
+yyout << "ﬀ"; return 1055;
 	YY_BREAK
 case 1058:
 YY_RULE_SETUP
 #line 1062 "/tmp/input.flex"
-yyout << u8"ﬄ"; return 1056;
+yyout << "ﬄ"; return 1056;
 	YY_BREAK
 case 1059:
 YY_RULE_SETUP
 #line 1063 "/tmp/input.flex"
-yyout << u8"𝔣"; return 1057;
+yyout << "𝔣"; return 1057;
 	YY_BREAK
 case 1060:
 YY_RULE_SETUP
 #line 1064 "/tmp/input.flex"
-yyout << u8"ﬁ"; return 1058;
+yyout << "ﬁ"; return 1058;
 	YY_BREAK
 case 1061:
 YY_RULE_SETUP
 #line 1065 "/tmp/input.flex"
-yyout << u8"f" << u8"j"; return 1059;
+yyout << "f" << "j"; return 1059;
 	YY_BREAK
 case 1062:
 YY_RULE_SETUP
 #line 1066 "/tmp/input.flex"
-yyout << u8"♭"; return 1060;
+yyout << "♭"; return 1060;
 	YY_BREAK
 case 1063:
 YY_RULE_SETUP
 #line 1067 "/tmp/input.flex"
-yyout << u8"ﬂ"; return 1061;
+yyout << "ﬂ"; return 1061;
 	YY_BREAK
 case 1064:
 YY_RULE_SETUP
 #line 1068 "/tmp/input.flex"
-yyout << u8"▱"; return 1062;
+yyout << "▱"; return 1062;
 	YY_BREAK
 case 1065:
 YY_RULE_SETUP
 #line 1069 "/tmp/input.flex"
-yyout << u8"ƒ"; return 1063;
+yyout << "ƒ"; return 1063;
 	YY_BREAK
 case 1066:
 YY_RULE_SETUP
 #line 1070 "/tmp/input.flex"
-yyout << u8"𝕗"; return 1064;
+yyout << "𝕗"; return 1064;
 	YY_BREAK
 case 1067:
 YY_RULE_SETUP
 #line 1071 "/tmp/input.flex"
-yyout << u8"∀"; return 1065;
+yyout << "∀"; return 1065;
 	YY_BREAK
 case 1068:
 YY_RULE_SETUP
 #line 1072 "/tmp/input.flex"
-yyout << u8"⋔"; return 1066;
+yyout << "⋔"; return 1066;
 	YY_BREAK
 case 1069:
 YY_RULE_SETUP
 #line 1073 "/tmp/input.flex"
-yyout << u8"⫙"; return 1067;
+yyout << "⫙"; return 1067;
 	YY_BREAK
 case 1070:
 YY_RULE_SETUP
 #line 1074 "/tmp/input.flex"
-yyout << u8"⨍"; return 1068;
+yyout << "⨍"; return 1068;
 	YY_BREAK
 case 1071:
 YY_RULE_SETUP
 #line 1075 "/tmp/input.flex"
-yyout << u8"½"; return 1069;
+yyout << "½"; return 1069;
 	YY_BREAK
 case 1072:
 YY_RULE_SETUP
 #line 1076 "/tmp/input.flex"
-yyout << u8"½"; return 1070;
+yyout << "½"; return 1070;
 	YY_BREAK
 case 1073:
 YY_RULE_SETUP
 #line 1077 "/tmp/input.flex"
-yyout << u8"⅓"; return 1071;
+yyout << "⅓"; return 1071;
 	YY_BREAK
 case 1074:
 YY_RULE_SETUP
 #line 1078 "/tmp/input.flex"
-yyout << u8"¼"; return 1072;
+yyout << "¼"; return 1072;
 	YY_BREAK
 case 1075:
 YY_RULE_SETUP
 #line 1079 "/tmp/input.flex"
-yyout << u8"¼"; return 1073;
+yyout << "¼"; return 1073;
 	YY_BREAK
 case 1076:
 YY_RULE_SETUP
 #line 1080 "/tmp/input.flex"
-yyout << u8"⅕"; return 1074;
+yyout << "⅕"; return 1074;
 	YY_BREAK
 case 1077:
 YY_RULE_SETUP
 #line 1081 "/tmp/input.flex"
-yyout << u8"⅙"; return 1075;
+yyout << "⅙"; return 1075;
 	YY_BREAK
 case 1078:
 YY_RULE_SETUP
 #line 1082 "/tmp/input.flex"
-yyout << u8"⅛"; return 1076;
+yyout << "⅛"; return 1076;
 	YY_BREAK
 case 1079:
 YY_RULE_SETUP
 #line 1083 "/tmp/input.flex"
-yyout << u8"⅔"; return 1077;
+yyout << "⅔"; return 1077;
 	YY_BREAK
 case 1080:
 YY_RULE_SETUP
 #line 1084 "/tmp/input.flex"
-yyout << u8"⅖"; return 1078;
+yyout << "⅖"; return 1078;
 	YY_BREAK
 case 1081:
 YY_RULE_SETUP
 #line 1085 "/tmp/input.flex"
-yyout << u8"¾"; return 1079;
+yyout << "¾"; return 1079;
 	YY_BREAK
 case 1082:
 YY_RULE_SETUP
 #line 1086 "/tmp/input.flex"
-yyout << u8"¾"; return 1080;
+yyout << "¾"; return 1080;
 	YY_BREAK
 case 1083:
 YY_RULE_SETUP
 #line 1087 "/tmp/input.flex"
-yyout << u8"⅗"; return 1081;
+yyout << "⅗"; return 1081;
 	YY_BREAK
 case 1084:
 YY_RULE_SETUP
 #line 1088 "/tmp/input.flex"
-yyout << u8"⅜"; return 1082;
+yyout << "⅜"; return 1082;
 	YY_BREAK
 case 1085:
 YY_RULE_SETUP
 #line 1089 "/tmp/input.flex"
-yyout << u8"⅘"; return 1083;
+yyout << "⅘"; return 1083;
 	YY_BREAK
 case 1086:
 YY_RULE_SETUP
 #line 1090 "/tmp/input.flex"
-yyout << u8"⅚"; return 1084;
+yyout << "⅚"; return 1084;
 	YY_BREAK
 case 1087:
 YY_RULE_SETUP
 #line 1091 "/tmp/input.flex"
-yyout << u8"⅝"; return 1085;
+yyout << "⅝"; return 1085;
 	YY_BREAK
 case 1088:
 YY_RULE_SETUP
 #line 1092 "/tmp/input.flex"
-yyout << u8"⅞"; return 1086;
+yyout << "⅞"; return 1086;
 	YY_BREAK
 case 1089:
 YY_RULE_SETUP
 #line 1093 "/tmp/input.flex"
-yyout << u8"⁄"; return 1087;
+yyout << "⁄"; return 1087;
 	YY_BREAK
 case 1090:
 YY_RULE_SETUP
 #line 1094 "/tmp/input.flex"
-yyout << u8"⌢"; return 1088;
+yyout << "⌢"; return 1088;
 	YY_BREAK
 case 1091:
 YY_RULE_SETUP
 #line 1095 "/tmp/input.flex"
-yyout << u8"𝒻"; return 1089;
+yyout << "𝒻"; return 1089;
 	YY_BREAK
 case 1092:
 YY_RULE_SETUP
 #line 1096 "/tmp/input.flex"
-yyout << u8"≧"; return 1090;
+yyout << "≧"; return 1090;
 	YY_BREAK
 case 1093:
 YY_RULE_SETUP
 #line 1097 "/tmp/input.flex"
-yyout << u8"⪌"; return 1091;
+yyout << "⪌"; return 1091;
 	YY_BREAK
 case 1094:
 YY_RULE_SETUP
 #line 1098 "/tmp/input.flex"
-yyout << u8"ǵ"; return 1092;
+yyout << "ǵ"; return 1092;
 	YY_BREAK
 case 1095:
 YY_RULE_SETUP
 #line 1099 "/tmp/input.flex"
-yyout << u8"γ"; return 1093;
+yyout << "γ"; return 1093;
 	YY_BREAK
 case 1096:
 YY_RULE_SETUP
 #line 1100 "/tmp/input.flex"
-yyout << u8"ϝ"; return 1094;
+yyout << "ϝ"; return 1094;
 	YY_BREAK
 case 1097:
 YY_RULE_SETUP
 #line 1101 "/tmp/input.flex"
-yyout << u8"⪆"; return 1095;
+yyout << "⪆"; return 1095;
 	YY_BREAK
 case 1098:
 YY_RULE_SETUP
 #line 1102 "/tmp/input.flex"
-yyout << u8"ğ"; return 1096;
+yyout << "ğ"; return 1096;
 	YY_BREAK
 case 1099:
 YY_RULE_SETUP
 #line 1103 "/tmp/input.flex"
-yyout << u8"ĝ"; return 1097;
+yyout << "ĝ"; return 1097;
 	YY_BREAK
 case 1100:
 YY_RULE_SETUP
 #line 1104 "/tmp/input.flex"
-yyout << u8"г"; return 1098;
+yyout << "г"; return 1098;
 	YY_BREAK
 case 1101:
 YY_RULE_SETUP
 #line 1105 "/tmp/input.flex"
-yyout << u8"ġ"; return 1099;
+yyout << "ġ"; return 1099;
 	YY_BREAK
 case 1102:
 YY_RULE_SETUP
 #line 1106 "/tmp/input.flex"
-yyout << u8"≥"; return 1100;
+yyout << "≥"; return 1100;
 	YY_BREAK
 case 1103:
 YY_RULE_SETUP
 #line 1107 "/tmp/input.flex"
-yyout << u8"⋛"; return 1101;
+yyout << "⋛"; return 1101;
 	YY_BREAK
 case 1104:
 YY_RULE_SETUP
 #line 1108 "/tmp/input.flex"
-yyout << u8"≥"; return 1102;
+yyout << "≥"; return 1102;
 	YY_BREAK
 case 1105:
 YY_RULE_SETUP
 #line 1109 "/tmp/input.flex"
-yyout << u8"≧"; return 1103;
+yyout << "≧"; return 1103;
 	YY_BREAK
 case 1106:
 YY_RULE_SETUP
 #line 1110 "/tmp/input.flex"
-yyout << u8"⩾"; return 1104;
+yyout << "⩾"; return 1104;
 	YY_BREAK
 case 1107:
 YY_RULE_SETUP
 #line 1111 "/tmp/input.flex"
-yyout << u8"⩾"; return 1105;
+yyout << "⩾"; return 1105;
 	YY_BREAK
 case 1108:
 YY_RULE_SETUP
 #line 1112 "/tmp/input.flex"
-yyout << u8"⪩"; return 1106;
+yyout << "⪩"; return 1106;
 	YY_BREAK
 case 1109:
 YY_RULE_SETUP
 #line 1113 "/tmp/input.flex"
-yyout << u8"⪀"; return 1107;
+yyout << "⪀"; return 1107;
 	YY_BREAK
 case 1110:
 YY_RULE_SETUP
 #line 1114 "/tmp/input.flex"
-yyout << u8"⪂"; return 1108;
+yyout << "⪂"; return 1108;
 	YY_BREAK
 case 1111:
 YY_RULE_SETUP
 #line 1115 "/tmp/input.flex"
-yyout << u8"⪄"; return 1109;
+yyout << "⪄"; return 1109;
 	YY_BREAK
 case 1112:
 YY_RULE_SETUP
 #line 1116 "/tmp/input.flex"
-yyout << u8"⋛" << u8"︀"; return 1110;
+yyout << "⋛" << "︀"; return 1110;
 	YY_BREAK
 case 1113:
 YY_RULE_SETUP
 #line 1117 "/tmp/input.flex"
-yyout << u8"⪔"; return 1111;
+yyout << "⪔"; return 1111;
 	YY_BREAK
 case 1114:
 YY_RULE_SETUP
 #line 1118 "/tmp/input.flex"
-yyout << u8"𝔤"; return 1112;
+yyout << "𝔤"; return 1112;
 	YY_BREAK
 case 1115:
 YY_RULE_SETUP
 #line 1119 "/tmp/input.flex"
-yyout << u8"≫"; return 1113;
+yyout << "≫"; return 1113;
 	YY_BREAK
 case 1116:
 YY_RULE_SETUP
 #line 1120 "/tmp/input.flex"
-yyout << u8"⋙"; return 1114;
+yyout << "⋙"; return 1114;
 	YY_BREAK
 case 1117:
 YY_RULE_SETUP
 #line 1121 "/tmp/input.flex"
-yyout << u8"ℷ"; return 1115;
+yyout << "ℷ"; return 1115;
 	YY_BREAK
 case 1118:
 YY_RULE_SETUP
 #line 1122 "/tmp/input.flex"
-yyout << u8"ѓ"; return 1116;
+yyout << "ѓ"; return 1116;
 	YY_BREAK
 case 1119:
 YY_RULE_SETUP
 #line 1123 "/tmp/input.flex"
-yyout << u8"≷"; return 1117;
+yyout << "≷"; return 1117;
 	YY_BREAK
 case 1120:
 YY_RULE_SETUP
 #line 1124 "/tmp/input.flex"
-yyout << u8"⪒"; return 1118;
+yyout << "⪒"; return 1118;
 	YY_BREAK
 case 1121:
 YY_RULE_SETUP
 #line 1125 "/tmp/input.flex"
-yyout << u8"⪥"; return 1119;
+yyout << "⪥"; return 1119;
 	YY_BREAK
 case 1122:
 YY_RULE_SETUP
 #line 1126 "/tmp/input.flex"
-yyout << u8"⪤"; return 1120;
+yyout << "⪤"; return 1120;
 	YY_BREAK
 case 1123:
 YY_RULE_SETUP
 #line 1127 "/tmp/input.flex"
-yyout << u8"≩"; return 1121;
+yyout << "≩"; return 1121;
 	YY_BREAK
 case 1124:
 YY_RULE_SETUP
 #line 1128 "/tmp/input.flex"
-yyout << u8"⪊"; return 1122;
+yyout << "⪊"; return 1122;
 	YY_BREAK
 case 1125:
 YY_RULE_SETUP
 #line 1129 "/tmp/input.flex"
-yyout << u8"⪊"; return 1123;
+yyout << "⪊"; return 1123;
 	YY_BREAK
 case 1126:
 YY_RULE_SETUP
 #line 1130 "/tmp/input.flex"
-yyout << u8"⪈"; return 1124;
+yyout << "⪈"; return 1124;
 	YY_BREAK
 case 1127:
 YY_RULE_SETUP
 #line 1131 "/tmp/input.flex"
-yyout << u8"⪈"; return 1125;
+yyout << "⪈"; return 1125;
 	YY_BREAK
 case 1128:
 YY_RULE_SETUP
 #line 1132 "/tmp/input.flex"
-yyout << u8"≩"; return 1126;
+yyout << "≩"; return 1126;
 	YY_BREAK
 case 1129:
 YY_RULE_SETUP
 #line 1133 "/tmp/input.flex"
-yyout << u8"⋧"; return 1127;
+yyout << "⋧"; return 1127;
 	YY_BREAK
 case 1130:
 YY_RULE_SETUP
 #line 1134 "/tmp/input.flex"
-yyout << u8"𝕘"; return 1128;
+yyout << "𝕘"; return 1128;
 	YY_BREAK
 case 1131:
 YY_RULE_SETUP
 #line 1135 "/tmp/input.flex"
-yyout << u8"`"; return 1129;
+yyout << "`"; return 1129;
 	YY_BREAK
 case 1132:
 YY_RULE_SETUP
 #line 1136 "/tmp/input.flex"
-yyout << u8"ℊ"; return 1130;
+yyout << "ℊ"; return 1130;
 	YY_BREAK
 case 1133:
 YY_RULE_SETUP
 #line 1137 "/tmp/input.flex"
-yyout << u8"≳"; return 1131;
+yyout << "≳"; return 1131;
 	YY_BREAK
 case 1134:
 YY_RULE_SETUP
 #line 1138 "/tmp/input.flex"
-yyout << u8"⪎"; return 1132;
+yyout << "⪎"; return 1132;
 	YY_BREAK
 case 1135:
 YY_RULE_SETUP
 #line 1139 "/tmp/input.flex"
-yyout << u8"⪐"; return 1133;
+yyout << "⪐"; return 1133;
 	YY_BREAK
 case 1136:
 YY_RULE_SETUP
 #line 1140 "/tmp/input.flex"
-yyout << u8">"; return 1134;
+yyout << ">"; return 1134;
 	YY_BREAK
 case 1137:
 YY_RULE_SETUP
 #line 1141 "/tmp/input.flex"
-yyout << u8">"; return 1135;
+yyout << ">"; return 1135;
 	YY_BREAK
 case 1138:
 YY_RULE_SETUP
 #line 1142 "/tmp/input.flex"
-yyout << u8"⪧"; return 1136;
+yyout << "⪧"; return 1136;
 	YY_BREAK
 case 1139:
 YY_RULE_SETUP
 #line 1143 "/tmp/input.flex"
-yyout << u8"⩺"; return 1137;
+yyout << "⩺"; return 1137;
 	YY_BREAK
 case 1140:
 YY_RULE_SETUP
 #line 1144 "/tmp/input.flex"
-yyout << u8"⋗"; return 1138;
+yyout << "⋗"; return 1138;
 	YY_BREAK
 case 1141:
 YY_RULE_SETUP
 #line 1145 "/tmp/input.flex"
-yyout << u8"⦕"; return 1139;
+yyout << "⦕"; return 1139;
 	YY_BREAK
 case 1142:
 YY_RULE_SETUP
 #line 1146 "/tmp/input.flex"
-yyout << u8"⩼"; return 1140;
+yyout << "⩼"; return 1140;
 	YY_BREAK
 case 1143:
 YY_RULE_SETUP
 #line 1147 "/tmp/input.flex"
-yyout << u8"⪆"; return 1141;
+yyout << "⪆"; return 1141;
 	YY_BREAK
 case 1144:
 YY_RULE_SETUP
 #line 1148 "/tmp/input.flex"
-yyout << u8"⥸"; return 1142;
+yyout << "⥸"; return 1142;
 	YY_BREAK
 case 1145:
 YY_RULE_SETUP
 #line 1149 "/tmp/input.flex"
-yyout << u8"⋗"; return 1143;
+yyout << "⋗"; return 1143;
 	YY_BREAK
 case 1146:
 YY_RULE_SETUP
 #line 1150 "/tmp/input.flex"
-yyout << u8"⋛"; return 1144;
+yyout << "⋛"; return 1144;
 	YY_BREAK
 case 1147:
 YY_RULE_SETUP
 #line 1151 "/tmp/input.flex"
-yyout << u8"⪌"; return 1145;
+yyout << "⪌"; return 1145;
 	YY_BREAK
 case 1148:
 YY_RULE_SETUP
 #line 1152 "/tmp/input.flex"
-yyout << u8"≷"; return 1146;
+yyout << "≷"; return 1146;
 	YY_BREAK
 case 1149:
 YY_RULE_SETUP
 #line 1153 "/tmp/input.flex"
-yyout << u8"≳"; return 1147;
+yyout << "≳"; return 1147;
 	YY_BREAK
 case 1150:
 YY_RULE_SETUP
 #line 1154 "/tmp/input.flex"
-yyout << u8"≩" << u8"︀"; return 1148;
+yyout << "≩" << "︀"; return 1148;
 	YY_BREAK
 case 1151:
 YY_RULE_SETUP
 #line 1155 "/tmp/input.flex"
-yyout << u8"≩" << u8"︀"; return 1149;
+yyout << "≩" << "︀"; return 1149;
 	YY_BREAK
 case 1152:
 YY_RULE_SETUP
 #line 1156 "/tmp/input.flex"
-yyout << u8"⇔"; return 1150;
+yyout << "⇔"; return 1150;
 	YY_BREAK
 case 1153:
 YY_RULE_SETUP
 #line 1157 "/tmp/input.flex"
-yyout << u8" "; return 1151;
+yyout << " "; return 1151;
 	YY_BREAK
 case 1154:
 YY_RULE_SETUP
 #line 1158 "/tmp/input.flex"
-yyout << u8"½"; return 1152;
+yyout << "½"; return 1152;
 	YY_BREAK
 case 1155:
 YY_RULE_SETUP
 #line 1159 "/tmp/input.flex"
-yyout << u8"ℋ"; return 1153;
+yyout << "ℋ"; return 1153;
 	YY_BREAK
 case 1156:
 YY_RULE_SETUP
 #line 1160 "/tmp/input.flex"
-yyout << u8"ъ"; return 1154;
+yyout << "ъ"; return 1154;
 	YY_BREAK
 case 1157:
 YY_RULE_SETUP
 #line 1161 "/tmp/input.flex"
-yyout << u8"↔"; return 1155;
+yyout << "↔"; return 1155;
 	YY_BREAK
 case 1158:
 YY_RULE_SETUP
 #line 1162 "/tmp/input.flex"
-yyout << u8"⥈"; return 1156;
+yyout << "⥈"; return 1156;
 	YY_BREAK
 case 1159:
 YY_RULE_SETUP
 #line 1163 "/tmp/input.flex"
-yyout << u8"↭"; return 1157;
+yyout << "↭"; return 1157;
 	YY_BREAK
 case 1160:
 YY_RULE_SETUP
 #line 1164 "/tmp/input.flex"
-yyout << u8"ℏ"; return 1158;
+yyout << "ℏ"; return 1158;
 	YY_BREAK
 case 1161:
 YY_RULE_SETUP
 #line 1165 "/tmp/input.flex"
-yyout << u8"ĥ"; return 1159;
+yyout << "ĥ"; return 1159;
 	YY_BREAK
 case 1162:
 YY_RULE_SETUP
 #line 1166 "/tmp/input.flex"
-yyout << u8"♥"; return 1160;
+yyout << "♥"; return 1160;
 	YY_BREAK
 case 1163:
 YY_RULE_SETUP
 #line 1167 "/tmp/input.flex"
-yyout << u8"♥"; return 1161;
+yyout << "♥"; return 1161;
 	YY_BREAK
 case 1164:
 YY_RULE_SETUP
 #line 1168 "/tmp/input.flex"
-yyout << u8"…"; return 1162;
+yyout << "…"; return 1162;
 	YY_BREAK
 case 1165:
 YY_RULE_SETUP
 #line 1169 "/tmp/input.flex"
-yyout << u8"⊹"; return 1163;
+yyout << "⊹"; return 1163;
 	YY_BREAK
 case 1166:
 YY_RULE_SETUP
 #line 1170 "/tmp/input.flex"
-yyout << u8"𝔥"; return 1164;
+yyout << "𝔥"; return 1164;
 	YY_BREAK
 case 1167:
 YY_RULE_SETUP
 #line 1171 "/tmp/input.flex"
-yyout << u8"⤥"; return 1165;
+yyout << "⤥"; return 1165;
 	YY_BREAK
 case 1168:
 YY_RULE_SETUP
 #line 1172 "/tmp/input.flex"
-yyout << u8"⤦"; return 1166;
+yyout << "⤦"; return 1166;
 	YY_BREAK
 case 1169:
 YY_RULE_SETUP
 #line 1173 "/tmp/input.flex"
-yyout << u8"⇿"; return 1167;
+yyout << "⇿"; return 1167;
 	YY_BREAK
 case 1170:
 YY_RULE_SETUP
 #line 1174 "/tmp/input.flex"
-yyout << u8"∻"; return 1168;
+yyout << "∻"; return 1168;
 	YY_BREAK
 case 1171:
 YY_RULE_SETUP
 #line 1175 "/tmp/input.flex"
-yyout << u8"↩"; return 1169;
+yyout << "↩"; return 1169;
 	YY_BREAK
 case 1172:
 YY_RULE_SETUP
 #line 1176 "/tmp/input.flex"
-yyout << u8"↪"; return 1170;
+yyout << "↪"; return 1170;
 	YY_BREAK
 case 1173:
 YY_RULE_SETUP
 #line 1177 "/tmp/input.flex"
-yyout << u8"𝕙"; return 1171;
+yyout << "𝕙"; return 1171;
 	YY_BREAK
 case 1174:
 YY_RULE_SETUP
 #line 1178 "/tmp/input.flex"
-yyout << u8"―"; return 1172;
+yyout << "―"; return 1172;
 	YY_BREAK
 case 1175:
 YY_RULE_SETUP
 #line 1179 "/tmp/input.flex"
-yyout << u8"𝒽"; return 1173;
+yyout << "𝒽"; return 1173;
 	YY_BREAK
 case 1176:
 YY_RULE_SETUP
 #line 1180 "/tmp/input.flex"
-yyout << u8"ℏ"; return 1174;
+yyout << "ℏ"; return 1174;
 	YY_BREAK
 case 1177:
 YY_RULE_SETUP
 #line 1181 "/tmp/input.flex"
-yyout << u8"ħ"; return 1175;
+yyout << "ħ"; return 1175;
 	YY_BREAK
 case 1178:
 YY_RULE_SETUP
 #line 1182 "/tmp/input.flex"
-yyout << u8"⁃"; return 1176;
+yyout << "⁃"; return 1176;
 	YY_BREAK
 case 1179:
 YY_RULE_SETUP
 #line 1183 "/tmp/input.flex"
-yyout << u8"‐"; return 1177;
+yyout << "‐"; return 1177;
 	YY_BREAK
 case 1180:
 YY_RULE_SETUP
 #line 1184 "/tmp/input.flex"
-yyout << u8"í"; return 1178;
+yyout << "í"; return 1178;
 	YY_BREAK
 case 1181:
 YY_RULE_SETUP
 #line 1185 "/tmp/input.flex"
-yyout << u8"í"; return 1179;
+yyout << "í"; return 1179;
 	YY_BREAK
 case 1182:
 YY_RULE_SETUP
 #line 1186 "/tmp/input.flex"
-yyout << u8"⁣"; return 1180;
+yyout << "⁣"; return 1180;
 	YY_BREAK
 case 1183:
 YY_RULE_SETUP
 #line 1187 "/tmp/input.flex"
-yyout << u8"î"; return 1181;
+yyout << "î"; return 1181;
 	YY_BREAK
 case 1184:
 YY_RULE_SETUP
 #line 1188 "/tmp/input.flex"
-yyout << u8"î"; return 1182;
+yyout << "î"; return 1182;
 	YY_BREAK
 case 1185:
 YY_RULE_SETUP
 #line 1189 "/tmp/input.flex"
-yyout << u8"и"; return 1183;
+yyout << "и"; return 1183;
 	YY_BREAK
 case 1186:
 YY_RULE_SETUP
 #line 1190 "/tmp/input.flex"
-yyout << u8"е"; return 1184;
+yyout << "е"; return 1184;
 	YY_BREAK
 case 1187:
 YY_RULE_SETUP
 #line 1191 "/tmp/input.flex"
-yyout << u8"¡"; return 1185;
+yyout << "¡"; return 1185;
 	YY_BREAK
 case 1188:
 YY_RULE_SETUP
 #line 1192 "/tmp/input.flex"
-yyout << u8"¡"; return 1186;
+yyout << "¡"; return 1186;
 	YY_BREAK
 case 1189:
 YY_RULE_SETUP
 #line 1193 "/tmp/input.flex"
-yyout << u8"⇔"; return 1187;
+yyout << "⇔"; return 1187;
 	YY_BREAK
 case 1190:
 YY_RULE_SETUP
 #line 1194 "/tmp/input.flex"
-yyout << u8"𝔦"; return 1188;
+yyout << "𝔦"; return 1188;
 	YY_BREAK
 case 1191:
 YY_RULE_SETUP
 #line 1195 "/tmp/input.flex"
-yyout << u8"ì"; return 1189;
+yyout << "ì"; return 1189;
 	YY_BREAK
 case 1192:
 YY_RULE_SETUP
 #line 1196 "/tmp/input.flex"
-yyout << u8"ì"; return 1190;
+yyout << "ì"; return 1190;
 	YY_BREAK
 case 1193:
 YY_RULE_SETUP
 #line 1197 "/tmp/input.flex"
-yyout << u8"ⅈ"; return 1191;
+yyout << "ⅈ"; return 1191;
 	YY_BREAK
 case 1194:
 YY_RULE_SETUP
 #line 1198 "/tmp/input.flex"
-yyout << u8"⨌"; return 1192;
+yyout << "⨌"; return 1192;
 	YY_BREAK
 case 1195:
 YY_RULE_SETUP
 #line 1199 "/tmp/input.flex"
-yyout << u8"∭"; return 1193;
+yyout << "∭"; return 1193;
 	YY_BREAK
 case 1196:
 YY_RULE_SETUP
 #line 1200 "/tmp/input.flex"
-yyout << u8"⧜"; return 1194;
+yyout << "⧜"; return 1194;
 	YY_BREAK
 case 1197:
 YY_RULE_SETUP
 #line 1201 "/tmp/input.flex"
-yyout << u8"℩"; return 1195;
+yyout << "℩"; return 1195;
 	YY_BREAK
 case 1198:
 YY_RULE_SETUP
 #line 1202 "/tmp/input.flex"
-yyout << u8"ĳ"; return 1196;
+yyout << "ĳ"; return 1196;
 	YY_BREAK
 case 1199:
 YY_RULE_SETUP
 #line 1203 "/tmp/input.flex"
-yyout << u8"ī"; return 1197;
+yyout << "ī"; return 1197;
 	YY_BREAK
 case 1200:
 YY_RULE_SETUP
 #line 1204 "/tmp/input.flex"
-yyout << u8"ℑ"; return 1198;
+yyout << "ℑ"; return 1198;
 	YY_BREAK
 case 1201:
 YY_RULE_SETUP
 #line 1205 "/tmp/input.flex"
-yyout << u8"ℐ"; return 1199;
+yyout << "ℐ"; return 1199;
 	YY_BREAK
 case 1202:
 YY_RULE_SETUP
 #line 1206 "/tmp/input.flex"
-yyout << u8"ℑ"; return 1200;
+yyout << "ℑ"; return 1200;
 	YY_BREAK
 case 1203:
 YY_RULE_SETUP
 #line 1207 "/tmp/input.flex"
-yyout << u8"ı"; return 1201;
+yyout << "ı"; return 1201;
 	YY_BREAK
 case 1204:
 YY_RULE_SETUP
 #line 1208 "/tmp/input.flex"
-yyout << u8"⊷"; return 1202;
+yyout << "⊷"; return 1202;
 	YY_BREAK
 case 1205:
 YY_RULE_SETUP
 #line 1209 "/tmp/input.flex"
-yyout << u8"Ƶ"; return 1203;
+yyout << "Ƶ"; return 1203;
 	YY_BREAK
 case 1206:
 YY_RULE_SETUP
 #line 1210 "/tmp/input.flex"
-yyout << u8"∈"; return 1204;
+yyout << "∈"; return 1204;
 	YY_BREAK
 case 1207:
 YY_RULE_SETUP
 #line 1211 "/tmp/input.flex"
-yyout << u8"℅"; return 1205;
+yyout << "℅"; return 1205;
 	YY_BREAK
 case 1208:
 YY_RULE_SETUP
 #line 1212 "/tmp/input.flex"
-yyout << u8"∞"; return 1206;
+yyout << "∞"; return 1206;
 	YY_BREAK
 case 1209:
 YY_RULE_SETUP
 #line 1213 "/tmp/input.flex"
-yyout << u8"⧝"; return 1207;
+yyout << "⧝"; return 1207;
 	YY_BREAK
 case 1210:
 YY_RULE_SETUP
 #line 1214 "/tmp/input.flex"
-yyout << u8"ı"; return 1208;
+yyout << "ı"; return 1208;
 	YY_BREAK
 case 1211:
 YY_RULE_SETUP
 #line 1215 "/tmp/input.flex"
-yyout << u8"∫"; return 1209;
+yyout << "∫"; return 1209;
 	YY_BREAK
 case 1212:
 YY_RULE_SETUP
 #line 1216 "/tmp/input.flex"
-yyout << u8"⊺"; return 1210;
+yyout << "⊺"; return 1210;
 	YY_BREAK
 case 1213:
 YY_RULE_SETUP
 #line 1217 "/tmp/input.flex"
-yyout << u8"ℤ"; return 1211;
+yyout << "ℤ"; return 1211;
 	YY_BREAK
 case 1214:
 YY_RULE_SETUP
 #line 1218 "/tmp/input.flex"
-yyout << u8"⊺"; return 1212;
+yyout << "⊺"; return 1212;
 	YY_BREAK
 case 1215:
 YY_RULE_SETUP
 #line 1219 "/tmp/input.flex"
-yyout << u8"⨗"; return 1213;
+yyout << "⨗"; return 1213;
 	YY_BREAK
 case 1216:
 YY_RULE_SETUP
 #line 1220 "/tmp/input.flex"
-yyout << u8"⨼"; return 1214;
+yyout << "⨼"; return 1214;
 	YY_BREAK
 case 1217:
 YY_RULE_SETUP
 #line 1221 "/tmp/input.flex"
-yyout << u8"ё"; return 1215;
+yyout << "ё"; return 1215;
 	YY_BREAK
 case 1218:
 YY_RULE_SETUP
 #line 1222 "/tmp/input.flex"
-yyout << u8"į"; return 1216;
+yyout << "į"; return 1216;
 	YY_BREAK
 case 1219:
 YY_RULE_SETUP
 #line 1223 "/tmp/input.flex"
-yyout << u8"𝕚"; return 1217;
+yyout << "𝕚"; return 1217;
 	YY_BREAK
 case 1220:
 YY_RULE_SETUP
 #line 1224 "/tmp/input.flex"
-yyout << u8"ι"; return 1218;
+yyout << "ι"; return 1218;
 	YY_BREAK
 case 1221:
 YY_RULE_SETUP
 #line 1225 "/tmp/input.flex"
-yyout << u8"⨼"; return 1219;
+yyout << "⨼"; return 1219;
 	YY_BREAK
 case 1222:
 YY_RULE_SETUP
 #line 1226 "/tmp/input.flex"
-yyout << u8"¿"; return 1220;
+yyout << "¿"; return 1220;
 	YY_BREAK
 case 1223:
 YY_RULE_SETUP
 #line 1227 "/tmp/input.flex"
-yyout << u8"¿"; return 1221;
+yyout << "¿"; return 1221;
 	YY_BREAK
 case 1224:
 YY_RULE_SETUP
 #line 1228 "/tmp/input.flex"
-yyout << u8"𝒾"; return 1222;
+yyout << "𝒾"; return 1222;
 	YY_BREAK
 case 1225:
 YY_RULE_SETUP
 #line 1229 "/tmp/input.flex"
-yyout << u8"∈"; return 1223;
+yyout << "∈"; return 1223;
 	YY_BREAK
 case 1226:
 YY_RULE_SETUP
 #line 1230 "/tmp/input.flex"
-yyout << u8"⋹"; return 1224;
+yyout << "⋹"; return 1224;
 	YY_BREAK
 case 1227:
 YY_RULE_SETUP
 #line 1231 "/tmp/input.flex"
-yyout << u8"⋵"; return 1225;
+yyout << "⋵"; return 1225;
 	YY_BREAK
 case 1228:
 YY_RULE_SETUP
 #line 1232 "/tmp/input.flex"
-yyout << u8"⋴"; return 1226;
+yyout << "⋴"; return 1226;
 	YY_BREAK
 case 1229:
 YY_RULE_SETUP
 #line 1233 "/tmp/input.flex"
-yyout << u8"⋳"; return 1227;
+yyout << "⋳"; return 1227;
 	YY_BREAK
 case 1230:
 YY_RULE_SETUP
 #line 1234 "/tmp/input.flex"
-yyout << u8"∈"; return 1228;
+yyout << "∈"; return 1228;
 	YY_BREAK
 case 1231:
 YY_RULE_SETUP
 #line 1235 "/tmp/input.flex"
-yyout << u8"⁢"; return 1229;
+yyout << "⁢"; return 1229;
 	YY_BREAK
 case 1232:
 YY_RULE_SETUP
 #line 1236 "/tmp/input.flex"
-yyout << u8"ĩ"; return 1230;
+yyout << "ĩ"; return 1230;
 	YY_BREAK
 case 1233:
 YY_RULE_SETUP
 #line 1237 "/tmp/input.flex"
-yyout << u8"і"; return 1231;
+yyout << "і"; return 1231;
 	YY_BREAK
 case 1234:
 YY_RULE_SETUP
 #line 1238 "/tmp/input.flex"
-yyout << u8"ï"; return 1232;
+yyout << "ï"; return 1232;
 	YY_BREAK
 case 1235:
 YY_RULE_SETUP
 #line 1239 "/tmp/input.flex"
-yyout << u8"ï"; return 1233;
+yyout << "ï"; return 1233;
 	YY_BREAK
 case 1236:
 YY_RULE_SETUP
 #line 1240 "/tmp/input.flex"
-yyout << u8"ĵ"; return 1234;
+yyout << "ĵ"; return 1234;
 	YY_BREAK
 case 1237:
 YY_RULE_SETUP
 #line 1241 "/tmp/input.flex"
-yyout << u8"й"; return 1235;
+yyout << "й"; return 1235;
 	YY_BREAK
 case 1238:
 YY_RULE_SETUP
 #line 1242 "/tmp/input.flex"
-yyout << u8"𝔧"; return 1236;
+yyout << "𝔧"; return 1236;
 	YY_BREAK
 case 1239:
 YY_RULE_SETUP
 #line 1243 "/tmp/input.flex"
-yyout << u8"ȷ"; return 1237;
+yyout << "ȷ"; return 1237;
 	YY_BREAK
 case 1240:
 YY_RULE_SETUP
 #line 1244 "/tmp/input.flex"
-yyout << u8"𝕛"; return 1238;
+yyout << "𝕛"; return 1238;
 	YY_BREAK
 case 1241:
 YY_RULE_SETUP
 #line 1245 "/tmp/input.flex"
-yyout << u8"𝒿"; return 1239;
+yyout << "𝒿"; return 1239;
 	YY_BREAK
 case 1242:
 YY_RULE_SETUP
 #line 1246 "/tmp/input.flex"
-yyout << u8"ј"; return 1240;
+yyout << "ј"; return 1240;
 	YY_BREAK
 case 1243:
 YY_RULE_SETUP
 #line 1247 "/tmp/input.flex"
-yyout << u8"є"; return 1241;
+yyout << "є"; return 1241;
 	YY_BREAK
 case 1244:
 YY_RULE_SETUP
 #line 1248 "/tmp/input.flex"
-yyout << u8"κ"; return 1242;
+yyout << "κ"; return 1242;
 	YY_BREAK
 case 1245:
 YY_RULE_SETUP
 #line 1249 "/tmp/input.flex"
-yyout << u8"ϰ"; return 1243;
+yyout << "ϰ"; return 1243;
 	YY_BREAK
 case 1246:
 YY_RULE_SETUP
 #line 1250 "/tmp/input.flex"
-yyout << u8"ķ"; return 1244;
+yyout << "ķ"; return 1244;
 	YY_BREAK
 case 1247:
 YY_RULE_SETUP
 #line 1251 "/tmp/input.flex"
-yyout << u8"к"; return 1245;
+yyout << "к"; return 1245;
 	YY_BREAK
 case 1248:
 YY_RULE_SETUP
 #line 1252 "/tmp/input.flex"
-yyout << u8"𝔨"; return 1246;
+yyout << "𝔨"; return 1246;
 	YY_BREAK
 case 1249:
 YY_RULE_SETUP
 #line 1253 "/tmp/input.flex"
-yyout << u8"ĸ"; return 1247;
+yyout << "ĸ"; return 1247;
 	YY_BREAK
 case 1250:
 YY_RULE_SETUP
 #line 1254 "/tmp/input.flex"
-yyout << u8"х"; return 1248;
+yyout << "х"; return 1248;
 	YY_BREAK
 case 1251:
 YY_RULE_SETUP
 #line 1255 "/tmp/input.flex"
-yyout << u8"ќ"; return 1249;
+yyout << "ќ"; return 1249;
 	YY_BREAK
 case 1252:
 YY_RULE_SETUP
 #line 1256 "/tmp/input.flex"
-yyout << u8"𝕜"; return 1250;
+yyout << "𝕜"; return 1250;
 	YY_BREAK
 case 1253:
 YY_RULE_SETUP
 #line 1257 "/tmp/input.flex"
-yyout << u8"𝓀"; return 1251;
+yyout << "𝓀"; return 1251;
 	YY_BREAK
 case 1254:
 YY_RULE_SETUP
 #line 1258 "/tmp/input.flex"
-yyout << u8"⇚"; return 1252;
+yyout << "⇚"; return 1252;
 	YY_BREAK
 case 1255:
 YY_RULE_SETUP
 #line 1259 "/tmp/input.flex"
-yyout << u8"⇐"; return 1253;
+yyout << "⇐"; return 1253;
 	YY_BREAK
 case 1256:
 YY_RULE_SETUP
 #line 1260 "/tmp/input.flex"
-yyout << u8"⤛"; return 1254;
+yyout << "⤛"; return 1254;
 	YY_BREAK
 case 1257:
 YY_RULE_SETUP
 #line 1261 "/tmp/input.flex"
-yyout << u8"⤎"; return 1255;
+yyout << "⤎"; return 1255;
 	YY_BREAK
 case 1258:
 YY_RULE_SETUP
 #line 1262 "/tmp/input.flex"
-yyout << u8"≦"; return 1256;
+yyout << "≦"; return 1256;
 	YY_BREAK
 case 1259:
 YY_RULE_SETUP
 #line 1263 "/tmp/input.flex"
-yyout << u8"⪋"; return 1257;
+yyout << "⪋"; return 1257;
 	YY_BREAK
 case 1260:
 YY_RULE_SETUP
 #line 1264 "/tmp/input.flex"
-yyout << u8"⥢"; return 1258;
+yyout << "⥢"; return 1258;
 	YY_BREAK
 case 1261:
 YY_RULE_SETUP
 #line 1265 "/tmp/input.flex"
-yyout << u8"ĺ"; return 1259;
+yyout << "ĺ"; return 1259;
 	YY_BREAK
 case 1262:
 YY_RULE_SETUP
 #line 1266 "/tmp/input.flex"
-yyout << u8"⦴"; return 1260;
+yyout << "⦴"; return 1260;
 	YY_BREAK
 case 1263:
 YY_RULE_SETUP
 #line 1267 "/tmp/input.flex"
-yyout << u8"ℒ"; return 1261;
+yyout << "ℒ"; return 1261;
 	YY_BREAK
 case 1264:
 YY_RULE_SETUP
 #line 1268 "/tmp/input.flex"
-yyout << u8"λ"; return 1262;
+yyout << "λ"; return 1262;
 	YY_BREAK
 case 1265:
 YY_RULE_SETUP
 #line 1269 "/tmp/input.flex"
-yyout << u8"⟨"; return 1263;
+yyout << "⟨"; return 1263;
 	YY_BREAK
 case 1266:
 YY_RULE_SETUP
 #line 1270 "/tmp/input.flex"
-yyout << u8"⦑"; return 1264;
+yyout << "⦑"; return 1264;
 	YY_BREAK
 case 1267:
 YY_RULE_SETUP
 #line 1271 "/tmp/input.flex"
-yyout << u8"⟨"; return 1265;
+yyout << "⟨"; return 1265;
 	YY_BREAK
 case 1268:
 YY_RULE_SETUP
 #line 1272 "/tmp/input.flex"
-yyout << u8"⪅"; return 1266;
+yyout << "⪅"; return 1266;
 	YY_BREAK
 case 1269:
 YY_RULE_SETUP
 #line 1273 "/tmp/input.flex"
-yyout << u8"«"; return 1267;
+yyout << "«"; return 1267;
 	YY_BREAK
 case 1270:
 YY_RULE_SETUP
 #line 1274 "/tmp/input.flex"
-yyout << u8"«"; return 1268;
+yyout << "«"; return 1268;
 	YY_BREAK
 case 1271:
 YY_RULE_SETUP
 #line 1275 "/tmp/input.flex"
-yyout << u8"←"; return 1269;
+yyout << "←"; return 1269;
 	YY_BREAK
 case 1272:
 YY_RULE_SETUP
 #line 1276 "/tmp/input.flex"
-yyout << u8"⇤"; return 1270;
+yyout << "⇤"; return 1270;
 	YY_BREAK
 case 1273:
 YY_RULE_SETUP
 #line 1277 "/tmp/input.flex"
-yyout << u8"⤟"; return 1271;
+yyout << "⤟"; return 1271;
 	YY_BREAK
 case 1274:
 YY_RULE_SETUP
 #line 1278 "/tmp/input.flex"
-yyout << u8"⤝"; return 1272;
+yyout << "⤝"; return 1272;
 	YY_BREAK
 case 1275:
 YY_RULE_SETUP
 #line 1279 "/tmp/input.flex"
-yyout << u8"↩"; return 1273;
+yyout << "↩"; return 1273;
 	YY_BREAK
 case 1276:
 YY_RULE_SETUP
 #line 1280 "/tmp/input.flex"
-yyout << u8"↫"; return 1274;
+yyout << "↫"; return 1274;
 	YY_BREAK
 case 1277:
 YY_RULE_SETUP
 #line 1281 "/tmp/input.flex"
-yyout << u8"⤹"; return 1275;
+yyout << "⤹"; return 1275;
 	YY_BREAK
 case 1278:
 YY_RULE_SETUP
 #line 1282 "/tmp/input.flex"
-yyout << u8"⥳"; return 1276;
+yyout << "⥳"; return 1276;
 	YY_BREAK
 case 1279:
 YY_RULE_SETUP
 #line 1283 "/tmp/input.flex"
-yyout << u8"↢"; return 1277;
+yyout << "↢"; return 1277;
 	YY_BREAK
 case 1280:
 YY_RULE_SETUP
 #line 1284 "/tmp/input.flex"
-yyout << u8"⪫"; return 1278;
+yyout << "⪫"; return 1278;
 	YY_BREAK
 case 1281:
 YY_RULE_SETUP
 #line 1285 "/tmp/input.flex"
-yyout << u8"⤙"; return 1279;
+yyout << "⤙"; return 1279;
 	YY_BREAK
 case 1282:
 YY_RULE_SETUP
 #line 1286 "/tmp/input.flex"
-yyout << u8"⪭"; return 1280;
+yyout << "⪭"; return 1280;
 	YY_BREAK
 case 1283:
 YY_RULE_SETUP
 #line 1287 "/tmp/input.flex"
-yyout << u8"⪭" << u8"︀"; return 1281;
+yyout << "⪭" << "︀"; return 1281;
 	YY_BREAK
 case 1284:
 YY_RULE_SETUP
 #line 1288 "/tmp/input.flex"
-yyout << u8"⤌"; return 1282;
+yyout << "⤌"; return 1282;
 	YY_BREAK
 case 1285:
 YY_RULE_SETUP
 #line 1289 "/tmp/input.flex"
-yyout << u8"❲"; return 1283;
+yyout << "❲"; return 1283;
 	YY_BREAK
 case 1286:
 YY_RULE_SETUP
 #line 1290 "/tmp/input.flex"
-yyout << u8"{"; return 1284;
+yyout << "{"; return 1284;
 	YY_BREAK
 case 1287:
 YY_RULE_SETUP
 #line 1291 "/tmp/input.flex"
-yyout << u8"["; return 1285;
+yyout << "["; return 1285;
 	YY_BREAK
 case 1288:
 YY_RULE_SETUP
 #line 1292 "/tmp/input.flex"
-yyout << u8"⦋"; return 1286;
+yyout << "⦋"; return 1286;
 	YY_BREAK
 case 1289:
 YY_RULE_SETUP
 #line 1293 "/tmp/input.flex"
-yyout << u8"⦏"; return 1287;
+yyout << "⦏"; return 1287;
 	YY_BREAK
 case 1290:
 YY_RULE_SETUP
 #line 1294 "/tmp/input.flex"
-yyout << u8"⦍"; return 1288;
+yyout << "⦍"; return 1288;
 	YY_BREAK
 case 1291:
 YY_RULE_SETUP
 #line 1295 "/tmp/input.flex"
-yyout << u8"ľ"; return 1289;
+yyout << "ľ"; return 1289;
 	YY_BREAK
 case 1292:
 YY_RULE_SETUP
 #line 1296 "/tmp/input.flex"
-yyout << u8"ļ"; return 1290;
+yyout << "ļ"; return 1290;
 	YY_BREAK
 case 1293:
 YY_RULE_SETUP
 #line 1297 "/tmp/input.flex"
-yyout << u8"⌈"; return 1291;
+yyout << "⌈"; return 1291;
 	YY_BREAK
 case 1294:
 YY_RULE_SETUP
 #line 1298 "/tmp/input.flex"
-yyout << u8"{"; return 1292;
+yyout << "{"; return 1292;
 	YY_BREAK
 case 1295:
 YY_RULE_SETUP
 #line 1299 "/tmp/input.flex"
-yyout << u8"л"; return 1293;
+yyout << "л"; return 1293;
 	YY_BREAK
 case 1296:
 YY_RULE_SETUP
 #line 1300 "/tmp/input.flex"
-yyout << u8"⤶"; return 1294;
+yyout << "⤶"; return 1294;
 	YY_BREAK
 case 1297:
 YY_RULE_SETUP
 #line 1301 "/tmp/input.flex"
-yyout << u8"“"; return 1295;
+yyout << "“"; return 1295;
 	YY_BREAK
 case 1298:
 YY_RULE_SETUP
 #line 1302 "/tmp/input.flex"
-yyout << u8"„"; return 1296;
+yyout << "„"; return 1296;
 	YY_BREAK
 case 1299:
 YY_RULE_SETUP
 #line 1303 "/tmp/input.flex"
-yyout << u8"⥧"; return 1297;
+yyout << "⥧"; return 1297;
 	YY_BREAK
 case 1300:
 YY_RULE_SETUP
 #line 1304 "/tmp/input.flex"
-yyout << u8"⥋"; return 1298;
+yyout << "⥋"; return 1298;
 	YY_BREAK
 case 1301:
 YY_RULE_SETUP
 #line 1305 "/tmp/input.flex"
-yyout << u8"↲"; return 1299;
+yyout << "↲"; return 1299;
 	YY_BREAK
 case 1302:
 YY_RULE_SETUP
 #line 1306 "/tmp/input.flex"
-yyout << u8"≤"; return 1300;
+yyout << "≤"; return 1300;
 	YY_BREAK
 case 1303:
 YY_RULE_SETUP
 #line 1307 "/tmp/input.flex"
-yyout << u8"←"; return 1301;
+yyout << "←"; return 1301;
 	YY_BREAK
 case 1304:
 YY_RULE_SETUP
 #line 1308 "/tmp/input.flex"
-yyout << u8"↢"; return 1302;
+yyout << "↢"; return 1302;
 	YY_BREAK
 case 1305:
 YY_RULE_SETUP
 #line 1309 "/tmp/input.flex"
-yyout << u8"↽"; return 1303;
+yyout << "↽"; return 1303;
 	YY_BREAK
 case 1306:
 YY_RULE_SETUP
 #line 1310 "/tmp/input.flex"
-yyout << u8"↼"; return 1304;
+yyout << "↼"; return 1304;
 	YY_BREAK
 case 1307:
 YY_RULE_SETUP
 #line 1311 "/tmp/input.flex"
-yyout << u8"⇇"; return 1305;
+yyout << "⇇"; return 1305;
 	YY_BREAK
 case 1308:
 YY_RULE_SETUP
 #line 1312 "/tmp/input.flex"
-yyout << u8"↔"; return 1306;
+yyout << "↔"; return 1306;
 	YY_BREAK
 case 1309:
 YY_RULE_SETUP
 #line 1313 "/tmp/input.flex"
-yyout << u8"⇆"; return 1307;
+yyout << "⇆"; return 1307;
 	YY_BREAK
 case 1310:
 YY_RULE_SETUP
 #line 1314 "/tmp/input.flex"
-yyout << u8"⇋"; return 1308;
+yyout << "⇋"; return 1308;
 	YY_BREAK
 case 1311:
 YY_RULE_SETUP
 #line 1315 "/tmp/input.flex"
-yyout << u8"↭"; return 1309;
+yyout << "↭"; return 1309;
 	YY_BREAK
 case 1312:
 YY_RULE_SETUP
 #line 1316 "/tmp/input.flex"
-yyout << u8"⋋"; return 1310;
+yyout << "⋋"; return 1310;
 	YY_BREAK
 case 1313:
 YY_RULE_SETUP
 #line 1317 "/tmp/input.flex"
-yyout << u8"⋚"; return 1311;
+yyout << "⋚"; return 1311;
 	YY_BREAK
 case 1314:
 YY_RULE_SETUP
 #line 1318 "/tmp/input.flex"
-yyout << u8"≤"; return 1312;
+yyout << "≤"; return 1312;
 	YY_BREAK
 case 1315:
 YY_RULE_SETUP
 #line 1319 "/tmp/input.flex"
-yyout << u8"≦"; return 1313;
+yyout << "≦"; return 1313;
 	YY_BREAK
 case 1316:
 YY_RULE_SETUP
 #line 1320 "/tmp/input.flex"
-yyout << u8"⩽"; return 1314;
+yyout << "⩽"; return 1314;
 	YY_BREAK
 case 1317:
 YY_RULE_SETUP
 #line 1321 "/tmp/input.flex"
-yyout << u8"⩽"; return 1315;
+yyout << "⩽"; return 1315;
 	YY_BREAK
 case 1318:
 YY_RULE_SETUP
 #line 1322 "/tmp/input.flex"
-yyout << u8"⪨"; return 1316;
+yyout << "⪨"; return 1316;
 	YY_BREAK
 case 1319:
 YY_RULE_SETUP
 #line 1323 "/tmp/input.flex"
-yyout << u8"⩿"; return 1317;
+yyout << "⩿"; return 1317;
 	YY_BREAK
 case 1320:
 YY_RULE_SETUP
 #line 1324 "/tmp/input.flex"
-yyout << u8"⪁"; return 1318;
+yyout << "⪁"; return 1318;
 	YY_BREAK
 case 1321:
 YY_RULE_SETUP
 #line 1325 "/tmp/input.flex"
-yyout << u8"⪃"; return 1319;
+yyout << "⪃"; return 1319;
 	YY_BREAK
 case 1322:
 YY_RULE_SETUP
 #line 1326 "/tmp/input.flex"
-yyout << u8"⋚" << u8"︀"; return 1320;
+yyout << "⋚" << "︀"; return 1320;
 	YY_BREAK
 case 1323:
 YY_RULE_SETUP
 #line 1327 "/tmp/input.flex"
-yyout << u8"⪓"; return 1321;
+yyout << "⪓"; return 1321;
 	YY_BREAK
 case 1324:
 YY_RULE_SETUP
 #line 1328 "/tmp/input.flex"
-yyout << u8"⪅"; return 1322;
+yyout << "⪅"; return 1322;
 	YY_BREAK
 case 1325:
 YY_RULE_SETUP
 #line 1329 "/tmp/input.flex"
-yyout << u8"⋖"; return 1323;
+yyout << "⋖"; return 1323;
 	YY_BREAK
 case 1326:
 YY_RULE_SETUP
 #line 1330 "/tmp/input.flex"
-yyout << u8"⋚"; return 1324;
+yyout << "⋚"; return 1324;
 	YY_BREAK
 case 1327:
 YY_RULE_SETUP
 #line 1331 "/tmp/input.flex"
-yyout << u8"⪋"; return 1325;
+yyout << "⪋"; return 1325;
 	YY_BREAK
 case 1328:
 YY_RULE_SETUP
 #line 1332 "/tmp/input.flex"
-yyout << u8"≶"; return 1326;
+yyout << "≶"; return 1326;
 	YY_BREAK
 case 1329:
 YY_RULE_SETUP
 #line 1333 "/tmp/input.flex"
-yyout << u8"≲"; return 1327;
+yyout << "≲"; return 1327;
 	YY_BREAK
 case 1330:
 YY_RULE_SETUP
 #line 1334 "/tmp/input.flex"
-yyout << u8"⥼"; return 1328;
+yyout << "⥼"; return 1328;
 	YY_BREAK
 case 1331:
 YY_RULE_SETUP
 #line 1335 "/tmp/input.flex"
-yyout << u8"⌊"; return 1329;
+yyout << "⌊"; return 1329;
 	YY_BREAK
 case 1332:
 YY_RULE_SETUP
 #line 1336 "/tmp/input.flex"
-yyout << u8"𝔩"; return 1330;
+yyout << "𝔩"; return 1330;
 	YY_BREAK
 case 1333:
 YY_RULE_SETUP
 #line 1337 "/tmp/input.flex"
-yyout << u8"≶"; return 1331;
+yyout << "≶"; return 1331;
 	YY_BREAK
 case 1334:
 YY_RULE_SETUP
 #line 1338 "/tmp/input.flex"
-yyout << u8"⪑"; return 1332;
+yyout << "⪑"; return 1332;
 	YY_BREAK
 case 1335:
 YY_RULE_SETUP
 #line 1339 "/tmp/input.flex"
-yyout << u8"↽"; return 1333;
+yyout << "↽"; return 1333;
 	YY_BREAK
 case 1336:
 YY_RULE_SETUP
 #line 1340 "/tmp/input.flex"
-yyout << u8"↼"; return 1334;
+yyout << "↼"; return 1334;
 	YY_BREAK
 case 1337:
 YY_RULE_SETUP
 #line 1341 "/tmp/input.flex"
-yyout << u8"⥪"; return 1335;
+yyout << "⥪"; return 1335;
 	YY_BREAK
 case 1338:
 YY_RULE_SETUP
 #line 1342 "/tmp/input.flex"
-yyout << u8"▄"; return 1336;
+yyout << "▄"; return 1336;
 	YY_BREAK
 case 1339:
 YY_RULE_SETUP
 #line 1343 "/tmp/input.flex"
-yyout << u8"љ"; return 1337;
+yyout << "љ"; return 1337;
 	YY_BREAK
 case 1340:
 YY_RULE_SETUP
 #line 1344 "/tmp/input.flex"
-yyout << u8"≪"; return 1338;
+yyout << "≪"; return 1338;
 	YY_BREAK
 case 1341:
 YY_RULE_SETUP
 #line 1345 "/tmp/input.flex"
-yyout << u8"⇇"; return 1339;
+yyout << "⇇"; return 1339;
 	YY_BREAK
 case 1342:
 YY_RULE_SETUP
 #line 1346 "/tmp/input.flex"
-yyout << u8"⌞"; return 1340;
+yyout << "⌞"; return 1340;
 	YY_BREAK
 case 1343:
 YY_RULE_SETUP
 #line 1347 "/tmp/input.flex"
-yyout << u8"⥫"; return 1341;
+yyout << "⥫"; return 1341;
 	YY_BREAK
 case 1344:
 YY_RULE_SETUP
 #line 1348 "/tmp/input.flex"
-yyout << u8"◺"; return 1342;
+yyout << "◺"; return 1342;
 	YY_BREAK
 case 1345:
 YY_RULE_SETUP
 #line 1349 "/tmp/input.flex"
-yyout << u8"ŀ"; return 1343;
+yyout << "ŀ"; return 1343;
 	YY_BREAK
 case 1346:
 YY_RULE_SETUP
 #line 1350 "/tmp/input.flex"
-yyout << u8"⎰"; return 1344;
+yyout << "⎰"; return 1344;
 	YY_BREAK
 case 1347:
 YY_RULE_SETUP
 #line 1351 "/tmp/input.flex"
-yyout << u8"⎰"; return 1345;
+yyout << "⎰"; return 1345;
 	YY_BREAK
 case 1348:
 YY_RULE_SETUP
 #line 1352 "/tmp/input.flex"
-yyout << u8"≨"; return 1346;
+yyout << "≨"; return 1346;
 	YY_BREAK
 case 1349:
 YY_RULE_SETUP
 #line 1353 "/tmp/input.flex"
-yyout << u8"⪉"; return 1347;
+yyout << "⪉"; return 1347;
 	YY_BREAK
 case 1350:
 YY_RULE_SETUP
 #line 1354 "/tmp/input.flex"
-yyout << u8"⪉"; return 1348;
+yyout << "⪉"; return 1348;
 	YY_BREAK
 case 1351:
 YY_RULE_SETUP
 #line 1355 "/tmp/input.flex"
-yyout << u8"⪇"; return 1349;
+yyout << "⪇"; return 1349;
 	YY_BREAK
 case 1352:
 YY_RULE_SETUP
 #line 1356 "/tmp/input.flex"
-yyout << u8"⪇"; return 1350;
+yyout << "⪇"; return 1350;
 	YY_BREAK
 case 1353:
 YY_RULE_SETUP
 #line 1357 "/tmp/input.flex"
-yyout << u8"≨"; return 1351;
+yyout << "≨"; return 1351;
 	YY_BREAK
 case 1354:
 YY_RULE_SETUP
 #line 1358 "/tmp/input.flex"
-yyout << u8"⋦"; return 1352;
+yyout << "⋦"; return 1352;
 	YY_BREAK
 case 1355:
 YY_RULE_SETUP
 #line 1359 "/tmp/input.flex"
-yyout << u8"⟬"; return 1353;
+yyout << "⟬"; return 1353;
 	YY_BREAK
 case 1356:
 YY_RULE_SETUP
 #line 1360 "/tmp/input.flex"
-yyout << u8"⇽"; return 1354;
+yyout << "⇽"; return 1354;
 	YY_BREAK
 case 1357:
 YY_RULE_SETUP
 #line 1361 "/tmp/input.flex"
-yyout << u8"⟦"; return 1355;
+yyout << "⟦"; return 1355;
 	YY_BREAK
 case 1358:
 YY_RULE_SETUP
 #line 1362 "/tmp/input.flex"
-yyout << u8"⟵"; return 1356;
+yyout << "⟵"; return 1356;
 	YY_BREAK
 case 1359:
 YY_RULE_SETUP
 #line 1363 "/tmp/input.flex"
-yyout << u8"⟷"; return 1357;
+yyout << "⟷"; return 1357;
 	YY_BREAK
 case 1360:
 YY_RULE_SETUP
 #line 1364 "/tmp/input.flex"
-yyout << u8"⟼"; return 1358;
+yyout << "⟼"; return 1358;
 	YY_BREAK
 case 1361:
 YY_RULE_SETUP
 #line 1365 "/tmp/input.flex"
-yyout << u8"⟶"; return 1359;
+yyout << "⟶"; return 1359;
 	YY_BREAK
 case 1362:
 YY_RULE_SETUP
 #line 1366 "/tmp/input.flex"
-yyout << u8"↫"; return 1360;
+yyout << "↫"; return 1360;
 	YY_BREAK
 case 1363:
 YY_RULE_SETUP
 #line 1367 "/tmp/input.flex"
-yyout << u8"↬"; return 1361;
+yyout << "↬"; return 1361;
 	YY_BREAK
 case 1364:
 YY_RULE_SETUP
 #line 1368 "/tmp/input.flex"
-yyout << u8"⦅"; return 1362;
+yyout << "⦅"; return 1362;
 	YY_BREAK
 case 1365:
 YY_RULE_SETUP
 #line 1369 "/tmp/input.flex"
-yyout << u8"𝕝"; return 1363;
+yyout << "𝕝"; return 1363;
 	YY_BREAK
 case 1366:
 YY_RULE_SETUP
 #line 1370 "/tmp/input.flex"
-yyout << u8"⨭"; return 1364;
+yyout << "⨭"; return 1364;
 	YY_BREAK
 case 1367:
 YY_RULE_SETUP
 #line 1371 "/tmp/input.flex"
-yyout << u8"⨴"; return 1365;
+yyout << "⨴"; return 1365;
 	YY_BREAK
 case 1368:
 YY_RULE_SETUP
 #line 1372 "/tmp/input.flex"
-yyout << u8"∗"; return 1366;
+yyout << "∗"; return 1366;
 	YY_BREAK
 case 1369:
 YY_RULE_SETUP
 #line 1373 "/tmp/input.flex"
-yyout << u8"_"; return 1367;
+yyout << "_"; return 1367;
 	YY_BREAK
 case 1370:
 YY_RULE_SETUP
 #line 1374 "/tmp/input.flex"
-yyout << u8"◊"; return 1368;
+yyout << "◊"; return 1368;
 	YY_BREAK
 case 1371:
 YY_RULE_SETUP
 #line 1375 "/tmp/input.flex"
-yyout << u8"◊"; return 1369;
+yyout << "◊"; return 1369;
 	YY_BREAK
 case 1372:
 YY_RULE_SETUP
 #line 1376 "/tmp/input.flex"
-yyout << u8"⧫"; return 1370;
+yyout << "⧫"; return 1370;
 	YY_BREAK
 case 1373:
 YY_RULE_SETUP
 #line 1377 "/tmp/input.flex"
-yyout << u8"("; return 1371;
+yyout << "("; return 1371;
 	YY_BREAK
 case 1374:
 YY_RULE_SETUP
 #line 1378 "/tmp/input.flex"
-yyout << u8"⦓"; return 1372;
+yyout << "⦓"; return 1372;
 	YY_BREAK
 case 1375:
 YY_RULE_SETUP
 #line 1379 "/tmp/input.flex"
-yyout << u8"⇆"; return 1373;
+yyout << "⇆"; return 1373;
 	YY_BREAK
 case 1376:
 YY_RULE_SETUP
 #line 1380 "/tmp/input.flex"
-yyout << u8"⌟"; return 1374;
+yyout << "⌟"; return 1374;
 	YY_BREAK
 case 1377:
 YY_RULE_SETUP
 #line 1381 "/tmp/input.flex"
-yyout << u8"⇋"; return 1375;
+yyout << "⇋"; return 1375;
 	YY_BREAK
 case 1378:
 YY_RULE_SETUP
 #line 1382 "/tmp/input.flex"
-yyout << u8"⥭"; return 1376;
+yyout << "⥭"; return 1376;
 	YY_BREAK
 case 1379:
 YY_RULE_SETUP
 #line 1383 "/tmp/input.flex"
-yyout << u8"‎"; return 1377;
+yyout << "‎"; return 1377;
 	YY_BREAK
 case 1380:
 YY_RULE_SETUP
 #line 1384 "/tmp/input.flex"
-yyout << u8"⊿"; return 1378;
+yyout << "⊿"; return 1378;
 	YY_BREAK
 case 1381:
 YY_RULE_SETUP
 #line 1385 "/tmp/input.flex"
-yyout << u8"‹"; return 1379;
+yyout << "‹"; return 1379;
 	YY_BREAK
 case 1382:
 YY_RULE_SETUP
 #line 1386 "/tmp/input.flex"
-yyout << u8"𝓁"; return 1380;
+yyout << "𝓁"; return 1380;
 	YY_BREAK
 case 1383:
 YY_RULE_SETUP
 #line 1387 "/tmp/input.flex"
-yyout << u8"↰"; return 1381;
+yyout << "↰"; return 1381;
 	YY_BREAK
 case 1384:
 YY_RULE_SETUP
 #line 1388 "/tmp/input.flex"
-yyout << u8"≲"; return 1382;
+yyout << "≲"; return 1382;
 	YY_BREAK
 case 1385:
 YY_RULE_SETUP
 #line 1389 "/tmp/input.flex"
-yyout << u8"⪍"; return 1383;
+yyout << "⪍"; return 1383;
 	YY_BREAK
 case 1386:
 YY_RULE_SETUP
 #line 1390 "/tmp/input.flex"
-yyout << u8"⪏"; return 1384;
+yyout << "⪏"; return 1384;
 	YY_BREAK
 case 1387:
 YY_RULE_SETUP
 #line 1391 "/tmp/input.flex"
-yyout << u8"["; return 1385;
+yyout << "["; return 1385;
 	YY_BREAK
 case 1388:
 YY_RULE_SETUP
 #line 1392 "/tmp/input.flex"
-yyout << u8"‘"; return 1386;
+yyout << "‘"; return 1386;
 	YY_BREAK
 case 1389:
 YY_RULE_SETUP
 #line 1393 "/tmp/input.flex"
-yyout << u8"‚"; return 1387;
+yyout << "‚"; return 1387;
 	YY_BREAK
 case 1390:
 YY_RULE_SETUP
 #line 1394 "/tmp/input.flex"
-yyout << u8"ł"; return 1388;
+yyout << "ł"; return 1388;
 	YY_BREAK
 case 1391:
 YY_RULE_SETUP
 #line 1395 "/tmp/input.flex"
-yyout << u8"<"; return 1389;
+yyout << "<"; return 1389;
 	YY_BREAK
 case 1392:
 YY_RULE_SETUP
 #line 1396 "/tmp/input.flex"
-yyout << u8"<"; return 1390;
+yyout << "<"; return 1390;
 	YY_BREAK
 case 1393:
 YY_RULE_SETUP
 #line 1397 "/tmp/input.flex"
-yyout << u8"⪦"; return 1391;
+yyout << "⪦"; return 1391;
 	YY_BREAK
 case 1394:
 YY_RULE_SETUP
 #line 1398 "/tmp/input.flex"
-yyout << u8"⩹"; return 1392;
+yyout << "⩹"; return 1392;
 	YY_BREAK
 case 1395:
 YY_RULE_SETUP
 #line 1399 "/tmp/input.flex"
-yyout << u8"⋖"; return 1393;
+yyout << "⋖"; return 1393;
 	YY_BREAK
 case 1396:
 YY_RULE_SETUP
 #line 1400 "/tmp/input.flex"
-yyout << u8"⋋"; return 1394;
+yyout << "⋋"; return 1394;
 	YY_BREAK
 case 1397:
 YY_RULE_SETUP
 #line 1401 "/tmp/input.flex"
-yyout << u8"⋉"; return 1395;
+yyout << "⋉"; return 1395;
 	YY_BREAK
 case 1398:
 YY_RULE_SETUP
 #line 1402 "/tmp/input.flex"
-yyout << u8"⥶"; return 1396;
+yyout << "⥶"; return 1396;
 	YY_BREAK
 case 1399:
 YY_RULE_SETUP
 #line 1403 "/tmp/input.flex"
-yyout << u8"⩻"; return 1397;
+yyout << "⩻"; return 1397;
 	YY_BREAK
 case 1400:
 YY_RULE_SETUP
 #line 1404 "/tmp/input.flex"
-yyout << u8"⦖"; return 1398;
+yyout << "⦖"; return 1398;
 	YY_BREAK
 case 1401:
 YY_RULE_SETUP
 #line 1405 "/tmp/input.flex"
-yyout << u8"◃"; return 1399;
+yyout << "◃"; return 1399;
 	YY_BREAK
 case 1402:
 YY_RULE_SETUP
 #line 1406 "/tmp/input.flex"
-yyout << u8"⊴"; return 1400;
+yyout << "⊴"; return 1400;
 	YY_BREAK
 case 1403:
 YY_RULE_SETUP
 #line 1407 "/tmp/input.flex"
-yyout << u8"◂"; return 1401;
+yyout << "◂"; return 1401;
 	YY_BREAK
 case 1404:
 YY_RULE_SETUP
 #line 1408 "/tmp/input.flex"
-yyout << u8"⥊"; return 1402;
+yyout << "⥊"; return 1402;
 	YY_BREAK
 case 1405:
 YY_RULE_SETUP
 #line 1409 "/tmp/input.flex"
-yyout << u8"⥦"; return 1403;
+yyout << "⥦"; return 1403;
 	YY_BREAK
 case 1406:
 YY_RULE_SETUP
 #line 1410 "/tmp/input.flex"
-yyout << u8"≨" << u8"︀"; return 1404;
+yyout << "≨" << "︀"; return 1404;
 	YY_BREAK
 case 1407:
 YY_RULE_SETUP
 #line 1411 "/tmp/input.flex"
-yyout << u8"≨" << u8"︀"; return 1405;
+yyout << "≨" << "︀"; return 1405;
 	YY_BREAK
 case 1408:
 YY_RULE_SETUP
 #line 1412 "/tmp/input.flex"
-yyout << u8"∺"; return 1406;
+yyout << "∺"; return 1406;
 	YY_BREAK
 case 1409:
 YY_RULE_SETUP
 #line 1413 "/tmp/input.flex"
-yyout << u8"¯"; return 1407;
+yyout << "¯"; return 1407;
 	YY_BREAK
 case 1410:
 YY_RULE_SETUP
 #line 1414 "/tmp/input.flex"
-yyout << u8"¯"; return 1408;
+yyout << "¯"; return 1408;
 	YY_BREAK
 case 1411:
 YY_RULE_SETUP
 #line 1415 "/tmp/input.flex"
-yyout << u8"♂"; return 1409;
+yyout << "♂"; return 1409;
 	YY_BREAK
 case 1412:
 YY_RULE_SETUP
 #line 1416 "/tmp/input.flex"
-yyout << u8"✠"; return 1410;
+yyout << "✠"; return 1410;
 	YY_BREAK
 case 1413:
 YY_RULE_SETUP
 #line 1417 "/tmp/input.flex"
-yyout << u8"✠"; return 1411;
+yyout << "✠"; return 1411;
 	YY_BREAK
 case 1414:
 YY_RULE_SETUP
 #line 1418 "/tmp/input.flex"
-yyout << u8"↦"; return 1412;
+yyout << "↦"; return 1412;
 	YY_BREAK
 case 1415:
 YY_RULE_SETUP
 #line 1419 "/tmp/input.flex"
-yyout << u8"↦"; return 1413;
+yyout << "↦"; return 1413;
 	YY_BREAK
 case 1416:
 YY_RULE_SETUP
 #line 1420 "/tmp/input.flex"
-yyout << u8"↧"; return 1414;
+yyout << "↧"; return 1414;
 	YY_BREAK
 case 1417:
 YY_RULE_SETUP
 #line 1421 "/tmp/input.flex"
-yyout << u8"↤"; return 1415;
+yyout << "↤"; return 1415;
 	YY_BREAK
 case 1418:
 YY_RULE_SETUP
 #line 1422 "/tmp/input.flex"
-yyout << u8"↥"; return 1416;
+yyout << "↥"; return 1416;
 	YY_BREAK
 case 1419:
 YY_RULE_SETUP
 #line 1423 "/tmp/input.flex"
-yyout << u8"▮"; return 1417;
+yyout << "▮"; return 1417;
 	YY_BREAK
 case 1420:
 YY_RULE_SETUP
 #line 1424 "/tmp/input.flex"
-yyout << u8"⨩"; return 1418;
+yyout << "⨩"; return 1418;
 	YY_BREAK
 case 1421:
 YY_RULE_SETUP
 #line 1425 "/tmp/input.flex"
-yyout << u8"м"; return 1419;
+yyout << "м"; return 1419;
 	YY_BREAK
 case 1422:
 YY_RULE_SETUP
 #line 1426 "/tmp/input.flex"
-yyout << u8"—"; return 1420;
+yyout << "—"; return 1420;
 	YY_BREAK
 case 1423:
 YY_RULE_SETUP
 #line 1427 "/tmp/input.flex"
-yyout << u8"∡"; return 1421;
+yyout << "∡"; return 1421;
 	YY_BREAK
 case 1424:
 YY_RULE_SETUP
 #line 1428 "/tmp/input.flex"
-yyout << u8"𝔪"; return 1422;
+yyout << "𝔪"; return 1422;
 	YY_BREAK
 case 1425:
 YY_RULE_SETUP
 #line 1429 "/tmp/input.flex"
-yyout << u8"℧"; return 1423;
+yyout << "℧"; return 1423;
 	YY_BREAK
 case 1426:
 YY_RULE_SETUP
 #line 1430 "/tmp/input.flex"
-yyout << u8"µ"; return 1424;
+yyout << "µ"; return 1424;
 	YY_BREAK
 case 1427:
 YY_RULE_SETUP
 #line 1431 "/tmp/input.flex"
-yyout << u8"µ"; return 1425;
+yyout << "µ"; return 1425;
 	YY_BREAK
 case 1428:
 YY_RULE_SETUP
 #line 1432 "/tmp/input.flex"
-yyout << u8"∣"; return 1426;
+yyout << "∣"; return 1426;
 	YY_BREAK
 case 1429:
 YY_RULE_SETUP
 #line 1433 "/tmp/input.flex"
-yyout << u8"*"; return 1427;
+yyout << "*"; return 1427;
 	YY_BREAK
 case 1430:
 YY_RULE_SETUP
 #line 1434 "/tmp/input.flex"
-yyout << u8"⫰"; return 1428;
+yyout << "⫰"; return 1428;
 	YY_BREAK
 case 1431:
 YY_RULE_SETUP
 #line 1435 "/tmp/input.flex"
-yyout << u8"·"; return 1429;
+yyout << "·"; return 1429;
 	YY_BREAK
 case 1432:
 YY_RULE_SETUP
 #line 1436 "/tmp/input.flex"
-yyout << u8"·"; return 1430;
+yyout << "·"; return 1430;
 	YY_BREAK
 case 1433:
 YY_RULE_SETUP
 #line 1437 "/tmp/input.flex"
-yyout << u8"−"; return 1431;
+yyout << "−"; return 1431;
 	YY_BREAK
 case 1434:
 YY_RULE_SETUP
 #line 1438 "/tmp/input.flex"
-yyout << u8"⊟"; return 1432;
+yyout << "⊟"; return 1432;
 	YY_BREAK
 case 1435:
 YY_RULE_SETUP
 #line 1439 "/tmp/input.flex"
-yyout << u8"∸"; return 1433;
+yyout << "∸"; return 1433;
 	YY_BREAK
 case 1436:
 YY_RULE_SETUP
 #line 1440 "/tmp/input.flex"
-yyout << u8"⨪"; return 1434;
+yyout << "⨪"; return 1434;
 	YY_BREAK
 case 1437:
 YY_RULE_SETUP
 #line 1441 "/tmp/input.flex"
-yyout << u8"⫛"; return 1435;
+yyout << "⫛"; return 1435;
 	YY_BREAK
 case 1438:
 YY_RULE_SETUP
 #line 1442 "/tmp/input.flex"
-yyout << u8"…"; return 1436;
+yyout << "…"; return 1436;
 	YY_BREAK
 case 1439:
 YY_RULE_SETUP
 #line 1443 "/tmp/input.flex"
-yyout << u8"∓"; return 1437;
+yyout << "∓"; return 1437;
 	YY_BREAK
 case 1440:
 YY_RULE_SETUP
 #line 1444 "/tmp/input.flex"
-yyout << u8"⊧"; return 1438;
+yyout << "⊧"; return 1438;
 	YY_BREAK
 case 1441:
 YY_RULE_SETUP
 #line 1445 "/tmp/input.flex"
-yyout << u8"𝕞"; return 1439;
+yyout << "𝕞"; return 1439;
 	YY_BREAK
 case 1442:
 YY_RULE_SETUP
 #line 1446 "/tmp/input.flex"
-yyout << u8"∓"; return 1440;
+yyout << "∓"; return 1440;
 	YY_BREAK
 case 1443:
 YY_RULE_SETUP
 #line 1447 "/tmp/input.flex"
-yyout << u8"𝓂"; return 1441;
+yyout << "𝓂"; return 1441;
 	YY_BREAK
 case 1444:
 YY_RULE_SETUP
 #line 1448 "/tmp/input.flex"
-yyout << u8"∾"; return 1442;
+yyout << "∾"; return 1442;
 	YY_BREAK
 case 1445:
 YY_RULE_SETUP
 #line 1449 "/tmp/input.flex"
-yyout << u8"μ"; return 1443;
+yyout << "μ"; return 1443;
 	YY_BREAK
 case 1446:
 YY_RULE_SETUP
 #line 1450 "/tmp/input.flex"
-yyout << u8"⊸"; return 1444;
+yyout << "⊸"; return 1444;
 	YY_BREAK
 case 1447:
 YY_RULE_SETUP
 #line 1451 "/tmp/input.flex"
-yyout << u8"⊸"; return 1445;
+yyout << "⊸"; return 1445;
 	YY_BREAK
 case 1448:
 YY_RULE_SETUP
 #line 1452 "/tmp/input.flex"
-yyout << u8"⋙" << u8"̸"; return 1446;
+yyout << "⋙" << "̸"; return 1446;
 	YY_BREAK
 case 1449:
 YY_RULE_SETUP
 #line 1453 "/tmp/input.flex"
-yyout << u8"≫" << u8"⃒"; return 1447;
+yyout << "≫" << "⃒"; return 1447;
 	YY_BREAK
 case 1450:
 YY_RULE_SETUP
 #line 1454 "/tmp/input.flex"
-yyout << u8"≫" << u8"̸"; return 1448;
+yyout << "≫" << "̸"; return 1448;
 	YY_BREAK
 case 1451:
 YY_RULE_SETUP
 #line 1455 "/tmp/input.flex"
-yyout << u8"⇍"; return 1449;
+yyout << "⇍"; return 1449;
 	YY_BREAK
 case 1452:
 YY_RULE_SETUP
 #line 1456 "/tmp/input.flex"
-yyout << u8"⇎"; return 1450;
+yyout << "⇎"; return 1450;
 	YY_BREAK
 case 1453:
 YY_RULE_SETUP
 #line 1457 "/tmp/input.flex"
-yyout << u8"⋘" << u8"̸"; return 1451;
+yyout << "⋘" << "̸"; return 1451;
 	YY_BREAK
 case 1454:
 YY_RULE_SETUP
 #line 1458 "/tmp/input.flex"
-yyout << u8"≪" << u8"⃒"; return 1452;
+yyout << "≪" << "⃒"; return 1452;
 	YY_BREAK
 case 1455:
 YY_RULE_SETUP
 #line 1459 "/tmp/input.flex"
-yyout << u8"≪" << u8"̸"; return 1453;
+yyout << "≪" << "̸"; return 1453;
 	YY_BREAK
 case 1456:
 YY_RULE_SETUP
 #line 1460 "/tmp/input.flex"
-yyout << u8"⇏"; return 1454;
+yyout << "⇏"; return 1454;
 	YY_BREAK
 case 1457:
 YY_RULE_SETUP
 #line 1461 "/tmp/input.flex"
-yyout << u8"⊯"; return 1455;
+yyout << "⊯"; return 1455;
 	YY_BREAK
 case 1458:
 YY_RULE_SETUP
 #line 1462 "/tmp/input.flex"
-yyout << u8"⊮"; return 1456;
+yyout << "⊮"; return 1456;
 	YY_BREAK
 case 1459:
 YY_RULE_SETUP
 #line 1463 "/tmp/input.flex"
-yyout << u8"∇"; return 1457;
+yyout << "∇"; return 1457;
 	YY_BREAK
 case 1460:
 YY_RULE_SETUP
 #line 1464 "/tmp/input.flex"
-yyout << u8"ń"; return 1458;
+yyout << "ń"; return 1458;
 	YY_BREAK
 case 1461:
 YY_RULE_SETUP
 #line 1465 "/tmp/input.flex"
-yyout << u8"∠" << u8"⃒"; return 1459;
+yyout << "∠" << "⃒"; return 1459;
 	YY_BREAK
 case 1462:
 YY_RULE_SETUP
 #line 1466 "/tmp/input.flex"
-yyout << u8"≉"; return 1460;
+yyout << "≉"; return 1460;
 	YY_BREAK
 case 1463:
 YY_RULE_SETUP
 #line 1467 "/tmp/input.flex"
-yyout << u8"⩰" << u8"̸"; return 1461;
+yyout << "⩰" << "̸"; return 1461;
 	YY_BREAK
 case 1464:
 YY_RULE_SETUP
 #line 1468 "/tmp/input.flex"
-yyout << u8"≋" << u8"̸"; return 1462;
+yyout << "≋" << "̸"; return 1462;
 	YY_BREAK
 case 1465:
 YY_RULE_SETUP
 #line 1469 "/tmp/input.flex"
-yyout << u8"ŉ"; return 1463;
+yyout << "ŉ"; return 1463;
 	YY_BREAK
 case 1466:
 YY_RULE_SETUP
 #line 1470 "/tmp/input.flex"
-yyout << u8"≉"; return 1464;
+yyout << "≉"; return 1464;
 	YY_BREAK
 case 1467:
 YY_RULE_SETUP
 #line 1471 "/tmp/input.flex"
-yyout << u8"♮"; return 1465;
+yyout << "♮"; return 1465;
 	YY_BREAK
 case 1468:
 YY_RULE_SETUP
 #line 1472 "/tmp/input.flex"
-yyout << u8"♮"; return 1466;
+yyout << "♮"; return 1466;
 	YY_BREAK
 case 1469:
 YY_RULE_SETUP
 #line 1473 "/tmp/input.flex"
-yyout << u8"ℕ"; return 1467;
+yyout << "ℕ"; return 1467;
 	YY_BREAK
 case 1470:
 YY_RULE_SETUP
 #line 1474 "/tmp/input.flex"
-yyout << u8" "; return 1468;
+yyout << " "; return 1468;
 	YY_BREAK
 case 1471:
 YY_RULE_SETUP
 #line 1475 "/tmp/input.flex"
-yyout << u8" "; return 1469;
+yyout << " "; return 1469;
 	YY_BREAK
 case 1472:
 YY_RULE_SETUP
 #line 1476 "/tmp/input.flex"
-yyout << u8"≎" << u8"̸"; return 1470;
+yyout << "≎" << "̸"; return 1470;
 	YY_BREAK
 case 1473:
 YY_RULE_SETUP
 #line 1477 "/tmp/input.flex"
-yyout << u8"≏" << u8"̸"; return 1471;
+yyout << "≏" << "̸"; return 1471;
 	YY_BREAK
 case 1474:
 YY_RULE_SETUP
 #line 1478 "/tmp/input.flex"
-yyout << u8"⩃"; return 1472;
+yyout << "⩃"; return 1472;
 	YY_BREAK
 case 1475:
 YY_RULE_SETUP
 #line 1479 "/tmp/input.flex"
-yyout << u8"ň"; return 1473;
+yyout << "ň"; return 1473;
 	YY_BREAK
 case 1476:
 YY_RULE_SETUP
 #line 1480 "/tmp/input.flex"
-yyout << u8"ņ"; return 1474;
+yyout << "ņ"; return 1474;
 	YY_BREAK
 case 1477:
 YY_RULE_SETUP
 #line 1481 "/tmp/input.flex"
-yyout << u8"≇"; return 1475;
+yyout << "≇"; return 1475;
 	YY_BREAK
 case 1478:
 YY_RULE_SETUP
 #line 1482 "/tmp/input.flex"
-yyout << u8"⩭" << u8"̸"; return 1476;
+yyout << "⩭" << "̸"; return 1476;
 	YY_BREAK
 case 1479:
 YY_RULE_SETUP
 #line 1483 "/tmp/input.flex"
-yyout << u8"⩂"; return 1477;
+yyout << "⩂"; return 1477;
 	YY_BREAK
 case 1480:
 YY_RULE_SETUP
 #line 1484 "/tmp/input.flex"
-yyout << u8"н"; return 1478;
+yyout << "н"; return 1478;
 	YY_BREAK
 case 1481:
 YY_RULE_SETUP
 #line 1485 "/tmp/input.flex"
-yyout << u8"–"; return 1479;
+yyout << "–"; return 1479;
 	YY_BREAK
 case 1482:
 YY_RULE_SETUP
 #line 1486 "/tmp/input.flex"
-yyout << u8"≠"; return 1480;
+yyout << "≠"; return 1480;
 	YY_BREAK
 case 1483:
 YY_RULE_SETUP
 #line 1487 "/tmp/input.flex"
-yyout << u8"⇗"; return 1481;
+yyout << "⇗"; return 1481;
 	YY_BREAK
 case 1484:
 YY_RULE_SETUP
 #line 1488 "/tmp/input.flex"
-yyout << u8"⤤"; return 1482;
+yyout << "⤤"; return 1482;
 	YY_BREAK
 case 1485:
 YY_RULE_SETUP
 #line 1489 "/tmp/input.flex"
-yyout << u8"↗"; return 1483;
+yyout << "↗"; return 1483;
 	YY_BREAK
 case 1486:
 YY_RULE_SETUP
 #line 1490 "/tmp/input.flex"
-yyout << u8"↗"; return 1484;
+yyout << "↗"; return 1484;
 	YY_BREAK
 case 1487:
 YY_RULE_SETUP
 #line 1491 "/tmp/input.flex"
-yyout << u8"≐" << u8"̸"; return 1485;
+yyout << "≐" << "̸"; return 1485;
 	YY_BREAK
 case 1488:
 YY_RULE_SETUP
 #line 1492 "/tmp/input.flex"
-yyout << u8"≢"; return 1486;
+yyout << "≢"; return 1486;
 	YY_BREAK
 case 1489:
 YY_RULE_SETUP
 #line 1493 "/tmp/input.flex"
-yyout << u8"⤨"; return 1487;
+yyout << "⤨"; return 1487;
 	YY_BREAK
 case 1490:
 YY_RULE_SETUP
 #line 1494 "/tmp/input.flex"
-yyout << u8"≂" << u8"̸"; return 1488;
+yyout << "≂" << "̸"; return 1488;
 	YY_BREAK
 case 1491:
 YY_RULE_SETUP
 #line 1495 "/tmp/input.flex"
-yyout << u8"∄"; return 1489;
+yyout << "∄"; return 1489;
 	YY_BREAK
 case 1492:
 YY_RULE_SETUP
 #line 1496 "/tmp/input.flex"
-yyout << u8"∄"; return 1490;
+yyout << "∄"; return 1490;
 	YY_BREAK
 case 1493:
 YY_RULE_SETUP
 #line 1497 "/tmp/input.flex"
-yyout << u8"𝔫"; return 1491;
+yyout << "𝔫"; return 1491;
 	YY_BREAK
 case 1494:
 YY_RULE_SETUP
 #line 1498 "/tmp/input.flex"
-yyout << u8"≧" << u8"̸"; return 1492;
+yyout << "≧" << "̸"; return 1492;
 	YY_BREAK
 case 1495:
 YY_RULE_SETUP
 #line 1499 "/tmp/input.flex"
-yyout << u8"≱"; return 1493;
+yyout << "≱"; return 1493;
 	YY_BREAK
 case 1496:
 YY_RULE_SETUP
 #line 1500 "/tmp/input.flex"
-yyout << u8"≱"; return 1494;
+yyout << "≱"; return 1494;
 	YY_BREAK
 case 1497:
 YY_RULE_SETUP
 #line 1501 "/tmp/input.flex"
-yyout << u8"≧" << u8"̸"; return 1495;
+yyout << "≧" << "̸"; return 1495;
 	YY_BREAK
 case 1498:
 YY_RULE_SETUP
 #line 1502 "/tmp/input.flex"
-yyout << u8"⩾" << u8"̸"; return 1496;
+yyout << "⩾" << "̸"; return 1496;
 	YY_BREAK
 case 1499:
 YY_RULE_SETUP
 #line 1503 "/tmp/input.flex"
-yyout << u8"⩾" << u8"̸"; return 1497;
+yyout << "⩾" << "̸"; return 1497;
 	YY_BREAK
 case 1500:
 YY_RULE_SETUP
 #line 1504 "/tmp/input.flex"
-yyout << u8"≵"; return 1498;
+yyout << "≵"; return 1498;
 	YY_BREAK
 case 1501:
 YY_RULE_SETUP
 #line 1505 "/tmp/input.flex"
-yyout << u8"≯"; return 1499;
+yyout << "≯"; return 1499;
 	YY_BREAK
 case 1502:
 YY_RULE_SETUP
 #line 1506 "/tmp/input.flex"
-yyout << u8"≯"; return 1500;
+yyout << "≯"; return 1500;
 	YY_BREAK
 case 1503:
 YY_RULE_SETUP
 #line 1507 "/tmp/input.flex"
-yyout << u8"⇎"; return 1501;
+yyout << "⇎"; return 1501;
 	YY_BREAK
 case 1504:
 YY_RULE_SETUP
 #line 1508 "/tmp/input.flex"
-yyout << u8"↮"; return 1502;
+yyout << "↮"; return 1502;
 	YY_BREAK
 case 1505:
 YY_RULE_SETUP
 #line 1509 "/tmp/input.flex"
-yyout << u8"⫲"; return 1503;
+yyout << "⫲"; return 1503;
 	YY_BREAK
 case 1506:
 YY_RULE_SETUP
 #line 1510 "/tmp/input.flex"
-yyout << u8"∋"; return 1504;
+yyout << "∋"; return 1504;
 	YY_BREAK
 case 1507:
 YY_RULE_SETUP
 #line 1511 "/tmp/input.flex"
-yyout << u8"⋼"; return 1505;
+yyout << "⋼"; return 1505;
 	YY_BREAK
 case 1508:
 YY_RULE_SETUP
 #line 1512 "/tmp/input.flex"
-yyout << u8"⋺"; return 1506;
+yyout << "⋺"; return 1506;
 	YY_BREAK
 case 1509:
 YY_RULE_SETUP
 #line 1513 "/tmp/input.flex"
-yyout << u8"∋"; return 1507;
+yyout << "∋"; return 1507;
 	YY_BREAK
 case 1510:
 YY_RULE_SETUP
 #line 1514 "/tmp/input.flex"
-yyout << u8"њ"; return 1508;
+yyout << "њ"; return 1508;
 	YY_BREAK
 case 1511:
 YY_RULE_SETUP
 #line 1515 "/tmp/input.flex"
-yyout << u8"⇍"; return 1509;
+yyout << "⇍"; return 1509;
 	YY_BREAK
 case 1512:
 YY_RULE_SETUP
 #line 1516 "/tmp/input.flex"
-yyout << u8"≦" << u8"̸"; return 1510;
+yyout << "≦" << "̸"; return 1510;
 	YY_BREAK
 case 1513:
 YY_RULE_SETUP
 #line 1517 "/tmp/input.flex"
-yyout << u8"↚"; return 1511;
+yyout << "↚"; return 1511;
 	YY_BREAK
 case 1514:
 YY_RULE_SETUP
 #line 1518 "/tmp/input.flex"
-yyout << u8"‥"; return 1512;
+yyout << "‥"; return 1512;
 	YY_BREAK
 case 1515:
 YY_RULE_SETUP
 #line 1519 "/tmp/input.flex"
-yyout << u8"≰"; return 1513;
+yyout << "≰"; return 1513;
 	YY_BREAK
 case 1516:
 YY_RULE_SETUP
 #line 1520 "/tmp/input.flex"
-yyout << u8"↚"; return 1514;
+yyout << "↚"; return 1514;
 	YY_BREAK
 case 1517:
 YY_RULE_SETUP
 #line 1521 "/tmp/input.flex"
-yyout << u8"↮"; return 1515;
+yyout << "↮"; return 1515;
 	YY_BREAK
 case 1518:
 YY_RULE_SETUP
 #line 1522 "/tmp/input.flex"
-yyout << u8"≰"; return 1516;
+yyout << "≰"; return 1516;
 	YY_BREAK
 case 1519:
 YY_RULE_SETUP
 #line 1523 "/tmp/input.flex"
-yyout << u8"≦" << u8"̸"; return 1517;
+yyout << "≦" << "̸"; return 1517;
 	YY_BREAK
 case 1520:
 YY_RULE_SETUP
 #line 1524 "/tmp/input.flex"
-yyout << u8"⩽" << u8"̸"; return 1518;
+yyout << "⩽" << "̸"; return 1518;
 	YY_BREAK
 case 1521:
 YY_RULE_SETUP
 #line 1525 "/tmp/input.flex"
-yyout << u8"⩽" << u8"̸"; return 1519;
+yyout << "⩽" << "̸"; return 1519;
 	YY_BREAK
 case 1522:
 YY_RULE_SETUP
 #line 1526 "/tmp/input.flex"
-yyout << u8"≮"; return 1520;
+yyout << "≮"; return 1520;
 	YY_BREAK
 case 1523:
 YY_RULE_SETUP
 #line 1527 "/tmp/input.flex"
-yyout << u8"≴"; return 1521;
+yyout << "≴"; return 1521;
 	YY_BREAK
 case 1524:
 YY_RULE_SETUP
 #line 1528 "/tmp/input.flex"
-yyout << u8"≮"; return 1522;
+yyout << "≮"; return 1522;
 	YY_BREAK
 case 1525:
 YY_RULE_SETUP
 #line 1529 "/tmp/input.flex"
-yyout << u8"⋪"; return 1523;
+yyout << "⋪"; return 1523;
 	YY_BREAK
 case 1526:
 YY_RULE_SETUP
 #line 1530 "/tmp/input.flex"
-yyout << u8"⋬"; return 1524;
+yyout << "⋬"; return 1524;
 	YY_BREAK
 case 1527:
 YY_RULE_SETUP
 #line 1531 "/tmp/input.flex"
-yyout << u8"∤"; return 1525;
+yyout << "∤"; return 1525;
 	YY_BREAK
 case 1528:
 YY_RULE_SETUP
 #line 1532 "/tmp/input.flex"
-yyout << u8"𝕟"; return 1526;
+yyout << "𝕟"; return 1526;
 	YY_BREAK
 case 1529:
 YY_RULE_SETUP
 #line 1533 "/tmp/input.flex"
-yyout << u8"¬"; return 1527;
+yyout << "¬"; return 1527;
 	YY_BREAK
 case 1530:
 YY_RULE_SETUP
 #line 1534 "/tmp/input.flex"
-yyout << u8"¬"; return 1528;
+yyout << "¬"; return 1528;
 	YY_BREAK
 case 1531:
 YY_RULE_SETUP
 #line 1535 "/tmp/input.flex"
-yyout << u8"∉"; return 1529;
+yyout << "∉"; return 1529;
 	YY_BREAK
 case 1532:
 YY_RULE_SETUP
 #line 1536 "/tmp/input.flex"
-yyout << u8"⋹" << u8"̸"; return 1530;
+yyout << "⋹" << "̸"; return 1530;
 	YY_BREAK
 case 1533:
 YY_RULE_SETUP
 #line 1537 "/tmp/input.flex"
-yyout << u8"⋵" << u8"̸"; return 1531;
+yyout << "⋵" << "̸"; return 1531;
 	YY_BREAK
 case 1534:
 YY_RULE_SETUP
 #line 1538 "/tmp/input.flex"
-yyout << u8"∉"; return 1532;
+yyout << "∉"; return 1532;
 	YY_BREAK
 case 1535:
 YY_RULE_SETUP
 #line 1539 "/tmp/input.flex"
-yyout << u8"⋷"; return 1533;
+yyout << "⋷"; return 1533;
 	YY_BREAK
 case 1536:
 YY_RULE_SETUP
 #line 1540 "/tmp/input.flex"
-yyout << u8"⋶"; return 1534;
+yyout << "⋶"; return 1534;
 	YY_BREAK
 case 1537:
 YY_RULE_SETUP
 #line 1541 "/tmp/input.flex"
-yyout << u8"∌"; return 1535;
+yyout << "∌"; return 1535;
 	YY_BREAK
 case 1538:
 YY_RULE_SETUP
 #line 1542 "/tmp/input.flex"
-yyout << u8"∌"; return 1536;
+yyout << "∌"; return 1536;
 	YY_BREAK
 case 1539:
 YY_RULE_SETUP
 #line 1543 "/tmp/input.flex"
-yyout << u8"⋾"; return 1537;
+yyout << "⋾"; return 1537;
 	YY_BREAK
 case 1540:
 YY_RULE_SETUP
 #line 1544 "/tmp/input.flex"
-yyout << u8"⋽"; return 1538;
+yyout << "⋽"; return 1538;
 	YY_BREAK
 case 1541:
 YY_RULE_SETUP
 #line 1545 "/tmp/input.flex"
-yyout << u8"∦"; return 1539;
+yyout << "∦"; return 1539;
 	YY_BREAK
 case 1542:
 YY_RULE_SETUP
 #line 1546 "/tmp/input.flex"
-yyout << u8"∦"; return 1540;
+yyout << "∦"; return 1540;
 	YY_BREAK
 case 1543:
 YY_RULE_SETUP
 #line 1547 "/tmp/input.flex"
-yyout << u8"⫽" << u8"⃥"; return 1541;
+yyout << "⫽" << "⃥"; return 1541;
 	YY_BREAK
 case 1544:
 YY_RULE_SETUP
 #line 1548 "/tmp/input.flex"
-yyout << u8"∂" << u8"̸"; return 1542;
+yyout << "∂" << "̸"; return 1542;
 	YY_BREAK
 case 1545:
 YY_RULE_SETUP
 #line 1549 "/tmp/input.flex"
-yyout << u8"⨔"; return 1543;
+yyout << "⨔"; return 1543;
 	YY_BREAK
 case 1546:
 YY_RULE_SETUP
 #line 1550 "/tmp/input.flex"
-yyout << u8"⊀"; return 1544;
+yyout << "⊀"; return 1544;
 	YY_BREAK
 case 1547:
 YY_RULE_SETUP
 #line 1551 "/tmp/input.flex"
-yyout << u8"⋠"; return 1545;
+yyout << "⋠"; return 1545;
 	YY_BREAK
 case 1548:
 YY_RULE_SETUP
 #line 1552 "/tmp/input.flex"
-yyout << u8"⪯" << u8"̸"; return 1546;
+yyout << "⪯" << "̸"; return 1546;
 	YY_BREAK
 case 1549:
 YY_RULE_SETUP
 #line 1553 "/tmp/input.flex"
-yyout << u8"⊀"; return 1547;
+yyout << "⊀"; return 1547;
 	YY_BREAK
 case 1550:
 YY_RULE_SETUP
 #line 1554 "/tmp/input.flex"
-yyout << u8"⪯" << u8"̸"; return 1548;
+yyout << "⪯" << "̸"; return 1548;
 	YY_BREAK
 case 1551:
 YY_RULE_SETUP
 #line 1555 "/tmp/input.flex"
-yyout << u8"⇏"; return 1549;
+yyout << "⇏"; return 1549;
 	YY_BREAK
 case 1552:
 YY_RULE_SETUP
 #line 1556 "/tmp/input.flex"
-yyout << u8"↛"; return 1550;
+yyout << "↛"; return 1550;
 	YY_BREAK
 case 1553:
 YY_RULE_SETUP
 #line 1557 "/tmp/input.flex"
-yyout << u8"⤳" << u8"̸"; return 1551;
+yyout << "⤳" << "̸"; return 1551;
 	YY_BREAK
 case 1554:
 YY_RULE_SETUP
 #line 1558 "/tmp/input.flex"
-yyout << u8"↝" << u8"̸"; return 1552;
+yyout << "↝" << "̸"; return 1552;
 	YY_BREAK
 case 1555:
 YY_RULE_SETUP
 #line 1559 "/tmp/input.flex"
-yyout << u8"↛"; return 1553;
+yyout << "↛"; return 1553;
 	YY_BREAK
 case 1556:
 YY_RULE_SETUP
 #line 1560 "/tmp/input.flex"
-yyout << u8"⋫"; return 1554;
+yyout << "⋫"; return 1554;
 	YY_BREAK
 case 1557:
 YY_RULE_SETUP
 #line 1561 "/tmp/input.flex"
-yyout << u8"⋭"; return 1555;
+yyout << "⋭"; return 1555;
 	YY_BREAK
 case 1558:
 YY_RULE_SETUP
 #line 1562 "/tmp/input.flex"
-yyout << u8"⊁"; return 1556;
+yyout << "⊁"; return 1556;
 	YY_BREAK
 case 1559:
 YY_RULE_SETUP
 #line 1563 "/tmp/input.flex"
-yyout << u8"⋡"; return 1557;
+yyout << "⋡"; return 1557;
 	YY_BREAK
 case 1560:
 YY_RULE_SETUP
 #line 1564 "/tmp/input.flex"
-yyout << u8"⪰" << u8"̸"; return 1558;
+yyout << "⪰" << "̸"; return 1558;
 	YY_BREAK
 case 1561:
 YY_RULE_SETUP
 #line 1565 "/tmp/input.flex"
-yyout << u8"𝓃"; return 1559;
+yyout << "𝓃"; return 1559;
 	YY_BREAK
 case 1562:
 YY_RULE_SETUP
 #line 1566 "/tmp/input.flex"
-yyout << u8"∤"; return 1560;
+yyout << "∤"; return 1560;
 	YY_BREAK
 case 1563:
 YY_RULE_SETUP
 #line 1567 "/tmp/input.flex"
-yyout << u8"∦"; return 1561;
+yyout << "∦"; return 1561;
 	YY_BREAK
 case 1564:
 YY_RULE_SETUP
 #line 1568 "/tmp/input.flex"
-yyout << u8"≁"; return 1562;
+yyout << "≁"; return 1562;
 	YY_BREAK
 case 1565:
 YY_RULE_SETUP
 #line 1569 "/tmp/input.flex"
-yyout << u8"≄"; return 1563;
+yyout << "≄"; return 1563;
 	YY_BREAK
 case 1566:
 YY_RULE_SETUP
 #line 1570 "/tmp/input.flex"
-yyout << u8"≄"; return 1564;
+yyout << "≄"; return 1564;
 	YY_BREAK
 case 1567:
 YY_RULE_SETUP
 #line 1571 "/tmp/input.flex"
-yyout << u8"∤"; return 1565;
+yyout << "∤"; return 1565;
 	YY_BREAK
 case 1568:
 YY_RULE_SETUP
 #line 1572 "/tmp/input.flex"
-yyout << u8"∦"; return 1566;
+yyout << "∦"; return 1566;
 	YY_BREAK
 case 1569:
 YY_RULE_SETUP
 #line 1573 "/tmp/input.flex"
-yyout << u8"⋢"; return 1567;
+yyout << "⋢"; return 1567;
 	YY_BREAK
 case 1570:
 YY_RULE_SETUP
 #line 1574 "/tmp/input.flex"
-yyout << u8"⋣"; return 1568;
+yyout << "⋣"; return 1568;
 	YY_BREAK
 case 1571:
 YY_RULE_SETUP
 #line 1575 "/tmp/input.flex"
-yyout << u8"⊄"; return 1569;
+yyout << "⊄"; return 1569;
 	YY_BREAK
 case 1572:
 YY_RULE_SETUP
 #line 1576 "/tmp/input.flex"
-yyout << u8"⫅" << u8"̸"; return 1570;
+yyout << "⫅" << "̸"; return 1570;
 	YY_BREAK
 case 1573:
 YY_RULE_SETUP
 #line 1577 "/tmp/input.flex"
-yyout << u8"⊈"; return 1571;
+yyout << "⊈"; return 1571;
 	YY_BREAK
 case 1574:
 YY_RULE_SETUP
 #line 1578 "/tmp/input.flex"
-yyout << u8"⊂" << u8"⃒"; return 1572;
+yyout << "⊂" << "⃒"; return 1572;
 	YY_BREAK
 case 1575:
 YY_RULE_SETUP
 #line 1579 "/tmp/input.flex"
-yyout << u8"⊈"; return 1573;
+yyout << "⊈"; return 1573;
 	YY_BREAK
 case 1576:
 YY_RULE_SETUP
 #line 1580 "/tmp/input.flex"
-yyout << u8"⫅" << u8"̸"; return 1574;
+yyout << "⫅" << "̸"; return 1574;
 	YY_BREAK
 case 1577:
 YY_RULE_SETUP
 #line 1581 "/tmp/input.flex"
-yyout << u8"⊁"; return 1575;
+yyout << "⊁"; return 1575;
 	YY_BREAK
 case 1578:
 YY_RULE_SETUP
 #line 1582 "/tmp/input.flex"
-yyout << u8"⪰" << u8"̸"; return 1576;
+yyout << "⪰" << "̸"; return 1576;
 	YY_BREAK
 case 1579:
 YY_RULE_SETUP
 #line 1583 "/tmp/input.flex"
-yyout << u8"⊅"; return 1577;
+yyout << "⊅"; return 1577;
 	YY_BREAK
 case 1580:
 YY_RULE_SETUP
 #line 1584 "/tmp/input.flex"
-yyout << u8"⫆" << u8"̸"; return 1578;
+yyout << "⫆" << "̸"; return 1578;
 	YY_BREAK
 case 1581:
 YY_RULE_SETUP
 #line 1585 "/tmp/input.flex"
-yyout << u8"⊉"; return 1579;
+yyout << "⊉"; return 1579;
 	YY_BREAK
 case 1582:
 YY_RULE_SETUP
 #line 1586 "/tmp/input.flex"
-yyout << u8"⊃" << u8"⃒"; return 1580;
+yyout << "⊃" << "⃒"; return 1580;
 	YY_BREAK
 case 1583:
 YY_RULE_SETUP
 #line 1587 "/tmp/input.flex"
-yyout << u8"⊉"; return 1581;
+yyout << "⊉"; return 1581;
 	YY_BREAK
 case 1584:
 YY_RULE_SETUP
 #line 1588 "/tmp/input.flex"
-yyout << u8"⫆" << u8"̸"; return 1582;
+yyout << "⫆" << "̸"; return 1582;
 	YY_BREAK
 case 1585:
 YY_RULE_SETUP
 #line 1589 "/tmp/input.flex"
-yyout << u8"≹"; return 1583;
+yyout << "≹"; return 1583;
 	YY_BREAK
 case 1586:
 YY_RULE_SETUP
 #line 1590 "/tmp/input.flex"
-yyout << u8"ñ"; return 1584;
+yyout << "ñ"; return 1584;
 	YY_BREAK
 case 1587:
 YY_RULE_SETUP
 #line 1591 "/tmp/input.flex"
-yyout << u8"ñ"; return 1585;
+yyout << "ñ"; return 1585;
 	YY_BREAK
 case 1588:
 YY_RULE_SETUP
 #line 1592 "/tmp/input.flex"
-yyout << u8"≸"; return 1586;
+yyout << "≸"; return 1586;
 	YY_BREAK
 case 1589:
 YY_RULE_SETUP
 #line 1593 "/tmp/input.flex"
-yyout << u8"⋪"; return 1587;
+yyout << "⋪"; return 1587;
 	YY_BREAK
 case 1590:
 YY_RULE_SETUP
 #line 1594 "/tmp/input.flex"
-yyout << u8"⋬"; return 1588;
+yyout << "⋬"; return 1588;
 	YY_BREAK
 case 1591:
 YY_RULE_SETUP
 #line 1595 "/tmp/input.flex"
-yyout << u8"⋫"; return 1589;
+yyout << "⋫"; return 1589;
 	YY_BREAK
 case 1592:
 YY_RULE_SETUP
 #line 1596 "/tmp/input.flex"
-yyout << u8"⋭"; return 1590;
+yyout << "⋭"; return 1590;
 	YY_BREAK
 case 1593:
 YY_RULE_SETUP
 #line 1597 "/tmp/input.flex"
-yyout << u8"ν"; return 1591;
+yyout << "ν"; return 1591;
 	YY_BREAK
 case 1594:
 YY_RULE_SETUP
 #line 1598 "/tmp/input.flex"
-yyout << u8"#"; return 1592;
+yyout << "#"; return 1592;
 	YY_BREAK
 case 1595:
 YY_RULE_SETUP
 #line 1599 "/tmp/input.flex"
-yyout << u8"№"; return 1593;
+yyout << "№"; return 1593;
 	YY_BREAK
 case 1596:
 YY_RULE_SETUP
 #line 1600 "/tmp/input.flex"
-yyout << u8" "; return 1594;
+yyout << " "; return 1594;
 	YY_BREAK
 case 1597:
 YY_RULE_SETUP
 #line 1601 "/tmp/input.flex"
-yyout << u8"⊭"; return 1595;
+yyout << "⊭"; return 1595;
 	YY_BREAK
 case 1598:
 YY_RULE_SETUP
 #line 1602 "/tmp/input.flex"
-yyout << u8"⤄"; return 1596;
+yyout << "⤄"; return 1596;
 	YY_BREAK
 case 1599:
 YY_RULE_SETUP
 #line 1603 "/tmp/input.flex"
-yyout << u8"≍" << u8"⃒"; return 1597;
+yyout << "≍" << "⃒"; return 1597;
 	YY_BREAK
 case 1600:
 YY_RULE_SETUP
 #line 1604 "/tmp/input.flex"
-yyout << u8"⊬"; return 1598;
+yyout << "⊬"; return 1598;
 	YY_BREAK
 case 1601:
 YY_RULE_SETUP
 #line 1605 "/tmp/input.flex"
-yyout << u8"≥" << u8"⃒"; return 1599;
+yyout << "≥" << "⃒"; return 1599;
 	YY_BREAK
 case 1602:
 YY_RULE_SETUP
 #line 1606 "/tmp/input.flex"
-yyout << u8">" << u8"⃒"; return 1600;
+yyout << ">" << "⃒"; return 1600;
 	YY_BREAK
 case 1603:
 YY_RULE_SETUP
 #line 1607 "/tmp/input.flex"
-yyout << u8"⧞"; return 1601;
+yyout << "⧞"; return 1601;
 	YY_BREAK
 case 1604:
 YY_RULE_SETUP
 #line 1608 "/tmp/input.flex"
-yyout << u8"⤂"; return 1602;
+yyout << "⤂"; return 1602;
 	YY_BREAK
 case 1605:
 YY_RULE_SETUP
 #line 1609 "/tmp/input.flex"
-yyout << u8"≤" << u8"⃒"; return 1603;
+yyout << "≤" << "⃒"; return 1603;
 	YY_BREAK
 case 1606:
 YY_RULE_SETUP
 #line 1610 "/tmp/input.flex"
-yyout << u8"<" << u8"⃒"; return 1604;
+yyout << "<" << "⃒"; return 1604;
 	YY_BREAK
 case 1607:
 YY_RULE_SETUP
 #line 1611 "/tmp/input.flex"
-yyout << u8"⊴" << u8"⃒"; return 1605;
+yyout << "⊴" << "⃒"; return 1605;
 	YY_BREAK
 case 1608:
 YY_RULE_SETUP
 #line 1612 "/tmp/input.flex"
-yyout << u8"⤃"; return 1606;
+yyout << "⤃"; return 1606;
 	YY_BREAK
 case 1609:
 YY_RULE_SETUP
 #line 1613 "/tmp/input.flex"
-yyout << u8"⊵" << u8"⃒"; return 1607;
+yyout << "⊵" << "⃒"; return 1607;
 	YY_BREAK
 case 1610:
 YY_RULE_SETUP
 #line 1614 "/tmp/input.flex"
-yyout << u8"∼" << u8"⃒"; return 1608;
+yyout << "∼" << "⃒"; return 1608;
 	YY_BREAK
 case 1611:
 YY_RULE_SETUP
 #line 1615 "/tmp/input.flex"
-yyout << u8"⇖"; return 1609;
+yyout << "⇖"; return 1609;
 	YY_BREAK
 case 1612:
 YY_RULE_SETUP
 #line 1616 "/tmp/input.flex"
-yyout << u8"⤣"; return 1610;
+yyout << "⤣"; return 1610;
 	YY_BREAK
 case 1613:
 YY_RULE_SETUP
 #line 1617 "/tmp/input.flex"
-yyout << u8"↖"; return 1611;
+yyout << "↖"; return 1611;
 	YY_BREAK
 case 1614:
 YY_RULE_SETUP
 #line 1618 "/tmp/input.flex"
-yyout << u8"↖"; return 1612;
+yyout << "↖"; return 1612;
 	YY_BREAK
 case 1615:
 YY_RULE_SETUP
 #line 1619 "/tmp/input.flex"
-yyout << u8"⤧"; return 1613;
+yyout << "⤧"; return 1613;
 	YY_BREAK
 case 1616:
 YY_RULE_SETUP
 #line 1620 "/tmp/input.flex"
-yyout << u8"Ⓢ"; return 1614;
+yyout << "Ⓢ"; return 1614;
 	YY_BREAK
 case 1617:
 YY_RULE_SETUP
 #line 1621 "/tmp/input.flex"
-yyout << u8"ó"; return 1615;
+yyout << "ó"; return 1615;
 	YY_BREAK
 case 1618:
 YY_RULE_SETUP
 #line 1622 "/tmp/input.flex"
-yyout << u8"ó"; return 1616;
+yyout << "ó"; return 1616;
 	YY_BREAK
 case 1619:
 YY_RULE_SETUP
 #line 1623 "/tmp/input.flex"
-yyout << u8"⊛"; return 1617;
+yyout << "⊛"; return 1617;
 	YY_BREAK
 case 1620:
 YY_RULE_SETUP
 #line 1624 "/tmp/input.flex"
-yyout << u8"⊚"; return 1618;
+yyout << "⊚"; return 1618;
 	YY_BREAK
 case 1621:
 YY_RULE_SETUP
 #line 1625 "/tmp/input.flex"
-yyout << u8"ô"; return 1619;
+yyout << "ô"; return 1619;
 	YY_BREAK
 case 1622:
 YY_RULE_SETUP
 #line 1626 "/tmp/input.flex"
-yyout << u8"ô"; return 1620;
+yyout << "ô"; return 1620;
 	YY_BREAK
 case 1623:
 YY_RULE_SETUP
 #line 1627 "/tmp/input.flex"
-yyout << u8"о"; return 1621;
+yyout << "о"; return 1621;
 	YY_BREAK
 case 1624:
 YY_RULE_SETUP
 #line 1628 "/tmp/input.flex"
-yyout << u8"⊝"; return 1622;
+yyout << "⊝"; return 1622;
 	YY_BREAK
 case 1625:
 YY_RULE_SETUP
 #line 1629 "/tmp/input.flex"
-yyout << u8"ő"; return 1623;
+yyout << "ő"; return 1623;
 	YY_BREAK
 case 1626:
 YY_RULE_SETUP
 #line 1630 "/tmp/input.flex"
-yyout << u8"⨸"; return 1624;
+yyout << "⨸"; return 1624;
 	YY_BREAK
 case 1627:
 YY_RULE_SETUP
 #line 1631 "/tmp/input.flex"
-yyout << u8"⊙"; return 1625;
+yyout << "⊙"; return 1625;
 	YY_BREAK
 case 1628:
 YY_RULE_SETUP
 #line 1632 "/tmp/input.flex"
-yyout << u8"⦼"; return 1626;
+yyout << "⦼"; return 1626;
 	YY_BREAK
 case 1629:
 YY_RULE_SETUP
 #line 1633 "/tmp/input.flex"
-yyout << u8"œ"; return 1627;
+yyout << "œ"; return 1627;
 	YY_BREAK
 case 1630:
 YY_RULE_SETUP
 #line 1634 "/tmp/input.flex"
-yyout << u8"⦿"; return 1628;
+yyout << "⦿"; return 1628;
 	YY_BREAK
 case 1631:
 YY_RULE_SETUP
 #line 1635 "/tmp/input.flex"
-yyout << u8"𝔬"; return 1629;
+yyout << "𝔬"; return 1629;
 	YY_BREAK
 case 1632:
 YY_RULE_SETUP
 #line 1636 "/tmp/input.flex"
-yyout << u8"˛"; return 1630;
+yyout << "˛"; return 1630;
 	YY_BREAK
 case 1633:
 YY_RULE_SETUP
 #line 1637 "/tmp/input.flex"
-yyout << u8"ò"; return 1631;
+yyout << "ò"; return 1631;
 	YY_BREAK
 case 1634:
 YY_RULE_SETUP
 #line 1638 "/tmp/input.flex"
-yyout << u8"ò"; return 1632;
+yyout << "ò"; return 1632;
 	YY_BREAK
 case 1635:
 YY_RULE_SETUP
 #line 1639 "/tmp/input.flex"
-yyout << u8"⧁"; return 1633;
+yyout << "⧁"; return 1633;
 	YY_BREAK
 case 1636:
 YY_RULE_SETUP
 #line 1640 "/tmp/input.flex"
-yyout << u8"⦵"; return 1634;
+yyout << "⦵"; return 1634;
 	YY_BREAK
 case 1637:
 YY_RULE_SETUP
 #line 1641 "/tmp/input.flex"
-yyout << u8"Ω"; return 1635;
+yyout << "Ω"; return 1635;
 	YY_BREAK
 case 1638:
 YY_RULE_SETUP
 #line 1642 "/tmp/input.flex"
-yyout << u8"∮"; return 1636;
+yyout << "∮"; return 1636;
 	YY_BREAK
 case 1639:
 YY_RULE_SETUP
 #line 1643 "/tmp/input.flex"
-yyout << u8"↺"; return 1637;
+yyout << "↺"; return 1637;
 	YY_BREAK
 case 1640:
 YY_RULE_SETUP
 #line 1644 "/tmp/input.flex"
-yyout << u8"⦾"; return 1638;
+yyout << "⦾"; return 1638;
 	YY_BREAK
 case 1641:
 YY_RULE_SETUP
 #line 1645 "/tmp/input.flex"
-yyout << u8"⦻"; return 1639;
+yyout << "⦻"; return 1639;
 	YY_BREAK
 case 1642:
 YY_RULE_SETUP
 #line 1646 "/tmp/input.flex"
-yyout << u8"‾"; return 1640;
+yyout << "‾"; return 1640;
 	YY_BREAK
 case 1643:
 YY_RULE_SETUP
 #line 1647 "/tmp/input.flex"
-yyout << u8"⧀"; return 1641;
+yyout << "⧀"; return 1641;
 	YY_BREAK
 case 1644:
 YY_RULE_SETUP
 #line 1648 "/tmp/input.flex"
-yyout << u8"ō"; return 1642;
+yyout << "ō"; return 1642;
 	YY_BREAK
 case 1645:
 YY_RULE_SETUP
 #line 1649 "/tmp/input.flex"
-yyout << u8"ω"; return 1643;
+yyout << "ω"; return 1643;
 	YY_BREAK
 case 1646:
 YY_RULE_SETUP
 #line 1650 "/tmp/input.flex"
-yyout << u8"ο"; return 1644;
+yyout << "ο"; return 1644;
 	YY_BREAK
 case 1647:
 YY_RULE_SETUP
 #line 1651 "/tmp/input.flex"
-yyout << u8"⦶"; return 1645;
+yyout << "⦶"; return 1645;
 	YY_BREAK
 case 1648:
 YY_RULE_SETUP
 #line 1652 "/tmp/input.flex"
-yyout << u8"⊖"; return 1646;
+yyout << "⊖"; return 1646;
 	YY_BREAK
 case 1649:
 YY_RULE_SETUP
 #line 1653 "/tmp/input.flex"
-yyout << u8"𝕠"; return 1647;
+yyout << "𝕠"; return 1647;
 	YY_BREAK
 case 1650:
 YY_RULE_SETUP
 #line 1654 "/tmp/input.flex"
-yyout << u8"⦷"; return 1648;
+yyout << "⦷"; return 1648;
 	YY_BREAK
 case 1651:
 YY_RULE_SETUP
 #line 1655 "/tmp/input.flex"
-yyout << u8"⦹"; return 1649;
+yyout << "⦹"; return 1649;
 	YY_BREAK
 case 1652:
 YY_RULE_SETUP
 #line 1656 "/tmp/input.flex"
-yyout << u8"⊕"; return 1650;
+yyout << "⊕"; return 1650;
 	YY_BREAK
 case 1653:
 YY_RULE_SETUP
 #line 1657 "/tmp/input.flex"
-yyout << u8"∨"; return 1651;
+yyout << "∨"; return 1651;
 	YY_BREAK
 case 1654:
 YY_RULE_SETUP
 #line 1658 "/tmp/input.flex"
-yyout << u8"↻"; return 1652;
+yyout << "↻"; return 1652;
 	YY_BREAK
 case 1655:
 YY_RULE_SETUP
 #line 1659 "/tmp/input.flex"
-yyout << u8"⩝"; return 1653;
+yyout << "⩝"; return 1653;
 	YY_BREAK
 case 1656:
 YY_RULE_SETUP
 #line 1660 "/tmp/input.flex"
-yyout << u8"ℴ"; return 1654;
+yyout << "ℴ"; return 1654;
 	YY_BREAK
 case 1657:
 YY_RULE_SETUP
 #line 1661 "/tmp/input.flex"
-yyout << u8"ℴ"; return 1655;
+yyout << "ℴ"; return 1655;
 	YY_BREAK
 case 1658:
 YY_RULE_SETUP
 #line 1662 "/tmp/input.flex"
-yyout << u8"ª"; return 1656;
+yyout << "ª"; return 1656;
 	YY_BREAK
 case 1659:
 YY_RULE_SETUP
 #line 1663 "/tmp/input.flex"
-yyout << u8"ª"; return 1657;
+yyout << "ª"; return 1657;
 	YY_BREAK
 case 1660:
 YY_RULE_SETUP
 #line 1664 "/tmp/input.flex"
-yyout << u8"º"; return 1658;
+yyout << "º"; return 1658;
 	YY_BREAK
 case 1661:
 YY_RULE_SETUP
 #line 1665 "/tmp/input.flex"
-yyout << u8"º"; return 1659;
+yyout << "º"; return 1659;
 	YY_BREAK
 case 1662:
 YY_RULE_SETUP
 #line 1666 "/tmp/input.flex"
-yyout << u8"⊶"; return 1660;
+yyout << "⊶"; return 1660;
 	YY_BREAK
 case 1663:
 YY_RULE_SETUP
 #line 1667 "/tmp/input.flex"
-yyout << u8"⩖"; return 1661;
+yyout << "⩖"; return 1661;
 	YY_BREAK
 case 1664:
 YY_RULE_SETUP
 #line 1668 "/tmp/input.flex"
-yyout << u8"⩗"; return 1662;
+yyout << "⩗"; return 1662;
 	YY_BREAK
 case 1665:
 YY_RULE_SETUP
 #line 1669 "/tmp/input.flex"
-yyout << u8"⩛"; return 1663;
+yyout << "⩛"; return 1663;
 	YY_BREAK
 case 1666:
 YY_RULE_SETUP
 #line 1670 "/tmp/input.flex"
-yyout << u8"ℴ"; return 1664;
+yyout << "ℴ"; return 1664;
 	YY_BREAK
 case 1667:
 YY_RULE_SETUP
 #line 1671 "/tmp/input.flex"
-yyout << u8"ø"; return 1665;
+yyout << "ø"; return 1665;
 	YY_BREAK
 case 1668:
 YY_RULE_SETUP
 #line 1672 "/tmp/input.flex"
-yyout << u8"ø"; return 1666;
+yyout << "ø"; return 1666;
 	YY_BREAK
 case 1669:
 YY_RULE_SETUP
 #line 1673 "/tmp/input.flex"
-yyout << u8"⊘"; return 1667;
+yyout << "⊘"; return 1667;
 	YY_BREAK
 case 1670:
 YY_RULE_SETUP
 #line 1674 "/tmp/input.flex"
-yyout << u8"õ"; return 1668;
+yyout << "õ"; return 1668;
 	YY_BREAK
 case 1671:
 YY_RULE_SETUP
 #line 1675 "/tmp/input.flex"
-yyout << u8"õ"; return 1669;
+yyout << "õ"; return 1669;
 	YY_BREAK
 case 1672:
 YY_RULE_SETUP
 #line 1676 "/tmp/input.flex"
-yyout << u8"⊗"; return 1670;
+yyout << "⊗"; return 1670;
 	YY_BREAK
 case 1673:
 YY_RULE_SETUP
 #line 1677 "/tmp/input.flex"
-yyout << u8"⨶"; return 1671;
+yyout << "⨶"; return 1671;
 	YY_BREAK
 case 1674:
 YY_RULE_SETUP
 #line 1678 "/tmp/input.flex"
-yyout << u8"ö"; return 1672;
+yyout << "ö"; return 1672;
 	YY_BREAK
 case 1675:
 YY_RULE_SETUP
 #line 1679 "/tmp/input.flex"
-yyout << u8"ö"; return 1673;
+yyout << "ö"; return 1673;
 	YY_BREAK
 case 1676:
 YY_RULE_SETUP
 #line 1680 "/tmp/input.flex"
-yyout << u8"⌽"; return 1674;
+yyout << "⌽"; return 1674;
 	YY_BREAK
 case 1677:
 YY_RULE_SETUP
 #line 1681 "/tmp/input.flex"
-yyout << u8"∥"; return 1675;
+yyout << "∥"; return 1675;
 	YY_BREAK
 case 1678:
 YY_RULE_SETUP
 #line 1682 "/tmp/input.flex"
-yyout << u8"¶"; return 1676;
+yyout << "¶"; return 1676;
 	YY_BREAK
 case 1679:
 YY_RULE_SETUP
 #line 1683 "/tmp/input.flex"
-yyout << u8"¶"; return 1677;
+yyout << "¶"; return 1677;
 	YY_BREAK
 case 1680:
 YY_RULE_SETUP
 #line 1684 "/tmp/input.flex"
-yyout << u8"∥"; return 1678;
+yyout << "∥"; return 1678;
 	YY_BREAK
 case 1681:
 YY_RULE_SETUP
 #line 1685 "/tmp/input.flex"
-yyout << u8"⫳"; return 1679;
+yyout << "⫳"; return 1679;
 	YY_BREAK
 case 1682:
 YY_RULE_SETUP
 #line 1686 "/tmp/input.flex"
-yyout << u8"⫽"; return 1680;
+yyout << "⫽"; return 1680;
 	YY_BREAK
 case 1683:
 YY_RULE_SETUP
 #line 1687 "/tmp/input.flex"
-yyout << u8"∂"; return 1681;
+yyout << "∂"; return 1681;
 	YY_BREAK
 case 1684:
 YY_RULE_SETUP
 #line 1688 "/tmp/input.flex"
-yyout << u8"п"; return 1682;
+yyout << "п"; return 1682;
 	YY_BREAK
 case 1685:
 YY_RULE_SETUP
 #line 1689 "/tmp/input.flex"
-yyout << u8"%"; return 1683;
+yyout << "%"; return 1683;
 	YY_BREAK
 case 1686:
 YY_RULE_SETUP
 #line 1690 "/tmp/input.flex"
-yyout << u8"."; return 1684;
+yyout << "."; return 1684;
 	YY_BREAK
 case 1687:
 YY_RULE_SETUP
 #line 1691 "/tmp/input.flex"
-yyout << u8"‰"; return 1685;
+yyout << "‰"; return 1685;
 	YY_BREAK
 case 1688:
 YY_RULE_SETUP
 #line 1692 "/tmp/input.flex"
-yyout << u8"⊥"; return 1686;
+yyout << "⊥"; return 1686;
 	YY_BREAK
 case 1689:
 YY_RULE_SETUP
 #line 1693 "/tmp/input.flex"
-yyout << u8"‱"; return 1687;
+yyout << "‱"; return 1687;
 	YY_BREAK
 case 1690:
 YY_RULE_SETUP
 #line 1694 "/tmp/input.flex"
-yyout << u8"𝔭"; return 1688;
+yyout << "𝔭"; return 1688;
 	YY_BREAK
 case 1691:
 YY_RULE_SETUP
 #line 1695 "/tmp/input.flex"
-yyout << u8"φ"; return 1689;
+yyout << "φ"; return 1689;
 	YY_BREAK
 case 1692:
 YY_RULE_SETUP
 #line 1696 "/tmp/input.flex"
-yyout << u8"ϕ"; return 1690;
+yyout << "ϕ"; return 1690;
 	YY_BREAK
 case 1693:
 YY_RULE_SETUP
 #line 1697 "/tmp/input.flex"
-yyout << u8"ℳ"; return 1691;
+yyout << "ℳ"; return 1691;
 	YY_BREAK
 case 1694:
 YY_RULE_SETUP
 #line 1698 "/tmp/input.flex"
-yyout << u8"☎"; return 1692;
+yyout << "☎"; return 1692;
 	YY_BREAK
 case 1695:
 YY_RULE_SETUP
 #line 1699 "/tmp/input.flex"
-yyout << u8"π"; return 1693;
+yyout << "π"; return 1693;
 	YY_BREAK
 case 1696:
 YY_RULE_SETUP
 #line 1700 "/tmp/input.flex"
-yyout << u8"⋔"; return 1694;
+yyout << "⋔"; return 1694;
 	YY_BREAK
 case 1697:
 YY_RULE_SETUP
 #line 1701 "/tmp/input.flex"
-yyout << u8"ϖ"; return 1695;
+yyout << "ϖ"; return 1695;
 	YY_BREAK
 case 1698:
 YY_RULE_SETUP
 #line 1702 "/tmp/input.flex"
-yyout << u8"ℏ"; return 1696;
+yyout << "ℏ"; return 1696;
 	YY_BREAK
 case 1699:
 YY_RULE_SETUP
 #line 1703 "/tmp/input.flex"
-yyout << u8"ℎ"; return 1697;
+yyout << "ℎ"; return 1697;
 	YY_BREAK
 case 1700:
 YY_RULE_SETUP
 #line 1704 "/tmp/input.flex"
-yyout << u8"ℏ"; return 1698;
+yyout << "ℏ"; return 1698;
 	YY_BREAK
 case 1701:
 YY_RULE_SETUP
 #line 1705 "/tmp/input.flex"
-yyout << u8"+"; return 1699;
+yyout << "+"; return 1699;
 	YY_BREAK
 case 1702:
 YY_RULE_SETUP
 #line 1706 "/tmp/input.flex"
-yyout << u8"⨣"; return 1700;
+yyout << "⨣"; return 1700;
 	YY_BREAK
 case 1703:
 YY_RULE_SETUP
 #line 1707 "/tmp/input.flex"
-yyout << u8"⊞"; return 1701;
+yyout << "⊞"; return 1701;
 	YY_BREAK
 case 1704:
 YY_RULE_SETUP
 #line 1708 "/tmp/input.flex"
-yyout << u8"⨢"; return 1702;
+yyout << "⨢"; return 1702;
 	YY_BREAK
 case 1705:
 YY_RULE_SETUP
 #line 1709 "/tmp/input.flex"
-yyout << u8"∔"; return 1703;
+yyout << "∔"; return 1703;
 	YY_BREAK
 case 1706:
 YY_RULE_SETUP
 #line 1710 "/tmp/input.flex"
-yyout << u8"⨥"; return 1704;
+yyout << "⨥"; return 1704;
 	YY_BREAK
 case 1707:
 YY_RULE_SETUP
 #line 1711 "/tmp/input.flex"
-yyout << u8"⩲"; return 1705;
+yyout << "⩲"; return 1705;
 	YY_BREAK
 case 1708:
 YY_RULE_SETUP
 #line 1712 "/tmp/input.flex"
-yyout << u8"±"; return 1706;
+yyout << "±"; return 1706;
 	YY_BREAK
 case 1709:
 YY_RULE_SETUP
 #line 1713 "/tmp/input.flex"
-yyout << u8"±"; return 1707;
+yyout << "±"; return 1707;
 	YY_BREAK
 case 1710:
 YY_RULE_SETUP
 #line 1714 "/tmp/input.flex"
-yyout << u8"⨦"; return 1708;
+yyout << "⨦"; return 1708;
 	YY_BREAK
 case 1711:
 YY_RULE_SETUP
 #line 1715 "/tmp/input.flex"
-yyout << u8"⨧"; return 1709;
+yyout << "⨧"; return 1709;
 	YY_BREAK
 case 1712:
 YY_RULE_SETUP
 #line 1716 "/tmp/input.flex"
-yyout << u8"±"; return 1710;
+yyout << "±"; return 1710;
 	YY_BREAK
 case 1713:
 YY_RULE_SETUP
 #line 1717 "/tmp/input.flex"
-yyout << u8"⨕"; return 1711;
+yyout << "⨕"; return 1711;
 	YY_BREAK
 case 1714:
 YY_RULE_SETUP
 #line 1718 "/tmp/input.flex"
-yyout << u8"𝕡"; return 1712;
+yyout << "𝕡"; return 1712;
 	YY_BREAK
 case 1715:
 YY_RULE_SETUP
 #line 1719 "/tmp/input.flex"
-yyout << u8"£"; return 1713;
+yyout << "£"; return 1713;
 	YY_BREAK
 case 1716:
 YY_RULE_SETUP
 #line 1720 "/tmp/input.flex"
-yyout << u8"£"; return 1714;
+yyout << "£"; return 1714;
 	YY_BREAK
 case 1717:
 YY_RULE_SETUP
 #line 1721 "/tmp/input.flex"
-yyout << u8"≺"; return 1715;
+yyout << "≺"; return 1715;
 	YY_BREAK
 case 1718:
 YY_RULE_SETUP
 #line 1722 "/tmp/input.flex"
-yyout << u8"⪳"; return 1716;
+yyout << "⪳"; return 1716;
 	YY_BREAK
 case 1719:
 YY_RULE_SETUP
 #line 1723 "/tmp/input.flex"
-yyout << u8"⪷"; return 1717;
+yyout << "⪷"; return 1717;
 	YY_BREAK
 case 1720:
 YY_RULE_SETUP
 #line 1724 "/tmp/input.flex"
-yyout << u8"≼"; return 1718;
+yyout << "≼"; return 1718;
 	YY_BREAK
 case 1721:
 YY_RULE_SETUP
 #line 1725 "/tmp/input.flex"
-yyout << u8"⪯"; return 1719;
+yyout << "⪯"; return 1719;
 	YY_BREAK
 case 1722:
 YY_RULE_SETUP
 #line 1726 "/tmp/input.flex"
-yyout << u8"≺"; return 1720;
+yyout << "≺"; return 1720;
 	YY_BREAK
 case 1723:
 YY_RULE_SETUP
 #line 1727 "/tmp/input.flex"
-yyout << u8"⪷"; return 1721;
+yyout << "⪷"; return 1721;
 	YY_BREAK
 case 1724:
 YY_RULE_SETUP
 #line 1728 "/tmp/input.flex"
-yyout << u8"≼"; return 1722;
+yyout << "≼"; return 1722;
 	YY_BREAK
 case 1725:
 YY_RULE_SETUP
 #line 1729 "/tmp/input.flex"
-yyout << u8"⪯"; return 1723;
+yyout << "⪯"; return 1723;
 	YY_BREAK
 case 1726:
 YY_RULE_SETUP
 #line 1730 "/tmp/input.flex"
-yyout << u8"⪹"; return 1724;
+yyout << "⪹"; return 1724;
 	YY_BREAK
 case 1727:
 YY_RULE_SETUP
 #line 1731 "/tmp/input.flex"
-yyout << u8"⪵"; return 1725;
+yyout << "⪵"; return 1725;
 	YY_BREAK
 case 1728:
 YY_RULE_SETUP
 #line 1732 "/tmp/input.flex"
-yyout << u8"⋨"; return 1726;
+yyout << "⋨"; return 1726;
 	YY_BREAK
 case 1729:
 YY_RULE_SETUP
 #line 1733 "/tmp/input.flex"
-yyout << u8"≾"; return 1727;
+yyout << "≾"; return 1727;
 	YY_BREAK
 case 1730:
 YY_RULE_SETUP
 #line 1734 "/tmp/input.flex"
-yyout << u8"′"; return 1728;
+yyout << "′"; return 1728;
 	YY_BREAK
 case 1731:
 YY_RULE_SETUP
 #line 1735 "/tmp/input.flex"
-yyout << u8"ℙ"; return 1729;
+yyout << "ℙ"; return 1729;
 	YY_BREAK
 case 1732:
 YY_RULE_SETUP
 #line 1736 "/tmp/input.flex"
-yyout << u8"⪵"; return 1730;
+yyout << "⪵"; return 1730;
 	YY_BREAK
 case 1733:
 YY_RULE_SETUP
 #line 1737 "/tmp/input.flex"
-yyout << u8"⪹"; return 1731;
+yyout << "⪹"; return 1731;
 	YY_BREAK
 case 1734:
 YY_RULE_SETUP
 #line 1738 "/tmp/input.flex"
-yyout << u8"⋨"; return 1732;
+yyout << "⋨"; return 1732;
 	YY_BREAK
 case 1735:
 YY_RULE_SETUP
 #line 1739 "/tmp/input.flex"
-yyout << u8"∏"; return 1733;
+yyout << "∏"; return 1733;
 	YY_BREAK
 case 1736:
 YY_RULE_SETUP
 #line 1740 "/tmp/input.flex"
-yyout << u8"⌮"; return 1734;
+yyout << "⌮"; return 1734;
 	YY_BREAK
 case 1737:
 YY_RULE_SETUP
 #line 1741 "/tmp/input.flex"
-yyout << u8"⌒"; return 1735;
+yyout << "⌒"; return 1735;
 	YY_BREAK
 case 1738:
 YY_RULE_SETUP
 #line 1742 "/tmp/input.flex"
-yyout << u8"⌓"; return 1736;
+yyout << "⌓"; return 1736;
 	YY_BREAK
 case 1739:
 YY_RULE_SETUP
 #line 1743 "/tmp/input.flex"
-yyout << u8"∝"; return 1737;
+yyout << "∝"; return 1737;
 	YY_BREAK
 case 1740:
 YY_RULE_SETUP
 #line 1744 "/tmp/input.flex"
-yyout << u8"∝"; return 1738;
+yyout << "∝"; return 1738;
 	YY_BREAK
 case 1741:
 YY_RULE_SETUP
 #line 1745 "/tmp/input.flex"
-yyout << u8"≾"; return 1739;
+yyout << "≾"; return 1739;
 	YY_BREAK
 case 1742:
 YY_RULE_SETUP
 #line 1746 "/tmp/input.flex"
-yyout << u8"⊰"; return 1740;
+yyout << "⊰"; return 1740;
 	YY_BREAK
 case 1743:
 YY_RULE_SETUP
 #line 1747 "/tmp/input.flex"
-yyout << u8"𝓅"; return 1741;
+yyout << "𝓅"; return 1741;
 	YY_BREAK
 case 1744:
 YY_RULE_SETUP
 #line 1748 "/tmp/input.flex"
-yyout << u8"ψ"; return 1742;
+yyout << "ψ"; return 1742;
 	YY_BREAK
 case 1745:
 YY_RULE_SETUP
 #line 1749 "/tmp/input.flex"
-yyout << u8" "; return 1743;
+yyout << " "; return 1743;
 	YY_BREAK
 case 1746:
 YY_RULE_SETUP
 #line 1750 "/tmp/input.flex"
-yyout << u8"𝔮"; return 1744;
+yyout << "𝔮"; return 1744;
 	YY_BREAK
 case 1747:
 YY_RULE_SETUP
 #line 1751 "/tmp/input.flex"
-yyout << u8"⨌"; return 1745;
+yyout << "⨌"; return 1745;
 	YY_BREAK
 case 1748:
 YY_RULE_SETUP
 #line 1752 "/tmp/input.flex"
-yyout << u8"𝕢"; return 1746;
+yyout << "𝕢"; return 1746;
 	YY_BREAK
 case 1749:
 YY_RULE_SETUP
 #line 1753 "/tmp/input.flex"
-yyout << u8"⁗"; return 1747;
+yyout << "⁗"; return 1747;
 	YY_BREAK
 case 1750:
 YY_RULE_SETUP
 #line 1754 "/tmp/input.flex"
-yyout << u8"𝓆"; return 1748;
+yyout << "𝓆"; return 1748;
 	YY_BREAK
 case 1751:
 YY_RULE_SETUP
 #line 1755 "/tmp/input.flex"
-yyout << u8"ℍ"; return 1749;
+yyout << "ℍ"; return 1749;
 	YY_BREAK
 case 1752:
 YY_RULE_SETUP
 #line 1756 "/tmp/input.flex"
-yyout << u8"⨖"; return 1750;
+yyout << "⨖"; return 1750;
 	YY_BREAK
 case 1753:
 YY_RULE_SETUP
 #line 1757 "/tmp/input.flex"
-yyout << u8"?"; return 1751;
+yyout << "?"; return 1751;
 	YY_BREAK
 case 1754:
 YY_RULE_SETUP
 #line 1758 "/tmp/input.flex"
-yyout << u8"≟"; return 1752;
+yyout << "≟"; return 1752;
 	YY_BREAK
 case 1755:
 YY_RULE_SETUP
@@ -14816,2382 +14816,2382 @@ yyout << '"'; return 1754;
 case 1757:
 YY_RULE_SETUP
 #line 1761 "/tmp/input.flex"
-yyout << u8"⇛"; return 1755;
+yyout << "⇛"; return 1755;
 	YY_BREAK
 case 1758:
 YY_RULE_SETUP
 #line 1762 "/tmp/input.flex"
-yyout << u8"⇒"; return 1756;
+yyout << "⇒"; return 1756;
 	YY_BREAK
 case 1759:
 YY_RULE_SETUP
 #line 1763 "/tmp/input.flex"
-yyout << u8"⤜"; return 1757;
+yyout << "⤜"; return 1757;
 	YY_BREAK
 case 1760:
 YY_RULE_SETUP
 #line 1764 "/tmp/input.flex"
-yyout << u8"⤏"; return 1758;
+yyout << "⤏"; return 1758;
 	YY_BREAK
 case 1761:
 YY_RULE_SETUP
 #line 1765 "/tmp/input.flex"
-yyout << u8"⥤"; return 1759;
+yyout << "⥤"; return 1759;
 	YY_BREAK
 case 1762:
 YY_RULE_SETUP
 #line 1766 "/tmp/input.flex"
-yyout << u8"∽" << u8"̱"; return 1760;
+yyout << "∽" << "̱"; return 1760;
 	YY_BREAK
 case 1763:
 YY_RULE_SETUP
 #line 1767 "/tmp/input.flex"
-yyout << u8"ŕ"; return 1761;
+yyout << "ŕ"; return 1761;
 	YY_BREAK
 case 1764:
 YY_RULE_SETUP
 #line 1768 "/tmp/input.flex"
-yyout << u8"√"; return 1762;
+yyout << "√"; return 1762;
 	YY_BREAK
 case 1765:
 YY_RULE_SETUP
 #line 1769 "/tmp/input.flex"
-yyout << u8"⦳"; return 1763;
+yyout << "⦳"; return 1763;
 	YY_BREAK
 case 1766:
 YY_RULE_SETUP
 #line 1770 "/tmp/input.flex"
-yyout << u8"⟩"; return 1764;
+yyout << "⟩"; return 1764;
 	YY_BREAK
 case 1767:
 YY_RULE_SETUP
 #line 1771 "/tmp/input.flex"
-yyout << u8"⦒"; return 1765;
+yyout << "⦒"; return 1765;
 	YY_BREAK
 case 1768:
 YY_RULE_SETUP
 #line 1772 "/tmp/input.flex"
-yyout << u8"⦥"; return 1766;
+yyout << "⦥"; return 1766;
 	YY_BREAK
 case 1769:
 YY_RULE_SETUP
 #line 1773 "/tmp/input.flex"
-yyout << u8"⟩"; return 1767;
+yyout << "⟩"; return 1767;
 	YY_BREAK
 case 1770:
 YY_RULE_SETUP
 #line 1774 "/tmp/input.flex"
-yyout << u8"»"; return 1768;
+yyout << "»"; return 1768;
 	YY_BREAK
 case 1771:
 YY_RULE_SETUP
 #line 1775 "/tmp/input.flex"
-yyout << u8"»"; return 1769;
+yyout << "»"; return 1769;
 	YY_BREAK
 case 1772:
 YY_RULE_SETUP
 #line 1776 "/tmp/input.flex"
-yyout << u8"→"; return 1770;
+yyout << "→"; return 1770;
 	YY_BREAK
 case 1773:
 YY_RULE_SETUP
 #line 1777 "/tmp/input.flex"
-yyout << u8"⥵"; return 1771;
+yyout << "⥵"; return 1771;
 	YY_BREAK
 case 1774:
 YY_RULE_SETUP
 #line 1778 "/tmp/input.flex"
-yyout << u8"⇥"; return 1772;
+yyout << "⇥"; return 1772;
 	YY_BREAK
 case 1775:
 YY_RULE_SETUP
 #line 1779 "/tmp/input.flex"
-yyout << u8"⤠"; return 1773;
+yyout << "⤠"; return 1773;
 	YY_BREAK
 case 1776:
 YY_RULE_SETUP
 #line 1780 "/tmp/input.flex"
-yyout << u8"⤳"; return 1774;
+yyout << "⤳"; return 1774;
 	YY_BREAK
 case 1777:
 YY_RULE_SETUP
 #line 1781 "/tmp/input.flex"
-yyout << u8"⤞"; return 1775;
+yyout << "⤞"; return 1775;
 	YY_BREAK
 case 1778:
 YY_RULE_SETUP
 #line 1782 "/tmp/input.flex"
-yyout << u8"↪"; return 1776;
+yyout << "↪"; return 1776;
 	YY_BREAK
 case 1779:
 YY_RULE_SETUP
 #line 1783 "/tmp/input.flex"
-yyout << u8"↬"; return 1777;
+yyout << "↬"; return 1777;
 	YY_BREAK
 case 1780:
 YY_RULE_SETUP
 #line 1784 "/tmp/input.flex"
-yyout << u8"⥅"; return 1778;
+yyout << "⥅"; return 1778;
 	YY_BREAK
 case 1781:
 YY_RULE_SETUP
 #line 1785 "/tmp/input.flex"
-yyout << u8"⥴"; return 1779;
+yyout << "⥴"; return 1779;
 	YY_BREAK
 case 1782:
 YY_RULE_SETUP
 #line 1786 "/tmp/input.flex"
-yyout << u8"↣"; return 1780;
+yyout << "↣"; return 1780;
 	YY_BREAK
 case 1783:
 YY_RULE_SETUP
 #line 1787 "/tmp/input.flex"
-yyout << u8"↝"; return 1781;
+yyout << "↝"; return 1781;
 	YY_BREAK
 case 1784:
 YY_RULE_SETUP
 #line 1788 "/tmp/input.flex"
-yyout << u8"⤚"; return 1782;
+yyout << "⤚"; return 1782;
 	YY_BREAK
 case 1785:
 YY_RULE_SETUP
 #line 1789 "/tmp/input.flex"
-yyout << u8"∶"; return 1783;
+yyout << "∶"; return 1783;
 	YY_BREAK
 case 1786:
 YY_RULE_SETUP
 #line 1790 "/tmp/input.flex"
-yyout << u8"ℚ"; return 1784;
+yyout << "ℚ"; return 1784;
 	YY_BREAK
 case 1787:
 YY_RULE_SETUP
 #line 1791 "/tmp/input.flex"
-yyout << u8"⤍"; return 1785;
+yyout << "⤍"; return 1785;
 	YY_BREAK
 case 1788:
 YY_RULE_SETUP
 #line 1792 "/tmp/input.flex"
-yyout << u8"❳"; return 1786;
+yyout << "❳"; return 1786;
 	YY_BREAK
 case 1789:
 YY_RULE_SETUP
 #line 1793 "/tmp/input.flex"
-yyout << u8"}"; return 1787;
+yyout << "}"; return 1787;
 	YY_BREAK
 case 1790:
 YY_RULE_SETUP
 #line 1794 "/tmp/input.flex"
-yyout << u8"]"; return 1788;
+yyout << "]"; return 1788;
 	YY_BREAK
 case 1791:
 YY_RULE_SETUP
 #line 1795 "/tmp/input.flex"
-yyout << u8"⦌"; return 1789;
+yyout << "⦌"; return 1789;
 	YY_BREAK
 case 1792:
 YY_RULE_SETUP
 #line 1796 "/tmp/input.flex"
-yyout << u8"⦎"; return 1790;
+yyout << "⦎"; return 1790;
 	YY_BREAK
 case 1793:
 YY_RULE_SETUP
 #line 1797 "/tmp/input.flex"
-yyout << u8"⦐"; return 1791;
+yyout << "⦐"; return 1791;
 	YY_BREAK
 case 1794:
 YY_RULE_SETUP
 #line 1798 "/tmp/input.flex"
-yyout << u8"ř"; return 1792;
+yyout << "ř"; return 1792;
 	YY_BREAK
 case 1795:
 YY_RULE_SETUP
 #line 1799 "/tmp/input.flex"
-yyout << u8"ŗ"; return 1793;
+yyout << "ŗ"; return 1793;
 	YY_BREAK
 case 1796:
 YY_RULE_SETUP
 #line 1800 "/tmp/input.flex"
-yyout << u8"⌉"; return 1794;
+yyout << "⌉"; return 1794;
 	YY_BREAK
 case 1797:
 YY_RULE_SETUP
 #line 1801 "/tmp/input.flex"
-yyout << u8"}"; return 1795;
+yyout << "}"; return 1795;
 	YY_BREAK
 case 1798:
 YY_RULE_SETUP
 #line 1802 "/tmp/input.flex"
-yyout << u8"р"; return 1796;
+yyout << "р"; return 1796;
 	YY_BREAK
 case 1799:
 YY_RULE_SETUP
 #line 1803 "/tmp/input.flex"
-yyout << u8"⤷"; return 1797;
+yyout << "⤷"; return 1797;
 	YY_BREAK
 case 1800:
 YY_RULE_SETUP
 #line 1804 "/tmp/input.flex"
-yyout << u8"⥩"; return 1798;
+yyout << "⥩"; return 1798;
 	YY_BREAK
 case 1801:
 YY_RULE_SETUP
 #line 1805 "/tmp/input.flex"
-yyout << u8"”"; return 1799;
+yyout << "”"; return 1799;
 	YY_BREAK
 case 1802:
 YY_RULE_SETUP
 #line 1806 "/tmp/input.flex"
-yyout << u8"”"; return 1800;
+yyout << "”"; return 1800;
 	YY_BREAK
 case 1803:
 YY_RULE_SETUP
 #line 1807 "/tmp/input.flex"
-yyout << u8"↳"; return 1801;
+yyout << "↳"; return 1801;
 	YY_BREAK
 case 1804:
 YY_RULE_SETUP
 #line 1808 "/tmp/input.flex"
-yyout << u8"ℜ"; return 1802;
+yyout << "ℜ"; return 1802;
 	YY_BREAK
 case 1805:
 YY_RULE_SETUP
 #line 1809 "/tmp/input.flex"
-yyout << u8"ℛ"; return 1803;
+yyout << "ℛ"; return 1803;
 	YY_BREAK
 case 1806:
 YY_RULE_SETUP
 #line 1810 "/tmp/input.flex"
-yyout << u8"ℜ"; return 1804;
+yyout << "ℜ"; return 1804;
 	YY_BREAK
 case 1807:
 YY_RULE_SETUP
 #line 1811 "/tmp/input.flex"
-yyout << u8"ℝ"; return 1805;
+yyout << "ℝ"; return 1805;
 	YY_BREAK
 case 1808:
 YY_RULE_SETUP
 #line 1812 "/tmp/input.flex"
-yyout << u8"▭"; return 1806;
+yyout << "▭"; return 1806;
 	YY_BREAK
 case 1809:
 YY_RULE_SETUP
 #line 1813 "/tmp/input.flex"
-yyout << u8"®"; return 1807;
+yyout << "®"; return 1807;
 	YY_BREAK
 case 1810:
 YY_RULE_SETUP
 #line 1814 "/tmp/input.flex"
-yyout << u8"®"; return 1808;
+yyout << "®"; return 1808;
 	YY_BREAK
 case 1811:
 YY_RULE_SETUP
 #line 1815 "/tmp/input.flex"
-yyout << u8"⥽"; return 1809;
+yyout << "⥽"; return 1809;
 	YY_BREAK
 case 1812:
 YY_RULE_SETUP
 #line 1816 "/tmp/input.flex"
-yyout << u8"⌋"; return 1810;
+yyout << "⌋"; return 1810;
 	YY_BREAK
 case 1813:
 YY_RULE_SETUP
 #line 1817 "/tmp/input.flex"
-yyout << u8"𝔯"; return 1811;
+yyout << "𝔯"; return 1811;
 	YY_BREAK
 case 1814:
 YY_RULE_SETUP
 #line 1818 "/tmp/input.flex"
-yyout << u8"⇁"; return 1812;
+yyout << "⇁"; return 1812;
 	YY_BREAK
 case 1815:
 YY_RULE_SETUP
 #line 1819 "/tmp/input.flex"
-yyout << u8"⇀"; return 1813;
+yyout << "⇀"; return 1813;
 	YY_BREAK
 case 1816:
 YY_RULE_SETUP
 #line 1820 "/tmp/input.flex"
-yyout << u8"⥬"; return 1814;
+yyout << "⥬"; return 1814;
 	YY_BREAK
 case 1817:
 YY_RULE_SETUP
 #line 1821 "/tmp/input.flex"
-yyout << u8"ρ"; return 1815;
+yyout << "ρ"; return 1815;
 	YY_BREAK
 case 1818:
 YY_RULE_SETUP
 #line 1822 "/tmp/input.flex"
-yyout << u8"ϱ"; return 1816;
+yyout << "ϱ"; return 1816;
 	YY_BREAK
 case 1819:
 YY_RULE_SETUP
 #line 1823 "/tmp/input.flex"
-yyout << u8"→"; return 1817;
+yyout << "→"; return 1817;
 	YY_BREAK
 case 1820:
 YY_RULE_SETUP
 #line 1824 "/tmp/input.flex"
-yyout << u8"↣"; return 1818;
+yyout << "↣"; return 1818;
 	YY_BREAK
 case 1821:
 YY_RULE_SETUP
 #line 1825 "/tmp/input.flex"
-yyout << u8"⇁"; return 1819;
+yyout << "⇁"; return 1819;
 	YY_BREAK
 case 1822:
 YY_RULE_SETUP
 #line 1826 "/tmp/input.flex"
-yyout << u8"⇀"; return 1820;
+yyout << "⇀"; return 1820;
 	YY_BREAK
 case 1823:
 YY_RULE_SETUP
 #line 1827 "/tmp/input.flex"
-yyout << u8"⇄"; return 1821;
+yyout << "⇄"; return 1821;
 	YY_BREAK
 case 1824:
 YY_RULE_SETUP
 #line 1828 "/tmp/input.flex"
-yyout << u8"⇌"; return 1822;
+yyout << "⇌"; return 1822;
 	YY_BREAK
 case 1825:
 YY_RULE_SETUP
 #line 1829 "/tmp/input.flex"
-yyout << u8"⇉"; return 1823;
+yyout << "⇉"; return 1823;
 	YY_BREAK
 case 1826:
 YY_RULE_SETUP
 #line 1830 "/tmp/input.flex"
-yyout << u8"↝"; return 1824;
+yyout << "↝"; return 1824;
 	YY_BREAK
 case 1827:
 YY_RULE_SETUP
 #line 1831 "/tmp/input.flex"
-yyout << u8"⋌"; return 1825;
+yyout << "⋌"; return 1825;
 	YY_BREAK
 case 1828:
 YY_RULE_SETUP
 #line 1832 "/tmp/input.flex"
-yyout << u8"˚"; return 1826;
+yyout << "˚"; return 1826;
 	YY_BREAK
 case 1829:
 YY_RULE_SETUP
 #line 1833 "/tmp/input.flex"
-yyout << u8"≓"; return 1827;
+yyout << "≓"; return 1827;
 	YY_BREAK
 case 1830:
 YY_RULE_SETUP
 #line 1834 "/tmp/input.flex"
-yyout << u8"⇄"; return 1828;
+yyout << "⇄"; return 1828;
 	YY_BREAK
 case 1831:
 YY_RULE_SETUP
 #line 1835 "/tmp/input.flex"
-yyout << u8"⇌"; return 1829;
+yyout << "⇌"; return 1829;
 	YY_BREAK
 case 1832:
 YY_RULE_SETUP
 #line 1836 "/tmp/input.flex"
-yyout << u8"‏"; return 1830;
+yyout << "‏"; return 1830;
 	YY_BREAK
 case 1833:
 YY_RULE_SETUP
 #line 1837 "/tmp/input.flex"
-yyout << u8"⎱"; return 1831;
+yyout << "⎱"; return 1831;
 	YY_BREAK
 case 1834:
 YY_RULE_SETUP
 #line 1838 "/tmp/input.flex"
-yyout << u8"⎱"; return 1832;
+yyout << "⎱"; return 1832;
 	YY_BREAK
 case 1835:
 YY_RULE_SETUP
 #line 1839 "/tmp/input.flex"
-yyout << u8"⫮"; return 1833;
+yyout << "⫮"; return 1833;
 	YY_BREAK
 case 1836:
 YY_RULE_SETUP
 #line 1840 "/tmp/input.flex"
-yyout << u8"⟭"; return 1834;
+yyout << "⟭"; return 1834;
 	YY_BREAK
 case 1837:
 YY_RULE_SETUP
 #line 1841 "/tmp/input.flex"
-yyout << u8"⇾"; return 1835;
+yyout << "⇾"; return 1835;
 	YY_BREAK
 case 1838:
 YY_RULE_SETUP
 #line 1842 "/tmp/input.flex"
-yyout << u8"⟧"; return 1836;
+yyout << "⟧"; return 1836;
 	YY_BREAK
 case 1839:
 YY_RULE_SETUP
 #line 1843 "/tmp/input.flex"
-yyout << u8"⦆"; return 1837;
+yyout << "⦆"; return 1837;
 	YY_BREAK
 case 1840:
 YY_RULE_SETUP
 #line 1844 "/tmp/input.flex"
-yyout << u8"𝕣"; return 1838;
+yyout << "𝕣"; return 1838;
 	YY_BREAK
 case 1841:
 YY_RULE_SETUP
 #line 1845 "/tmp/input.flex"
-yyout << u8"⨮"; return 1839;
+yyout << "⨮"; return 1839;
 	YY_BREAK
 case 1842:
 YY_RULE_SETUP
 #line 1846 "/tmp/input.flex"
-yyout << u8"⨵"; return 1840;
+yyout << "⨵"; return 1840;
 	YY_BREAK
 case 1843:
 YY_RULE_SETUP
 #line 1847 "/tmp/input.flex"
-yyout << u8")"; return 1841;
+yyout << ")"; return 1841;
 	YY_BREAK
 case 1844:
 YY_RULE_SETUP
 #line 1848 "/tmp/input.flex"
-yyout << u8"⦔"; return 1842;
+yyout << "⦔"; return 1842;
 	YY_BREAK
 case 1845:
 YY_RULE_SETUP
 #line 1849 "/tmp/input.flex"
-yyout << u8"⨒"; return 1843;
+yyout << "⨒"; return 1843;
 	YY_BREAK
 case 1846:
 YY_RULE_SETUP
 #line 1850 "/tmp/input.flex"
-yyout << u8"⇉"; return 1844;
+yyout << "⇉"; return 1844;
 	YY_BREAK
 case 1847:
 YY_RULE_SETUP
 #line 1851 "/tmp/input.flex"
-yyout << u8"›"; return 1845;
+yyout << "›"; return 1845;
 	YY_BREAK
 case 1848:
 YY_RULE_SETUP
 #line 1852 "/tmp/input.flex"
-yyout << u8"𝓇"; return 1846;
+yyout << "𝓇"; return 1846;
 	YY_BREAK
 case 1849:
 YY_RULE_SETUP
 #line 1853 "/tmp/input.flex"
-yyout << u8"↱"; return 1847;
+yyout << "↱"; return 1847;
 	YY_BREAK
 case 1850:
 YY_RULE_SETUP
 #line 1854 "/tmp/input.flex"
-yyout << u8"]"; return 1848;
+yyout << "]"; return 1848;
 	YY_BREAK
 case 1851:
 YY_RULE_SETUP
 #line 1855 "/tmp/input.flex"
-yyout << u8"’"; return 1849;
+yyout << "’"; return 1849;
 	YY_BREAK
 case 1852:
 YY_RULE_SETUP
 #line 1856 "/tmp/input.flex"
-yyout << u8"’"; return 1850;
+yyout << "’"; return 1850;
 	YY_BREAK
 case 1853:
 YY_RULE_SETUP
 #line 1857 "/tmp/input.flex"
-yyout << u8"⋌"; return 1851;
+yyout << "⋌"; return 1851;
 	YY_BREAK
 case 1854:
 YY_RULE_SETUP
 #line 1858 "/tmp/input.flex"
-yyout << u8"⋊"; return 1852;
+yyout << "⋊"; return 1852;
 	YY_BREAK
 case 1855:
 YY_RULE_SETUP
 #line 1859 "/tmp/input.flex"
-yyout << u8"▹"; return 1853;
+yyout << "▹"; return 1853;
 	YY_BREAK
 case 1856:
 YY_RULE_SETUP
 #line 1860 "/tmp/input.flex"
-yyout << u8"⊵"; return 1854;
+yyout << "⊵"; return 1854;
 	YY_BREAK
 case 1857:
 YY_RULE_SETUP
 #line 1861 "/tmp/input.flex"
-yyout << u8"▸"; return 1855;
+yyout << "▸"; return 1855;
 	YY_BREAK
 case 1858:
 YY_RULE_SETUP
 #line 1862 "/tmp/input.flex"
-yyout << u8"⧎"; return 1856;
+yyout << "⧎"; return 1856;
 	YY_BREAK
 case 1859:
 YY_RULE_SETUP
 #line 1863 "/tmp/input.flex"
-yyout << u8"⥨"; return 1857;
+yyout << "⥨"; return 1857;
 	YY_BREAK
 case 1860:
 YY_RULE_SETUP
 #line 1864 "/tmp/input.flex"
-yyout << u8"℞"; return 1858;
+yyout << "℞"; return 1858;
 	YY_BREAK
 case 1861:
 YY_RULE_SETUP
 #line 1865 "/tmp/input.flex"
-yyout << u8"ś"; return 1859;
+yyout << "ś"; return 1859;
 	YY_BREAK
 case 1862:
 YY_RULE_SETUP
 #line 1866 "/tmp/input.flex"
-yyout << u8"‚"; return 1860;
+yyout << "‚"; return 1860;
 	YY_BREAK
 case 1863:
 YY_RULE_SETUP
 #line 1867 "/tmp/input.flex"
-yyout << u8"≻"; return 1861;
+yyout << "≻"; return 1861;
 	YY_BREAK
 case 1864:
 YY_RULE_SETUP
 #line 1868 "/tmp/input.flex"
-yyout << u8"⪴"; return 1862;
+yyout << "⪴"; return 1862;
 	YY_BREAK
 case 1865:
 YY_RULE_SETUP
 #line 1869 "/tmp/input.flex"
-yyout << u8"⪸"; return 1863;
+yyout << "⪸"; return 1863;
 	YY_BREAK
 case 1866:
 YY_RULE_SETUP
 #line 1870 "/tmp/input.flex"
-yyout << u8"š"; return 1864;
+yyout << "š"; return 1864;
 	YY_BREAK
 case 1867:
 YY_RULE_SETUP
 #line 1871 "/tmp/input.flex"
-yyout << u8"≽"; return 1865;
+yyout << "≽"; return 1865;
 	YY_BREAK
 case 1868:
 YY_RULE_SETUP
 #line 1872 "/tmp/input.flex"
-yyout << u8"⪰"; return 1866;
+yyout << "⪰"; return 1866;
 	YY_BREAK
 case 1869:
 YY_RULE_SETUP
 #line 1873 "/tmp/input.flex"
-yyout << u8"ş"; return 1867;
+yyout << "ş"; return 1867;
 	YY_BREAK
 case 1870:
 YY_RULE_SETUP
 #line 1874 "/tmp/input.flex"
-yyout << u8"ŝ"; return 1868;
+yyout << "ŝ"; return 1868;
 	YY_BREAK
 case 1871:
 YY_RULE_SETUP
 #line 1875 "/tmp/input.flex"
-yyout << u8"⪶"; return 1869;
+yyout << "⪶"; return 1869;
 	YY_BREAK
 case 1872:
 YY_RULE_SETUP
 #line 1876 "/tmp/input.flex"
-yyout << u8"⪺"; return 1870;
+yyout << "⪺"; return 1870;
 	YY_BREAK
 case 1873:
 YY_RULE_SETUP
 #line 1877 "/tmp/input.flex"
-yyout << u8"⋩"; return 1871;
+yyout << "⋩"; return 1871;
 	YY_BREAK
 case 1874:
 YY_RULE_SETUP
 #line 1878 "/tmp/input.flex"
-yyout << u8"⨓"; return 1872;
+yyout << "⨓"; return 1872;
 	YY_BREAK
 case 1875:
 YY_RULE_SETUP
 #line 1879 "/tmp/input.flex"
-yyout << u8"≿"; return 1873;
+yyout << "≿"; return 1873;
 	YY_BREAK
 case 1876:
 YY_RULE_SETUP
 #line 1880 "/tmp/input.flex"
-yyout << u8"с"; return 1874;
+yyout << "с"; return 1874;
 	YY_BREAK
 case 1877:
 YY_RULE_SETUP
 #line 1881 "/tmp/input.flex"
-yyout << u8"⋅"; return 1875;
+yyout << "⋅"; return 1875;
 	YY_BREAK
 case 1878:
 YY_RULE_SETUP
 #line 1882 "/tmp/input.flex"
-yyout << u8"⊡"; return 1876;
+yyout << "⊡"; return 1876;
 	YY_BREAK
 case 1879:
 YY_RULE_SETUP
 #line 1883 "/tmp/input.flex"
-yyout << u8"⩦"; return 1877;
+yyout << "⩦"; return 1877;
 	YY_BREAK
 case 1880:
 YY_RULE_SETUP
 #line 1884 "/tmp/input.flex"
-yyout << u8"⇘"; return 1878;
+yyout << "⇘"; return 1878;
 	YY_BREAK
 case 1881:
 YY_RULE_SETUP
 #line 1885 "/tmp/input.flex"
-yyout << u8"⤥"; return 1879;
+yyout << "⤥"; return 1879;
 	YY_BREAK
 case 1882:
 YY_RULE_SETUP
 #line 1886 "/tmp/input.flex"
-yyout << u8"↘"; return 1880;
+yyout << "↘"; return 1880;
 	YY_BREAK
 case 1883:
 YY_RULE_SETUP
 #line 1887 "/tmp/input.flex"
-yyout << u8"↘"; return 1881;
+yyout << "↘"; return 1881;
 	YY_BREAK
 case 1884:
 YY_RULE_SETUP
 #line 1888 "/tmp/input.flex"
-yyout << u8"§"; return 1882;
+yyout << "§"; return 1882;
 	YY_BREAK
 case 1885:
 YY_RULE_SETUP
 #line 1889 "/tmp/input.flex"
-yyout << u8"§"; return 1883;
+yyout << "§"; return 1883;
 	YY_BREAK
 case 1886:
 YY_RULE_SETUP
 #line 1890 "/tmp/input.flex"
-yyout << u8";"; return 1884;
+yyout << ";"; return 1884;
 	YY_BREAK
 case 1887:
 YY_RULE_SETUP
 #line 1891 "/tmp/input.flex"
-yyout << u8"⤩"; return 1885;
+yyout << "⤩"; return 1885;
 	YY_BREAK
 case 1888:
 YY_RULE_SETUP
 #line 1892 "/tmp/input.flex"
-yyout << u8"∖"; return 1886;
+yyout << "∖"; return 1886;
 	YY_BREAK
 case 1889:
 YY_RULE_SETUP
 #line 1893 "/tmp/input.flex"
-yyout << u8"∖"; return 1887;
+yyout << "∖"; return 1887;
 	YY_BREAK
 case 1890:
 YY_RULE_SETUP
 #line 1894 "/tmp/input.flex"
-yyout << u8"✶"; return 1888;
+yyout << "✶"; return 1888;
 	YY_BREAK
 case 1891:
 YY_RULE_SETUP
 #line 1895 "/tmp/input.flex"
-yyout << u8"𝔰"; return 1889;
+yyout << "𝔰"; return 1889;
 	YY_BREAK
 case 1892:
 YY_RULE_SETUP
 #line 1896 "/tmp/input.flex"
-yyout << u8"⌢"; return 1890;
+yyout << "⌢"; return 1890;
 	YY_BREAK
 case 1893:
 YY_RULE_SETUP
 #line 1897 "/tmp/input.flex"
-yyout << u8"♯"; return 1891;
+yyout << "♯"; return 1891;
 	YY_BREAK
 case 1894:
 YY_RULE_SETUP
 #line 1898 "/tmp/input.flex"
-yyout << u8"щ"; return 1892;
+yyout << "щ"; return 1892;
 	YY_BREAK
 case 1895:
 YY_RULE_SETUP
 #line 1899 "/tmp/input.flex"
-yyout << u8"ш"; return 1893;
+yyout << "ш"; return 1893;
 	YY_BREAK
 case 1896:
 YY_RULE_SETUP
 #line 1900 "/tmp/input.flex"
-yyout << u8"∣"; return 1894;
+yyout << "∣"; return 1894;
 	YY_BREAK
 case 1897:
 YY_RULE_SETUP
 #line 1901 "/tmp/input.flex"
-yyout << u8"∥"; return 1895;
+yyout << "∥"; return 1895;
 	YY_BREAK
 case 1898:
 YY_RULE_SETUP
 #line 1902 "/tmp/input.flex"
-yyout << u8"­"; return 1896;
+yyout << "­"; return 1896;
 	YY_BREAK
 case 1899:
 YY_RULE_SETUP
 #line 1903 "/tmp/input.flex"
-yyout << u8"­"; return 1897;
+yyout << "­"; return 1897;
 	YY_BREAK
 case 1900:
 YY_RULE_SETUP
 #line 1904 "/tmp/input.flex"
-yyout << u8"σ"; return 1898;
+yyout << "σ"; return 1898;
 	YY_BREAK
 case 1901:
 YY_RULE_SETUP
 #line 1905 "/tmp/input.flex"
-yyout << u8"ς"; return 1899;
+yyout << "ς"; return 1899;
 	YY_BREAK
 case 1902:
 YY_RULE_SETUP
 #line 1906 "/tmp/input.flex"
-yyout << u8"ς"; return 1900;
+yyout << "ς"; return 1900;
 	YY_BREAK
 case 1903:
 YY_RULE_SETUP
 #line 1907 "/tmp/input.flex"
-yyout << u8"∼"; return 1901;
+yyout << "∼"; return 1901;
 	YY_BREAK
 case 1904:
 YY_RULE_SETUP
 #line 1908 "/tmp/input.flex"
-yyout << u8"⩪"; return 1902;
+yyout << "⩪"; return 1902;
 	YY_BREAK
 case 1905:
 YY_RULE_SETUP
 #line 1909 "/tmp/input.flex"
-yyout << u8"≃"; return 1903;
+yyout << "≃"; return 1903;
 	YY_BREAK
 case 1906:
 YY_RULE_SETUP
 #line 1910 "/tmp/input.flex"
-yyout << u8"≃"; return 1904;
+yyout << "≃"; return 1904;
 	YY_BREAK
 case 1907:
 YY_RULE_SETUP
 #line 1911 "/tmp/input.flex"
-yyout << u8"⪞"; return 1905;
+yyout << "⪞"; return 1905;
 	YY_BREAK
 case 1908:
 YY_RULE_SETUP
 #line 1912 "/tmp/input.flex"
-yyout << u8"⪠"; return 1906;
+yyout << "⪠"; return 1906;
 	YY_BREAK
 case 1909:
 YY_RULE_SETUP
 #line 1913 "/tmp/input.flex"
-yyout << u8"⪝"; return 1907;
+yyout << "⪝"; return 1907;
 	YY_BREAK
 case 1910:
 YY_RULE_SETUP
 #line 1914 "/tmp/input.flex"
-yyout << u8"⪟"; return 1908;
+yyout << "⪟"; return 1908;
 	YY_BREAK
 case 1911:
 YY_RULE_SETUP
 #line 1915 "/tmp/input.flex"
-yyout << u8"≆"; return 1909;
+yyout << "≆"; return 1909;
 	YY_BREAK
 case 1912:
 YY_RULE_SETUP
 #line 1916 "/tmp/input.flex"
-yyout << u8"⨤"; return 1910;
+yyout << "⨤"; return 1910;
 	YY_BREAK
 case 1913:
 YY_RULE_SETUP
 #line 1917 "/tmp/input.flex"
-yyout << u8"⥲"; return 1911;
+yyout << "⥲"; return 1911;
 	YY_BREAK
 case 1914:
 YY_RULE_SETUP
 #line 1918 "/tmp/input.flex"
-yyout << u8"←"; return 1912;
+yyout << "←"; return 1912;
 	YY_BREAK
 case 1915:
 YY_RULE_SETUP
 #line 1919 "/tmp/input.flex"
-yyout << u8"∖"; return 1913;
+yyout << "∖"; return 1913;
 	YY_BREAK
 case 1916:
 YY_RULE_SETUP
 #line 1920 "/tmp/input.flex"
-yyout << u8"⨳"; return 1914;
+yyout << "⨳"; return 1914;
 	YY_BREAK
 case 1917:
 YY_RULE_SETUP
 #line 1921 "/tmp/input.flex"
-yyout << u8"⧤"; return 1915;
+yyout << "⧤"; return 1915;
 	YY_BREAK
 case 1918:
 YY_RULE_SETUP
 #line 1922 "/tmp/input.flex"
-yyout << u8"∣"; return 1916;
+yyout << "∣"; return 1916;
 	YY_BREAK
 case 1919:
 YY_RULE_SETUP
 #line 1923 "/tmp/input.flex"
-yyout << u8"⌣"; return 1917;
+yyout << "⌣"; return 1917;
 	YY_BREAK
 case 1920:
 YY_RULE_SETUP
 #line 1924 "/tmp/input.flex"
-yyout << u8"⪪"; return 1918;
+yyout << "⪪"; return 1918;
 	YY_BREAK
 case 1921:
 YY_RULE_SETUP
 #line 1925 "/tmp/input.flex"
-yyout << u8"⪬"; return 1919;
+yyout << "⪬"; return 1919;
 	YY_BREAK
 case 1922:
 YY_RULE_SETUP
 #line 1926 "/tmp/input.flex"
-yyout << u8"⪬" << u8"︀"; return 1920;
+yyout << "⪬" << "︀"; return 1920;
 	YY_BREAK
 case 1923:
 YY_RULE_SETUP
 #line 1927 "/tmp/input.flex"
-yyout << u8"ь"; return 1921;
+yyout << "ь"; return 1921;
 	YY_BREAK
 case 1924:
 YY_RULE_SETUP
 #line 1928 "/tmp/input.flex"
-yyout << u8"/"; return 1922;
+yyout << "/"; return 1922;
 	YY_BREAK
 case 1925:
 YY_RULE_SETUP
 #line 1929 "/tmp/input.flex"
-yyout << u8"⧄"; return 1923;
+yyout << "⧄"; return 1923;
 	YY_BREAK
 case 1926:
 YY_RULE_SETUP
 #line 1930 "/tmp/input.flex"
-yyout << u8"⌿"; return 1924;
+yyout << "⌿"; return 1924;
 	YY_BREAK
 case 1927:
 YY_RULE_SETUP
 #line 1931 "/tmp/input.flex"
-yyout << u8"𝕤"; return 1925;
+yyout << "𝕤"; return 1925;
 	YY_BREAK
 case 1928:
 YY_RULE_SETUP
 #line 1932 "/tmp/input.flex"
-yyout << u8"♠"; return 1926;
+yyout << "♠"; return 1926;
 	YY_BREAK
 case 1929:
 YY_RULE_SETUP
 #line 1933 "/tmp/input.flex"
-yyout << u8"♠"; return 1927;
+yyout << "♠"; return 1927;
 	YY_BREAK
 case 1930:
 YY_RULE_SETUP
 #line 1934 "/tmp/input.flex"
-yyout << u8"∥"; return 1928;
+yyout << "∥"; return 1928;
 	YY_BREAK
 case 1931:
 YY_RULE_SETUP
 #line 1935 "/tmp/input.flex"
-yyout << u8"⊓"; return 1929;
+yyout << "⊓"; return 1929;
 	YY_BREAK
 case 1932:
 YY_RULE_SETUP
 #line 1936 "/tmp/input.flex"
-yyout << u8"⊓" << u8"︀"; return 1930;
+yyout << "⊓" << "︀"; return 1930;
 	YY_BREAK
 case 1933:
 YY_RULE_SETUP
 #line 1937 "/tmp/input.flex"
-yyout << u8"⊔"; return 1931;
+yyout << "⊔"; return 1931;
 	YY_BREAK
 case 1934:
 YY_RULE_SETUP
 #line 1938 "/tmp/input.flex"
-yyout << u8"⊔" << u8"︀"; return 1932;
+yyout << "⊔" << "︀"; return 1932;
 	YY_BREAK
 case 1935:
 YY_RULE_SETUP
 #line 1939 "/tmp/input.flex"
-yyout << u8"⊏"; return 1933;
+yyout << "⊏"; return 1933;
 	YY_BREAK
 case 1936:
 YY_RULE_SETUP
 #line 1940 "/tmp/input.flex"
-yyout << u8"⊑"; return 1934;
+yyout << "⊑"; return 1934;
 	YY_BREAK
 case 1937:
 YY_RULE_SETUP
 #line 1941 "/tmp/input.flex"
-yyout << u8"⊏"; return 1935;
+yyout << "⊏"; return 1935;
 	YY_BREAK
 case 1938:
 YY_RULE_SETUP
 #line 1942 "/tmp/input.flex"
-yyout << u8"⊑"; return 1936;
+yyout << "⊑"; return 1936;
 	YY_BREAK
 case 1939:
 YY_RULE_SETUP
 #line 1943 "/tmp/input.flex"
-yyout << u8"⊐"; return 1937;
+yyout << "⊐"; return 1937;
 	YY_BREAK
 case 1940:
 YY_RULE_SETUP
 #line 1944 "/tmp/input.flex"
-yyout << u8"⊒"; return 1938;
+yyout << "⊒"; return 1938;
 	YY_BREAK
 case 1941:
 YY_RULE_SETUP
 #line 1945 "/tmp/input.flex"
-yyout << u8"⊐"; return 1939;
+yyout << "⊐"; return 1939;
 	YY_BREAK
 case 1942:
 YY_RULE_SETUP
 #line 1946 "/tmp/input.flex"
-yyout << u8"⊒"; return 1940;
+yyout << "⊒"; return 1940;
 	YY_BREAK
 case 1943:
 YY_RULE_SETUP
 #line 1947 "/tmp/input.flex"
-yyout << u8"□"; return 1941;
+yyout << "□"; return 1941;
 	YY_BREAK
 case 1944:
 YY_RULE_SETUP
 #line 1948 "/tmp/input.flex"
-yyout << u8"□"; return 1942;
+yyout << "□"; return 1942;
 	YY_BREAK
 case 1945:
 YY_RULE_SETUP
 #line 1949 "/tmp/input.flex"
-yyout << u8"▪"; return 1943;
+yyout << "▪"; return 1943;
 	YY_BREAK
 case 1946:
 YY_RULE_SETUP
 #line 1950 "/tmp/input.flex"
-yyout << u8"▪"; return 1944;
+yyout << "▪"; return 1944;
 	YY_BREAK
 case 1947:
 YY_RULE_SETUP
 #line 1951 "/tmp/input.flex"
-yyout << u8"→"; return 1945;
+yyout << "→"; return 1945;
 	YY_BREAK
 case 1948:
 YY_RULE_SETUP
 #line 1952 "/tmp/input.flex"
-yyout << u8"𝓈"; return 1946;
+yyout << "𝓈"; return 1946;
 	YY_BREAK
 case 1949:
 YY_RULE_SETUP
 #line 1953 "/tmp/input.flex"
-yyout << u8"∖"; return 1947;
+yyout << "∖"; return 1947;
 	YY_BREAK
 case 1950:
 YY_RULE_SETUP
 #line 1954 "/tmp/input.flex"
-yyout << u8"⌣"; return 1948;
+yyout << "⌣"; return 1948;
 	YY_BREAK
 case 1951:
 YY_RULE_SETUP
 #line 1955 "/tmp/input.flex"
-yyout << u8"⋆"; return 1949;
+yyout << "⋆"; return 1949;
 	YY_BREAK
 case 1952:
 YY_RULE_SETUP
 #line 1956 "/tmp/input.flex"
-yyout << u8"☆"; return 1950;
+yyout << "☆"; return 1950;
 	YY_BREAK
 case 1953:
 YY_RULE_SETUP
 #line 1957 "/tmp/input.flex"
-yyout << u8"★"; return 1951;
+yyout << "★"; return 1951;
 	YY_BREAK
 case 1954:
 YY_RULE_SETUP
 #line 1958 "/tmp/input.flex"
-yyout << u8"ϵ"; return 1952;
+yyout << "ϵ"; return 1952;
 	YY_BREAK
 case 1955:
 YY_RULE_SETUP
 #line 1959 "/tmp/input.flex"
-yyout << u8"ϕ"; return 1953;
+yyout << "ϕ"; return 1953;
 	YY_BREAK
 case 1956:
 YY_RULE_SETUP
 #line 1960 "/tmp/input.flex"
-yyout << u8"¯"; return 1954;
+yyout << "¯"; return 1954;
 	YY_BREAK
 case 1957:
 YY_RULE_SETUP
 #line 1961 "/tmp/input.flex"
-yyout << u8"⊂"; return 1955;
+yyout << "⊂"; return 1955;
 	YY_BREAK
 case 1958:
 YY_RULE_SETUP
 #line 1962 "/tmp/input.flex"
-yyout << u8"⫅"; return 1956;
+yyout << "⫅"; return 1956;
 	YY_BREAK
 case 1959:
 YY_RULE_SETUP
 #line 1963 "/tmp/input.flex"
-yyout << u8"⪽"; return 1957;
+yyout << "⪽"; return 1957;
 	YY_BREAK
 case 1960:
 YY_RULE_SETUP
 #line 1964 "/tmp/input.flex"
-yyout << u8"⊆"; return 1958;
+yyout << "⊆"; return 1958;
 	YY_BREAK
 case 1961:
 YY_RULE_SETUP
 #line 1965 "/tmp/input.flex"
-yyout << u8"⫃"; return 1959;
+yyout << "⫃"; return 1959;
 	YY_BREAK
 case 1962:
 YY_RULE_SETUP
 #line 1966 "/tmp/input.flex"
-yyout << u8"⫁"; return 1960;
+yyout << "⫁"; return 1960;
 	YY_BREAK
 case 1963:
 YY_RULE_SETUP
 #line 1967 "/tmp/input.flex"
-yyout << u8"⫋"; return 1961;
+yyout << "⫋"; return 1961;
 	YY_BREAK
 case 1964:
 YY_RULE_SETUP
 #line 1968 "/tmp/input.flex"
-yyout << u8"⊊"; return 1962;
+yyout << "⊊"; return 1962;
 	YY_BREAK
 case 1965:
 YY_RULE_SETUP
 #line 1969 "/tmp/input.flex"
-yyout << u8"⪿"; return 1963;
+yyout << "⪿"; return 1963;
 	YY_BREAK
 case 1966:
 YY_RULE_SETUP
 #line 1970 "/tmp/input.flex"
-yyout << u8"⥹"; return 1964;
+yyout << "⥹"; return 1964;
 	YY_BREAK
 case 1967:
 YY_RULE_SETUP
 #line 1971 "/tmp/input.flex"
-yyout << u8"⊂"; return 1965;
+yyout << "⊂"; return 1965;
 	YY_BREAK
 case 1968:
 YY_RULE_SETUP
 #line 1972 "/tmp/input.flex"
-yyout << u8"⊆"; return 1966;
+yyout << "⊆"; return 1966;
 	YY_BREAK
 case 1969:
 YY_RULE_SETUP
 #line 1973 "/tmp/input.flex"
-yyout << u8"⫅"; return 1967;
+yyout << "⫅"; return 1967;
 	YY_BREAK
 case 1970:
 YY_RULE_SETUP
 #line 1974 "/tmp/input.flex"
-yyout << u8"⊊"; return 1968;
+yyout << "⊊"; return 1968;
 	YY_BREAK
 case 1971:
 YY_RULE_SETUP
 #line 1975 "/tmp/input.flex"
-yyout << u8"⫋"; return 1969;
+yyout << "⫋"; return 1969;
 	YY_BREAK
 case 1972:
 YY_RULE_SETUP
 #line 1976 "/tmp/input.flex"
-yyout << u8"⫇"; return 1970;
+yyout << "⫇"; return 1970;
 	YY_BREAK
 case 1973:
 YY_RULE_SETUP
 #line 1977 "/tmp/input.flex"
-yyout << u8"⫕"; return 1971;
+yyout << "⫕"; return 1971;
 	YY_BREAK
 case 1974:
 YY_RULE_SETUP
 #line 1978 "/tmp/input.flex"
-yyout << u8"⫓"; return 1972;
+yyout << "⫓"; return 1972;
 	YY_BREAK
 case 1975:
 YY_RULE_SETUP
 #line 1979 "/tmp/input.flex"
-yyout << u8"≻"; return 1973;
+yyout << "≻"; return 1973;
 	YY_BREAK
 case 1976:
 YY_RULE_SETUP
 #line 1980 "/tmp/input.flex"
-yyout << u8"⪸"; return 1974;
+yyout << "⪸"; return 1974;
 	YY_BREAK
 case 1977:
 YY_RULE_SETUP
 #line 1981 "/tmp/input.flex"
-yyout << u8"≽"; return 1975;
+yyout << "≽"; return 1975;
 	YY_BREAK
 case 1978:
 YY_RULE_SETUP
 #line 1982 "/tmp/input.flex"
-yyout << u8"⪰"; return 1976;
+yyout << "⪰"; return 1976;
 	YY_BREAK
 case 1979:
 YY_RULE_SETUP
 #line 1983 "/tmp/input.flex"
-yyout << u8"⪺"; return 1977;
+yyout << "⪺"; return 1977;
 	YY_BREAK
 case 1980:
 YY_RULE_SETUP
 #line 1984 "/tmp/input.flex"
-yyout << u8"⪶"; return 1978;
+yyout << "⪶"; return 1978;
 	YY_BREAK
 case 1981:
 YY_RULE_SETUP
 #line 1985 "/tmp/input.flex"
-yyout << u8"⋩"; return 1979;
+yyout << "⋩"; return 1979;
 	YY_BREAK
 case 1982:
 YY_RULE_SETUP
 #line 1986 "/tmp/input.flex"
-yyout << u8"≿"; return 1980;
+yyout << "≿"; return 1980;
 	YY_BREAK
 case 1983:
 YY_RULE_SETUP
 #line 1987 "/tmp/input.flex"
-yyout << u8"∑"; return 1981;
+yyout << "∑"; return 1981;
 	YY_BREAK
 case 1984:
 YY_RULE_SETUP
 #line 1988 "/tmp/input.flex"
-yyout << u8"♪"; return 1982;
+yyout << "♪"; return 1982;
 	YY_BREAK
 case 1985:
 YY_RULE_SETUP
 #line 1989 "/tmp/input.flex"
-yyout << u8"¹"; return 1983;
+yyout << "¹"; return 1983;
 	YY_BREAK
 case 1986:
 YY_RULE_SETUP
 #line 1990 "/tmp/input.flex"
-yyout << u8"¹"; return 1984;
+yyout << "¹"; return 1984;
 	YY_BREAK
 case 1987:
 YY_RULE_SETUP
 #line 1991 "/tmp/input.flex"
-yyout << u8"²"; return 1985;
+yyout << "²"; return 1985;
 	YY_BREAK
 case 1988:
 YY_RULE_SETUP
 #line 1992 "/tmp/input.flex"
-yyout << u8"²"; return 1986;
+yyout << "²"; return 1986;
 	YY_BREAK
 case 1989:
 YY_RULE_SETUP
 #line 1993 "/tmp/input.flex"
-yyout << u8"³"; return 1987;
+yyout << "³"; return 1987;
 	YY_BREAK
 case 1990:
 YY_RULE_SETUP
 #line 1994 "/tmp/input.flex"
-yyout << u8"³"; return 1988;
+yyout << "³"; return 1988;
 	YY_BREAK
 case 1991:
 YY_RULE_SETUP
 #line 1995 "/tmp/input.flex"
-yyout << u8"⊃"; return 1989;
+yyout << "⊃"; return 1989;
 	YY_BREAK
 case 1992:
 YY_RULE_SETUP
 #line 1996 "/tmp/input.flex"
-yyout << u8"⫆"; return 1990;
+yyout << "⫆"; return 1990;
 	YY_BREAK
 case 1993:
 YY_RULE_SETUP
 #line 1997 "/tmp/input.flex"
-yyout << u8"⪾"; return 1991;
+yyout << "⪾"; return 1991;
 	YY_BREAK
 case 1994:
 YY_RULE_SETUP
 #line 1998 "/tmp/input.flex"
-yyout << u8"⫘"; return 1992;
+yyout << "⫘"; return 1992;
 	YY_BREAK
 case 1995:
 YY_RULE_SETUP
 #line 1999 "/tmp/input.flex"
-yyout << u8"⊇"; return 1993;
+yyout << "⊇"; return 1993;
 	YY_BREAK
 case 1996:
 YY_RULE_SETUP
 #line 2000 "/tmp/input.flex"
-yyout << u8"⫄"; return 1994;
+yyout << "⫄"; return 1994;
 	YY_BREAK
 case 1997:
 YY_RULE_SETUP
 #line 2001 "/tmp/input.flex"
-yyout << u8"⟉"; return 1995;
+yyout << "⟉"; return 1995;
 	YY_BREAK
 case 1998:
 YY_RULE_SETUP
 #line 2002 "/tmp/input.flex"
-yyout << u8"⫗"; return 1996;
+yyout << "⫗"; return 1996;
 	YY_BREAK
 case 1999:
 YY_RULE_SETUP
 #line 2003 "/tmp/input.flex"
-yyout << u8"⥻"; return 1997;
+yyout << "⥻"; return 1997;
 	YY_BREAK
 case 2000:
 YY_RULE_SETUP
 #line 2004 "/tmp/input.flex"
-yyout << u8"⫂"; return 1998;
+yyout << "⫂"; return 1998;
 	YY_BREAK
 case 2001:
 YY_RULE_SETUP
 #line 2005 "/tmp/input.flex"
-yyout << u8"⫌"; return 1999;
+yyout << "⫌"; return 1999;
 	YY_BREAK
 case 2002:
 YY_RULE_SETUP
 #line 2006 "/tmp/input.flex"
-yyout << u8"⊋"; return 2000;
+yyout << "⊋"; return 2000;
 	YY_BREAK
 case 2003:
 YY_RULE_SETUP
 #line 2007 "/tmp/input.flex"
-yyout << u8"⫀"; return 2001;
+yyout << "⫀"; return 2001;
 	YY_BREAK
 case 2004:
 YY_RULE_SETUP
 #line 2008 "/tmp/input.flex"
-yyout << u8"⊃"; return 2002;
+yyout << "⊃"; return 2002;
 	YY_BREAK
 case 2005:
 YY_RULE_SETUP
 #line 2009 "/tmp/input.flex"
-yyout << u8"⊇"; return 2003;
+yyout << "⊇"; return 2003;
 	YY_BREAK
 case 2006:
 YY_RULE_SETUP
 #line 2010 "/tmp/input.flex"
-yyout << u8"⫆"; return 2004;
+yyout << "⫆"; return 2004;
 	YY_BREAK
 case 2007:
 YY_RULE_SETUP
 #line 2011 "/tmp/input.flex"
-yyout << u8"⊋"; return 2005;
+yyout << "⊋"; return 2005;
 	YY_BREAK
 case 2008:
 YY_RULE_SETUP
 #line 2012 "/tmp/input.flex"
-yyout << u8"⫌"; return 2006;
+yyout << "⫌"; return 2006;
 	YY_BREAK
 case 2009:
 YY_RULE_SETUP
 #line 2013 "/tmp/input.flex"
-yyout << u8"⫈"; return 2007;
+yyout << "⫈"; return 2007;
 	YY_BREAK
 case 2010:
 YY_RULE_SETUP
 #line 2014 "/tmp/input.flex"
-yyout << u8"⫔"; return 2008;
+yyout << "⫔"; return 2008;
 	YY_BREAK
 case 2011:
 YY_RULE_SETUP
 #line 2015 "/tmp/input.flex"
-yyout << u8"⫖"; return 2009;
+yyout << "⫖"; return 2009;
 	YY_BREAK
 case 2012:
 YY_RULE_SETUP
 #line 2016 "/tmp/input.flex"
-yyout << u8"⇙"; return 2010;
+yyout << "⇙"; return 2010;
 	YY_BREAK
 case 2013:
 YY_RULE_SETUP
 #line 2017 "/tmp/input.flex"
-yyout << u8"⤦"; return 2011;
+yyout << "⤦"; return 2011;
 	YY_BREAK
 case 2014:
 YY_RULE_SETUP
 #line 2018 "/tmp/input.flex"
-yyout << u8"↙"; return 2012;
+yyout << "↙"; return 2012;
 	YY_BREAK
 case 2015:
 YY_RULE_SETUP
 #line 2019 "/tmp/input.flex"
-yyout << u8"↙"; return 2013;
+yyout << "↙"; return 2013;
 	YY_BREAK
 case 2016:
 YY_RULE_SETUP
 #line 2020 "/tmp/input.flex"
-yyout << u8"⤪"; return 2014;
+yyout << "⤪"; return 2014;
 	YY_BREAK
 case 2017:
 YY_RULE_SETUP
 #line 2021 "/tmp/input.flex"
-yyout << u8"ß"; return 2015;
+yyout << "ß"; return 2015;
 	YY_BREAK
 case 2018:
 YY_RULE_SETUP
 #line 2022 "/tmp/input.flex"
-yyout << u8"ß"; return 2016;
+yyout << "ß"; return 2016;
 	YY_BREAK
 case 2019:
 YY_RULE_SETUP
 #line 2023 "/tmp/input.flex"
-yyout << u8"⌖"; return 2017;
+yyout << "⌖"; return 2017;
 	YY_BREAK
 case 2020:
 YY_RULE_SETUP
 #line 2024 "/tmp/input.flex"
-yyout << u8"τ"; return 2018;
+yyout << "τ"; return 2018;
 	YY_BREAK
 case 2021:
 YY_RULE_SETUP
 #line 2025 "/tmp/input.flex"
-yyout << u8"⎴"; return 2019;
+yyout << "⎴"; return 2019;
 	YY_BREAK
 case 2022:
 YY_RULE_SETUP
 #line 2026 "/tmp/input.flex"
-yyout << u8"ť"; return 2020;
+yyout << "ť"; return 2020;
 	YY_BREAK
 case 2023:
 YY_RULE_SETUP
 #line 2027 "/tmp/input.flex"
-yyout << u8"ţ"; return 2021;
+yyout << "ţ"; return 2021;
 	YY_BREAK
 case 2024:
 YY_RULE_SETUP
 #line 2028 "/tmp/input.flex"
-yyout << u8"т"; return 2022;
+yyout << "т"; return 2022;
 	YY_BREAK
 case 2025:
 YY_RULE_SETUP
 #line 2029 "/tmp/input.flex"
-yyout << u8"⃛"; return 2023;
+yyout << "⃛"; return 2023;
 	YY_BREAK
 case 2026:
 YY_RULE_SETUP
 #line 2030 "/tmp/input.flex"
-yyout << u8"⌕"; return 2024;
+yyout << "⌕"; return 2024;
 	YY_BREAK
 case 2027:
 YY_RULE_SETUP
 #line 2031 "/tmp/input.flex"
-yyout << u8"𝔱"; return 2025;
+yyout << "𝔱"; return 2025;
 	YY_BREAK
 case 2028:
 YY_RULE_SETUP
 #line 2032 "/tmp/input.flex"
-yyout << u8"∴"; return 2026;
+yyout << "∴"; return 2026;
 	YY_BREAK
 case 2029:
 YY_RULE_SETUP
 #line 2033 "/tmp/input.flex"
-yyout << u8"∴"; return 2027;
+yyout << "∴"; return 2027;
 	YY_BREAK
 case 2030:
 YY_RULE_SETUP
 #line 2034 "/tmp/input.flex"
-yyout << u8"θ"; return 2028;
+yyout << "θ"; return 2028;
 	YY_BREAK
 case 2031:
 YY_RULE_SETUP
 #line 2035 "/tmp/input.flex"
-yyout << u8"ϑ"; return 2029;
+yyout << "ϑ"; return 2029;
 	YY_BREAK
 case 2032:
 YY_RULE_SETUP
 #line 2036 "/tmp/input.flex"
-yyout << u8"ϑ"; return 2030;
+yyout << "ϑ"; return 2030;
 	YY_BREAK
 case 2033:
 YY_RULE_SETUP
 #line 2037 "/tmp/input.flex"
-yyout << u8"≈"; return 2031;
+yyout << "≈"; return 2031;
 	YY_BREAK
 case 2034:
 YY_RULE_SETUP
 #line 2038 "/tmp/input.flex"
-yyout << u8"∼"; return 2032;
+yyout << "∼"; return 2032;
 	YY_BREAK
 case 2035:
 YY_RULE_SETUP
 #line 2039 "/tmp/input.flex"
-yyout << u8" "; return 2033;
+yyout << " "; return 2033;
 	YY_BREAK
 case 2036:
 YY_RULE_SETUP
 #line 2040 "/tmp/input.flex"
-yyout << u8"≈"; return 2034;
+yyout << "≈"; return 2034;
 	YY_BREAK
 case 2037:
 YY_RULE_SETUP
 #line 2041 "/tmp/input.flex"
-yyout << u8"∼"; return 2035;
+yyout << "∼"; return 2035;
 	YY_BREAK
 case 2038:
 YY_RULE_SETUP
 #line 2042 "/tmp/input.flex"
-yyout << u8"þ"; return 2036;
+yyout << "þ"; return 2036;
 	YY_BREAK
 case 2039:
 YY_RULE_SETUP
 #line 2043 "/tmp/input.flex"
-yyout << u8"þ"; return 2037;
+yyout << "þ"; return 2037;
 	YY_BREAK
 case 2040:
 YY_RULE_SETUP
 #line 2044 "/tmp/input.flex"
-yyout << u8"˜"; return 2038;
+yyout << "˜"; return 2038;
 	YY_BREAK
 case 2041:
 YY_RULE_SETUP
 #line 2045 "/tmp/input.flex"
-yyout << u8"×"; return 2039;
+yyout << "×"; return 2039;
 	YY_BREAK
 case 2042:
 YY_RULE_SETUP
 #line 2046 "/tmp/input.flex"
-yyout << u8"×"; return 2040;
+yyout << "×"; return 2040;
 	YY_BREAK
 case 2043:
 YY_RULE_SETUP
 #line 2047 "/tmp/input.flex"
-yyout << u8"⊠"; return 2041;
+yyout << "⊠"; return 2041;
 	YY_BREAK
 case 2044:
 YY_RULE_SETUP
 #line 2048 "/tmp/input.flex"
-yyout << u8"⨱"; return 2042;
+yyout << "⨱"; return 2042;
 	YY_BREAK
 case 2045:
 YY_RULE_SETUP
 #line 2049 "/tmp/input.flex"
-yyout << u8"⨰"; return 2043;
+yyout << "⨰"; return 2043;
 	YY_BREAK
 case 2046:
 YY_RULE_SETUP
 #line 2050 "/tmp/input.flex"
-yyout << u8"∭"; return 2044;
+yyout << "∭"; return 2044;
 	YY_BREAK
 case 2047:
 YY_RULE_SETUP
 #line 2051 "/tmp/input.flex"
-yyout << u8"⤨"; return 2045;
+yyout << "⤨"; return 2045;
 	YY_BREAK
 case 2048:
 YY_RULE_SETUP
 #line 2052 "/tmp/input.flex"
-yyout << u8"⊤"; return 2046;
+yyout << "⊤"; return 2046;
 	YY_BREAK
 case 2049:
 YY_RULE_SETUP
 #line 2053 "/tmp/input.flex"
-yyout << u8"⌶"; return 2047;
+yyout << "⌶"; return 2047;
 	YY_BREAK
 case 2050:
 YY_RULE_SETUP
 #line 2054 "/tmp/input.flex"
-yyout << u8"⫱"; return 2048;
+yyout << "⫱"; return 2048;
 	YY_BREAK
 case 2051:
 YY_RULE_SETUP
 #line 2055 "/tmp/input.flex"
-yyout << u8"𝕥"; return 2049;
+yyout << "𝕥"; return 2049;
 	YY_BREAK
 case 2052:
 YY_RULE_SETUP
 #line 2056 "/tmp/input.flex"
-yyout << u8"⫚"; return 2050;
+yyout << "⫚"; return 2050;
 	YY_BREAK
 case 2053:
 YY_RULE_SETUP
 #line 2057 "/tmp/input.flex"
-yyout << u8"⤩"; return 2051;
+yyout << "⤩"; return 2051;
 	YY_BREAK
 case 2054:
 YY_RULE_SETUP
 #line 2058 "/tmp/input.flex"
-yyout << u8"‴"; return 2052;
+yyout << "‴"; return 2052;
 	YY_BREAK
 case 2055:
 YY_RULE_SETUP
 #line 2059 "/tmp/input.flex"
-yyout << u8"™"; return 2053;
+yyout << "™"; return 2053;
 	YY_BREAK
 case 2056:
 YY_RULE_SETUP
 #line 2060 "/tmp/input.flex"
-yyout << u8"▵"; return 2054;
+yyout << "▵"; return 2054;
 	YY_BREAK
 case 2057:
 YY_RULE_SETUP
 #line 2061 "/tmp/input.flex"
-yyout << u8"▿"; return 2055;
+yyout << "▿"; return 2055;
 	YY_BREAK
 case 2058:
 YY_RULE_SETUP
 #line 2062 "/tmp/input.flex"
-yyout << u8"◃"; return 2056;
+yyout << "◃"; return 2056;
 	YY_BREAK
 case 2059:
 YY_RULE_SETUP
 #line 2063 "/tmp/input.flex"
-yyout << u8"⊴"; return 2057;
+yyout << "⊴"; return 2057;
 	YY_BREAK
 case 2060:
 YY_RULE_SETUP
 #line 2064 "/tmp/input.flex"
-yyout << u8"≜"; return 2058;
+yyout << "≜"; return 2058;
 	YY_BREAK
 case 2061:
 YY_RULE_SETUP
 #line 2065 "/tmp/input.flex"
-yyout << u8"▹"; return 2059;
+yyout << "▹"; return 2059;
 	YY_BREAK
 case 2062:
 YY_RULE_SETUP
 #line 2066 "/tmp/input.flex"
-yyout << u8"⊵"; return 2060;
+yyout << "⊵"; return 2060;
 	YY_BREAK
 case 2063:
 YY_RULE_SETUP
 #line 2067 "/tmp/input.flex"
-yyout << u8"◬"; return 2061;
+yyout << "◬"; return 2061;
 	YY_BREAK
 case 2064:
 YY_RULE_SETUP
 #line 2068 "/tmp/input.flex"
-yyout << u8"≜"; return 2062;
+yyout << "≜"; return 2062;
 	YY_BREAK
 case 2065:
 YY_RULE_SETUP
 #line 2069 "/tmp/input.flex"
-yyout << u8"⨺"; return 2063;
+yyout << "⨺"; return 2063;
 	YY_BREAK
 case 2066:
 YY_RULE_SETUP
 #line 2070 "/tmp/input.flex"
-yyout << u8"⨹"; return 2064;
+yyout << "⨹"; return 2064;
 	YY_BREAK
 case 2067:
 YY_RULE_SETUP
 #line 2071 "/tmp/input.flex"
-yyout << u8"⧍"; return 2065;
+yyout << "⧍"; return 2065;
 	YY_BREAK
 case 2068:
 YY_RULE_SETUP
 #line 2072 "/tmp/input.flex"
-yyout << u8"⨻"; return 2066;
+yyout << "⨻"; return 2066;
 	YY_BREAK
 case 2069:
 YY_RULE_SETUP
 #line 2073 "/tmp/input.flex"
-yyout << u8"⏢"; return 2067;
+yyout << "⏢"; return 2067;
 	YY_BREAK
 case 2070:
 YY_RULE_SETUP
 #line 2074 "/tmp/input.flex"
-yyout << u8"𝓉"; return 2068;
+yyout << "𝓉"; return 2068;
 	YY_BREAK
 case 2071:
 YY_RULE_SETUP
 #line 2075 "/tmp/input.flex"
-yyout << u8"ц"; return 2069;
+yyout << "ц"; return 2069;
 	YY_BREAK
 case 2072:
 YY_RULE_SETUP
 #line 2076 "/tmp/input.flex"
-yyout << u8"ћ"; return 2070;
+yyout << "ћ"; return 2070;
 	YY_BREAK
 case 2073:
 YY_RULE_SETUP
 #line 2077 "/tmp/input.flex"
-yyout << u8"ŧ"; return 2071;
+yyout << "ŧ"; return 2071;
 	YY_BREAK
 case 2074:
 YY_RULE_SETUP
 #line 2078 "/tmp/input.flex"
-yyout << u8"≬"; return 2072;
+yyout << "≬"; return 2072;
 	YY_BREAK
 case 2075:
 YY_RULE_SETUP
 #line 2079 "/tmp/input.flex"
-yyout << u8"↞"; return 2073;
+yyout << "↞"; return 2073;
 	YY_BREAK
 case 2076:
 YY_RULE_SETUP
 #line 2080 "/tmp/input.flex"
-yyout << u8"↠"; return 2074;
+yyout << "↠"; return 2074;
 	YY_BREAK
 case 2077:
 YY_RULE_SETUP
 #line 2081 "/tmp/input.flex"
-yyout << u8"⇑"; return 2075;
+yyout << "⇑"; return 2075;
 	YY_BREAK
 case 2078:
 YY_RULE_SETUP
 #line 2082 "/tmp/input.flex"
-yyout << u8"⥣"; return 2076;
+yyout << "⥣"; return 2076;
 	YY_BREAK
 case 2079:
 YY_RULE_SETUP
 #line 2083 "/tmp/input.flex"
-yyout << u8"ú"; return 2077;
+yyout << "ú"; return 2077;
 	YY_BREAK
 case 2080:
 YY_RULE_SETUP
 #line 2084 "/tmp/input.flex"
-yyout << u8"ú"; return 2078;
+yyout << "ú"; return 2078;
 	YY_BREAK
 case 2081:
 YY_RULE_SETUP
 #line 2085 "/tmp/input.flex"
-yyout << u8"↑"; return 2079;
+yyout << "↑"; return 2079;
 	YY_BREAK
 case 2082:
 YY_RULE_SETUP
 #line 2086 "/tmp/input.flex"
-yyout << u8"ў"; return 2080;
+yyout << "ў"; return 2080;
 	YY_BREAK
 case 2083:
 YY_RULE_SETUP
 #line 2087 "/tmp/input.flex"
-yyout << u8"ŭ"; return 2081;
+yyout << "ŭ"; return 2081;
 	YY_BREAK
 case 2084:
 YY_RULE_SETUP
 #line 2088 "/tmp/input.flex"
-yyout << u8"û"; return 2082;
+yyout << "û"; return 2082;
 	YY_BREAK
 case 2085:
 YY_RULE_SETUP
 #line 2089 "/tmp/input.flex"
-yyout << u8"û"; return 2083;
+yyout << "û"; return 2083;
 	YY_BREAK
 case 2086:
 YY_RULE_SETUP
 #line 2090 "/tmp/input.flex"
-yyout << u8"у"; return 2084;
+yyout << "у"; return 2084;
 	YY_BREAK
 case 2087:
 YY_RULE_SETUP
 #line 2091 "/tmp/input.flex"
-yyout << u8"⇅"; return 2085;
+yyout << "⇅"; return 2085;
 	YY_BREAK
 case 2088:
 YY_RULE_SETUP
 #line 2092 "/tmp/input.flex"
-yyout << u8"ű"; return 2086;
+yyout << "ű"; return 2086;
 	YY_BREAK
 case 2089:
 YY_RULE_SETUP
 #line 2093 "/tmp/input.flex"
-yyout << u8"⥮"; return 2087;
+yyout << "⥮"; return 2087;
 	YY_BREAK
 case 2090:
 YY_RULE_SETUP
 #line 2094 "/tmp/input.flex"
-yyout << u8"⥾"; return 2088;
+yyout << "⥾"; return 2088;
 	YY_BREAK
 case 2091:
 YY_RULE_SETUP
 #line 2095 "/tmp/input.flex"
-yyout << u8"𝔲"; return 2089;
+yyout << "𝔲"; return 2089;
 	YY_BREAK
 case 2092:
 YY_RULE_SETUP
 #line 2096 "/tmp/input.flex"
-yyout << u8"ù"; return 2090;
+yyout << "ù"; return 2090;
 	YY_BREAK
 case 2093:
 YY_RULE_SETUP
 #line 2097 "/tmp/input.flex"
-yyout << u8"ù"; return 2091;
+yyout << "ù"; return 2091;
 	YY_BREAK
 case 2094:
 YY_RULE_SETUP
 #line 2098 "/tmp/input.flex"
-yyout << u8"↿"; return 2092;
+yyout << "↿"; return 2092;
 	YY_BREAK
 case 2095:
 YY_RULE_SETUP
 #line 2099 "/tmp/input.flex"
-yyout << u8"↾"; return 2093;
+yyout << "↾"; return 2093;
 	YY_BREAK
 case 2096:
 YY_RULE_SETUP
 #line 2100 "/tmp/input.flex"
-yyout << u8"▀"; return 2094;
+yyout << "▀"; return 2094;
 	YY_BREAK
 case 2097:
 YY_RULE_SETUP
 #line 2101 "/tmp/input.flex"
-yyout << u8"⌜"; return 2095;
+yyout << "⌜"; return 2095;
 	YY_BREAK
 case 2098:
 YY_RULE_SETUP
 #line 2102 "/tmp/input.flex"
-yyout << u8"⌜"; return 2096;
+yyout << "⌜"; return 2096;
 	YY_BREAK
 case 2099:
 YY_RULE_SETUP
 #line 2103 "/tmp/input.flex"
-yyout << u8"⌏"; return 2097;
+yyout << "⌏"; return 2097;
 	YY_BREAK
 case 2100:
 YY_RULE_SETUP
 #line 2104 "/tmp/input.flex"
-yyout << u8"◸"; return 2098;
+yyout << "◸"; return 2098;
 	YY_BREAK
 case 2101:
 YY_RULE_SETUP
 #line 2105 "/tmp/input.flex"
-yyout << u8"ū"; return 2099;
+yyout << "ū"; return 2099;
 	YY_BREAK
 case 2102:
 YY_RULE_SETUP
 #line 2106 "/tmp/input.flex"
-yyout << u8"¨"; return 2100;
+yyout << "¨"; return 2100;
 	YY_BREAK
 case 2103:
 YY_RULE_SETUP
 #line 2107 "/tmp/input.flex"
-yyout << u8"¨"; return 2101;
+yyout << "¨"; return 2101;
 	YY_BREAK
 case 2104:
 YY_RULE_SETUP
 #line 2108 "/tmp/input.flex"
-yyout << u8"ų"; return 2102;
+yyout << "ų"; return 2102;
 	YY_BREAK
 case 2105:
 YY_RULE_SETUP
 #line 2109 "/tmp/input.flex"
-yyout << u8"𝕦"; return 2103;
+yyout << "𝕦"; return 2103;
 	YY_BREAK
 case 2106:
 YY_RULE_SETUP
 #line 2110 "/tmp/input.flex"
-yyout << u8"↑"; return 2104;
+yyout << "↑"; return 2104;
 	YY_BREAK
 case 2107:
 YY_RULE_SETUP
 #line 2111 "/tmp/input.flex"
-yyout << u8"↕"; return 2105;
+yyout << "↕"; return 2105;
 	YY_BREAK
 case 2108:
 YY_RULE_SETUP
 #line 2112 "/tmp/input.flex"
-yyout << u8"↿"; return 2106;
+yyout << "↿"; return 2106;
 	YY_BREAK
 case 2109:
 YY_RULE_SETUP
 #line 2113 "/tmp/input.flex"
-yyout << u8"↾"; return 2107;
+yyout << "↾"; return 2107;
 	YY_BREAK
 case 2110:
 YY_RULE_SETUP
 #line 2114 "/tmp/input.flex"
-yyout << u8"⊎"; return 2108;
+yyout << "⊎"; return 2108;
 	YY_BREAK
 case 2111:
 YY_RULE_SETUP
 #line 2115 "/tmp/input.flex"
-yyout << u8"υ"; return 2109;
+yyout << "υ"; return 2109;
 	YY_BREAK
 case 2112:
 YY_RULE_SETUP
 #line 2116 "/tmp/input.flex"
-yyout << u8"ϒ"; return 2110;
+yyout << "ϒ"; return 2110;
 	YY_BREAK
 case 2113:
 YY_RULE_SETUP
 #line 2117 "/tmp/input.flex"
-yyout << u8"υ"; return 2111;
+yyout << "υ"; return 2111;
 	YY_BREAK
 case 2114:
 YY_RULE_SETUP
 #line 2118 "/tmp/input.flex"
-yyout << u8"⇈"; return 2112;
+yyout << "⇈"; return 2112;
 	YY_BREAK
 case 2115:
 YY_RULE_SETUP
 #line 2119 "/tmp/input.flex"
-yyout << u8"⌝"; return 2113;
+yyout << "⌝"; return 2113;
 	YY_BREAK
 case 2116:
 YY_RULE_SETUP
 #line 2120 "/tmp/input.flex"
-yyout << u8"⌝"; return 2114;
+yyout << "⌝"; return 2114;
 	YY_BREAK
 case 2117:
 YY_RULE_SETUP
 #line 2121 "/tmp/input.flex"
-yyout << u8"⌎"; return 2115;
+yyout << "⌎"; return 2115;
 	YY_BREAK
 case 2118:
 YY_RULE_SETUP
 #line 2122 "/tmp/input.flex"
-yyout << u8"ů"; return 2116;
+yyout << "ů"; return 2116;
 	YY_BREAK
 case 2119:
 YY_RULE_SETUP
 #line 2123 "/tmp/input.flex"
-yyout << u8"◹"; return 2117;
+yyout << "◹"; return 2117;
 	YY_BREAK
 case 2120:
 YY_RULE_SETUP
 #line 2124 "/tmp/input.flex"
-yyout << u8"𝓊"; return 2118;
+yyout << "𝓊"; return 2118;
 	YY_BREAK
 case 2121:
 YY_RULE_SETUP
 #line 2125 "/tmp/input.flex"
-yyout << u8"⋰"; return 2119;
+yyout << "⋰"; return 2119;
 	YY_BREAK
 case 2122:
 YY_RULE_SETUP
 #line 2126 "/tmp/input.flex"
-yyout << u8"ũ"; return 2120;
+yyout << "ũ"; return 2120;
 	YY_BREAK
 case 2123:
 YY_RULE_SETUP
 #line 2127 "/tmp/input.flex"
-yyout << u8"▵"; return 2121;
+yyout << "▵"; return 2121;
 	YY_BREAK
 case 2124:
 YY_RULE_SETUP
 #line 2128 "/tmp/input.flex"
-yyout << u8"▴"; return 2122;
+yyout << "▴"; return 2122;
 	YY_BREAK
 case 2125:
 YY_RULE_SETUP
 #line 2129 "/tmp/input.flex"
-yyout << u8"⇈"; return 2123;
+yyout << "⇈"; return 2123;
 	YY_BREAK
 case 2126:
 YY_RULE_SETUP
 #line 2130 "/tmp/input.flex"
-yyout << u8"ü"; return 2124;
+yyout << "ü"; return 2124;
 	YY_BREAK
 case 2127:
 YY_RULE_SETUP
 #line 2131 "/tmp/input.flex"
-yyout << u8"ü"; return 2125;
+yyout << "ü"; return 2125;
 	YY_BREAK
 case 2128:
 YY_RULE_SETUP
 #line 2132 "/tmp/input.flex"
-yyout << u8"⦧"; return 2126;
+yyout << "⦧"; return 2126;
 	YY_BREAK
 case 2129:
 YY_RULE_SETUP
 #line 2133 "/tmp/input.flex"
-yyout << u8"⇕"; return 2127;
+yyout << "⇕"; return 2127;
 	YY_BREAK
 case 2130:
 YY_RULE_SETUP
 #line 2134 "/tmp/input.flex"
-yyout << u8"⫨"; return 2128;
+yyout << "⫨"; return 2128;
 	YY_BREAK
 case 2131:
 YY_RULE_SETUP
 #line 2135 "/tmp/input.flex"
-yyout << u8"⫩"; return 2129;
+yyout << "⫩"; return 2129;
 	YY_BREAK
 case 2132:
 YY_RULE_SETUP
 #line 2136 "/tmp/input.flex"
-yyout << u8"⊨"; return 2130;
+yyout << "⊨"; return 2130;
 	YY_BREAK
 case 2133:
 YY_RULE_SETUP
 #line 2137 "/tmp/input.flex"
-yyout << u8"⦜"; return 2131;
+yyout << "⦜"; return 2131;
 	YY_BREAK
 case 2134:
 YY_RULE_SETUP
 #line 2138 "/tmp/input.flex"
-yyout << u8"ϵ"; return 2132;
+yyout << "ϵ"; return 2132;
 	YY_BREAK
 case 2135:
 YY_RULE_SETUP
 #line 2139 "/tmp/input.flex"
-yyout << u8"ϰ"; return 2133;
+yyout << "ϰ"; return 2133;
 	YY_BREAK
 case 2136:
 YY_RULE_SETUP
 #line 2140 "/tmp/input.flex"
-yyout << u8"∅"; return 2134;
+yyout << "∅"; return 2134;
 	YY_BREAK
 case 2137:
 YY_RULE_SETUP
 #line 2141 "/tmp/input.flex"
-yyout << u8"ϕ"; return 2135;
+yyout << "ϕ"; return 2135;
 	YY_BREAK
 case 2138:
 YY_RULE_SETUP
 #line 2142 "/tmp/input.flex"
-yyout << u8"ϖ"; return 2136;
+yyout << "ϖ"; return 2136;
 	YY_BREAK
 case 2139:
 YY_RULE_SETUP
 #line 2143 "/tmp/input.flex"
-yyout << u8"∝"; return 2137;
+yyout << "∝"; return 2137;
 	YY_BREAK
 case 2140:
 YY_RULE_SETUP
 #line 2144 "/tmp/input.flex"
-yyout << u8"↕"; return 2138;
+yyout << "↕"; return 2138;
 	YY_BREAK
 case 2141:
 YY_RULE_SETUP
 #line 2145 "/tmp/input.flex"
-yyout << u8"ϱ"; return 2139;
+yyout << "ϱ"; return 2139;
 	YY_BREAK
 case 2142:
 YY_RULE_SETUP
 #line 2146 "/tmp/input.flex"
-yyout << u8"ς"; return 2140;
+yyout << "ς"; return 2140;
 	YY_BREAK
 case 2143:
 YY_RULE_SETUP
 #line 2147 "/tmp/input.flex"
-yyout << u8"⊊" << u8"︀"; return 2141;
+yyout << "⊊" << "︀"; return 2141;
 	YY_BREAK
 case 2144:
 YY_RULE_SETUP
 #line 2148 "/tmp/input.flex"
-yyout << u8"⫋" << u8"︀"; return 2142;
+yyout << "⫋" << "︀"; return 2142;
 	YY_BREAK
 case 2145:
 YY_RULE_SETUP
 #line 2149 "/tmp/input.flex"
-yyout << u8"⊋" << u8"︀"; return 2143;
+yyout << "⊋" << "︀"; return 2143;
 	YY_BREAK
 case 2146:
 YY_RULE_SETUP
 #line 2150 "/tmp/input.flex"
-yyout << u8"⫌" << u8"︀"; return 2144;
+yyout << "⫌" << "︀"; return 2144;
 	YY_BREAK
 case 2147:
 YY_RULE_SETUP
 #line 2151 "/tmp/input.flex"
-yyout << u8"ϑ"; return 2145;
+yyout << "ϑ"; return 2145;
 	YY_BREAK
 case 2148:
 YY_RULE_SETUP
 #line 2152 "/tmp/input.flex"
-yyout << u8"⊲"; return 2146;
+yyout << "⊲"; return 2146;
 	YY_BREAK
 case 2149:
 YY_RULE_SETUP
 #line 2153 "/tmp/input.flex"
-yyout << u8"⊳"; return 2147;
+yyout << "⊳"; return 2147;
 	YY_BREAK
 case 2150:
 YY_RULE_SETUP
 #line 2154 "/tmp/input.flex"
-yyout << u8"в"; return 2148;
+yyout << "в"; return 2148;
 	YY_BREAK
 case 2151:
 YY_RULE_SETUP
 #line 2155 "/tmp/input.flex"
-yyout << u8"⊢"; return 2149;
+yyout << "⊢"; return 2149;
 	YY_BREAK
 case 2152:
 YY_RULE_SETUP
 #line 2156 "/tmp/input.flex"
-yyout << u8"∨"; return 2150;
+yyout << "∨"; return 2150;
 	YY_BREAK
 case 2153:
 YY_RULE_SETUP
 #line 2157 "/tmp/input.flex"
-yyout << u8"⊻"; return 2151;
+yyout << "⊻"; return 2151;
 	YY_BREAK
 case 2154:
 YY_RULE_SETUP
 #line 2158 "/tmp/input.flex"
-yyout << u8"≚"; return 2152;
+yyout << "≚"; return 2152;
 	YY_BREAK
 case 2155:
 YY_RULE_SETUP
 #line 2159 "/tmp/input.flex"
-yyout << u8"⋮"; return 2153;
+yyout << "⋮"; return 2153;
 	YY_BREAK
 case 2156:
 YY_RULE_SETUP
 #line 2160 "/tmp/input.flex"
-yyout << u8"|"; return 2154;
+yyout << "|"; return 2154;
 	YY_BREAK
 case 2157:
 YY_RULE_SETUP
 #line 2161 "/tmp/input.flex"
-yyout << u8"|"; return 2155;
+yyout << "|"; return 2155;
 	YY_BREAK
 case 2158:
 YY_RULE_SETUP
 #line 2162 "/tmp/input.flex"
-yyout << u8"𝔳"; return 2156;
+yyout << "𝔳"; return 2156;
 	YY_BREAK
 case 2159:
 YY_RULE_SETUP
 #line 2163 "/tmp/input.flex"
-yyout << u8"⊲"; return 2157;
+yyout << "⊲"; return 2157;
 	YY_BREAK
 case 2160:
 YY_RULE_SETUP
 #line 2164 "/tmp/input.flex"
-yyout << u8"⊂" << u8"⃒"; return 2158;
+yyout << "⊂" << "⃒"; return 2158;
 	YY_BREAK
 case 2161:
 YY_RULE_SETUP
 #line 2165 "/tmp/input.flex"
-yyout << u8"⊃" << u8"⃒"; return 2159;
+yyout << "⊃" << "⃒"; return 2159;
 	YY_BREAK
 case 2162:
 YY_RULE_SETUP
 #line 2166 "/tmp/input.flex"
-yyout << u8"𝕧"; return 2160;
+yyout << "𝕧"; return 2160;
 	YY_BREAK
 case 2163:
 YY_RULE_SETUP
 #line 2167 "/tmp/input.flex"
-yyout << u8"∝"; return 2161;
+yyout << "∝"; return 2161;
 	YY_BREAK
 case 2164:
 YY_RULE_SETUP
 #line 2168 "/tmp/input.flex"
-yyout << u8"⊳"; return 2162;
+yyout << "⊳"; return 2162;
 	YY_BREAK
 case 2165:
 YY_RULE_SETUP
 #line 2169 "/tmp/input.flex"
-yyout << u8"𝓋"; return 2163;
+yyout << "𝓋"; return 2163;
 	YY_BREAK
 case 2166:
 YY_RULE_SETUP
 #line 2170 "/tmp/input.flex"
-yyout << u8"⫋" << u8"︀"; return 2164;
+yyout << "⫋" << "︀"; return 2164;
 	YY_BREAK
 case 2167:
 YY_RULE_SETUP
 #line 2171 "/tmp/input.flex"
-yyout << u8"⊊" << u8"︀"; return 2165;
+yyout << "⊊" << "︀"; return 2165;
 	YY_BREAK
 case 2168:
 YY_RULE_SETUP
 #line 2172 "/tmp/input.flex"
-yyout << u8"⫌" << u8"︀"; return 2166;
+yyout << "⫌" << "︀"; return 2166;
 	YY_BREAK
 case 2169:
 YY_RULE_SETUP
 #line 2173 "/tmp/input.flex"
-yyout << u8"⊋" << u8"︀"; return 2167;
+yyout << "⊋" << "︀"; return 2167;
 	YY_BREAK
 case 2170:
 YY_RULE_SETUP
 #line 2174 "/tmp/input.flex"
-yyout << u8"⦚"; return 2168;
+yyout << "⦚"; return 2168;
 	YY_BREAK
 case 2171:
 YY_RULE_SETUP
 #line 2175 "/tmp/input.flex"
-yyout << u8"ŵ"; return 2169;
+yyout << "ŵ"; return 2169;
 	YY_BREAK
 case 2172:
 YY_RULE_SETUP
 #line 2176 "/tmp/input.flex"
-yyout << u8"⩟"; return 2170;
+yyout << "⩟"; return 2170;
 	YY_BREAK
 case 2173:
 YY_RULE_SETUP
 #line 2177 "/tmp/input.flex"
-yyout << u8"∧"; return 2171;
+yyout << "∧"; return 2171;
 	YY_BREAK
 case 2174:
 YY_RULE_SETUP
 #line 2178 "/tmp/input.flex"
-yyout << u8"≙"; return 2172;
+yyout << "≙"; return 2172;
 	YY_BREAK
 case 2175:
 YY_RULE_SETUP
 #line 2179 "/tmp/input.flex"
-yyout << u8"℘"; return 2173;
+yyout << "℘"; return 2173;
 	YY_BREAK
 case 2176:
 YY_RULE_SETUP
 #line 2180 "/tmp/input.flex"
-yyout << u8"𝔴"; return 2174;
+yyout << "𝔴"; return 2174;
 	YY_BREAK
 case 2177:
 YY_RULE_SETUP
 #line 2181 "/tmp/input.flex"
-yyout << u8"𝕨"; return 2175;
+yyout << "𝕨"; return 2175;
 	YY_BREAK
 case 2178:
 YY_RULE_SETUP
 #line 2182 "/tmp/input.flex"
-yyout << u8"℘"; return 2176;
+yyout << "℘"; return 2176;
 	YY_BREAK
 case 2179:
 YY_RULE_SETUP
 #line 2183 "/tmp/input.flex"
-yyout << u8"≀"; return 2177;
+yyout << "≀"; return 2177;
 	YY_BREAK
 case 2180:
 YY_RULE_SETUP
 #line 2184 "/tmp/input.flex"
-yyout << u8"≀"; return 2178;
+yyout << "≀"; return 2178;
 	YY_BREAK
 case 2181:
 YY_RULE_SETUP
 #line 2185 "/tmp/input.flex"
-yyout << u8"𝓌"; return 2179;
+yyout << "𝓌"; return 2179;
 	YY_BREAK
 case 2182:
 YY_RULE_SETUP
 #line 2186 "/tmp/input.flex"
-yyout << u8"⋂"; return 2180;
+yyout << "⋂"; return 2180;
 	YY_BREAK
 case 2183:
 YY_RULE_SETUP
 #line 2187 "/tmp/input.flex"
-yyout << u8"◯"; return 2181;
+yyout << "◯"; return 2181;
 	YY_BREAK
 case 2184:
 YY_RULE_SETUP
 #line 2188 "/tmp/input.flex"
-yyout << u8"⋃"; return 2182;
+yyout << "⋃"; return 2182;
 	YY_BREAK
 case 2185:
 YY_RULE_SETUP
 #line 2189 "/tmp/input.flex"
-yyout << u8"▽"; return 2183;
+yyout << "▽"; return 2183;
 	YY_BREAK
 case 2186:
 YY_RULE_SETUP
 #line 2190 "/tmp/input.flex"
-yyout << u8"𝔵"; return 2184;
+yyout << "𝔵"; return 2184;
 	YY_BREAK
 case 2187:
 YY_RULE_SETUP
 #line 2191 "/tmp/input.flex"
-yyout << u8"⟺"; return 2185;
+yyout << "⟺"; return 2185;
 	YY_BREAK
 case 2188:
 YY_RULE_SETUP
 #line 2192 "/tmp/input.flex"
-yyout << u8"⟷"; return 2186;
+yyout << "⟷"; return 2186;
 	YY_BREAK
 case 2189:
 YY_RULE_SETUP
 #line 2193 "/tmp/input.flex"
-yyout << u8"ξ"; return 2187;
+yyout << "ξ"; return 2187;
 	YY_BREAK
 case 2190:
 YY_RULE_SETUP
 #line 2194 "/tmp/input.flex"
-yyout << u8"⟸"; return 2188;
+yyout << "⟸"; return 2188;
 	YY_BREAK
 case 2191:
 YY_RULE_SETUP
 #line 2195 "/tmp/input.flex"
-yyout << u8"⟵"; return 2189;
+yyout << "⟵"; return 2189;
 	YY_BREAK
 case 2192:
 YY_RULE_SETUP
 #line 2196 "/tmp/input.flex"
-yyout << u8"⟼"; return 2190;
+yyout << "⟼"; return 2190;
 	YY_BREAK
 case 2193:
 YY_RULE_SETUP
 #line 2197 "/tmp/input.flex"
-yyout << u8"⋻"; return 2191;
+yyout << "⋻"; return 2191;
 	YY_BREAK
 case 2194:
 YY_RULE_SETUP
 #line 2198 "/tmp/input.flex"
-yyout << u8"⨀"; return 2192;
+yyout << "⨀"; return 2192;
 	YY_BREAK
 case 2195:
 YY_RULE_SETUP
 #line 2199 "/tmp/input.flex"
-yyout << u8"𝕩"; return 2193;
+yyout << "𝕩"; return 2193;
 	YY_BREAK
 case 2196:
 YY_RULE_SETUP
 #line 2200 "/tmp/input.flex"
-yyout << u8"⨁"; return 2194;
+yyout << "⨁"; return 2194;
 	YY_BREAK
 case 2197:
 YY_RULE_SETUP
 #line 2201 "/tmp/input.flex"
-yyout << u8"⨂"; return 2195;
+yyout << "⨂"; return 2195;
 	YY_BREAK
 case 2198:
 YY_RULE_SETUP
 #line 2202 "/tmp/input.flex"
-yyout << u8"⟹"; return 2196;
+yyout << "⟹"; return 2196;
 	YY_BREAK
 case 2199:
 YY_RULE_SETUP
 #line 2203 "/tmp/input.flex"
-yyout << u8"⟶"; return 2197;
+yyout << "⟶"; return 2197;
 	YY_BREAK
 case 2200:
 YY_RULE_SETUP
 #line 2204 "/tmp/input.flex"
-yyout << u8"𝓍"; return 2198;
+yyout << "𝓍"; return 2198;
 	YY_BREAK
 case 2201:
 YY_RULE_SETUP
 #line 2205 "/tmp/input.flex"
-yyout << u8"⨆"; return 2199;
+yyout << "⨆"; return 2199;
 	YY_BREAK
 case 2202:
 YY_RULE_SETUP
 #line 2206 "/tmp/input.flex"
-yyout << u8"⨄"; return 2200;
+yyout << "⨄"; return 2200;
 	YY_BREAK
 case 2203:
 YY_RULE_SETUP
 #line 2207 "/tmp/input.flex"
-yyout << u8"△"; return 2201;
+yyout << "△"; return 2201;
 	YY_BREAK
 case 2204:
 YY_RULE_SETUP
 #line 2208 "/tmp/input.flex"
-yyout << u8"⋁"; return 2202;
+yyout << "⋁"; return 2202;
 	YY_BREAK
 case 2205:
 YY_RULE_SETUP
 #line 2209 "/tmp/input.flex"
-yyout << u8"⋀"; return 2203;
+yyout << "⋀"; return 2203;
 	YY_BREAK
 case 2206:
 YY_RULE_SETUP
 #line 2210 "/tmp/input.flex"
-yyout << u8"ý"; return 2204;
+yyout << "ý"; return 2204;
 	YY_BREAK
 case 2207:
 YY_RULE_SETUP
 #line 2211 "/tmp/input.flex"
-yyout << u8"ý"; return 2205;
+yyout << "ý"; return 2205;
 	YY_BREAK
 case 2208:
 YY_RULE_SETUP
 #line 2212 "/tmp/input.flex"
-yyout << u8"я"; return 2206;
+yyout << "я"; return 2206;
 	YY_BREAK
 case 2209:
 YY_RULE_SETUP
 #line 2213 "/tmp/input.flex"
-yyout << u8"ŷ"; return 2207;
+yyout << "ŷ"; return 2207;
 	YY_BREAK
 case 2210:
 YY_RULE_SETUP
 #line 2214 "/tmp/input.flex"
-yyout << u8"ы"; return 2208;
+yyout << "ы"; return 2208;
 	YY_BREAK
 case 2211:
 YY_RULE_SETUP
 #line 2215 "/tmp/input.flex"
-yyout << u8"¥"; return 2209;
+yyout << "¥"; return 2209;
 	YY_BREAK
 case 2212:
 YY_RULE_SETUP
 #line 2216 "/tmp/input.flex"
-yyout << u8"¥"; return 2210;
+yyout << "¥"; return 2210;
 	YY_BREAK
 case 2213:
 YY_RULE_SETUP
 #line 2217 "/tmp/input.flex"
-yyout << u8"𝔶"; return 2211;
+yyout << "𝔶"; return 2211;
 	YY_BREAK
 case 2214:
 YY_RULE_SETUP
 #line 2218 "/tmp/input.flex"
-yyout << u8"ї"; return 2212;
+yyout << "ї"; return 2212;
 	YY_BREAK
 case 2215:
 YY_RULE_SETUP
 #line 2219 "/tmp/input.flex"
-yyout << u8"𝕪"; return 2213;
+yyout << "𝕪"; return 2213;
 	YY_BREAK
 case 2216:
 YY_RULE_SETUP
 #line 2220 "/tmp/input.flex"
-yyout << u8"𝓎"; return 2214;
+yyout << "𝓎"; return 2214;
 	YY_BREAK
 case 2217:
 YY_RULE_SETUP
 #line 2221 "/tmp/input.flex"
-yyout << u8"ю"; return 2215;
+yyout << "ю"; return 2215;
 	YY_BREAK
 case 2218:
 YY_RULE_SETUP
 #line 2222 "/tmp/input.flex"
-yyout << u8"ÿ"; return 2216;
+yyout << "ÿ"; return 2216;
 	YY_BREAK
 case 2219:
 YY_RULE_SETUP
 #line 2223 "/tmp/input.flex"
-yyout << u8"ÿ"; return 2217;
+yyout << "ÿ"; return 2217;
 	YY_BREAK
 case 2220:
 YY_RULE_SETUP
 #line 2224 "/tmp/input.flex"
-yyout << u8"ź"; return 2218;
+yyout << "ź"; return 2218;
 	YY_BREAK
 case 2221:
 YY_RULE_SETUP
 #line 2225 "/tmp/input.flex"
-yyout << u8"ž"; return 2219;
+yyout << "ž"; return 2219;
 	YY_BREAK
 case 2222:
 YY_RULE_SETUP
 #line 2226 "/tmp/input.flex"
-yyout << u8"з"; return 2220;
+yyout << "з"; return 2220;
 	YY_BREAK
 case 2223:
 YY_RULE_SETUP
 #line 2227 "/tmp/input.flex"
-yyout << u8"ż"; return 2221;
+yyout << "ż"; return 2221;
 	YY_BREAK
 case 2224:
 YY_RULE_SETUP
 #line 2228 "/tmp/input.flex"
-yyout << u8"ℨ"; return 2222;
+yyout << "ℨ"; return 2222;
 	YY_BREAK
 case 2225:
 YY_RULE_SETUP
 #line 2229 "/tmp/input.flex"
-yyout << u8"ζ"; return 2223;
+yyout << "ζ"; return 2223;
 	YY_BREAK
 case 2226:
 YY_RULE_SETUP
 #line 2230 "/tmp/input.flex"
-yyout << u8"𝔷"; return 2224;
+yyout << "𝔷"; return 2224;
 	YY_BREAK
 case 2227:
 YY_RULE_SETUP
 #line 2231 "/tmp/input.flex"
-yyout << u8"ж"; return 2225;
+yyout << "ж"; return 2225;
 	YY_BREAK
 case 2228:
 YY_RULE_SETUP
 #line 2232 "/tmp/input.flex"
-yyout << u8"⇝"; return 2226;
+yyout << "⇝"; return 2226;
 	YY_BREAK
 case 2229:
 YY_RULE_SETUP
 #line 2233 "/tmp/input.flex"
-yyout << u8"𝕫"; return 2227;
+yyout << "𝕫"; return 2227;
 	YY_BREAK
 case 2230:
 YY_RULE_SETUP
 #line 2234 "/tmp/input.flex"
-yyout << u8"𝓏"; return 2228;
+yyout << "𝓏"; return 2228;
 	YY_BREAK
 case 2231:
 YY_RULE_SETUP
 #line 2235 "/tmp/input.flex"
-yyout << u8"‍"; return 2229;
+yyout << "‍"; return 2229;
 	YY_BREAK
 case 2232:
 YY_RULE_SETUP
 #line 2236 "/tmp/input.flex"
-yyout << u8"‌"; return 2230;
+yyout << "‌"; return 2230;
 	YY_BREAK
 case 2233:
 YY_RULE_SETUP

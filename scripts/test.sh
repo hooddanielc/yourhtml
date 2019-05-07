@@ -1,13 +1,14 @@
 #!/bin/bash -xe
-
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 TEST_DIR="$( dirname "${DIR}" )/test"
 cd "$( dirname "${DIR}" )"
 
 # update git submodules
-git submodule update --init
-
+if [ ! -d "$(dirname $DIR)/test/html5lib-tests" ]; then
+  echo "error html5lib-tests submodule node found"
+  echo "try running this command: git submodule update --init"
+  exit 1
+fi
 
 OUT_DIR="../out"
 

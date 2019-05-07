@@ -84,7 +84,7 @@ child_process.exec(cmd, (err, res) => {
     #pragma clang diagnostic ignored "-Wzero-as-null-pointer-constant"
     #pragma clang diagnostic ignored "-Wimplicit-fallthrough"
     ${entity_lexer_src}
-    #pragma clang diagnostic pop\n`
+    #pragma clang diagnostic pop\n`.replace(/u8"/g, '"')
   );
   fs.writeFileSync(output_h, `
     #pragma clang diagnostic push
@@ -93,7 +93,7 @@ child_process.exec(cmd, (err, res) => {
     #pragma clang diagnostic ignored "-Wweak-vtables"
     #pragma clang diagnostic ignored "-Wzero-as-null-pointer-constant"
     ${entity_lexer_src_h}
-    #pragma clang diagnostic pop\n`
+    #pragma clang diagnostic pop\n`.replace(/u8"/g, '"')
   );
 });
 

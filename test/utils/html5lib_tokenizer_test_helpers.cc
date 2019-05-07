@@ -60,7 +60,8 @@ testing::internal::ParamGenerator<html5lib_test_param_t> html5lib_test_params_in
       std::nullopt,
       std::nullopt,
       std::nullopt,
-      std::nullopt
+      std::nullopt,
+      std::nullopt,
     };
 
     if (test_key == "xmlViolationTests") {
@@ -228,12 +229,23 @@ std::string html5lib_tokenizer_test_title_generator_t::operator()(const testing:
 
 TEST_P(html5lib_tokenizer_test_t, tokenizes_as_expected) {
   auto param = GetParam();
-  
+  auto test_info = ::testing::UnitTest::GetInstance()->current_test_info();
+  std::string name(test_info->test_case_name());
+  name += ".";
+  name += test_info->name();
+
+  if (ignored_tests.count(name) > 0 && ignored_tests[name]) {
+    param.ignored = true;
+  }
+
   if (getenv("GTEST_FILTER")) {
     std::cout << "TESTING USING INPUT: ```" << std::endl;
     std::cout << "(" << param.input << std::endl << ")";
     std::cout << "```" << std::endl;
     std::cout << "TOTAL INPUT SIZE: " << param.input.size() << std::endl;
+  } else if (param.ignored) {
+    std::cout << "WARNING SKIPPING TEST: " << param.id << std::endl;
+    return;
   }
 
   html5lib_test_lexer_t lexer(param.input.c_str(), param.input.size());
